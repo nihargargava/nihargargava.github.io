@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /Everything
+
+Disallow: /ShortCV.pdf
