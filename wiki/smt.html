@@ -48,11 +48,25 @@
     \int_{SL_d(\mathbb{R})/SL_d(\mathbb{Z})}^{} \left( \sum_{v \in g \mathbb{Z}^{n} \setminus \{ 0\}}^{}f(v) \right) dg = \int_{\mathbb{R}^{n}}^{} f(x) dx,
   \end{align}\]</span> where the <span class="math inline">\(dx\)</span> on the RHS is the usual Lebesgue measure on <span class="math inline">\(\mathbb{R}^{d}\)</span>.</p>
 </div>
-<p>Setting <span class="math inline">\(f\)</span> as the indicator function of a ball, the left-hand side gives us the average intersection number of a ball and a lattice.</p>
+<p>Setting <span class="math inline">\(f\)</span> as the indicator function of a ball, the left-hand side gives us the average intersection number of a ball and a lattice. This gives the following lower bound on the <a href="sphere_packing_constant.html">sphere packing constant</a>. <span class="math display">\[\begin{align}
+  c_d \ge 2.
+\end{align}\]</span></p>
+<h2 id="venkateshs-mean-value-theorem">Venkatesh’s mean-value theorem</h2>
+<div class="theorem">
+<p><strong>(Venkatesh, 2013, <span class="citation" data-cites="AV">[<a href="#ref-AV" role="doc-biblioref">2</a>]</span>)</strong> Let <span class="math inline">\(d = 2\varphi(n)\)</span>. Suppose <span class="math inline">\(f:K_{\mathbb{R}}^2 \rightarrow \mathbb{R}\)</span> is a compactly supported bounded measurable function. Then, the following holds. <span class="math display">\[\begin{align}
+\int_{SL_2(K_\mathbb{R})/SL_2(\mathcal{O}_K)}^{} \left( \sum_{v \in g \mathcal{O}_K^{\oplus 2} \setminus \{ 0\}}^{}f(v) \right) dg = \int_{\mathbb{R}^{d}}^{} f(x) dx,
+\end{align}\]</span> where the <span class="math inline">\(dx\)</span> on the right-hand side is that Lebesgue measure on <span class="math inline">\(\mathbb{R}^{d}\)</span> that makes <span class="math inline">\(\mathcal{O}_K^{\oplus 2}\)</span> of unit covolume and <span class="math inline">\(dg\)</span> is the unique <span class="math inline">\(SL_2(K_\mathbb{R})\)</span>-invariant probability measure on <span class="math inline">\(SL_2(K_{\mathbb{R}})/SL_2(\mathcal{O}_{d})\)</span>.</p>
+</div>
+<p>Setting <span class="math inline">\(f\)</span> as the indicator function of a ball, the left-hand side gives us the average intersection number of a ball and a lattice. This gives the following lower bound on the sphere packing constant. <span class="math display">\[\begin{align}
+  c_{2 \varphi(n)} \ge n.
+\end{align}\]</span></p>
 <hr />
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-Sie45" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">1. </div><div class="csl-right-inline">C. L. Siegel, A mean value theorem in geometry of numbers. <em>Annals of Mathematics</em>, (1945) 340–347.</div>
+</div>
+<div id="ref-AV" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">A. Venkatesh, A note on sphere packings in high dimension. <em><span>International Mathematics Research Notices</span></em>, (2013) 1628–1642. <a href="https://doi.org/10.1093/imrn/rns096">https://doi.org/10.1093/imrn/rns096</a>.</div>
 </div>
 </div>
 </body>
