@@ -73,6 +73,8 @@ h1:first-of-type  {
 	display: block;
 } 
 
+
+
 /* Article Body */
 
 body {
@@ -98,8 +100,8 @@ dl dd {
 .theorem {
     margin: 10px;
     font-style: italic;
-    display: inline-block;
-    border: 1px solid #000;
+    display: block;
+    border: 2px solid #000;
     padding: 10px;
 }
 .theorem:before {
@@ -114,6 +116,18 @@ dl dd {
 }
 .lemma:before {
     content: "Lemma";
+    font-weight: bold;
+    font-style: normal;
+}
+.question {
+    margin: 10px ;
+    font-style: italic;
+    display: block;
+    border: 1px solid #000;
+    padding: 10px;
+}
+.question:before {
+    content: "Question";
     font-weight: bold;
     font-style: normal;
 }
@@ -146,4 +160,8 @@ dl dd {
 	margin-bottom: 8px;
   	font-variant-caps: small-caps;
   	text-align: center;
+}
+
+.sourceCode {
+  font-size: 8pt;
 }
