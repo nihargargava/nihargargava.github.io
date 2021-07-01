@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-07-01" />
+  <meta name="dcterms.date" content="2021-07-02" />
   <title>Dedekind-Zeta Function for Cyclotomic Fields.</title>
   <style>
     code{white-space: pre-wrap;}
@@ -101,6 +101,7 @@
 </ul></li>
 </ul>
 </nav>
+<p>The following lemma allows easy computation of the <a href="dedekind_zeta.html">Dedekind-zeta function</a> when the field is a cyclotomic extension of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 <div class="lemma">
 <p>When <span class="math inline">\(K=\mathbb{Q}(\mu_{n})\)</span>, the <span class="math inline">\(n\)</span>th cyclotomic field, then we have <span class="math display">\[\begin{align}
   \zeta_K(s)  = \prod_{  p \in \mathbb{P } } \frac{1}{\left( 1 -  \frac{1}{p^{ s\  \mathop{\mathrm{ord}}_{n_{p}}\ p  }} \right)^{\frac{\varphi(n_{p})}{\mathop{\mathrm{ord}}_{n_{p}} \ p}} } ,
@@ -195,27 +196,22 @@
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> latex_string</span></code></pre></div>
 <h3 id="some-outputs">Some outputs</h3>
 <p><span class="math display">\[
-\zeta_{\mathbb{Q}(\mu_{1024})}(s)=\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{4\
-^s}+\frac{1}{8^s}+\frac{1}{16^s}+\ldots
+\zeta_{\mathbb{Q}(\mu_{1024})}(s)=\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{4^s}+\frac{1}{8^s}+\frac{1}{16^s}+\ldots
 \]</span></p>
 <p><span class="math display">\[
-\zeta_{\mathbb{Q}(\mu_{16})}(s)=\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{4^s\
-}+\frac{1}{8^s}+\frac{1}{16^s}+\frac{8}{17^s}+\frac{1}{32^s}+\ldots
+\zeta_{\mathbb{Q}(\mu_{16})}(s)=\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{4^s}+\frac{1}{8^s}+\frac{1}{16^s}+\frac{8}{17^s}+\frac{1}{32^s}+\ldots
 \]</span></p>
 <p><span class="math display">\[
-\zeta_{\mathbb{Q}(\mu_{100})}(s)=\frac{1}{1^s}+\frac{2}{5^s}+\frac{3}{25\
-^s}+\frac{40}{101^s}+\frac{4}{125^s}+\ldots
+\zeta_{\mathbb{Q}(\mu_{100})}(s)=\frac{1}{1^s}+\frac{2}{5^s}+\frac{3}{25^s}+\frac{40}{101^s}+\frac{4}{125^s}+\ldots
 \]</span></p>
 <p><span class="math display">\[
-\zeta_{\mathbb{Q}(\mu_{210})}(s)=\frac{1}{1^s}+\frac{48}{211^s}+\frac{48\
-}{421^s}+\frac{48}{631^s}+\frac{24}{841^s}+\ldots
+\zeta_{\mathbb{Q}(\mu_{210})}(s)=\frac{1}{1^s}+\frac{48}{211^s}+\frac{48}{421^s}+\frac{48}{631^s}+\frac{24}{841^s}+\ldots
 \]</span></p>
 <p><span class="math display">\[
-\zeta_{\mathbb{Q}(\mu_{30})}(s)=\frac{1}{1^s}+\frac{2}{16^s}+\frac{1}{25\
-^s}+\frac{8}{31^s}+\frac{8}{61^s}+\frac{1}{81^s}+\frac{4}{121^s}+\ldots
+\zeta_{\mathbb{Q}(\mu_{30})}(s)=\frac{1}{1^s}+\frac{2}{16^s}+\frac{1}{25^s}+\frac{8}{31^s}+\frac{8}{61^s}+\frac{1}{81^s}+\frac{4}{121^s}+\ldots
 \]</span></p>
 <hr />
-	<small>	<p class="date">This page was updated on July 1, 2021.<br>
+	<small>	<p class="date">This page was updated on July 2, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
