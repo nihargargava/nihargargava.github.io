@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2021-07-01" />
-  <title>Dedekind-Zeta Function for cyclotomic fields.</title>
+  <title>Dedekind-Zeta Function for Cyclotomic Fields.</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -85,30 +85,49 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Dedekind-Zeta Function for cyclotomic fields.</h1>
+<h1 class="title">Dedekind-Zeta Function for Cyclotomic Fields.</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#code-for-computing-zeta_ks-for-real-s">Code for computing <span class="math inline">\(\zeta_{K}(s)\)</span> for real <span class="math inline">\(s\)</span></a></li>
+<li><a href="#series-expansion">Series expansion</a></li>
+<li><a href="#computational-aspects">Computational aspects</a>
+<ul>
+<li><a href="#program-for-computing-zeta_ks-for-real-s">Program for computing <span class="math inline">\(\zeta_{K}(s)\)</span> for real <span class="math inline">\(s\)</span></a></li>
+<li><a href="#program-for-computing-the-series-expansion.">Program for computing the series expansion.</a></li>
+</ul></li>
 </ul>
 </nav>
 <div class="lemma">
 <p>When <span class="math inline">\(K=\mathbb{Q}(\mu_{n})\)</span>, the <span class="math inline">\(n\)</span>th cyclotomic field, then we have <span class="math display">\[\begin{align}
-  \zeta_K(s)  = \prod_{  p \in \mathbb{P } } \frac{1}{\left( 1 -  \frac{1}{p^{ s\  \mathop{\mathrm{ord}}_{n_{p}}\ p  }} \right)^{\frac{\varphi(n)}{\mathop{\mathrm{ord}}_{n_{p}} \ p}} } ,
+  \zeta_K(s)  = \prod_{  p \in \mathbb{P } } \frac{1}{\left( 1 -  \frac{1}{p^{ s\  \mathop{\mathrm{ord}}_{n_{p}}\ p  }} \right)^{\frac{\varphi(n_{p})}{\mathop{\mathrm{ord}}_{n_{p}} \ p}} } ,
 \end{align}\]</span> where <span class="math inline">\(n_{p} = n p^{-\nu_{p}(n)}\)</span>, that is <span class="math inline">\(n\)</span> with all powers of <span class="math inline">\(p\)</span> removed.</p>
 </div>
 <div class="proof">
 <p>Since <span class="math inline">\(\mathcal{O}_{K} = \mathbb{Z}[\mu_{n}]\)</span>, we can use <a href="dedekind_factorization.html">Dedekind’s factorization lemma</a>. Let <span class="math inline">\(\Phi_{n}(X) \in \mathbb{Z}[X]\)</span> be the <span class="math inline">\(n\)</span>th cyclotomic polynomial. So <span class="math display">\[\begin{align}
     &amp; \Phi_{n}(X) \equiv f_1(X)^{e_1}f_{2}(X)^{e_2}\ldots f_r(X)^{e_r} \pmod{p},\\
     \Rightarrow &amp; p \mathcal{O}_{K} = \mathcal{P}_{1}^{e_1} \mathcal{P}_{2}^{e_2} \ldots \mathcal{P}_{r}^{e_r}
-  \end{align}\]</span> for some <span class="math inline">\(r&gt;0\)</span> and <span class="math inline">\(e_1,e_2,\cdots,e_r \ge 1\)</span>. Now <span class="math inline">\(\mathop{\mathrm{N}}(\mathcal{P})= p^{\deg f_i(X)}\)</span>. What are the roots of <span class="math inline">\(\Phi_n(X)\)</span>? They are primitive <span class="math inline">\(n\)</span>th roots of unity. In the algebraic closure <span class="math inline">\(\overline{\mathbb{F}}_p\)</span>, the Frobenious automorphism acts on these roots of unity.</p>
-<p>This is a combinatorial problem. We can count it by considering the multiplication by <span class="math inline">\(p\)</span> map. <span class="math display">\[\begin{align}
-    L_{p} : \left( \frac{\mathbb{Z}}{n \mathbb{Z}} \right)^{*} \rightarrow \left( \frac{\mathbb{Z}}{n \mathbb{Z}} \right)^{*}.
-  \end{align}\]</span> When <span class="math inline">\(p \mid n\)</span>, some of the primitive roots in <span class="math inline">\(\overline{\mathbb{Q}}\)</span> are the same in <span class="math inline">\(\overline{\mathbb{F}}_p\)</span>. S</p>
+  \end{align}\]</span> for some <span class="math inline">\(r&gt;0\)</span> and <span class="math inline">\(e_1,e_2,\cdots,e_r \ge 1\)</span>. Now <span class="math inline">\(\mathop{\mathrm{N}}(\mathcal{P})= p^{\deg f_i(X)}\)</span>. What are the roots of <span class="math inline">\(\Phi_n(X)\)</span>?</p>
+<p>If <span class="math inline">\(p \mid n\)</span>, then <span class="math inline">\(p\)</span> is ramified. In this case, there are no primitive <span class="math inline">\(n\)</span>th roots of unity in <span class="math inline">\(\overline{\mathbb{F}}_p\)</span> since <span class="math inline">\(X^{n} - 1 = (X^{n_{p}}-1)^{p^{\nu_{p}(n)}}\)</span>, where <span class="math inline">\(n_p\)</span> is as in the statement of the lemma. So the set of roots of <span class="math inline">\(\Phi_n(X)\)</span> in <span class="math inline">\(\overline{\mathbb{F}}_p\)</span> are the primitive <span class="math inline">\(n_{p}\)</span>th roots each repeated <span class="math inline">\(p^{\nu_{p}(n)}\)</span> times.</p>
+<p>So we consider the case when <span class="math inline">\(p \nmid n\)</span>. In the algebraic closure <span class="math inline">\(\overline{\mathbb{F}}_p\)</span>, the Frobenious automorphism acts on the primitive <span class="math inline">\(n\)</span>th roots of unity. We can count the orbits by considering the following multiplication by <span class="math inline">\(p\)</span> map. <span class="math display">\[\begin{align}
+    L_{p} : \left( \frac{\mathbb{Z}}{n \mathbb{Z}} \right)^{*}  &amp; \rightarrow \left( \frac{\mathbb{Z}}{n \mathbb{Z}} \right)^{*}\\
+    x \ \ \ \ \  &amp; \mapsto \ \ \ \  p x.
+  \end{align}\]</span> This map has <span class="math inline">\(\varphi(n)/\mathop{\mathrm{ord}}_n p\)</span> orbits of size <span class="math inline">\(\mathop{\mathrm{ord}}_{n} p\)</span>. Hence, each <span class="math inline">\(f_i(X)\)</span> above will have degree <span class="math inline">\(\mathop{\mathrm{ord}}_{n} p\)</span> and there are <span class="math inline">\(\varphi(n)/\mathop{\mathrm{ord}}_{n} p\)</span> such polynomials. This gives us all the prime ideals above <span class="math inline">\(p\)</span> and their norms.</p>
 </div>
-<h3 id="code-for-computing-zeta_ks-for-real-s">Code for computing <span class="math inline">\(\zeta_{K}(s)\)</span> for real <span class="math inline">\(s\)</span></h3>
-<p>The following <code>sage</code> code computes <span class="math inline">\(\zeta_{K}(2)\)</span> for any given <span class="math inline">\(\mathbb{Q}(\mu_n)\)</span>.</p>
+<h1 id="series-expansion">Series expansion</h1>
+<p>Based on the Euler product above, we can give a series expansion as well when <span class="math inline">\(K = \mathbb{Q}(\mu_{n})\)</span> as above. We have for <span class="math inline">\(\Re(s)&gt;1\)</span> <span class="math display">\[\begin{align}
+  \zeta_{K}(s) = \frac{a(1)}{1^{s}} + \frac{a(2)}{2^{s}} + \frac{a(3)}{3^{s}} + \frac{a(4)}{4^{s}} + \ldots
+\end{align}\]</span> where <span class="math inline">\(a(i)\)</span> is the number of ideals of <span class="math inline">\(\mathcal{O}_{K}\)</span> that have norm <span class="math inline">\(i\)</span>. We must have <span class="math display">\[\begin{align}
+  a(m_1m_2) = a(m_1)a(m_2),\ \  \gcd(m_1,m_2)=1,
+\end{align}\]</span> and for a prime <span class="math inline">\(p \in \mathbb{P}\)</span> and <span class="math inline">\(n_{p}\)</span> as above, we have <span class="math display">\[\begin{align}
+  a(p^{m}) = \begin{cases}
+    0 &amp; \mathop{\mathrm{ord}}_{n_p} p \nmid m \\
+    \left( \substack{\frac{\varphi(n_p)}{\mathop{\mathrm{ord}}_{n_p} p}+\frac{m}{\mathop{\mathrm{ord}}_{n_p} p} - 1 \\ \frac{m}{\mathop{\mathrm{ord}}_{n_p} p}} \right)&amp; \mathop{\mathrm{ord}}_{n_p} p \mid m
+  \end{cases}.
+\end{align}\]</span> The non-zero term above is just <span class="math display">\[\# \{ (x_1,x_2,\cdots) \in \mathbb{Z}_{\ge 0} ^{\frac{\varphi(n_p)}{\mathop{\mathrm{ord}}_{n_{p}}p}} \ | \ \sum_{i}  x_i = \tfrac{m}{\mathop{\mathrm{ord}}_{n_{p} p}}\}.\]</span> Indeed, the tuples <span class="math inline">\((x_1,x_2,\cdots)\)</span> correspond to the factorization <span class="math inline">\(\mathcal{I}= \mathcal{P}_{1}^{x_1} \mathcal{P}_{2}^{x_2} \ldots\)</span> where <span class="math inline">\(\mathcal{I}\)</span> is an ideal such that <span class="math inline">\(\mathop{\mathrm{N}}(\mathcal{I}) = p^{m}\)</span>.</p>
+<h1 id="computational-aspects">Computational aspects</h1>
+<h2 id="program-for-computing-zeta_ks-for-real-s">Program for computing <span class="math inline">\(\zeta_{K}(s)\)</span> for real <span class="math inline">\(s\)</span></h2>
+<p>The following <code>sage</code> code computes <span class="math inline">\(\zeta_{K}(2)\)</span> for any given <span class="math inline">\(\mathbb{Q}(\mu_n)\)</span> based on the Euler expansion above.</p>
 <p><strong>Caution</strong>: Not accurate for large <span class="math inline">\(n\)</span>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>MAX <span class="op">=</span> <span class="dv">10000</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -131,6 +150,7 @@
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  ord_mp <span class="op">=</span> multiplicative_order(mod(p,m))</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  DZ<span class="op">/=</span>(<span class="dv">1</span><span class="op">-</span><span class="fl">1.0</span><span class="op">/</span>p<span class="op">**</span>(s<span class="op">*</span>ord_mp))<span class="op">**</span>(euler_phi(m)<span class="op">/</span>ord_mp)</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> n,DZ</span></code></pre></div>
+<h2 id="program-for-computing-the-series-expansion.">Program for computing the series expansion.</h2>
 <hr />
 	<small>	<p class="date">This page was updated on July 1, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
