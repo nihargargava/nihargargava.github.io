@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-06-30" />
+  <meta name="dcterms.date" content="2021-07-01" />
   <title>Sphere Packing Constant</title>
   <style>
     code{white-space: pre-wrap;}
@@ -43,12 +43,22 @@
 <header id="title-block-header">
 <h1 class="title">Sphere Packing Constant</h1>
 </header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#known-values">Known values</a></li>
+<li><a href="#lower-bounds">Lower bounds</a></li>
+<li><a href="#bibliography">References</a></li>
+</ul>
+</nav>
 <p>If we denote <span class="math inline">\(SL(V)\)</span> to be the group of all unimodular linear transformations on <span class="math inline">\(V\)</span>, we can now define <span class="math display">\[\begin{align}
   c_{d} = \sup\left\{ \mu\left( g B_{r}(0)\right) \ | \ r&gt; 0,~g \in SL(V) \text{ and } g B_{r}(0) \cap \Lambda_0 = \{ 0\}\right\},
 \end{align}\]</span></p>
-<p>The most optimal <a href="lattice_packing.html">lattice packing</a> density in <span class="math inline">\(d\)</span>-dimensions is <span class="math inline">\(c_{d}/2^{d}\)</span>.</p>
+<p>The most optimal <a href="lattice_packing.html">lattice packing</a> density in <span class="math inline">\(d\)</span>-dimensions is <span class="math inline">\(c_{d}/2^{d}\)</span>. Note that the most optimal sphere packing may not be a lattice packing for large <span class="math inline">\(d\)</span>.</p>
+<h2 id="known-values">Known values</h2>
+<p>The exact value of <span class="math inline">\(c_d\)</span> is known only for <span class="math inline">\(d \in \{1,2,3,4,5,6,7,8,24\}\)</span>.</p>
 <h2 id="lower-bounds">Lower bounds</h2>
-<p>Here are some known lower bounds.</p>
+<p>Here are some known lower bounds. See <a href="smt.html">Siegel Mean Value theorem</a> for getting some of these bounds.</p>
 <table>
 <thead>
 <tr class="header">
@@ -104,7 +114,7 @@
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on June 30, 2021.<br>
+	<small>	<p class="date">This page was updated on July 1, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
