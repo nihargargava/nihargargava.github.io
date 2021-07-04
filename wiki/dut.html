@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2021-07-04" />
+  <title>Dirichlet’s Unit Theorem</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Dirichlet’s Unit Theorem</h1>
+</header>
+<p>Recall <span class="math inline">\(\mathcal{O}_{K} \subseteq K_{\mathbb{R}}\)</span> with respect to the <a href="minkowski_embedding.html">Minkowski’s embedding</a>.</p>
+<p>Let <span class="math inline">\(K_{\mathbb{R}}^{*} \subseteq K_{\mathbb{R}}\)</span> be the set <span class="math inline">\(\{ x \in K_{\mathbb{R}} \ | \ \mathop{\mathrm{N}}(x) \neq 0 \}\)</span>. From this, we can define the following logarithm mapping <span class="math display">\[\begin{align}
+  \log: K_{\mathbb{R}}^{*} \rightarrow &amp; \ \ \ \mathbb{R}^{r + s}\\
+  x \mapsto &amp; \ \ \  (\log | \sigma(x)|)_{\sigma}.
+\end{align}\]</span></p>
+<p>This is a homomorphism of abelian groups. We know that <span class="math inline">\(\mathcal{O}_{K}^{*} \subset K_{\mathbb{R}}^{*}\)</span> maps under this to a discrete subgroup of rank <span class="math inline">\(r+s-1\)</span> and has a kernel of exactly the torsional units inside the vector subspace perpendicular to <span class="math inline">\((1,1,1,\cdots,1)\)</span>.</p>
+<p>Often we denote this by saying that the group <span class="math inline">\(\mathcal{O}_{K}^{*}\)</span> has finite covolume inside the abelian group <span class="math inline">\(K_{\mathbb{R}}^{(1)} = \{ x \in K_{\mathbb{R}} \ | \ |\mathop{\mathrm{N}}(x)|=1\}\)</span>.</p>
+<div class="definition">
+<p>The covolume of <span class="math inline">\(\log(\mathcal{O}_{K}^{*}) \subseteq (1,1,1,\cdots,1)^{\perp}\)</span> is called the regulator of <span class="math inline">\(K\)</span>.</p>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on July 4, 2021.<br>
+		<a href="index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
