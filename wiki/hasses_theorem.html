@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-08-02" />
+  <meta name="dcterms.date" content="2021-09-13" />
   <title>Hasse’s theorem</title>
   <style>
     code{white-space: pre-wrap;}
@@ -110,6 +110,7 @@
 <h3 id="toc-title">Contents</h3>
 <ul>
 <li><a href="#computational-aspects">Computational aspects</a></li>
+<li><a href="#for-sphere-packing">For sphere packing</a></li>
 <li><a href="#bibliography">References</a></li>
 </ul>
 </nav>
@@ -128,6 +129,24 @@
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    ord_mp <span class="op">=</span> multiplicative_order(mod(p,<span class="dv">2</span>))</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ord_mp<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span>:</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span> p</span></code></pre></div>
+<h1 id="for-sphere-packing">For sphere packing</h1>
+<p>This code generates an array containing division algebra packings used in the division algebra preprint</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>N<span class="op">=</span><span class="dv">300</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>more<span class="op">=</span><span class="fl">2.7</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>pack_ratio<span class="op">=</span><span class="fl">3.0</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>log_d_prod<span class="op">=</span>log(<span class="dv">8</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>g_packing<span class="op">=</span>[]</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> p <span class="kw">in</span> prime_range(<span class="dv">3</span>,N<span class="op">*</span>more):</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    ord_mp <span class="op">=</span> multiplicative_order(mod(<span class="dv">2</span>,p))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ord_mp<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">1</span>:</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        pack_ratio<span class="op">*=</span><span class="fl">1.0</span><span class="op">/</span>(<span class="dv">1</span><span class="op">-</span><span class="fl">1.0</span><span class="op">/</span>p)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        log_d_prod<span class="op">+=</span>log(p<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        g_packing<span class="op">+=</span>[[log_d_prod.n(),pack_ratio.n()]]</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        </span></code></pre></div>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-Ha55" class="csl-entry" role="doc-biblioentry">
@@ -135,7 +154,7 @@
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on August 2, 2021.<br>
+	<small>	<p class="date">This page was updated on September 13, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
