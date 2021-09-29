@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-09-21" />
+  <meta name="dcterms.date" content="2021-09-27" />
   <title>Dirichlet’s Unit Theorem</title>
   <style>
     code{white-space: pre-wrap;}
@@ -26,16 +26,16 @@
 </header>
 <p>Recall <span class="math inline">\(\mathcal{O}_{K} \subseteq K_{\mathbb{R}}\)</span> with respect to the <a href="minkowski_embedding.html">Minkowski’s embedding</a>.</p>
 <p>Let <span class="math inline">\(K_{\mathbb{R}}^{*} \subseteq K_{\mathbb{R}}\)</span> be the set <span class="math inline">\(\{ x \in K_{\mathbb{R}} \ | \ \mathop{\mathrm{N}}(x) \neq 0 \}\)</span>. From this, we can define the following logarithm mapping <span class="math display">\[\begin{align}
-  \log: K_{\mathbb{R}}^{*} \rightarrow &amp; \ \ \ \mathbb{R}^{r + s}\\
+  \mathop{\mathrm{\mathbf{log}}}: K_{\mathbb{R}}^{*} \rightarrow &amp; \ \ \ \mathbb{R}^{r_1 + r_2}\\
   x \mapsto &amp; \ \ \  (\log | \sigma(x)|)_{\sigma}.
 \end{align}\]</span></p>
-<p>This is a homomorphism of abelian groups. We know that <span class="math inline">\(\mathcal{O}_{K}^{*} \subset K_{\mathbb{R}}^{*}\)</span> maps under this to a discrete subgroup of rank <span class="math inline">\(r+s-1\)</span> and has a kernel of exactly the torsional units inside the vector subspace perpendicular to <span class="math inline">\((1,1,1,\cdots,1)\)</span>.</p>
-<p>Often we denote this by saying that the group <span class="math inline">\(\mathcal{O}_{K}^{*}\)</span> has finite covolume inside the abelian group <span class="math inline">\(K_{\mathbb{R}}^{(1)} = \{ x \in K_{\mathbb{R}} \ | \ |\mathop{\mathrm{N}}(x)|=1\}\)</span>.</p>
+<p>This is a homomorphism of abelian groups. We know that <span class="math inline">\(\mathcal{O}_{K}^{*} \subset K_{\mathbb{R}}^{*}\)</span> maps under this to a discrete subgroup of rank <span class="math inline">\(r_1+r_2-1\)</span> and has a kernel of exactly the torsional units. The image of the <span class="math inline">\(\mathop{\mathrm{\mathbf{log}}}\)</span> embedding is the vector subspace of <span class="math inline">\(\mathbb{R}^{r_1+r_2}\)</span> perpendicular to the vector <span class="math inline">\(\{1\}^{r_1} \times \{2\}^{r_2}\)</span></p>
+<p>The group <span class="math inline">\(\mathcal{O}_{K}^{*}\)</span> has finite covolume inside the abelian group <span class="math inline">\(K_{\mathbb{R}}^{(1)} = \{ x \in K_{\mathbb{R}} \ | \ |\mathop{\mathrm{N}}(x)|=1\}\)</span>.</p>
 <div class="definition">
-<p>The covolume of <span class="math inline">\(\log(\mathcal{O}_{K}^{*}) \subseteq (1,1,1,\cdots,1)^{\perp}\)</span> is called the regulator of <span class="math inline">\(K\)</span>.</p>
+<p>The covolume of <span class="math inline">\(\mathop{\mathrm{\mathbf{log}}}(\mathcal{O}_{K}^{*}) \subseteq (\{1\}^{r_1} \times \{2\}^{r_2})^{\perp}\)</span> is called the regulator of <span class="math inline">\(K\)</span>. It is denoted by <span class="math inline">\(R_K\)</span>.</p>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on September 21, 2021.<br>
+	<small>	<p class="date">This page was updated on September 27, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
