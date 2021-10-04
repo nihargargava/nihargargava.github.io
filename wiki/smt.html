@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-09-21" />
+  <meta name="dcterms.date" content="2021-10-04" />
   <title>Siegel Mean Value Theorem</title>
   <style>
     code{white-space: pre-wrap;}
@@ -46,11 +46,9 @@
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#other-forms-generalizations">Other forms, generalizations</a>
-<ul>
 <li><a href="#primitive-vectors">Primitive vectors</a></li>
 <li><a href="#venkateshs-mean-value-theorem">Venkatesh’s mean-value theorem</a></li>
-</ul></li>
+<li><a href="#division-algebra-variant">Division algebra variant</a></li>
 <li><a href="#bibliography">References</a></li>
 </ul>
 </nav>
@@ -62,8 +60,7 @@
 </div>
 <p>Setting <span class="math inline">\(f\)</span> as the indicator function of a ball, the left-hand side gives us the average intersection number of a ball and a lattice. This gives the following lower bound on the <a href="sphere_packing_constant.html">sphere packing constant</a>. <span class="math display">\[\begin{align}
   c_d \ge 2.
-\end{align}\]</span></p>
-<h1 id="other-forms-generalizations">Other forms, generalizations</h1>
+\end{align}\]</span> # Other forms, generalizations</p>
 <h2 id="primitive-vectors">Primitive vectors</h2>
 <p>In the same paper as the mean value theorem, Siegel also showed the following.</p>
 <div class="theorem">
@@ -88,17 +85,27 @@
 <p>Does there exist a primitive vectors version of Venkatesh’s mean value theorem? Can it be used to prove something like <span class="math inline">\(c_{2 \varphi(n)} \ge n \zeta_{K}(2)\)</span> for <span class="math inline">\(K = \mathbb{Q}(\mu_{n})\)</span>?</p>
 <p>Here <span class="math inline">\(\zeta_K\)</span> is the <a href="dedekind_zeta.html">Dedekind-zeta function</a></p>
 </div>
+<h2 id="division-algebra-variant">Division algebra variant</h2>
+<p>This was shown in <span class="citation" data-cites="G21">[<a href="#ref-G21" role="doc-biblioref">3</a>]</span></p>
+<div class="theorem">
+<p>Let <span class="math inline">\(D\)</span> be a <span class="math inline">\(\mathbb{Q}\)</span>-division algebra containing an order <span class="math inline">\(\mathcal{O} \subseteq D\)</span>. Let <span class="math inline">\(G = SL_k(D_{\mathbb{R}})\)</span> and <span class="math inline">\(\Gamma = SL_k(\mathcal{O})\)</span>, for some <span class="math inline">\(k \ge 2\)</span>. Let <span class="math inline">\(dg\)</span> be the probability measure on <span class="math inline">\(G/\Gamma\)</span> that is left-invariant under <span class="math inline">\(G\)</span> action. Then for any <span class="math inline">\(f \in C_{c} (D_{\mathbb{R}}^{k})\)</span>, we obtain that <span class="math display">\[\begin{align}
+    \int_{G / \Gamma}\left( \sum_{v \in g \mathcal{O}^{k} \setminus \{ 0\}} f(v) \right) dg =  \int_{D_{\mathbb{R}}^{k}}^{} f(x) dx,
+  \end{align}\]</span> where <span class="math inline">\(dx\)</span> is a Lebesgue measure on <span class="math inline">\(D_{\mathbb{R}}^{k}\)</span> with respect to which <span class="math inline">\(\mathcal{O}^{k}\)</span> has a covolume of <span class="math inline">\(1\)</span>.</p>
+</div>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-Sie45" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">1. </div><div class="csl-right-inline">C. L. Siegel, A mean value theorem in geometry of numbers. <em>Annals of Mathematics</em>, (1945) 340–347.</div>
 </div>
 <div id="ref-AV" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">A. Venkatesh, A note on sphere packings in high dimension. <em><span>International Mathematics Research Notices</span></em>, (2013) 1628–1642.</div>
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">A. Venkatesh, A note on sphere packings in high dimension. <em><span>International Mathematics Research Notices</span></em>, <strong>2013</strong> (2013) 1628–1642. <a href="https://doi.org/10.1093/imrn/rns096">https://doi.org/10.1093/imrn/rns096</a>.</div>
+</div>
+<div id="ref-G21" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">N. P. Gargava, Lattice packings through division algebras. (2021).</div>
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on September 21, 2021.<br>
+	<small>	<p class="date">This page was updated on October 4, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
