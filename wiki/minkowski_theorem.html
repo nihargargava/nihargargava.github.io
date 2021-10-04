@@ -4,11 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-<<<<<<< HEAD
-  <meta name="dcterms.date" content="2021-10-01" />
-=======
   <meta name="dcterms.date" content="2021-10-04" />
->>>>>>> 7162c35fb446fd93fa2c6ed31610f9e5b74641cf
   <title>Minkowski’s Theorem on Successive Minima</title>
   <style>
     code{white-space: pre-wrap;}
@@ -57,12 +53,6 @@
 </nav>
 <p>Minkowski’s theorem for successive minima is the following theorem specialized for the case when <span class="math inline">\(D=\mathbb{Q}\)</span>. The following more general version is a modification of <span class="citation" data-cites="V11">[<a href="#ref-V11" role="doc-biblioref">1</a>]</span>, but is also based on the ideas given in <span class="citation" data-cites="W58">[<a href="#ref-W58" role="doc-biblioref">2</a>]</span>.</p>
 <div class="theorem">
-<<<<<<< HEAD
-<p>Let <span class="math inline">\(\mathcal{O} \subseteq D\)</span> is an order inside a finite-dimensional <span class="math inline">\(\mathbb{Q}\)</span>-division algebra <span class="math inline">\(D\)</span>. Let <span class="math inline">\(D_{\mathbb{R}}^{k} = (D \otimes_{\mathbb{Q}} \mathbb{R})^{\oplus k}\)</span> endowed with a Eucldean norm <span class="math inline">\(\|\ \|\)</span>. Let <span class="math inline">\(\Lambda \subseteq D_{\mathbb{R}}^{k}\)</span> be a left <span class="math inline">\(\mathcal{O}\)</span>-module such that it is also a Euclidean lattice.</p>
-<p>For <span class="math inline">\(n \le k\)</span>, define the <span class="math inline">\(n\)</span>th minima <span class="math inline">\(\lambda_n(\Lambda)\)</span> of such a lattice to be the radius of the smallest closed ball that contains <span class="math inline">\(n\)</span> vectors that are <span class="math inline">\(D\)</span>-linearly independent under left action.</p>
-<ul>
-<li>There exists a set of <span class="math inline">\(k\)</span> vectors in <span class="math inline">\(\Lambda\)</span> that are <span class="math inline">\(D\)</span>-linearly independent and <span class="math inline">\(\|v_i\|= \lambda_i\)</span></li>
-=======
 <p>Let <span class="math inline">\(\mathcal{O} \subseteq D\)</span> is an order inside a finite-dimensional <span class="math inline">\(\mathbb{Q}\)</span>-division algebra <span class="math inline">\(D\)</span>. Let <span class="math inline">\(D_{\mathbb{R}}^{k} = (D \otimes_{\mathbb{Q}} \mathbb{R})^{\oplus k}\)</span> endowed with a Euclidean norm <span class="math inline">\(\|\ \|\)</span>, arising from a fixed Euclidean norm <span class="math inline">\(| \ |\)</span> on each copy of <span class="math inline">\(D_{\mathbb{R}}\)</span>. Let <span class="math inline">\(\Lambda \subseteq D_{\mathbb{R}}^{k}\)</span> be a left <span class="math inline">\(\mathcal{O}\)</span>-module such that it is also a Euclidean lattice.</p>
 <p>For <span class="math inline">\(n \le k\)</span>, define the <span class="math inline">\(n\)</span>th minima <span class="math inline">\(\lambda_n(\Lambda)\)</span> of such a lattice to be the radius of the smallest closed ball that contains <span class="math inline">\(n\)</span> vectors that are <span class="math inline">\(D\)</span>-linearly independent under left action.</p>
 <ul>
@@ -70,7 +60,6 @@
 <li>There is a another lattice <span class="math inline">\(\Lambda&#39; \subseteq D_{\mathbb{R}}^{k}\)</span> that is also an <span class="math inline">\(O\)</span>-module and has the same covolume as <span class="math inline">\(\Lambda\)</span>, such that <span class="math display">\[\begin{align}
 \lambda_1(\Lambda&#39;) \ge \left( \lambda_1(\Lambda) \lambda_2(\Lambda)\ldots \lambda_{k}(\Lambda) \right)^{1/k}
 \end{align}\]</span></li>
->>>>>>> 7162c35fb446fd93fa2c6ed31610f9e5b74641cf
 </ul>
 </div>
 <div class="proof">
@@ -82,9 +71,6 @@
   \end{align}\]</span> Since <span class="math inline">\(\Lambda\otimes_{\mathbb{Z}} \mathbb{Q}\)</span> has <span class="math inline">\(\mathbb{Q}\)</span>-dimensions <span class="math inline">\(k[D:\mathbb{Q}]\)</span>, so we know that <span class="math inline">\(\Lambda \setminus (D v_1 + D v_2 + \cdots D v_i)\)</span> will always be non-empty for <span class="math inline">\(i \le k\)</span>. Now suppose that for some <span class="math inline">\(i\)</span>, <span class="math inline">\(a_1,a_2,\cdots,a_i \in D\)</span> satisfy <span class="math display">\[\begin{align}
     a_1 v_1 + a_2 v_2  + a_3 v_3 + \ldots a_i v_i= 0 , \ a_i \neq 0
   \end{align}\]</span> Then, this will imply that <span class="math inline">\(v_i\)</span> lies in the <span class="math inline">\(D\)</span>-span of <span class="math inline">\(v_1,v_2,\cdots,v_{i-1}\)</span> which is impossible. Hence, the claim about linear independent follows.</p>
-<<<<<<< HEAD
-<p>Now <span class="math inline">\(\|v_1\| = \lambda_{1}\)</span> is clear. Suppose it is true upto <span class="math inline">\(i\)</span> that <span class="math inline">\(\lambda_{i} = \|v_i\|\)</span>. Let <span class="math inline">\(\{ w_1,w_2,\cdots,w_{i+1}\} \subseteq \overline{B_{\lambda_{i+1}}(0)}\)</span> such that they are <span class="math inline">\(D\)</span>-linearly independent. Then, because the <span class="math inline">\(\mathbb{Q}\)</span>-dimension of the space they span is larger, at least one of these vectors does not lie in <span class="math inline">\(Dv_1 + D v_2 + \cdots + D v_k\)</span>. Let’s say <span class="math inline">\(w_{i+1}\)</span> is this vector. So <span class="math inline">\(\{ v_1,v_2,\cdots,v_i,w_{i+1}\}\)</span> is not a linear combination of .</p>
-=======
 <p>Observe that <span class="math display">\[\begin{align}
     \|v_1\| \le \|v_2\| \le \ldots \le \|v_k\|,
   \end{align}\]</span> and furthermore for each <span class="math inline">\(i\)</span> <span class="math display">\[\begin{align}
@@ -112,7 +98,6 @@
 <div class="question">
 <p>The proof is very similar to the proof of Minkowski-Siegel reduction theory given in Theorem 3 of <span class="citation" data-cites="W58">[<a href="#ref-W58" role="doc-biblioref">2</a>]</span>. What is the role of the lattice <span class="math inline">\(\Lambda&#39;\)</span> there?</p>
 <p>The <em>v2</em> of <span class="citation" data-cites="G21">[<a href="#ref-G21" role="doc-biblioref">3</a>]</span> might have some hints.</p>
->>>>>>> 7162c35fb446fd93fa2c6ed31610f9e5b74641cf
 </div>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -127,11 +112,7 @@
 </div>
 </div>
 <hr />
-<<<<<<< HEAD
-	<small>	<p class="date">This page was updated on October 1, 2021.<br>
-=======
 	<small>	<p class="date">This page was updated on October 4, 2021.<br>
->>>>>>> 7162c35fb446fd93fa2c6ed31610f9e5b74641cf
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
