@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-09-23" />
+  <meta name="dcterms.date" content="2021-10-04" />
   <title>Minimal Vector of a Lattice</title>
   <style>
     code{white-space: pre-wrap;}
@@ -24,6 +24,12 @@
 <header id="title-block-header">
 <h1 class="title">Minimal Vector of a Lattice</h1>
 </header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#relation-to-svp">Relation to SVP</a></li>
+</ul>
+</nav>
 <p>The minimal vector length of a lattice is a continuous function on the <a href="space_of_lattices.html">space of lattices</a>. Since space of lattices is <span class="math inline">\(GL_n(\mathbb{R})/GL_n(\mathbb{Z})\)</span> with the continuous topology, the following lemma is sufficient to show this.</p>
 <div class="lemma">
 <p>The following is a continuous function on <span class="math inline">\(GL_n(\mathbb{R})\)</span>. <span class="math display">\[\begin{align}
@@ -40,8 +46,10 @@
   g \mapsto \min_{\substack{ x\in \mathbb{Z}^{n} \setminus \{ 0\} \\ \|x\| \le R_{\Omega}}} \|gx\|.
 \end{align}\]</span></p>
 </div>
+<h2 id="relation-to-svp">Relation to SVP</h2>
+<p>Although the function is a continuous function of matrices <span class="math inline">\(g \in GL_n(\mathbb{R})\)</span>, finding the value computationally amounts to solving the <a href="svp.html">SVP</a> problem</p>
 <hr />
-	<small>	<p class="date">This page was updated on September 23, 2021.<br>
+	<small>	<p class="date">This page was updated on October 4, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
