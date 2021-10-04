@@ -4,11 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-<<<<<<< HEAD
-  <meta name="dcterms.date" content="2021-10-03" />
-=======
-  <meta name="dcterms.date" content="2021-09-30" />
->>>>>>> 61b2eba341b3c09cdb4e0fe8a06408dbfba98779
+  <meta name="dcterms.date" content="2021-10-04" />
   <title>Minkowski’s Theorem on Successive Minima</title>
   <style>
     code{white-space: pre-wrap;}
@@ -55,14 +51,13 @@
 </nav>
 <p>Minkowski’s theorem for successive minima is the following theorem specialized for the case when <span class="math inline">\(D=\mathbb{Q}\)</span>. The following more general version is a modification of <span class="citation" data-cites="V11">[<a href="#ref-V11" role="doc-biblioref">1</a>]</span>, but is also based on the ideas given in <span class="citation" data-cites="W58">[<a href="#ref-W58" role="doc-biblioref">2</a>]</span>.</p>
 <div class="theorem">
-<<<<<<< HEAD
-<p>Let <span class="math inline">\(\mathcal{O} \subseteq D\)</span> is an order inside a finite-dimensional <span class="math inline">\(\mathbb{Q}\)</span>-division algebra <span class="math inline">\(D\)</span>. Let <span class="math inline">\(D_{\mathbb{R}}^{k} = (D \otimes_{\mathbb{Q}} \mathbb{R})^{\oplus k}\)</span> endowed with a Euclidean norm <span class="math inline">\(\|\ \|\)</span>. Let <span class="math inline">\(\Lambda \subseteq D_{\mathbb{R}}^{k}\)</span> be a left <span class="math inline">\(\mathcal{O}\)</span>-module such that it is also a Euclidean lattice.</p>
+<p>Let <span class="math inline">\(\mathcal{O} \subseteq D\)</span> is an order inside a finite-dimensional <span class="math inline">\(\mathbb{Q}\)</span>-division algebra <span class="math inline">\(D\)</span>. Let <span class="math inline">\(D_{\mathbb{R}}^{k} = (D \otimes_{\mathbb{Q}} \mathbb{R})^{\oplus k}\)</span> endowed with a Euclidean norm <span class="math inline">\(\|\ \|\)</span>, arising from a fixed Euclidean norm <span class="math inline">\(| \ |\)</span> on each copy of <span class="math inline">\(D_{\mathbb{R}}\)</span>. Let <span class="math inline">\(\Lambda \subseteq D_{\mathbb{R}}^{k}\)</span> be a left <span class="math inline">\(\mathcal{O}\)</span>-module such that it is also a Euclidean lattice.</p>
 <p>For <span class="math inline">\(n \le k\)</span>, define the <span class="math inline">\(n\)</span>th minima <span class="math inline">\(\lambda_n(\Lambda)\)</span> of such a lattice to be the radius of the smallest closed ball that contains <span class="math inline">\(n\)</span> vectors that are <span class="math inline">\(D\)</span>-linearly independent under left action.</p>
 <ul>
 <li>There exists a set of <span class="math inline">\(k\)</span> vectors in <span class="math inline">\(\Lambda\)</span> that are <span class="math inline">\(D\)</span>-linearly independent and <span class="math inline">\(\|v_i\|= \lambda_i(\Lambda)\)</span></li>
 <li>There is a another lattice <span class="math inline">\(\Lambda&#39; \subseteq D_{\mathbb{R}}^{k}\)</span> that is also an <span class="math inline">\(O\)</span>-module and has the same covolume as <span class="math inline">\(\Lambda\)</span>, such that <span class="math display">\[\begin{align}
 \lambda_1(\Lambda&#39;) \ge \left( \lambda_1(\Lambda) \lambda_2(\Lambda)\ldots \lambda_{k}(\Lambda) \right)^{1/k}
-\end{align}\]</span>&lt;++&gt;</li>
+\end{align}\]</span></li>
 </ul>
 </div>
 <div class="proof">
@@ -87,15 +82,12 @@
     \vdots 
   \end{align}\]</span> and define</p>
 <p>This is just the Gram-Schmidt algorithm. Because <span class="math inline">\(x_i\)</span> are also <span class="math inline">\(D\)</span>-linearly independenet, i is clear that <span class="math inline">\(D_{\mathbb{R}} x_1 + D_{\mathbb{R}} x_2 + \cdots D_{\mathbb{R}} x_k\)</span></p>
-<p>Now consider the linear transform <span class="math inline">\(T: y \mapsto (\frac{y_1}{ \lambda_1}, \frac{y_2}{\lambda_2},\cdots)\)</span> and define <span class="math display">\[\begin{align}
-    \Lambda&#39; =  (\lambda_1 \lambda_2 \ldots \lambda_k)^{ {1}/{[D:\mathbb{Q}]}}T(\Lambda)
-  \end{align}\]</span> Observe that <span class="math inline">\(\det(\Lambda&#39;) = \det(\Lambda)\)</span>. Furthermore,</p>
+<p>Now consider the linear transform <span class="math inline">\(T: y \mapsto (\frac{y_1}{ \lambda_1}, \frac{y_2}{\lambda_2},\cdots)\)</span> for a <span class="math inline">\(y = y_1 x_1 + \cdots y_k x_k\)</span>, <span class="math inline">\(y_i \in D_{\mathbb{R}}\)</span> and define <span class="math display">\[\begin{align}
+    \Lambda&#39; =  (\lambda_1 \lambda_2 \ldots \lambda_k)^{ {1}/{k}}T(\Lambda)
+  \end{align}\]</span> Observe that <span class="math inline">\(\det(\Lambda&#39;) = \det(\Lambda)\)</span>. For any <span class="math inline">\(y&#39; \in \Lambda&#39; \setminus \{ 0\}\)</span>, we can find a <span class="math inline">\(y = y_1 x_1 + \cdots + y_k x_k \in \Lambda\)</span> such that <span class="math inline">\(y&#39; = (\lambda_1\cdots \lambda_k)^{1/k} T ( y)\)</span>. Furthermore, there must be a smallest <span class="math inline">\(i_0 \ge 1\)</span> that <span class="math inline">\(y_{i_0} \neq 0\)</span> and <span class="math inline">\(y_{i_0+1} = y_{i_0+2} = \cdots = y_{k} = 0\)</span>. Then <span class="math inline">\(y \in D_{\mathbb{R}} v_1 + D_{\mathbb{R}} v_2 + \cdots + D_{\mathbb{R}} v_{i_0}\)</span> and not in <span class="math inline">\(D_{\mathbb{R}} v_1 + \cdots + D_{\mathbb{R}} v_{i_0 - 1}\)</span>. Therefore <span class="math inline">\(\|y\| \ge \lambda_{i_0}\)</span>. This implies that <span class="math display">\[\begin{align}
+  \|y&#39;\|^{2} = \left( \lambda_1 \lambda_2 \ldots \lambda_k \right)^{2/k} \sum_{i=1}^{i_0} \left| \frac{y_i}{\lambda_i}\right|^{2}   \ge \left( \lambda_1 \lambda_2 \ldots \lambda_k \right)^{2/k} \frac{1}{\lambda_{i_0}^{2}} \sum_{i=1}^{k}\left| {y_1}\right|^{2} \ge (\lambda_1 \ldots \lambda_k)^{2/k}
+\end{align}\]</span> This lower bound is tight, since we can set <span class="math inline">\(y_1=1_{D_{\mathbb{R}}}\)</span> and the rest <span class="math inline">\(y_i=0\)</span> for <span class="math inline">\(i \ge 2\)</span>.</p>
 </div>
-=======
-<p>Let <span class="math inline">\(\mathcal{O} \subseteq D\)</span> is an order inside a finite-dimensional <span class="math inline">\(\mathbb{Q}\)</span>-division algebra <span class="math inline">\(D\)</span>. Let <span class="math inline">\(D_{\mathbb{R}} = D \otimes_{\mathbb{Q}} \mathbb{R}\)</span>.</p>
-</div>
-<p>&lt;++&gt;</p>
->>>>>>> 61b2eba341b3c09cdb4e0fe8a06408dbfba98779
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-V11" class="csl-entry" role="doc-biblioentry">
@@ -106,11 +98,7 @@
 </div>
 </div>
 <hr />
-<<<<<<< HEAD
-	<small>	<p class="date">This page was updated on October 3, 2021.<br>
-=======
-	<small>	<p class="date">This page was updated on September 30, 2021.<br>
->>>>>>> 61b2eba341b3c09cdb4e0fe8a06408dbfba98779
+	<small>	<p class="date">This page was updated on October 4, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
