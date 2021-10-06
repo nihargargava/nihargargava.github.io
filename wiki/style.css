@@ -119,6 +119,18 @@ dl dd {
     font-weight: bold;
     font-style: normal;
 }
+
+.remark {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.remark:before {
+    content: "Remark";
+    font-weight: bold;
+    font-style: normal;
+}
+
 .question {
     margin: 10px ;
     font-style: italic;

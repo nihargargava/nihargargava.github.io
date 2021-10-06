@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-10-04" />
+  <meta name="dcterms.date" content="2021-10-05" />
   <title>Minkowski’s Theorem on Successive Minima</title>
   <style>
     code{white-space: pre-wrap;}
@@ -90,6 +90,11 @@
   \|y&#39;\|^{2} = \left( \lambda_1 \lambda_2 \ldots \lambda_k \right)^{2/k} \sum_{i=1}^{i_0} \left| \frac{y_i}{\lambda_i}\right|^{2}   \ge \left( \lambda_1 \lambda_2 \ldots \lambda_k \right)^{2/k} \frac{1}{\lambda_{i_0}^{2}} \sum_{i=1}^{k}\left| {y_1}\right|^{2} \ge (\lambda_1 \ldots \lambda_k)^{2/k}
 \end{align}\]</span> This lower bound is tight, since we can set <span class="math inline">\(y_1=1_{D_{\mathbb{R}}}\)</span> and the rest <span class="math inline">\(y_i=0\)</span> for <span class="math inline">\(i \ge 2\)</span>.</p>
 </div>
+<p> </p>
+<div class="remark">
+<p>It is not implied in the Theorem that <span class="math inline">\(v_1,v_2,\cdots,v_k\)</span> generate <span class="math inline">\(\Lambda\)</span> as an <span class="math inline">\(\mathcal{O}\)</span>-module. Consider the case with <span class="math inline">\(k \ge 4\)</span>, <span class="math inline">\(D=\mathbb{Q}\)</span> and <span class="math inline">\(\mathcal{O}=\mathbb{Z}\)</span>, let <span class="math inline">\(\Lambda= 2 \mathbb{Z}e_1 + 2\mathbb{Z}e_2 +\cdots + 2 \mathbb{Z} e_{k-1} + \mathbb{Z}(e_1+e_2+\cdots+ e_k)\)</span>. Then all <span class="math inline">\(\lambda_i = 2\)</span> with the standard norm in <span class="math inline">\(\mathbb{R}^{k}\)</span> but any <span class="math inline">\(\mathbb{Z}\)</span>-basis must contain at least one vector of length <span class="math inline">\(\sqrt{k}\)</span>.</p>
+<p>Indeed, let <span class="math inline">\(v_1, v_2,\cdots,v_k \subseteq \mathbb{Z}^{k}\)</span> be a <span class="math inline">\(\mathbb{Z}\)</span>-basis. If all <span class="math inline">\(v_i\)</span> have even coordinates, then they cannot be generating <span class="math inline">\(\Lambda\)</span>. So at least one of them has odd coordinates.</p>
+</div>
 <h2 id="effectiveness">Effectiveness</h2>
 <div class="question">
 <p>Can this Theorem be made effective? If the lattice <span class="math inline">\(\Lambda\)</span> is known, say in the form of a matrix, can you generate <span class="math inline">\(\Lambda&#39;\)</span> in finite time?</p>
@@ -112,7 +117,7 @@
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on October 4, 2021.<br>
+	<small>	<p class="date">This page was updated on October 5, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
