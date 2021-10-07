@@ -99,17 +99,15 @@
 </div>
 <p> </p>
 <div class="remark">
-<p>It is not implied in the Theorem that <span class="math inline">\(v_1,v_2,\cdots,v_k\)</span> generate <span class="math inline">\(\Lambda\)</span> as an <span class="math inline">\(\mathcal{O}\)</span>-module. Consider the case with <span class="math inline">\(k \ge 4\)</span>, <span class="math inline">\(D=\mathbb{Q}\)</span> and <span class="math inline">\(\mathcal{O}=\mathbb{Z}\)</span>, let <span class="math inline">\(\Lambda= 2 \mathbb{Z}e_1 + 2\mathbb{Z}e_2 +\cdots + 2 \mathbb{Z} e_{k-1} + \mathbb{Z}(e_1+e_2+\cdots+ e_k)\)</span>. Then all <span class="math inline">\(\lambda_i = 2\)</span> with the standard norm in <span class="math inline">\(\mathbb{R}^{k}\)</span> but any <span class="math inline">\(\mathbb{Z}\)</span>-basis must contain at least one vector of length <span class="math inline">\(\sqrt{k}\)</span>.</p>
-<p>Indeed, let <span class="math inline">\(v_1, v_2,\cdots,v_k \subseteq \mathbb{Z}^{k}\)</span> be a <span class="math inline">\(\mathbb{Z}\)</span>-basis. If all <span class="math inline">\(v_i\)</span> have even coordinates, then they cannot be generating <span class="math inline">\(\Lambda\)</span>. So at least one of them has odd coordinates.</p>
+<p>It is not implied in the Theorem that <span class="math inline">\(v_1,v_2,\cdots,v_k\)</span> generate <span class="math inline">\(\Lambda\)</span> as an <span class="math inline">\(\mathcal{O}\)</span>-module. Consider the case with <span class="math inline">\(k \ge 4\)</span>, <span class="math inline">\(D=\mathbb{Q}\)</span> and <span class="math inline">\(\mathcal{O}=\mathbb{Z}\)</span>, let <span class="math inline">\(\Lambda= 2 \mathbb{Z}e_1 + 2\mathbb{Z}e_2 +\cdots + 2 \mathbb{Z} e_{k-1} + \mathbb{Z}(e_1+e_2+\cdots+ e_k)\)</span>. Then all <span class="math inline">\(\lambda_i = 2 = \|2 e_{i}\|\)</span> with the standard norm in <span class="math inline">\(\mathbb{R}^{k}\)</span> but any <span class="math inline">\(\mathbb{Z}\)</span>-basis must contain at least one vector of length at least <span class="math inline">\(\sqrt{k}\)</span>.</p>
+<p>Indeed, let <span class="math inline">\(v_1, v_2,\cdots,v_k \subseteq \mathbb{Z}^{k}\)</span> be a <span class="math inline">\(\mathbb{Z}\)</span>-basis. If all <span class="math inline">\(v_i\)</span> have even coordinates, then they cannot be generating <span class="math inline">\(\Lambda\)</span>. So at least one of them has odd coordinates, but this will force it to have a length of bigger than <span class="math inline">\(\sqrt{k}\)</span></p>
 </div>
 <h2 id="effectiveness">Effectiveness</h2>
-<div class="question">
-<p>Can this Theorem be made effective? If the lattice <span class="math inline">\(\Lambda\)</span> is known, say in the form of a matrix, can you generate <span class="math inline">\(\Lambda&#39;\)</span> in finite time?</p>
-</div>
+<p>This theorem can be made effective. For the case where <span class="math inline">\(D=\mathbb{Q}\)</span>, this is the subject of the SMP (Successive Minima Problem). See <span class="citation" data-cites="M12">[<a href="#ref-M12" role="doc-biblioref">3</a>]</span>.</p>
 <h2 id="reduction-theory">Reduction theory</h2>
 <div class="question">
 <p>The proof is very similar to the proof of Minkowski-Siegel reduction theory given in Theorem 3 of <span class="citation" data-cites="W58">[<a href="#ref-W58" role="doc-biblioref">2</a>]</span>. What is the role of the lattice <span class="math inline">\(\Lambda&#39;\)</span> there?</p>
-<p>The <em>v2</em> of <span class="citation" data-cites="G21">[<a href="#ref-G21" role="doc-biblioref">3</a>]</span> might have some hints.</p>
+<p>The <em>v2</em> of <span class="citation" data-cites="G21">[<a href="#ref-G21" role="doc-biblioref">4</a>]</span> might have some hints.</p>
 </div>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -119,8 +117,11 @@
 <div id="ref-W58" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">2. </div><div class="csl-right-inline">A. Weil, <em>Discontinuous subgroups of classical groups: lectures</em> (University of Chicago, 1958).</div>
 </div>
+<div id="ref-M12" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">D. Micciancio &amp; S. Goldwasser, <em>Complexity of lattice problems: A cryptographic perspective</em> (Springer Science &amp; Business Media, 2012).</div>
+</div>
 <div id="ref-G21" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">N. P. Gargava, Lattice packings through division algebras. (2021).</div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">N. P. Gargava, Lattice packings through division algebras. (2021).</div>
 </div>
 </div>
 <hr />
