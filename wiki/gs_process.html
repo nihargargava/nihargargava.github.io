@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2021-10-11" />
+  <title>Gram-Schmidt Orthonormalization Process</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Gram-Schmidt Orthonormalization Process</h1>
+</header>
+<p>This is a very generalized form of Gram-Schmidt algorithm. The setup for this is the same as that of <a href="rss_algebra.html">real semisimple algebras with a positive involution</a>, but in the special case when the semisimple algebra arises from a division <span class="math inline">\(\mathbb{Q}\)</span>-algebra.</p>
+<p>Let <span class="math inline">\(D\)</span> be a division algebra over <span class="math inline">\(\mathbb{Q}\)</span> and let <span class="math inline">\(D_{\mathbb{R}} = D \otimes_{\mathbb{Q}}\mathbb{R}\)</span> and let <span class="math inline">\((\ )^{*}: D_{\mathbb{R}}\rightarrow D_{\mathbb{R}}\)</span> be a positive involution.</p>
+<p>Let <span class="math inline">\(k \ge 1\)</span>. Let us define <span class="math display">\[\begin{align}
+  \langle \ , \ \rangle_{D_{\mathbb{R}}} : D_{\mathbb{R}}^{k} \times D_{\mathbb{R}}^{k} &amp; \mapsto D_{\mathbb{R}} \\
+  \langle x,y\rangle &amp; = \sum_{i=1}^{k} x_{i}^{*} y_{i}.
+\end{align}\]</span></p>
+<div class="remark">
+<p>This form is not necessarily <span class="math inline">\(D_{\mathbb{R}}\)</span>-bilinear, since <span class="math inline">\(D_{\mathbb{R}}\)</span> may not be commutative. We can then define a real bilinear form on <span class="math inline">\(D_{\mathbb{R}}^{k}\)</span> given by <span class="math display">\[\begin{align}
+    \langle x,y\rangle_{\mathbb{R}} = \mathop{\mathrm{tr}}\left(\langle x, y\rangle_{D_{\mathbb{R}}}\right).
+  \end{align}\]</span></p>
+</div>
+<p>Note that, for any <span class="math inline">\(x \in D_{\mathbb{R}}^{k} \setminus \{ 0\}\)</span>, we have that <span class="math inline">\(\langle x,x\rangle_{D_{\mathbb{R}}}\)</span> is a symmetric positive definite element of <span class="math inline">\(D_{\mathbb{R}}\)</span> as defined <a href="rss_algebra.html">in here</a>. Hence, in particular <span class="math inline">\(\langle x,x\rangle_{D_{\mathbb{R}}}\)</span> is a zero non-divisor in <span class="math inline">\(D_{\mathbb{R}}\)</span> and therefore is a unit. Therefore, it makes sense to talk about <span class="math inline">\(\langle x,x\rangle_{D_{\mathbb{R}}}^{-1} \in D_{\mathbb{R}}\)</span>.</p>
+<hr />
+	<small>	<p class="date">This page was updated on October 11, 2021.<br>
+		<a href="index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
