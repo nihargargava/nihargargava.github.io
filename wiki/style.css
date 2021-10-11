@@ -131,30 +131,29 @@ dl dd {
     font-weight: bold;
     font-style: normal;
 }
-<<<<<<< HEAD
-.corollary {
-=======
 
-.remark {
->>>>>>> 2621af3efebed9fe21fa8b2d4af5b24aaf643fce
+.corollary {
     display: block;
     margin: 12px 0;
     font-style: italic;
 }
-<<<<<<< HEAD
 .corollary:before {
     content: "Corollary";
     font-weight: bold;
     font-style: normal;
 }
-=======
+
+.remark {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
 .remark:before {
     content: "Remark";
     font-weight: bold;
     font-style: normal;
 }
 
->>>>>>> 2621af3efebed9fe21fa8b2d4af5b24aaf643fce
 .question {
     margin: 10px ;
     font-style: italic;
