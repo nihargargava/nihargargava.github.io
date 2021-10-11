@@ -109,6 +109,18 @@ dl dd {
     font-weight: bold;
     font-style: normal;
 }
+.proposition {
+    margin: 10px;
+    font-style: italic;
+    display: block;
+    border: 2px solid #000;
+    padding: 10px;
+}
+.proposition:before {
+    content: "Proposition";
+    font-weight: bold;
+    font-style: normal;
+}
 .lemma {
     display: block;
     margin: 12px 0;
@@ -116,6 +128,16 @@ dl dd {
 }
 .lemma:before {
     content: "Lemma";
+    font-weight: bold;
+    font-style: normal;
+}
+.corollary {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.corollary:before {
+    content: "Corollary";
     font-weight: bold;
     font-style: normal;
 }
