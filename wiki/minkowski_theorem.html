@@ -4,7 +4,11 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<<<<<<< HEAD
   <meta name="dcterms.date" content="2021-10-11" />
+=======
+  <meta name="dcterms.date" content="2021-10-08" />
+>>>>>>> 2621af3efebed9fe21fa8b2d4af5b24aaf643fce
   <title>Minkowski’s Theorem on Successive Minima</title>
   <style>
     code{white-space: pre-wrap;}
@@ -76,28 +80,39 @@
   \end{align}\]</span> and furthermore for each <span class="math inline">\(i\)</span> <span class="math display">\[\begin{align}
     \|v_i\| \ge \lambda_i.
   \end{align}\]</span> Now <span class="math inline">\(\|v_1\| = \lambda_{1}\)</span> is clear. Suppose it is true upto <span class="math inline">\(i\)</span> that <span class="math inline">\(\lambda_{i} = \|v_i\|\)</span>. Let <span class="math inline">\(\{ w_1,w_2,\cdots,w_{i+1}\} \subseteq \overline{B_{\lambda_{i+1}}(0)}\)</span> such that they are <span class="math inline">\(D\)</span>-linearly independent. Then, because the <span class="math inline">\(\mathbb{Q}\)</span>-dimension of the space they span is larger, at least one of these vectors does not lie in <span class="math inline">\(Dv_1 + D v_2 + \cdots + D v_k\)</span>. Let’s say <span class="math inline">\(w_{i+1}\)</span> is this vector. So <span class="math inline">\(\{ v_1,v_2,\cdots,v_i,w_{i+1}\}\)</span> is a <span class="math inline">\(D\)</span>-linearly independent set of vectors. Knowing that <span class="math inline">\(\|w_{i+1}\| \ge \lambda_1\)</span>, we try to find the smallest <span class="math inline">\(j \in \{2,\cdots, i+1\}\)</span> so that <span class="math inline">\(\|w_{i+1}\| &lt; \lambda_{j}\)</span>. Such a <span class="math inline">\(j\)</span> is not possible by the definition of <span class="math inline">\(\lambda_j\)</span> and hence <span class="math inline">\(\|w_{i+1}\| \ge \lambda_{j}\)</span>. In particular, <span class="math inline">\(\|w_{i+1}\|= \lambda_{i+1}\)</span>. So <span class="math inline">\(\|w_{i+1}\|=\lambda_{i+1}\)</span>. So <span class="math inline">\(\|v_i\|\ge \|w_i\|\)</span>. On the other hand <span class="math inline">\(\|v_{i+1}\| &gt; \|w_{i+1}\|\)</span> is not possible by the definition of <span class="math inline">\(\|v_{i+1}\|\)</span> so we have <span class="math inline">\(\|v_{i+1}\| = \|w_{i+1}\|= \lambda_{i+1}\)</span>.</p>
-<p>To get the second, let <span class="math inline">\(\langle \ , \ \rangle\)</span> be the inner product associated to the norm <span class="math inline">\(\| \ \|\)</span>. We now generate vectors <span class="math inline">\(x_1,x_2,\cdots,x_k\)</span> as follows. <span class="math display">\[\begin{align}
+<p>To get the second, let <span class="math inline">\(\langle \ , \ \rangle\)</span> be the inner product associated to the norm <span class="math inline">\(\| \ \|\)</span>. Now choose any <span class="math inline">\(\{t_{ij} \}_{i&gt;j} \subseteq D_{\mathbb{R}}\)</span> and generate vectors <span class="math inline">\(x_1,x_2,\cdots,x_k\)</span> as follows. <span class="math display">\[\begin{align}
     x_1 &amp;  = {v_1}, \\ 
-    x_2 &amp; = {v_2} - \frac{\langle v_1,v_2\rangle}{\langle  v_1, v_1\rangle} v_1\\
-    x_3 &amp; = {v_3} - \frac{\langle v_1,v_3\rangle}{\langle  v_1, v_1\rangle} v_1- \frac{\langle v_2,v_3\rangle}{\langle  v_2, v_2\rangle} v_2\\
-    x_4 &amp; = {v_4} - \frac{\langle v_1,v_4\rangle}{\langle  v_1, v_1\rangle} v_1- \frac{\langle v_2,v_4\rangle}{\langle  v_2, v_2\rangle} v_2- \frac{\langle v_3,v_4\rangle}{\langle  v_3, v_3\rangle} v_3\\
-    \vdots 
-  \end{align}\]</span> and define</p>
-<p>This is just the Gram-Schmidt algorithm. Because <span class="math inline">\(x_i\)</span> are also <span class="math inline">\(D\)</span>-linearly independenet, i is clear that <span class="math inline">\(D_{\mathbb{R}} x_1 + D_{\mathbb{R}} x_2 + \cdots D_{\mathbb{R}} x_k\)</span></p>
-<p>Now consider the linear transform <span class="math inline">\(T: y \mapsto (\frac{y_1}{ \lambda_1}, \frac{y_2}{\lambda_2},\cdots)\)</span> for a <span class="math inline">\(y = y_1 x_1 + \cdots y_k x_k\)</span>, <span class="math inline">\(y_i \in D_{\mathbb{R}}\)</span> and define <span class="math display">\[\begin{align}
+    x_{2} &amp; = t_{12} v_{1} + v_{2} \\
+    x_{3} &amp; = t_{13}  v_{1} + t_{23} v_{2} + v_{3} \\
+    \vdots\\
+    x_{k} &amp; = t_{1k} v_{1} +  t_{2k}v_{2} + \ldots  + v_{k}
+  \end{align}\]</span></p>
+<p>Now note that any <span class="math inline">\(y \in D_{\mathbb{R}}^{k}\)</span> can be written as <span class="math inline">\(y=y_1 x_1 + \cdots + y_k x_k\)</span>. Indeed, this is true for when <span class="math inline">\(t_{ij} = 0\)</span>, since <span class="math display">\[D_{\mathbb{R}}v_1 + D_{\mathbb{R}} v_{2} + \cdots D_{\mathbb{R}} v_{k} =  (D v_1 + D v_{2} +\cdots + D {v_k}) \otimes_{\mathbb{Q}} \mathbb{R},\]</span> and for a general <span class="math inline">\(t_{ij}\)</span>, we can find an inverse of the matrix <span class="math display">\[\begin{align}
+    \begin{bmatrix} 1 &amp; 0 &amp; \cdots &amp; 0 \\
+    t_{12} &amp; 1 &amp; \cdots&amp;  0  \\
+  t_{13} &amp; t_{23} &amp; \cdots &amp; 0 \\  
+  \vdots &amp; &amp; &amp; \\
+  t_{1k} &amp; t_{2k} &amp; \cdots &amp; 1
+\end{bmatrix}.
+  \end{align}\]</span></p>
+<p>Now consider the linear transform <span class="math inline">\(T: y \mapsto \left( \frac{y_1}{ \lambda_1} x_1 + \frac{y_2}{\lambda_2} x_2 + \cdots + \frac{y_k}{\lambda_k} x_k\right)\)</span> for a <span class="math inline">\(y = y_1 x_1 + \cdots y_k x_k\)</span>, <span class="math inline">\(y_i \in D_{\mathbb{R}}\)</span> and define <span class="math display">\[\begin{align}
     \Lambda&#39; =  (\lambda_1 \lambda_2 \ldots \lambda_k)^{ {1}/{k}}T(\Lambda)
-  \end{align}\]</span> Observe that <span class="math inline">\(\det(\Lambda&#39;) = \det(\Lambda)\)</span>. For any <span class="math inline">\(y&#39; \in \Lambda&#39; \setminus \{ 0\}\)</span>, we can find a <span class="math inline">\(y = y_1 x_1 + \cdots + y_k x_k \in \Lambda\)</span> such that <span class="math inline">\(y&#39; = (\lambda_1\cdots \lambda_k)^{1/k} T ( y)\)</span>. Furthermore, there must be a smallest <span class="math inline">\(i_0 \ge 1\)</span> that <span class="math inline">\(y_{i_0} \neq 0\)</span> and <span class="math inline">\(y_{i_0+1} = y_{i_0+2} = \cdots = y_{k} = 0\)</span>. Then <span class="math inline">\(y \in D_{\mathbb{R}} v_1 + D_{\mathbb{R}} v_2 + \cdots + D_{\mathbb{R}} v_{i_0}\)</span> and not in <span class="math inline">\(D_{\mathbb{R}} v_1 + \cdots + D_{\mathbb{R}} v_{i_0 - 1}\)</span>. Therefore <span class="math inline">\(\|y\| \ge \lambda_{i_0}\)</span>. This implies that <span class="math display">\[\begin{align}
+  \end{align}\]</span> Observe that <span class="math inline">\(\det(\Lambda&#39;) = \det(\Lambda)\)</span>. For any <span class="math inline">\(y&#39; \in \Lambda&#39; \setminus \{ 0\}\)</span>, we can find a <span class="math inline">\(y = y_1 x_1 + \cdots + y_k x_k \in \Lambda\)</span> such that <span class="math inline">\(y&#39; = (\lambda_1\cdots \lambda_k)^{1/k} T ( y)\)</span>. Furthermore, there must be a smallest <span class="math inline">\(i_0 \ge 1\)</span> that <span class="math inline">\(y_{i_0} \neq 0\)</span> and <span class="math inline">\(y_{i_0+1} = y_{i_0+2} = \cdots = y_{k} = 0\)</span>. Then <span class="math inline">\(y \in \Lambda \cap ( D_{\mathbb{R}} v_1 + D_{\mathbb{R}} v_2 + \cdots + D_{\mathbb{R}} v_{i_0})\)</span> and not in <span class="math inline">\(\Lambda \cap ( D_{\mathbb{R}} v_1 + \cdots + D_{\mathbb{R}} v_{i_0 - 1} )\)</span>. Therefore <span class="math inline">\(\|y\| \ge \lambda_{i_0}\)</span>. This implies that <span class="math display">\[\begin{align}
   \|y&#39;\|^{2} = \left( \lambda_1 \lambda_2 \ldots \lambda_k \right)^{2/k} \sum_{i=1}^{i_0} \left| \frac{y_i}{\lambda_i}\right|^{2}   \ge \left( \lambda_1 \lambda_2 \ldots \lambda_k \right)^{2/k} \frac{1}{\lambda_{i_0}^{2}} \sum_{i=1}^{k}\left| {y_1}\right|^{2} \ge (\lambda_1 \ldots \lambda_k)^{2/k}
 \end{align}\]</span> This lower bound is tight, since we can set <span class="math inline">\(y_1=1_{D_{\mathbb{R}}}\)</span> and the rest <span class="math inline">\(y_i=0\)</span> for <span class="math inline">\(i \ge 2\)</span>.</p>
 </div>
-<h2 id="effectiveness">Effectiveness</h2>
-<div class="question">
-<p>Can this Theorem be made effective? If the lattice <span class="math inline">\(\Lambda\)</span> is known, say in the form of a matrix, can you generate <span class="math inline">\(\Lambda&#39;\)</span> in finite time?</p>
+<p> </p>
+<div class="remark">
+<p>It is not implied in the Theorem that <span class="math inline">\(v_1,v_2,\cdots,v_k\)</span> generate <span class="math inline">\(\Lambda\)</span> as an <span class="math inline">\(\mathcal{O}\)</span>-module. Consider the case with <span class="math inline">\(k \ge 4\)</span>, <span class="math inline">\(D=\mathbb{Q}\)</span> and <span class="math inline">\(\mathcal{O}=\mathbb{Z}\)</span>, let <span class="math inline">\(\Lambda= 2 \mathbb{Z}e_1 + 2\mathbb{Z}e_2 +\cdots + 2 \mathbb{Z} e_{k-1} + \mathbb{Z}(e_1+e_2+\cdots+ e_k)\)</span>. Then all <span class="math inline">\(\lambda_i = 2 = \|2 e_{i}\|\)</span> with the standard norm in <span class="math inline">\(\mathbb{R}^{k}\)</span> but any <span class="math inline">\(\mathbb{Z}\)</span>-basis must contain at least one vector of length at least <span class="math inline">\(\sqrt{k}\)</span>.</p>
+<p>Indeed, let <span class="math inline">\(v_1, v_2,\cdots,v_k \subseteq \mathbb{Z}^{k}\)</span> be a <span class="math inline">\(\mathbb{Z}\)</span>-basis. If all <span class="math inline">\(v_i\)</span> have even coordinates, then they cannot be generating <span class="math inline">\(\Lambda\)</span>. So at least one of them has odd coordinates, but this will force it to have a length of bigger than <span class="math inline">\(\sqrt{k}\)</span></p>
 </div>
+<h2 id="effectiveness">Effectiveness</h2>
+<p>This theorem can be made effective. For the case where <span class="math inline">\(D=\mathbb{Q}\)</span>, this is the subject of the SMP (Successive Minima Problem). The idea is that it can be reduced to finitely many calls to a variant of the <a href="svp.html">SVP</a> algorithm, which is demonstrably deterministic.</p>
+<p>See <span class="citation" data-cites="M12">[<a href="#ref-M12" role="doc-biblioref">3</a>]</span>.</p>
 <h2 id="reduction-theory">Reduction theory</h2>
 <div class="question">
 <p>The proof is very similar to the proof of Minkowski-Siegel reduction theory given in Theorem 3 of <span class="citation" data-cites="W58">[<a href="#ref-W58" role="doc-biblioref">2</a>]</span>. What is the role of the lattice <span class="math inline">\(\Lambda&#39;\)</span> there?</p>
-<p>The <em>v2</em> of <span class="citation" data-cites="G21">[<a href="#ref-G21" role="doc-biblioref">3</a>]</span> might have some hints.</p>
+<p>The <em>v2</em> of <span class="citation" data-cites="G21">[<a href="#ref-G21" role="doc-biblioref">4</a>]</span> might have some hints.</p>
 </div>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -107,12 +122,19 @@
 <div id="ref-W58" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">2. </div><div class="csl-right-inline">A. Weil, <em>Discontinuous subgroups of classical groups: lectures</em> (University of Chicago, 1958).</div>
 </div>
+<div id="ref-M12" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">D. Micciancio &amp; S. Goldwasser, <em>Complexity of lattice problems: A cryptographic perspective</em> (Springer Science &amp; Business Media, 2012).</div>
+</div>
 <div id="ref-G21" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">N. P. Gargava, Lattice packings through division algebras. (2021).</div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">N. P. Gargava, Lattice packings through division algebras. (2021).</div>
 </div>
 </div>
 <hr />
+<<<<<<< HEAD
 	<small>	<p class="date">This page was updated on October 11, 2021.<br>
+=======
+	<small>	<p class="date">This page was updated on October 8, 2021.<br>
+>>>>>>> 2621af3efebed9fe21fa8b2d4af5b24aaf643fce
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
