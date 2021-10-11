@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-10-11" />
+  <meta name="dcterms.date" content="2021-10-12" />
   <title>Real Semisimple Algebra</title>
   <style>
     code{white-space: pre-wrap;}
@@ -27,12 +27,18 @@
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
+<li><a href="#structure-theorem">Structure theorem</a></li>
+<li><a href="#positive-involutions">Positive involutions</a>
+<ul>
+<li><a href="#symmetric-and-positive-definite-elements">Symmetric and positive definite elements</a></li>
+</ul></li>
 <li><a href="#norm-trace-inequality">Norm-trace inequality</a></li>
 <li><a href="#cholesky-decomposition">Cholesky Decomposition</a></li>
 <li><a href="#division-algebra">Division algebra</a></li>
 </ul>
 </nav>
 <p>This page is about finite semisimple <span class="math inline">\(\mathbb{R}\)</span>-algebra.</p>
+<h2 id="structure-theorem">Structure theorem</h2>
 <div class="theorem">
 <p><strong>(Artin-Wedderburn)</strong> Suppose <span class="math inline">\(A\)</span> is a semisimple algebra over a field <span class="math inline">\(k\)</span>. Then for some finite-dimensional <span class="math inline">\(k\)</span>-division algebras <span class="math inline">\(D_1, D_2, \dots, D_r\)</span> and natural numbers <span class="math inline">\(n_1, \dots , n_r\)</span>, we get the isomorphism <span class="math display">\[\begin{align}    
     A \simeq M_{n_1}(D_1) \oplus \dots \oplus M_{n_r}(D_r).
@@ -48,6 +54,7 @@
 <div class="proposition">
 <p>Any semisimple <span class="math inline">\(\mathbb{R}\)</span>-algebra is isomorphic to one of products of matrix algebras over <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(\mathbb{C}\)</span> and <span class="math inline">\(\mathbb{H}\)</span>.</p>
 </div>
+<h2 id="positive-involutions">Positive involutions</h2>
 <p>Matrix algebras over <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(\mathbb{C}\)</span> and <span class="math inline">\(\mathbb{H}\)</span> are well understood. One important property is that the conjugation map defined above can be extended to a <em>conjugate transpose</em> involution on such matrices by simply defining the mapping <span class="math inline">\([x_{ij}]^{*} = [\overline{x_{ji}}]\)</span>. With this, we can also define a positive definite quadratic form on these matrix algebras by sending <span class="math inline">\(a \mapsto \mathop{\mathrm{tr}}( a^{*} a)\)</span>.</p>
 <p>On a given finite-dimensional algebra over <span class="math inline">\(\mathbb{R}\)</span>, it is possible to define the trace map <span class="math inline">\(\mathop{\mathrm{tr}}_{A}: A \rightarrow \mathbb{R}\)</span> and the norm map <span class="math inline">\(\mathop{\mathrm{N}}_{A}: A \rightarrow \mathbb{R}\)</span> as the trace and the determinant of the matrix of the left-multiplication operation induced by any element. Similarly, it is also possible to generalize the above involution simply by taking direct sums of the respective involutions for matrix rings over <span class="math inline">\(\mathbb{R}, \mathbb{C}\)</span> or <span class="math inline">\(\mathbb{H}\)</span>. We will omit the subscripts in <span class="math inline">\(\mathop{\mathrm{tr}}_{A}\)</span> and <span class="math inline">\(\mathop{\mathrm{N}}_{A}\)</span> when <span class="math inline">\(A\)</span> is clear from the context.</p>
 <div class="corollary">
@@ -75,6 +82,7 @@
 <div class="proof">
 <p>The proofs are very enjoyable, so we leave all of them for the reader. The third one will require the use of semisimplicity of <span class="math inline">\(A\)</span>, which implies that the left-multiplication trace and right-multiplication trace are the same.</p>
 </div>
+<h3 id="symmetric-and-positive-definite-elements">Symmetric and positive definite elements</h3>
 <p>The notions of symmetric and positive definiteness can also be defined for <span class="math inline">\((A,(\ ) ^{*})\)</span>.</p>
 <div class="definition">
 <p>Given a finite-dimensional semisimple <span class="math inline">\(\mathbb{R}\)</span>-algebra and an involution <span class="math inline">\((\ )^{*}\)</span> as mentioned in Corollary , we shall call an element <span class="math inline">\(a \in A\)</span></p>
@@ -103,7 +111,7 @@
 <p>Why is <span class="math inline">\(D_{\mathbb{R}}\)</span> semisimple? The trace form <span class="math inline">\((a,b)\mapsto \mathop{\mathrm{tr}}(ab)\)</span> is clearly non-degenerate on <span class="math inline">\(D\)</span>. It is classically known that the trace form on a finite-dimensional <span class="math inline">\(k\)</span>-algebra is non-degenerate if and only if it is absolutely semisimple, i.e. <span class="math inline">\(A \otimes_{k} L\)</span> is semisimple for any field extension <span class="math inline">\(L\)</span> of <span class="math inline">\(k\)</span>.</p>
 <p>See <a href="div_alg.html">division algebra</a> for more info.</p>
 <hr />
-	<small>	<p class="date">This page was updated on October 11, 2021.<br>
+	<small>	<p class="date">This page was updated on October 12, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>

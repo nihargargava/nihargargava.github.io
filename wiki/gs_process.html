@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-10-11" />
+  <meta name="dcterms.date" content="2021-10-12" />
   <title>Gram-Schmidt Orthonormalization Process</title>
   <style>
     code{white-space: pre-wrap;}
@@ -31,13 +31,21 @@
   \langle x,y\rangle &amp; = \sum_{i=1}^{k} x_{i}^{*} y_{i}.
 \end{align}\]</span></p>
 <div class="remark">
-<p>This form is not necessarily <span class="math inline">\(D_{\mathbb{R}}\)</span>-bilinear, since <span class="math inline">\(D_{\mathbb{R}}\)</span> may not be commutative. We can then define a real bilinear form on <span class="math inline">\(D_{\mathbb{R}}^{k}\)</span> given by <span class="math display">\[\begin{align}
+<p>This form is not necessarily <span class="math inline">\(D_{\mathbb{R}}\)</span>-bilinear, since <span class="math inline">\(D_{\mathbb{R}}\)</span> may not be commutative. We can then define a real positive definite symmetric bilinear form on <span class="math inline">\(D_{\mathbb{R}}^{k}\)</span> given by <span class="math display">\[\begin{align}
     \langle x,y\rangle_{\mathbb{R}} = \mathop{\mathrm{tr}}\left(\langle x, y\rangle_{D_{\mathbb{R}}}\right).
   \end{align}\]</span></p>
 </div>
-<p>Note that, for any <span class="math inline">\(x \in D_{\mathbb{R}}^{k} \setminus \{ 0\}\)</span>, we have that <span class="math inline">\(\langle x,x\rangle_{D_{\mathbb{R}}}\)</span> is a symmetric positive definite element of <span class="math inline">\(D_{\mathbb{R}}\)</span> as defined <a href="rss_algebra.html">in here</a>. Hence, in particular <span class="math inline">\(\langle x,x\rangle_{D_{\mathbb{R}}}\)</span> is a zero non-divisor in <span class="math inline">\(D_{\mathbb{R}}\)</span> and therefore is a unit. Therefore, it makes sense to talk about <span class="math inline">\(\langle x,x\rangle_{D_{\mathbb{R}}}^{-1} \in D_{\mathbb{R}}\)</span>.</p>
+<div class="lemma">
+<p>The following properties are satisfied by <span class="math inline">\(\langle \ , \ \rangle_{D_{\mathbb{R}}}\)</span>.</p>
+<ul>
+<li>For <span class="math inline">\(x,y \in D_{\mathbb{R}}^{k}\)</span>, we have <span class="math display">\[\begin{align}
+\langle x,y\rangle^{*}_{D_{\mathbb{R}}} = \langle y,x\rangle_{D_{\mathbb{R}}}.
+  \end{align}\]</span></li>
+<li>For <span class="math inline">\(x \in D_{\mathbb{R}}^{k} \setminus \{ 0\}\)</span>, <span class="math inline">\(\langle x,x\rangle_{D_{\mathbb{R}}}\)</span> is a zero non-divisor, and hence a unit in <span class="math inline">\(D_{\mathbb{R}}\)</span>.</li>
+</ul>
+</div>
 <hr />
-	<small>	<p class="date">This page was updated on October 11, 2021.<br>
+	<small>	<p class="date">This page was updated on October 12, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
