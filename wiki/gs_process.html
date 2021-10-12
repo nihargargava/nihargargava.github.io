@@ -81,6 +81,17 @@
 </div>
 <p><br />
 </p>
+<div class="remark">
+<p>If we were to define <span class="math display">\[\begin{align}
+  \langle \ , \ \rangle_{A} : A^{k} \times A^{k} &amp; \mapsto A \\
+  \langle x,y\rangle &amp; = \sum_{i=1}^{k} x_{i}^{*} y_{i},
+\end{align}\]</span> we will reach the same proposition above, but for right actions instead of left.</p>
+</div>
+<div class="corollary">
+<p>Suppose <span class="math inline">\(x_1,x_2,\cdots,x_k \in A^{k}\)</span> is an orthogonal set of vectors, then for any <span class="math inline">\(v = a_1 x_1+ a_2 x_2 + \dots + a_k x_k\)</span> for <span class="math inline">\(\{ a_{i}\}_{i=1}^{k} \subseteq A\)</span>, we have <span class="math display">\[\begin{align}
+    \langle v,v\rangle_{\mathbb{R}} = \mathop{\mathrm{tr}}(\langle v,v\rangle_{A}) = \sum_{i=1}^{k} \mathop{\mathrm{tr}}(a_{i}^{*}a_{i}).
+  \end{align}\]</span></p>
+</div>
 <h2 id="gram-schmidt-algorithm">Gram-Schmidt algorithm</h2>
 <p>The following algorithm is an analogue of Gram-Schmidt.</p>
 <p>Suppose <span class="math inline">\(v_1,v_2,\cdots,v_k \in A^{k}\)</span> are some vectors that freely generate <span class="math inline">\(A^{k}\)</span> as a left <span class="math inline">\(A\)</span>-module. We claim that using these vectors, it is possible to create a set of orthonormalized basis vectors <span class="math inline">\(x_1,x_2,\cdots,x_k\)</span>.</p>
