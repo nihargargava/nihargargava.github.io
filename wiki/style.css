@@ -183,9 +183,11 @@ dl dd {
 }
 
 .definition {
+    margin: 10px ;
+    font-style: italic;
     display: block;
-    margin: 12px 0;
-    font-style: normal;
+    border: 1px solid #000;
+    padding: 10px;
 }
 .definition:before {
     content: "Definition.";
@@ -214,5 +216,4 @@ dl dd {
 	margin-top: 3px;
 	margin-bottom: 3px;
 }
-
 
