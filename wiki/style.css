@@ -189,6 +189,7 @@ dl dd {
     border: 1px solid #000;
     padding: 10px;
 }
+
 .definition:before {
     content: "Definition.";
     font-weight: bold;
