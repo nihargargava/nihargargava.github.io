@@ -4,7 +4,11 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<<<<<<< HEAD
   <meta name="dcterms.date" content="2021-10-15" />
+=======
+  <meta name="dcterms.date" content="2021-10-14" />
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
   <title>Gram-Schmidt Orthonormalization Process</title>
   <style>
     code{white-space: pre-wrap;}
@@ -30,15 +34,24 @@
 <li><a href="#orthogonality-in-ak">Orthogonality in <span class="math inline">\(A^k\)</span></a></li>
 <li><a href="#gram-schmidt-algorithm">Gram-Schmidt algorithm</a></li>
 <li><a href="#cholesky-decompositon">Cholesky decompositon</a></li>
+<<<<<<< HEAD
 <li><a href="#use-in-minkowskis-theorem">Use in Minkowski’s theorem</a></li>
+=======
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
 </ul>
 </nav>
 <p>This is a very generalized form of Gram-Schmidt algorithm. The setup for this is the same as that of <a href="rss_algebra.html">real semisimple algebras with a positive involution</a>. The classical version is recovered when we substitute <span class="math inline">\(A=\mathbb{R}\)</span>.</p>
 <p>Let <span class="math inline">\(A\)</span> be a real semisimple algebra and let <span class="math inline">\((\ )^{*}: A\rightarrow A\)</span> be a positive involution.</p>
 <h2 id="orthogonality-in-ak">Orthogonality in <span class="math inline">\(A^k\)</span></h2>
+<<<<<<< HEAD
 <p>Let <span class="math inline">\(k \ge 1\)</span>. Fix a positive definite symmetric element <span class="math inline">\(a \in A\)</span>. Let us define <span class="math display">\[\begin{align}
   \langle \ , \ \rangle_{A} : A^{k} \times A^{k} &amp; \mapsto A \\
   \langle x,y\rangle_{A} &amp; = \sum_{i=1}^{k} x_{i} a y_{i}^*.
+=======
+<p>Let <span class="math inline">\(k \ge 1\)</span>. Let us define <span class="math display">\[\begin{align}
+  \langle \ , \ \rangle_{A} : A^{k} \times A^{k} &amp; \mapsto A \\
+  \langle x,y\rangle_{A} &amp; = \sum_{i=1}^{k} x_{i} y_{i}^*.
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
 \end{align}\]</span></p>
 <p>This form is <span class="math inline">\(\mathbb{R}\)</span>-bilinear but not necessarily <span class="math inline">\(A\)</span>-bilinear, since <span class="math inline">\(A\)</span> may not be commutative. We can however define a real positive definite symmetric bilinear form on <span class="math inline">\(A^{k}\)</span> given by <span class="math display">\[\begin{align}
     \langle x,y\rangle_{\mathbb{R}} = \mathop{\mathrm{tr}}\left(\langle x, y\rangle_{A}\right).
@@ -53,6 +66,10 @@
 <li>For <span class="math inline">\(x \in A^{k} \setminus \{ 0\}\)</span>, <span class="math inline">\(\langle x,x\rangle_{A}\)</span> is a symmetric and positive definite in <span class="math inline">\(A\)</span>, and hence is a unit in <span class="math inline">\(A\)</span>.</li>
 <li>For <span class="math inline">\(x,y \in A^{k}\)</span> and <span class="math inline">\(\alpha \in A\)</span>, we have <span class="math display">\[\begin{align}
 \langle \alpha x,y\rangle_{A} &amp; = \alpha\langle x,y\rangle_{A},\\
+<<<<<<< HEAD
+=======
+\langle  x,y \alpha \rangle_{A} &amp; = \langle x \alpha^{*},y\rangle_{A},\\
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
 \langle  x, \alpha y \rangle_{A} &amp; = \langle x ,y\rangle_{A} \alpha^{*}.
   \end{align}\]</span></li>
 <li>Suppose <span class="math inline">\(x \in A^{k}\setminus \{ 0\}\)</span>. Then there exists some <span class="math inline">\(b \in A\)</span> such that <span class="math inline">\(\langle bx,bx\rangle = 1_{A}\)</span>.</li>
@@ -89,7 +106,11 @@
 </div>
 <div class="corollary">
 <p>Suppose <span class="math inline">\(x_1,x_2,\cdots,x_k \in A^{k}\)</span> is an orthonormal set of vectors, then for any <span class="math inline">\(v = a_1 x_1+ a_2 x_2 + \dots + a_k x_k\)</span> for <span class="math inline">\(\{ a_{i}\}_{i=1}^{k} \subseteq A\)</span>, we have <span class="math display">\[\begin{align}
+<<<<<<< HEAD
     \langle v,v\rangle_{\mathbb{R}} = \mathop{\mathrm{tr}}(\langle v,v\rangle_{A}) = \sum_{i=1}^{k} \mathop{\mathrm{tr}}(a_{i}^{*}a a_{i}).
+=======
+    \langle v,v\rangle_{\mathbb{R}} = \mathop{\mathrm{tr}}(\langle v,v\rangle_{A}) = \sum_{i=1}^{k} \mathop{\mathrm{tr}}(a_{i}^{*}a_{i}).
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
   \end{align}\]</span></p>
 </div>
 <h2 id="gram-schmidt-algorithm">Gram-Schmidt algorithm</h2>
@@ -115,10 +136,15 @@
 </div>
 <h2 id="cholesky-decompositon">Cholesky decompositon</h2>
 <p>This Gram-Schmidt is also related to the <a href="cholesky.html">Cholesky decomposition</a> in the same way the usual Gram-Schmidt is related to the Cholesky decomposition. See the <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process#Alternatives">wikipedia page</a>.</p>
+<<<<<<< HEAD
 <h2 id="use-in-minkowskis-theorem">Use in Minkowski’s theorem</h2>
 <p>This Gram-Schmidt appears is used in the Division algebra variant of <a href="minkowski_theorem.html">Minkowski’s theorem about successive minimas</a>.</p>
 <hr />
 	<small>	<p class="date">This page was updated on October 15, 2021.<br>
+=======
+<hr />
+	<small>	<p class="date">This page was updated on October 14, 2021.<br>
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
