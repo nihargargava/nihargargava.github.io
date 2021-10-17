@@ -4,7 +4,11 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<<<<<<< HEAD
+  <meta name="dcterms.date" content="2021-10-15" />
+=======
   <meta name="dcterms.date" content="2021-10-12" />
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
   <title>Minkowski’s Theorem on Successive Minima</title>
   <style>
     code{white-space: pre-wrap;}
@@ -53,7 +57,11 @@
 </nav>
 <p>Minkowski’s theorem for successive minima is the following theorem specialized for the case when <span class="math inline">\(D=\mathbb{Q}\)</span>. The following more general <a href="div_alg.html">divison algebra</a> version is a modification of <span class="citation" data-cites="V11">[<a href="#ref-V11" role="doc-biblioref">1</a>]</span>, but is also based on the ideas given in <span class="citation" data-cites="W58">[<a href="#ref-W58" role="doc-biblioref">2</a>]</span>.</p>
 <div class="theorem">
+<<<<<<< HEAD
+<p>Let <span class="math inline">\(\mathcal{O} \subseteq D\)</span> is an order inside a finite-dimensional <span class="math inline">\(\mathbb{Q}\)</span>-division algebra <span class="math inline">\(D\)</span>. Let <span class="math inline">\(D_{\mathbb{R}}^{k} = (D \otimes_{\mathbb{Q}} \mathbb{R})^{\oplus k}\)</span>. We endow <span class="math inline">\(D_{\mathbb{R}}\)</span> with a positive involution <span class="math inline">\((\ )^{*}\)</span>, as it is a <a href="rss_algebra.html">real semisimple algebra</a>. Fix a symmetric and positive definite element <span class="math inline">\(a \in D_{\mathbb{R}}\)</span> and use the real positive definite quadratic form <span class="math inline">\(x \mapsto \mathop{\mathrm{tr}}(xa x^*)\)</span> to get a norm <span class="math inline">\(| \ |\)</span> on <span class="math inline">\(D_{\mathbb{R}}\)</span>, and <span class="math inline">\(\|\ \|\)</span> on <span class="math inline">\(D_{\mathbb{R}}^{k}\)</span>. Let <span class="math inline">\(\Lambda \subseteq D_{\mathbb{R}}^{k}\)</span> be a left <span class="math inline">\(\mathcal{O}\)</span>-module such that it is also a Euclidean lattice.</p>
+=======
 <p>Let <span class="math inline">\(\mathcal{O} \subseteq D\)</span> is an order inside a finite-dimensional <span class="math inline">\(\mathbb{Q}\)</span>-division algebra <span class="math inline">\(D\)</span>. Let <span class="math inline">\(D_{\mathbb{R}}^{k} = (D \otimes_{\mathbb{Q}} \mathbb{R})^{\oplus k}\)</span>. We endow <span class="math inline">\(D_{\mathbb{R}}\)</span> with a positive involution <span class="math inline">\((\ )^{*}\)</span>, as it is a <a href="rss_algebra.html">real semisimple algebra</a>, and use the trace form <span class="math inline">\(x \mapsto \mathop{\mathrm{tr}}(x^{*}x)\)</span> to get a norm <span class="math inline">\(| \ |\)</span> on <span class="math inline">\(D_{\mathbb{R}}\)</span>, and <span class="math inline">\(\|\ \|\)</span> on <span class="math inline">\(D_{\mathbb{R}}^{k}\)</span>. Let <span class="math inline">\(\Lambda \subseteq D_{\mathbb{R}}^{k}\)</span> be a left <span class="math inline">\(\mathcal{O}\)</span>-module such that it is also a Euclidean lattice.</p>
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
 <p>For <span class="math inline">\(n \le k\)</span>, define the <span class="math inline">\(n\)</span>th minima <span class="math inline">\(\lambda_n(\Lambda)\)</span> of such a lattice to be the radius of the smallest closed ball that contains <span class="math inline">\(n\)</span> vectors that are <span class="math inline">\(D\)</span>-linearly independent under left multiplication action.</p>
 <ul>
 <li>There exists a set of <span class="math inline">\(k\)</span> vectors <span class="math inline">\(\{ v_1,v_2,\cdots,v_k\} \subseteq \Lambda\)</span> that are left <span class="math inline">\(D\)</span>-linearly independent and <span class="math inline">\(\|v_i\|= \lambda_i(\Lambda)\)</span></li>
@@ -78,7 +86,14 @@
     \|v_i\| \ge \lambda_i.
   \end{align}\]</span> Now <span class="math inline">\(\|v_1\| = \lambda_{1}\)</span> is clear. Suppose it is true upto <span class="math inline">\(i\)</span> that <span class="math inline">\(\lambda_{i} = \|v_i\|\)</span>. Let <span class="math inline">\(\{ w_1,w_2,\cdots,w_{i+1}\} \subseteq \overline{B_{\lambda_{i+1}}(0)}\)</span> such that they are <span class="math inline">\(D\)</span>-linearly independent. Then, because the <span class="math inline">\(\mathbb{Q}\)</span>-dimension of the space they span is larger, at least one of these vectors does not lie in <span class="math inline">\(Dv_1 + D v_2 + \cdots + D v_k\)</span>. Let’s say <span class="math inline">\(w_{i+1}\)</span> is this vector. So <span class="math inline">\(\{ v_1,v_2,\cdots,v_i,w_{i+1}\}\)</span> is a <span class="math inline">\(D\)</span>-linearly independent set of vectors. Knowing that <span class="math inline">\(\|w_{i+1}\| \ge \lambda_1\)</span>, we try to find the smallest <span class="math inline">\(j \in \{2,\cdots, i+1\}\)</span> so that <span class="math inline">\(\|w_{i+1}\| &lt; \lambda_{j}\)</span>. Such a <span class="math inline">\(j\)</span> is not possible by the definition of <span class="math inline">\(\lambda_j\)</span> and hence <span class="math inline">\(\|w_{i+1}\| \ge \lambda_{j}\)</span>. In particular, <span class="math inline">\(\|w_{i+1}\|= \lambda_{i+1}\)</span>. So <span class="math inline">\(\|v_i\|\ge \|w_i\|\)</span>. On the other hand <span class="math inline">\(\|v_{i+1}\| &gt; \|w_{i+1}\|\)</span> is not possible by the definition of <span class="math inline">\(\|v_{i+1}\|\)</span> so we have <span class="math inline">\(\|v_{i+1}\| = \|w_{i+1}\|= \lambda_{i+1}\)</span>.</p>
 <p>Generate the vectors <span class="math inline">\(x_1,x_2,\cdots,x_k\)</span> using the <a href="gs_process.html">Gram-Schmidt process</a> on <span class="math inline">\(v_1,v_2,\cdots,v_k\)</span>. Since <span class="math inline">\(\{ v_i\}_{i=1}^{k}\)</span> is free with respect to left-<span class="math inline">\(D_{\mathbb{R}}\)</span> action, we get that <span class="math inline">\(x_1,x_2,\cdots,x_k\)</span> freely generate <span class="math inline">\(D_{\mathbb{R}}^{k}\)</span> as a left-<span class="math inline">\(D_{\mathbb{R}}\)</span> module. Caution is advised here, since this is a non-commutative variant of the usual Gram-Schmidt algorithm. See <a href="gs_process.html">the page</a> for details.</p>
+<<<<<<< HEAD
+<p>Now consider the <span class="math inline">\(\mathbb{R}\)</span>-linear map given by <span class="math display">\[\begin{align}
+  T: y \mapsto \frac{y_i}{\lambda_i} x_1 + \frac{y_2}{ \lambda_2} x_2 + \cdots \frac{y_k}{ \lambda_k} x_k , \\ \text{ for }y = y_1x_1+y_2x_2 + \cdots +y_kx_k \in D_{\mathbb{R}}^{k}.
+  \end{align}\]</span></p>
+<p>Now create a lattice <span class="math inline">\(\Lambda&#39;\)</span> as <span class="math display">\[\begin{align}
+=======
 <p>Now consider the <span class="math inline">\(\mathbb{R}\)</span>-linear map given by <span class="math inline">\(T: y \mapsto \left( \frac{y_1}{ \lambda_1} , \frac{y_2}{\lambda_2} , \cdots , \frac{y_k}{\lambda_k} \right)\)</span> for a <span class="math inline">\(y = y_1x_1+y_2x_2 + \cdots +y_kx_k \in D_{\mathbb{R}}^{k}\)</span>. Now create a lattice <span class="math inline">\(\Lambda&#39;\)</span> as <span class="math display">\[\begin{align}
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
   \Lambda&#39; =  (\lambda_1 \lambda_2 \ldots \lambda_k)^{ {1}/{k}}T(\Lambda)
 \end{align}\]</span> Observe that <span class="math inline">\(\det(\Lambda&#39;) = \det(\Lambda)\)</span>. For any <span class="math inline">\(y&#39; \in \Lambda&#39; \setminus \{ 0\}\)</span>, we can find a <span class="math inline">\(y = y_1 x_1 + \cdots + y_k x_k \in \Lambda\)</span> such that <span class="math inline">\(y&#39; = (\lambda_1\cdots \lambda_k)^{1/k} T ( y)\)</span>. Furthermore, there must be a smallest <span class="math inline">\(i_0 \ge 1\)</span> that <span class="math inline">\(y_{i_0} \neq 0\)</span> and <span class="math inline">\(y_{i_0+1} = y_{i_0+2} = \cdots = y_{k} = 0\)</span>. Then <span class="math inline">\(y \in \Lambda \cap ( D_{\mathbb{R}} v_1 + D_{\mathbb{R}} v_2 + \cdots + D_{\mathbb{R}} v_{i_0})\)</span> and not in <span class="math inline">\(\Lambda \cap ( D_{\mathbb{R}} v_1 + \cdots + D_{\mathbb{R}} v_{i_0 - 1} )\)</span>. Therefore <span class="math inline">\(\|y\| \ge \lambda_{i_0}\)</span>. This implies that <span class="math display">\[\begin{align}
   \|y&#39;\|^{2} = \left( \lambda_1 \lambda_2 \ldots \lambda_k \right)^{2/k} \sum_{i=1}^{i_0} \left| \frac{y_i}{\lambda_i}\right|^{2}   \ge \left( \lambda_1 \lambda_2 \ldots \lambda_k \right)^{2/k} \frac{1}{\lambda_{i_0}^{2}} \sum_{i=1}^{k}\left| {y_1}\right|^{2} \ge (\lambda_1 \ldots \lambda_k)^{2/k}
@@ -113,7 +128,11 @@
 </div>
 </div>
 <hr />
+<<<<<<< HEAD
+	<small>	<p class="date">This page was updated on October 15, 2021.<br>
+=======
 	<small>	<p class="date">This page was updated on October 12, 2021.<br>
+>>>>>>> 7ed8cb3bdbdfe70fd527377b2aa3325773b15e93
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
