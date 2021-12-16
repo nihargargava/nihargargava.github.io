@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2021-12-16" />
-  <title>Sherman-Morrison Formula</title>
+  <title>Ellipsoid</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -40,39 +40,33 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Sherman-Morrison Formula</h1>
+<h1 class="title">Ellipsoid</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#example">Example</a></li>
+<li><a href="#volume-formula">Volume formula</a></li>
+<li><a href="#surface-area">Surface area</a></li>
 </ul>
 </nav>
-<p>This is the name of the following <a href="matrix.html">matrix</a> identity.</p>
-<p>For <span class="math inline">\(A \in GL_{n}(\mathbb{R})\)</span> and <span class="math inline">\(u,v \in \mathbb{R}^{n}\)</span> (written as column vectors), we have</p>
-<p><span class="math display">\[\begin{align}
-  \left(A + uv^\textsf{T}\right)^{-1} = A^{-1} - {A^{-1}uv^\textsf{T}A^{-1} \over 1 + v^\textsf{T}A^{-1}u}.
+<h1 id="volume-formula">Volume formula</h1>
+<p>Suppose <span class="math inline">\(q:\mathbb{R}^{d} \rightarrow \mathbb{R}\)</span> is a positive definite quadratic form. For any <span class="math inline">\(R&gt;0\)</span>, a set <span class="math display">\[\begin{align}
+  B_{q}(R)=\{ x \in \mathbb{R}^{d} \ | \ q(x) \le R^{2}\} \subseteq \mathbb{R}^{d}
+\end{align}\]</span> is called a closed ellipsoid of radius <span class="math inline">\(R\)</span> with respect to <span class="math inline">\(q\)</span>. The volume of such an ellipsoid is <span class="math display">\[\begin{align}
+\mathop{\mathrm{vol}}(B_{q}(R)) = \frac{ \pi^{d/2} R^{d}}{\Gamma(\frac{d}{2}+1) \sqrt{\det[ q(e_{i},e_{j})])}}
 \end{align}\]</span></p>
-<p>For example, when <span class="math inline">\(A = I\)</span>, the identity matrix, we have</p>
-<p><span class="math display">\[\begin{align}
-  \left(I + uv^\textsf{T}\right)^{-1} = I - \frac{uv^\textsf{T}}{1 + v^\textsf{T}u}.
+<p>In terms of factorials, <span class="math display">\[\begin{align}
+\mathop{\mathrm{vol}}(B_{q}(R)) = 
+\begin{cases}
+\frac{ \pi^{d/2} }{ (d/2)! \sqrt{\det[ q(e_{i},e_{j})])}} R^{d}&amp; d \text{ even} \\
+\frac{  2 (4 \pi)^{\frac{d-1}{2}}\left( \frac{d-1}{2}  \right)! }{{d}! \sqrt{\det[ q(e_{i},e_{j})])}}  R^{d}&amp; d \text{ odd}\\
+\end{cases}
 \end{align}\]</span></p>
-<h2 id="example">Example</h2>
-<p>In many cases, we have to compute inverse of a matrix</p>
+<h1 id="surface-area">Surface area</h1>
+<p>To get the surface area (or rather surface hypervolume), one can simply differentiate the above formula with respect to <span class="math inline">\(R\)</span>.</p>
 <p><span class="math display">\[\begin{align}
-  A=
-  \begin{bmatrix}
-    1+a &amp; 1 &amp; 1 &amp;1 &amp; \ldots   &amp;1\\
-    1 &amp; 1+a &amp; 1 &amp; 1 &amp;  \ldots &amp;1 \\
-     1 &amp; 1 &amp; 1+a &amp; 1 &amp; \ldots &amp;1 \\
-     \vdots  &amp; \vdots &amp; \vdots  &amp; \vdots  &amp; \ddots &amp; \\
-     1 &amp; 1 &amp; 1&amp;  1 &amp;  &amp; 1+a 
-  \end{bmatrix}
-  =  a I + vv^{T},
-\end{align}\]</span> where <span class="math inline">\(v\)</span> is the column vectors with all <span class="math inline">\(1\)</span>s.</p>
-<p>According to the above formula, the inverse of this is <span class="math display">\[\begin{align}
-  A^{-1} = \tfrac{1}{a}I - \frac{\tfrac{1}{a^2}v v^{T}}{(1+\tfrac{1}{a}v^{T}v)} =  \frac{(a+n)I -  vv^{T}}{a(a+n)}.
-\end{align}\]</span></p>
+  \mathop{\mathrm{surf}}(B_{q}(R)) =  d \cdot {\mathop{\mathrm{vol}}(B_{q}(1)) } \cdot {R}^{d-1}
+\end{align}\]</span>&lt;++&gt;</p>
 <hr />
 	<small>	<p class="date">This page was updated on December 16, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
