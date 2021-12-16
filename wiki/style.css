@@ -154,6 +154,17 @@ dl dd {
     font-style: normal;
 }
 
+.example {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.example:before {
+    content: "Example";
+    font-weight: bold;
+    font-style: normal;
+}
+
 .question {
     margin: 10px ;
     font-style: italic;
