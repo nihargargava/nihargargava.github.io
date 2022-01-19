@@ -154,6 +154,17 @@ dl dd {
     font-style: normal;
 }
 
+.example {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.example:before {
+    content: "Example";
+    font-weight: bold;
+    font-style: normal;
+}
+
 .question {
     margin: 10px ;
     font-style: italic;
@@ -183,10 +194,13 @@ dl dd {
 }
 
 .definition {
+    margin: 10px ;
+    font-style: italic;
     display: block;
-    margin: 12px 0;
-    font-style: normal;
+    border: 1px solid #000;
+    padding: 10px;
 }
+
 .definition:before {
     content: "Definition.";
     font-weight: bold;
@@ -204,15 +218,23 @@ dl dd {
   font-size: 8pt;
 }
 
-.TOC {
+code {
+  font-family: "Noto Mono";
+  font-style: bold;
+  /* color: crimson; */
+  /* background-color: #f1f1f1; */
+  /* padding: 2px; */
+  font-size: 85%;
+}
+
+#TOC {
     display: inline-block;
     border: 1px solid #000;
     padding: 10px;
 }
 
-.toc-title {
+#toc-title {
 	margin-top: 3px;
 	margin-bottom: 3px;
 }
-
 

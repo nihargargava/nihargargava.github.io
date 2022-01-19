@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2021-12-12" />
-  <title>Lattices</title>
+  <title>Poisson summation formula</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -33,24 +33,22 @@
           margin-left: 2em;
         }  </style>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Lattices</h1>
+<h1 class="title">Poisson summation formula</h1>
 </header>
-<p>Typically, a lattice means a discrete subgroup of a Lie group having a finite covolume.</p>
-<p>Most of the time, by lattice we mean a discrete subgroup of a Euclidean space.</p>
-<p>See the following links</p>
-<ul>
-<li><a href="space_of_lattices.html">Space of Lattices</a></li>
-<li><a href="minimal_vector.html">Minimal Vector of a lattice</a></li>
-<li><a href="smt.html">Siegel Mean Value Theorem</a></li>
-<li><a href="sphere_packing_constant.html">Sphere Packing Constant</a></li>
-<li><a href="dual_lattice.html">Dual Lattice</a></li>
-</ul>
+<p>Let <span class="math inline">\(\Lambda \subseteq \mathbb{R}^d\)</span> be a lattice. Let <span class="math inline">\(\Lambda^{*}\)</span> be the <a href="dual_lattice.html">dual lattice</a>.</p>
+<p>Let <span class="math inline">\(\mathcal{F}\)</span> denote the <a href="fourier.html">Fourier transform</a> on <span class="math inline">\(\mathbb{R}^{d}\)</span>. Let <span class="math inline">\(\hat{f}= \mathcal{F}(f)\)</span> for some <span class="math inline">\(f \in \mathcal{S}(\mathbb{R}^{d})\)</span>.</p>
+<p>Then, we have the following formula</p>
+<p><span class="math display">\[\begin{align}
+  \sum_{v \in \Lambda} f(v) &amp;= \ 
+  \frac{1}{\mathop{\mathrm{vol}}(\mathbb{R}^{d}/\Lambda )} \sum_{\lambda \in \Lambda^{*}} \hat{f}(v).
+\end{align}\]</span></p>
 <hr />
 	<small>	<p class="date">This page was updated on December 12, 2021.<br>
 		<a href="index.html">Main Page</a> </p>
