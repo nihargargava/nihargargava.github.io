@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2022-01-22" />
-  <title>Poisson summation formula</title>
+  <title>Ellipsoid</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -40,23 +40,33 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Poisson summation formula</h1>
+<h1 class="title">Ellipsoid</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#applications">Applications</a></li>
+<li><a href="#volume-formula">Volume formula</a></li>
+<li><a href="#surface-area">Surface area</a></li>
 </ul>
 </nav>
-<p>Let <span class="math inline">\(\Lambda \subseteq \mathbb{R}^d\)</span> be a lattice. Let <span class="math inline">\(\Lambda^{*}\)</span> be the <a href="dual_lattice.html">dual lattice</a>.</p>
-<p>Let <span class="math inline">\(\mathcal{F}\)</span> denote the <a href="fourier.html">Fourier transform</a> on <span class="math inline">\(\mathbb{R}^{d}\)</span>. Let <span class="math inline">\(\hat{f}= \mathcal{F}(f)\)</span> for some <span class="math inline">\(f \in \mathcal{S}(\mathbb{R}^{d})\)</span>.</p>
-<p>Then, we have the following formula</p>
-<p><span class="math display">\[\begin{align}
-  \sum_{v \in \Lambda} f(v) &amp;= \ 
-  \frac{1}{\mathop{\mathrm{vol}}(\mathbb{R}^{d}/\Lambda )} \sum_{\lambda \in \Lambda^{*}} \hat{f}(v).
+<h1 id="volume-formula">Volume formula</h1>
+<p>Suppose <span class="math inline">\(q:\mathbb{R}^{d} \rightarrow \mathbb{R}\)</span> is a positive definite quadratic form. For any <span class="math inline">\(R&gt;0\)</span>, a set <span class="math display">\[\begin{align}
+  B_{q}(R)=\{ x \in \mathbb{R}^{d} \ | \ q(x) \le R^{2}\} \subseteq \mathbb{R}^{d}
+\end{align}\]</span> is called a closed ellipsoid of radius <span class="math inline">\(R\)</span> with respect to <span class="math inline">\(q\)</span>. The volume of such an ellipsoid is <span class="math display">\[\begin{align}
+\mathop{\mathrm{vol}}(B_{q}(R)) = \frac{ \pi^{d/2} R^{d}}{\Gamma(\frac{d}{2}+1) \sqrt{\det[ q(e_{i},e_{j})])}}
 \end{align}\]</span></p>
-<h1 id="applications">Applications</h1>
-<p>One example is <a href="lp_bound_sp.html">linear programming bound for sphere packings</a></p>
+<p>In terms of factorials, <span class="math display">\[\begin{align}
+\mathop{\mathrm{vol}}(B_{q}(R)) = 
+\begin{cases}
+\frac{ \pi^{d/2} }{ (d/2)! \sqrt{\det[ q(e_{i},e_{j})])}} R^{d}&amp; d \text{ even} \\
+\frac{  2 (4 \pi)^{\frac{d-1}{2}}\left( \frac{d-1}{2}  \right)! }{{d}! \sqrt{\det[ q(e_{i},e_{j})])}}  R^{d}&amp; d \text{ odd}\\
+\end{cases}
+\end{align}\]</span></p>
+<h1 id="surface-area">Surface area</h1>
+<p>To get the surface area (or rather surface hypervolume), one can simply differentiate the above formula with respect to <span class="math inline">\(R\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+  \mathop{\mathrm{surf}}(B_{q}(R)) =  d \cdot {\mathop{\mathrm{vol}}(B_{q}(1)) } \cdot {R}^{d-1}.
+\end{align}\]</span></p>
 <hr />
 	<small>	<p class="date">This page was updated on January 22, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
