@@ -4,7 +4,11 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<<<<<<< HEAD
   <meta name="dcterms.date" content="2022-01-26" />
+=======
+  <meta name="dcterms.date" content="2022-01-24" />
+>>>>>>> f6d7359df8368c53312a595b9620af1890dbb2b7
   <title>Linear Programming Bound for Sphere Packings</title>
   <style>
     code{white-space: pre-wrap;}
@@ -85,8 +89,13 @@
 <p>Due to some limiting argument (see Appendix A in <span class="citation" data-cites="CE">[<a href="#ref-CE" role="doc-biblioref">1</a>]</span>), it is sufficient to consider the case the packing is with balls of radius <span class="math inline">\(1/2\)</span> and with centers given by <span class="math inline">\(F + \Lambda\)</span>, where <span class="math inline">\(\Lambda \subseteq \mathbb{R}^{n}\)</span> is a lattice and <span class="math inline">\(F \subset \mathbb{R}^{n}\)</span> is a finite subset of points, no two equivalent modulo <span class="math inline">\(\Lambda\)</span>.</p>
 <p>So with this, we get that packing efficiency is <span class="math inline">\(B_{d}(1/2) \frac{\# F}{\mathop{\mathrm{vol}}(\mathbb{R}^{n}/\Lambda)}\)</span>,</p>
 <p>With <span class="math inline">\(f\)</span> being the function as described, we have from the <a href="poisson.html">Poisson summation formula</a> <span class="math display">\[\begin{align}
+<<<<<<< HEAD
     \sum_{v \in \Lambda + F - F }^{ } f(v) =  \sum_{f_1,f_2 \in F}\sum_{v \in \Lambda}^{} f(v +f_1 - f_2 )  &amp; = \frac{1}{\mathop{\mathrm{vol}}(\mathbb{R}^{d}/\Lambda)} \sum_{t \in \Lambda^{*}}^{} \sum_{f_1,f_2 \in F}e^{2\pi i \langle f_1 - f_2, t\rangle} f(t) \\
     &amp; = \frac{1}{\mathop{\mathrm{vol}}(\mathbb{R}^{d}/\Lambda)} \sum_{t \in \Lambda^{*}}^{}  \hat{f}(t) \left| \sum_{f\in F}e^{2\pi i \langle f, t\rangle} \right|^{2} \\
+=======
+    \sum_{v \in \Lambda + F - F }^{ } f(v) =  \sum_{f_1,f_2 \in F}\sum_{v \in \Lambda}^{} f(v +f_1 - f_2 )  &amp; = \frac{1}{\mathop{\mathrm{vol}}(\mathbb{R}^{d}/\Lambda)} \sum_{t \in \Lambda^{*}}^{} \sum_{f_1,f_2 \in F}e^{-2\pi i \langle f_1 - f_2, t\rangle} f(t) \\
+    &amp; = \frac{1}{\mathop{\mathrm{vol}}(\mathbb{R}^{d}/\Lambda)} \sum_{t \in \Lambda^{*}}^{}  \hat{f}(t) \left| \sum_{f\in F}e^{-2\pi i \langle f, t\rangle} \right|^{2} \\
+>>>>>>> f6d7359df8368c53312a595b9620af1890dbb2b7
     &amp; \ge \frac{ ( \# F)^{2} } {\mathop{\mathrm{vol}}(\mathbb{R}^{d} / \Lambda)} \hat{f}(0).
   \end{align}\]</span></p>
 <p>Now notice that each term <span class="math inline">\(f(v + f_1 - f_2)\)</span> on the left is <span class="math inline">\(f\)</span> evaluated on the diference of two centers. Since we assumed that the center distances are at least <span class="math inline">\(1\)</span>. Hence, unless <span class="math inline">\(v = f_2 - f_1\)</span>, we have that <span class="math inline">\(f(v+f_1 - f_2) \le 0\)</span>. According to our assumption, <span class="math inline">\(f_2 - f_1\)</span> can be a lattice point if and only if <span class="math inline">\(f_1 = f_2\)</span>, so <span class="math display">\[\begin{align}
@@ -103,7 +112,11 @@
 </div>
 </div>
 <hr />
+<<<<<<< HEAD
 	<small>	<p class="date">This page was updated on January 26, 2022.<br>
+=======
+	<small>	<p class="date">This page was updated on January 24, 2022.<br>
+>>>>>>> f6d7359df8368c53312a595b9620af1890dbb2b7
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
