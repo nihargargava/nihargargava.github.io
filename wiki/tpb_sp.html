@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2022-01-22" />
+  <meta name="dcterms.date" content="2022-01-24" />
   <title>Three point bound for sphere packing</title>
   <style>
     code{white-space: pre-wrap;}
@@ -47,18 +47,17 @@
 <ul>
 <li><span class="math inline">\(f_2\)</span> is radial</li>
 <li><span class="math inline">\(\hat{f}_{2} \ge 0\)</span> and <span class="math inline">\(\hat{f}_{2}(0)=1\)</span>,</li>
-<li><span class="math inline">\(f_{3}(x,y)=f_{3}(gx,gy)\)</span>, for <span class="math inline">\(g \in O(n)\)</span>.</li>
-<li><span class="math inline">\(f_{3}\)</span> is positive definite as a kernel, i.e. <span class="math inline">\(\sum_{x,y}^{}w_{x} w_{y} \ge 0\)</span>,</li>
-<li><span class="math inline">\(f_{2}(x)+f_{3}(x,0)+f_{3}(0,x)+f_{3}(x,x) \le 0\)</span> for <span class="math inline">\(\|x\| \ge 1\)</span>.</li>
+<li><span class="math inline">\(f_{3}(x,y)=f_{3}(gx,gy)\)</span>, for <span class="math inline">\(g \in O(n)\)</span>,</li>
+<li><span class="math inline">\(f_{3}\)</span> is positive definite as a kernel, i.e. <span class="math inline">\(\sum_{x,y}^{}w_{x} w_{y}f_2(x,y) \ge 0\)</span> for any finitely supported function <span class="math inline">\(w_{\bullet}: \mathbb{R}^n \to \mathbb{R}\)</span>,</li>
+<li><span class="math inline">\(f_{2}(x)+f_{3}(x,0)+f_{3}(0,x)+f_{3}(x,x) \le 0\)</span> for <span class="math inline">\(\|x\| \ge 1\)</span>,</li>
 <li><span class="math inline">\(f_{3}(x,y) + f_{3}(x,x-y)+f_{3}(y,y-x) \le 0\)</span> for <span class="math inline">\(\|x\|,\|y\|,\|x-y\| \ge 1\)</span>.</li>
 </ul>
 <p>Then, <span class="math inline">\(\Delta_{3,n}\)</span> is a sphere packing bound in <span class="math inline">\(n\)</span> dimensions.</p>
 <div class="remark">
-<p>Compare this with the <a href="lp_bound.html">linear programming bound</a></p>
+<p>Compare this with the <a href="lp_bound_sp.html">linear programming bound of sphere packing</a></p>
 </div>
-<p>&lt;++&gt;</p>
 <hr />
-	<small>	<p class="date">This page was updated on January 22, 2022.<br>
+	<small>	<p class="date">This page was updated on January 24, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>

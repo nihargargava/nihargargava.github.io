@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2022-01-22" />
+  <meta name="dcterms.date" content="2022-01-26" />
   <title>Fourier transform</title>
   <style>
     code{white-space: pre-wrap;}
@@ -49,6 +49,7 @@
 <ul>
 <li><a href="#dilation">Dilation</a></li>
 <li><a href="#translation">Translation</a></li>
+<li><a href="#radial-functions">Radial functions</a></li>
 <li><a href="#poisson-summation-formula">Poisson summation formula</a></li>
 </ul></li>
 </ul>
@@ -69,12 +70,17 @@
 <p>Let <span class="math inline">\(f_{r}(x) = f(rx)\)</span> be the <span class="math inline">\(r\)</span>-dilate of <span class="math inline">\(f:\mathbb{R}^{d} \rightarrow \mathbb{R}\)</span>. Then, we have <span class="math inline">\(\mathcal{F}{(f_{r})} = r^{d} \mathcal{F}(f)\)</span>.</p>
 <h2 id="translation">Translation</h2>
 <p>Let <span class="math inline">\(v \in \mathbb{R}^{d}\)</span> and let <span class="math inline">\(T_{v}(f)(x) = f(x+v)\)</span>. Then <span class="math display">\[\begin{align}
-  \mathcal{F} \circ T_{v} (f) (\xi) = e^{-2\pi i \langle \xi,v\rangle} \hat{f}(\xi)
+  \mathcal{F} \circ T_{v} (f) (\xi) = e^{2\pi i \langle \xi,v\rangle} \hat{f}(\xi)
 \end{align}\]</span></p>
+<h2 id="radial-functions">Radial functions</h2>
+<p>Suppose <span class="math inline">\(f:\mathbb{R}^{d} \rightarrow \mathbb{R}\)</span> is a real-valued radial function, i.e. <span class="math inline">\(f(x)\)</span> only depends only on <span class="math inline">\(\|x\|\)</span>. In this case, we have that <span class="math inline">\(\hat{f}\)</span> is also real-valued radial and moreover <span class="math display">\[\begin{align}
+  \hat{f(t)}=2 \pi \| t\|^{-\alpha} \int_{0}^{\infty} f(r) J_{\alpha}(2 \pi r \| t\|)r^{\alpha + 1} dr,
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(\alpha=n/2-1\)</span> and <span class="math inline">\(J_{\alpha}\)</span> is the <a href="bessel.html">Bessel function</a> of order <span class="math inline">\(\alpha\)</span>.</p>
 <h2 id="poisson-summation-formula">Poisson summation formula</h2>
 <p>See <a href="poisson.html">here</a></p>
 <hr />
-	<small>	<p class="date">This page was updated on January 22, 2022.<br>
+	<small>	<p class="date">This page was updated on January 26, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
