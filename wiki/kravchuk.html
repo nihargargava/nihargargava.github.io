@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2022-02-02" />
+  <title>Kravchuk polynomials</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Kravchuk polynomials</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#fourier-transforms-of-spheres">Fourier transforms of spheres</a></li>
+</ul>
+</nav>
+<p>Kravchuk polynomials are defined by the following equation. For <span class="math inline">\(k \in \mathbb{N}\)</span>, <span class="math inline">\(2 \le q \in \mathbb{N}\)</span> and <span class="math inline">\(n \in \mathbb{N}\)</span>, we have</p>
+<p><span class="math display">\[\begin{equation}\label{eq:defi_of_krav}
+  K_k(x;n,q): = \sum_{j=0}^{ k} (-1)^{j} (q-1) ^{k-j} {x \choose j} { n - x \choose k - j},
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\({ x \choose j}\)</span> means <span class="math inline">\(\frac{(x)_j}{j!}\)</span>, where <span class="math inline">\((x)_j\)</span> is the falling factorial given by <span class="math display">\[\begin{equation}
+  (x)_j := x(x-1)(x-2)\dots (x-j+1).
+\end{equation}\]</span></p>
+<p>We will denote <span class="math inline">\(K_k(x;n,q)\)</span> as <span class="math inline">\(K_k(x)\)</span> when there is no ambiguity. Note that <span class="math inline">\(K_0(x)\)</span> is always the constant polynomial <span class="math inline">\(1\)</span>. Also, using the fact that the degree of <span class="math inline">\((x)_j\)</span> is <span class="math inline">\(j\)</span> and <span class="math inline">\((n-x)_{k-j}\)</span> is <span class="math inline">\(k-j\)</span>, the degree of <span class="math inline">\(K_k(x;n,q)\)</span> can be shown to be <span class="math inline">\(k\)</span> in <span class="math inline">\(x\)</span> (the coefficient of <span class="math inline">\(x^{k}\)</span> in <span class="math inline">\(K_k(x;n,q)\)</span> is <span class="math inline">\(\frac{(-q)^k}{k!}\)</span>).</p>
+<h1 id="fourier-transforms-of-spheres">Fourier transforms of spheres</h1>
+<p>Choose a primitive <span class="math inline">\(q\)</span>th root of unity <span class="math inline">\(\zeta \in \mathbb{C}\)</span>. Let <span class="math inline">\(Q^n\)</span> be the <a href="hamming_space.html">Hamming space</a> with <span class="math inline">\(q\)</span> alphabets.</p>
+<div class="lemma">
+<p>For any fixed <span class="math inline">\(x \in Q^n\)</span> whose weight is <span class="math inline">\(w(x)\)</span>, the following equation holds for a fixed <span class="math inline">\(k\)</span>. <span class="math display">\[\begin{equation}
+    \sum_{\substack{y \in Q^n \\ w(y) = k}}^{ } \zeta^{\langle x, y\rangle} = K_k( w(x) ) .
+   \end{equation}\]</span> Here <span class="math inline">\(\langle x, y\rangle\)</span> is the sum <span class="math inline">\(\sum_{1\le i \le n}^{} x_i y_i\)</span>, where <span class="math inline">\(x=(x_1,x_2, \dots , x_n)\)</span> and <span class="math inline">\(y = (y_1, y_2 ,\dots ,y_n)\)</span>.</p>
+</div>
+<p>The proof follows via direct computations.</p>
+<p>Consider the <span class="math inline">\(\mathbb{C}\)</span>-vector space <span class="math inline">\(H=\mathop{\mathrm{Maps}}(Q^n, \mathbb{C})\)</span> and recall the <a href="hamming_fourier.html">Fourier transform</a> <span class="math inline">\(\mathcal{F}\)</span>. The above lemma tells us that if <span class="math inline">\(0 \le k \le n\)</span> is fixed and <span class="math inline">\(f_k=\mathbb{I}_{w( \bullet ) = k} \in H\)</span> is the indicator function that gives 1 if weight of the argument is <span class="math inline">\(k\)</span> and 0 otherwise, then <span class="math inline">\(\mathcal{F}(f_k)(x)=K_{k}(w(x))\)</span>.</p>
+<p>In this interpretation, Kravchuk polynomials are Fourier transforms of spherical distributions. Hence, they are analogous to <a href="bessel.html">Bessel functions</a></p>
+<hr />
+	<small>	<p class="date">This page was updated on February 2, 2022.<br>
+		<a href="index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
