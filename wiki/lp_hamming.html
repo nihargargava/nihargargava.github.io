@@ -42,6 +42,12 @@
 <header id="title-block-header">
 <h1 class="title">Linear programming bound for Hamming spaces</h1>
 </header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#kravchuk-polynomial-version">Kravchuk polynomial version</a></li>
+</ul>
+</nav>
 <p>The following is a <a href="lp_bound.html">linear programming bound</a> for error-correcting <a href="codes.html">codes</a>. It is due to Delsarte.</p>
 <div class="theorem">
 <p>Consider the <a href="hamming_space.html">Hamming space</a> <span class="math inline">\(Q^n\)</span> and let <span class="math inline">\(C \subseteq Q^n\)</span> be a <a href="codes.html">code</a>. Suppose <span class="math inline">\(\varphi \in H\)</span> is any function where <span class="math inline">\(H = \mathop{\mathrm{Maps}}(Q^n, \mathbb{C})\)</span> such that</p>
@@ -64,6 +70,13 @@
 <div class="remark">
 <p>By averaging over symmetries of the Hamming space <span class="math inline">\(Q^n\)</span>, without loss of generality we can assume <span class="math inline">\(\varphi\)</span> to be radial.</p>
 </div>
+<h1 id="kravchuk-polynomial-version">Kravchuk polynomial version</h1>
+<div class="theorem">
+<p><strong>(LP Bound)</strong></p>
+<p>Suppose <span class="math inline">\(C \subset Q^n\)</span> is a code such <span class="math inline">\(d(C)\ge d\)</span>. Let <span class="math inline">\(\beta(x) = 1+ \sum_{k=1}^{n} y_k K_k (x)\)</span> be a polynomial such that <span class="math inline">\(y_k \ge 0\)</span> for every <span class="math inline">\(k\)</span> but <span class="math inline">\(\beta(j) \le 0\)</span> for <span class="math inline">\(j=d, d+1,\dots ,n\)</span>. With this setting, we have that <span class="math inline">\(|C| \le \beta(0)\)</span>.</p>
+</div>
+<p>Set <span class="math inline">\(\alpha:Q^n \to \mathbb{C}\)</span> as <span class="math inline">\(\alpha(x)=\)</span></p>
+<p>To recover the <a href="Kravchuk.html">Kravchuk</a> polynomial version of this theorem, simply put <span class="math inline">\(\varphi = \mathcal{F}(\alpha)\)</span> and use that <span class="math inline">\(\mathcal{F}\circ\mathcal{F}(\alpha)(x) = |Q^n| \alpha(-x)\)</span>.</p>
 <hr />
 	<small>	<p class="date">This page was updated on February 2, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
