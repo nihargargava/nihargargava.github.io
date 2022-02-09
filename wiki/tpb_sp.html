@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2022-02-08" />
+  <meta name="dcterms.date" content="2022-02-09" />
   <title>Three point bound for sphere packing</title>
   <style>
     code{white-space: pre-wrap;}
@@ -59,7 +59,10 @@
 <p>Consider the kernel <span class="math inline">\(K:\mathbb{R}^{n} \times \mathbb{R}^{n} \rightarrow \mathbb{R}\)</span> given by <span class="math display">\[\begin{align}
   K(x,y) = f_{3}(x,y) + \mathbb{I}_{x=y} f_2(x)
 \end{align}\]</span></p>
-<p>Note that <span class="math inline">\(K(x,y)\)</span> is positive definition. For any <span class="math inline">\(w_{\bullet} : \mathbb{R}^{n} \rightarrow \mathbb{R}\)</span> with finite support, we have  begin{align} <em>{x,y ^{n}} K(x,y)w</em>{x}w_{y} = <em>{x <sup>{n}}</sup>{} f_2(0) w_x^{2}+</em>{x,y ^{n}} f_3(x,y)w_{x}w_{y} . \end{align} Here, we know that <span class="math inline">\(f_{2}(0) \ge 0\)</span> since <span class="math inline">\(\hat{f_2} \ge 0\)</span>.</p>
+<p>Note that <span class="math inline">\(K(x,y)\)</span> is positive definition. For any <span class="math inline">\(w_{\bullet} : \mathbb{R}^{n} \rightarrow \mathbb{R}\)</span> with finite support, we have <span class="math display">\[\begin{align}
+  &amp; \sum_{x,y \in \mathbb{R}^{n}} K(x,y)w_{x}w_{y}  \\
+  = &amp;  \sum_{x \in \mathbb{R}^{n}}^{} f_2(0) w_x^{2}+\sum_{x,y \in \mathbb{R}^{n}} f_3(x,y)w_{x}w_{y}   \ge 0.
+\end{align}\]</span> Here, we know that <span class="math inline">\(f_{2}(0) \ge 0\)</span> since <span class="math inline">\(\hat{f_2} \ge 0\)</span>.</p>
 <p>Let <span class="math inline">\(\Lambda \subseteq \mathbb{R}^{n}\)</span> be a lattice and let <span class="math inline">\(F \subseteq \mathbb{R}^{n}\)</span> be a finite set such that <span class="math inline">\(F \rightarrow \mathbb{R}^{n}/ \Lambda\)</span> is injective. Therefore, we get that the set <span class="math inline">\(F + \Lambda\)</span> is a periodic packing. We also assume that <span class="math inline">\(\Lambda + F\)</span> is a unit-distance packing, that is no two pair of points are at a distance strictly less than <span class="math inline">\(1\)</span>.</p>
 <p>We now try to sum up the set <span class="math inline">\(K(v_2-v_0,v_1-v_0)\)</span> as <span class="math inline">\(v_0,v_1,v_2\)</span> are vertices of all possible triangles that we can form with points in <span class="math inline">\(\Lambda + F\)</span> up to translational symmetry. We consider the sum <span class="math display">\[\begin{align}
   S_{\Delta} = \sum_{\lambda_1, \lambda_2 \in \Lambda} \sum_{s_0,s_1,s_2 \in F} K(\lambda_1 + s_1-  s_0, \lambda_2+s_2 - s_0).
@@ -94,7 +97,7 @@
 <p>Putting the lower bound and upper bound on <span class="math inline">\(S_{\Delta}\)</span> gives the desired proof.</p>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on February 8, 2022.<br>
+	<small>	<p class="date">This page was updated on February 9, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
