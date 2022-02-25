@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2022-01-27" />
+  <meta name="dcterms.date" content="2022-02-25" />
   <title>Fourier transform on Euclidean space</title>
   <style>
     code{white-space: pre-wrap;}
@@ -49,6 +49,7 @@
 <ul>
 <li><a href="#dilation">Dilation</a></li>
 <li><a href="#translation">Translation</a></li>
+<li><a href="#radial-functions">Radial functions</a></li>
 <li><a href="#poisson-summation-formula">Poisson summation formula</a></li>
 </ul></li>
 <li><a href="#analogues-of-fourier-transforms">Analogues of Fourier transforms</a></li>
@@ -62,7 +63,7 @@
    &amp; \hat{f}(\xi) = \int_{\mathbb{R}^{d}} f(x)e^{-2\pi i \langle  x,\xi \rangle} dx 
 \end{align}\]</span></p>
 <div class="example">
-<p>Let <span class="math inline">\(g_{z}=e^{2 \pi i z \| x \|^{2}}\)</span>. Then <span class="math inline">\(\mathcal{F}(g_{z})= \left( \frac{i}{z}\right)^{\frac{1}{2}} g_{-\frac{1}{z}}\)</span>. This is example of a Gaussian.</p>
+<p>Let <span class="math inline">\(g_{z}=e^{2 \pi i z \| x \|^{2}}\)</span>. Then <span class="math inline">\(\mathcal{F}(g_{z})= \left( \frac{i}{z}\right)^{\frac{d}{2}} g_{-\frac{1}{z}}\)</span>. This is example of a Gaussian.</p>
 </div>
 <h1 id="properties">Properties</h1>
 <p>Let <span class="math inline">\(f:\mathbb{R}^{d} \rightarrow \mathbb{R}\)</span> be an admissible function for the Fourier transform <span class="math inline">\(\mathcal{F}\)</span>.</p>
@@ -70,14 +71,16 @@
 <p>Let <span class="math inline">\(f_{r}(x) = f(rx)\)</span> be the <span class="math inline">\(r\)</span>-dilate of <span class="math inline">\(f:\mathbb{R}^{d} \rightarrow \mathbb{R}\)</span>. Then, we have <span class="math inline">\(\mathcal{F}{(f_{r})} = r^{d} \mathcal{F}(f)\)</span>.</p>
 <h2 id="translation">Translation</h2>
 <p>Let <span class="math inline">\(v \in \mathbb{R}^{d}\)</span> and let <span class="math inline">\(T_{v}(f)(x) = f(x+v)\)</span>. Then <span class="math display">\[\begin{align}
-  \mathcal{F} \circ T_{v} (f) (\xi) = e^{-2\pi i \langle \xi,v\rangle} \hat{f}(\xi)
+  \mathcal{F} \circ T_{v} (f) (\xi) = e^{2\pi i \langle \xi,v\rangle} \hat{f}(\xi)
 \end{align}\]</span></p>
+<h2 id="radial-functions">Radial functions</h2>
+<p>See <a href="fourier_radial.html">Fourier transform of radial functions</a></p>
 <h2 id="poisson-summation-formula">Poisson summation formula</h2>
 <p>See <a href="poisson.html">here</a></p>
 <h1 id="analogues-of-fourier-transforms">Analogues of Fourier transforms</h1>
 <p>You can also do a <a href="hamming_fourier.html">Fourier transform on a Hamming space</a></p>
 <hr />
-	<small>	<p class="date">This page was updated on January 27, 2022.<br>
+	<small>	<p class="date">This page was updated on February 25, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
