@@ -4,35 +4,34 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-09-21" />
+  <meta name="dcterms.date" content="2022-02-02" />
   <title>Quantum Error Correcting Code</title>
   <style>
     code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }
-  </style>
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
@@ -46,10 +45,10 @@
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
+<li><a href="#relation-to-error-correcting-codes">Relation to error-correcting codes</a></li>
 <li><a href="#bibliography">References</a></li>
 </ul>
 </nav>
-<p><strong>Caution</strong>: This is the definition that I understood from reading <span class="citation" data-cites="CRSS1998">[<a href="#ref-CRSS1998" role="doc-biblioref">1</a>]</span>. It may be wrong! It seems somewhat similar to <a href="https://en.wikipedia.org/wiki/Stabilizer_code">this definition on wikipedia</a> of stabilizer codes..</p>
 <p>Let <span class="math inline">\(V=\mathbb{C}^{2}\)</span>. Let <span class="math inline">\(G \subset U(V)\)</span> be a finite group of unitary operators defined as <span class="math display">\[\begin{align}
     \left\langle
       \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}
@@ -67,18 +66,18 @@
     v \in W \Rightarrow gv - v\in W^{\perp}.
   \end{align}\]</span></p>
 </div>
-<p>There is also the book <span class="citation" data-cites="NC02">[<a href="#ref-NC02" role="doc-biblioref">2</a>]</span> about this subject.</p>
+<p>There is also the book <span class="citation" data-cites="NC02">[<a href="#ref-NC02" role="doc-biblioref">1</a>]</span> about this subject.</p>
+<h1 id="relation-to-error-correcting-codes">Relation to error-correcting codes</h1>
+<p>In classical binary error-correcting <a href="codes.html">codes</a>, each information is a bit. The errors are propagated as binary random variables adding randomly at coordinates.</p>
+<p>Here, the information is a qubit, which is seen as one copy of <span class="math inline">\(V\)</span>. The errors act as Pauli matrices on <span class="math inline">\(V\)</span>.</p>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-CRSS1998" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">A. R. Calderbank, E. M. Rains, P. Shor, &amp; N. J. Sloane, Quantum error correction via codes over GF (4). <em>IEEE Transactions on Information Theory</em>, <strong>44</strong> (1998) 1369–1387.</div>
-</div>
 <div id="ref-NC02" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">M. A. Nielsen &amp; I. Chuang, <em>Quantum computation and quantum information</em> (American Association of Physics Teachers, 2002).</div>
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">M. A. Nielsen &amp; I. Chuang, <em>Quantum computation and quantum information</em> (American Association of Physics Teachers, 2002).</div>
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on September 21, 2021.<br>
+	<small>	<p class="date">This page was updated on February 2, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
