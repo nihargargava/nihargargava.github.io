@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2022-02-01" />
-  <title>Linear Programming bounds</title>
+  <meta name="dcterms.date" content="2022-02-09" />
+  <title>Laplacian</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -33,21 +33,24 @@
           margin-left: 2em;
         }  </style>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Linear Programming bounds</h1>
+<h1 class="title">Laplacian</h1>
 </header>
-<p>A class of bounds on combinatorial problems or packing problems.</p>
-<ul>
-<li><a href="lp_bound_sp.html">Linear programming bound for sphere packing</a></li>
-<li><a href="lp_hamming.html">Linear programming bound for error-correcting codes</a></li>
-</ul>
+<p>Consider the <a href="laplacian.html">Laplacian</a> on <span class="math inline">\(\mathbb{R}^{n}\)</span> given by <span class="math display">\[\begin{align}
+  L = \frac{1}{4 \pi^{2}} \sum_{i=1}^{n} \frac{\partial^{2}}{\partial x_{i}^{2}}
+\end{align}\]</span></p>
+<p>We then have the following identity for any admissible function <span class="math inline">\(f:\mathbb{R}^{n} \rightarrow \mathbb{R}\)</span>. Suppose <span class="math inline">\(f_1(x) = - \|x\|^{2}f(x)\)</span>, then</p>
+<p><span class="math display">\[\begin{align}
+  \mathcal{F}(f_1)(x) = L\hat{f}(t),
+\end{align}\]</span> where <span class="math inline">\(\mathcal{F}\)</span> is the <a href="fourier.html">Fourier</a> transform.</p>
 <hr />
-	<small>	<p class="date">This page was updated on February 1, 2022.<br>
+	<small>	<p class="date">This page was updated on February 9, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
