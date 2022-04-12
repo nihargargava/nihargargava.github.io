@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2022-04-12" />
-  <title>Dedekind-Zeta Function</title>
+  <meta name="dcterms.date" content="2022-02-10" />
+  <title>Laguerre polynomials</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -40,30 +40,27 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Dedekind-Zeta Function</h1>
+<h1 class="title">Laguerre polynomials</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#euler-expansion">Euler expansion</a></li>
-<li><a href="#for-cyclotomic-field">For cyclotomic field</a></li>
+<li><a href="#bibliography">References</a></li>
 </ul>
 </nav>
-<div class="definition">
-<p>Let <span class="math inline">\(K\)</span> be a number field and let <span class="math inline">\(\mathcal{O}_{K}\)</span> be its ring of integers. <span class="math inline">\(\Re(s)&gt;1\)</span>, we define the Dedekind-zeta function to be <span class="math display">\[\begin{align}
-  \zeta_K(s)  = \sum_{\substack{ \mathcal{I} \subseteq \mathcal{O}_{K} \\ \mathcal{I} \text{ non-zero ideal}  } } \frac{1}{\mathop{\mathrm{N}}(\mathcal{I})^{s}},
-\end{align}\]</span> where <span class="math inline">\(\mathop{\mathrm{N}}(\mathcal{I}) = \# \left( \mathcal{O}_{K} / \mathcal{I}\right)\)</span>.</p>
-</div>
-<h1 id="euler-expansion">Euler expansion</h1>
-<p>For <span class="math inline">\(\Re(s) &gt; 1\)</span>, we have the following product expansion.</p>
+<p>We have the definition</p>
 <p><span class="math display">\[\begin{align}
-  \zeta_K(s)  = \prod_{\substack{ \mathcal{P} \subseteq \mathcal{O}_{K} \\ \mathcal{P} \text{ prime ideal}  } } \frac{1}{\left( 1 - \frac{1}{\mathop{\mathrm{N}}(\mathcal{P})^{s}} \right)}.
+  L_n^{(\alpha)} (x) = \sum_{i=0}^n (-1)^i {n+\alpha \choose n-i} \frac{x^i}{i!}.
 \end{align}\]</span></p>
-<h1 id="for-cyclotomic-field">For cyclotomic field</h1>
-<p>For cyclotomic fields, one can evaluate <span class="math inline">\(\zeta_K(s)\)</span> more precisely.</p>
-<p>See <a href="dz_for_cyclotomic.html">Dedekind-zeta for cyclotomic fields</a></p>
+<p>From <span class="citation" data-cites="K1996">[<a href="#ref-K1996" role="doc-biblioref">1</a>]</span>, we have the following.</p>
+<h1 class="unnumbered" id="bibliography">References</h1>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-K1996" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">K. S. Kölbig &amp; H. Scherb, On a <span>H</span>ankel transform integral containing an exponential function and two <span>L</span>aguerre polynomials. <em>Journal of computational and applied mathematics</em>, <strong>71</strong> (1996) 357–363.</div>
+</div>
+</div>
 <hr />
-	<small>	<p class="date">This page was updated on April 12, 2022.<br>
+	<small>	<p class="date">This page was updated on February 10, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
