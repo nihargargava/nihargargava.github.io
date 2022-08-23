@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2022-07-18" />
+  <meta name="dcterms.date" content="2022-08-23" />
   <title>Rogers’ mean value theorem</title>
   <style>
     code{white-space: pre-wrap;}
@@ -50,16 +50,23 @@
 </nav>
 <p>This is Theorem 1 from <span class="citation" data-cites="R1955">[<a href="#ref-R1955" role="doc-biblioref">1</a>]</span>.</p>
 <div class="theorem">
-<p>Consider the lattice in <span class="math inline">\(\mathbb{R}^{d}\)</span> given by</p>
-<p><span class="math display">\[
-\lambda (\theta_1,\dots,\theta_{d-1) = 
-    \begin{bmatrix}
-    \omega  &amp; &amp; &amp; &amp; &amp; \\
-        &amp; \omega &amp; &amp; &amp; &amp; \\
-    \end{bmatrix}
-\mathbb{Z}^{d}
-\]</span></p>
+<p>Consider the lattice in <span class="math inline">\(\mathbb{R}^{d}\)</span> given by <span class="math display">\[\begin{align}
+    \Lambda(\theta_1,\dots,\theta_{d-1})=
+\begin{bmatrix}
+\omega  &amp; &amp; &amp; &amp; &amp; \\
+    &amp; \omega &amp; &amp; &amp; &amp; \\
+    &amp; &amp; \omega &amp; &amp; &amp; \\
+ &amp;  &amp; &amp; \ddots &amp; \\
+\theta_1 &amp; \theta_2 &amp; \dots &amp; \theta_{d-2} &amp; \theta_{d-1} \omega^{d-1}
+\end{bmatrix}
+\mathbb{Z}^{d}.
+\end{align}\]</span></p>
+<p>Then, we have that</p>
+<p><span class="math display">\[\begin{equation}
+    \int_{ \theta \in [0,1]^{d-1}} \sum_{x \in \Lambda(\theta)}f(x) =  f(0) + \int_{\mathbb{R}^{d}} f(x) dx.
+\end{equation}\]</span></p>
 </div>
+<p>This is some analogue of horocycle equidistribution. Rogers’ used this theorem to prove the <a href="smt_higher.html">higher momemnts of SMT</a>.</p>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-R1955" class="csl-entry" role="doc-biblioentry">
@@ -67,7 +74,7 @@
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on July 18, 2022.<br>
+	<small>	<p class="date">This page was updated on August 23, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
