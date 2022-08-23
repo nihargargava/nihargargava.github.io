@@ -4,12 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-<<<<<<< HEAD
-  <meta name="dcterms.date" content="2022-08-24" />
-=======
   <meta name="dcterms.date" content="2022-08-23" />
->>>>>>> f640cbe66a375afb791bb96f64df155385b50640
-  <title>Higher moments of the Siegel Mean Value Theorem</title>
+  <title>Rogers’ mean value theorem</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -44,28 +40,33 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Higher moments of the Siegel Mean Value Theorem</h1>
+<h1 class="title">Rogers’ mean value theorem</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#rogers-mean-value-theorem">Rogers’ mean value theorem</a></li>
 <li><a href="#bibliography">References</a></li>
 </ul>
 </nav>
-<p>The following is the main theorem about <span class="math inline">\(k\)</span>th moments of the <span class="math inline">\(d\)</span>-dimensional <a href="smt.html">Seigel Mean Value theorem</a> from <span class="citation" data-cites="R1955">[<a href="#ref-R1955" role="doc-biblioref">1</a>]</span>.</p>
+<p>This is Theorem 1 from <span class="citation" data-cites="R1955">[<a href="#ref-R1955" role="doc-biblioref">1</a>]</span>.</p>
 <div class="theorem">
-<p>Let <span class="math inline">\(f:(\mathbb{R}^{d})^{k} \rightarrow \mathbb{R}\)</span> be a compactly supported continuous function. Then for <span class="math inline">\(k \in \{1,\dots,d-1\}\)</span>, we get that <span class="math display">\[\begin{align}
-    &amp; \int_{SL_d(\mathbb{R})/SL_d(\mathbb{Z})}\sum_{(x_1,x_2,\dots,x_k) \in (g \mathbb{Z}^{d})^k}f(x_1,x_2,\dots,x_k) \\
-    = &amp; f(0,0,\dots,0) + 
-  \sum_{m=1}^{{n}}\sum_{\substack{D \in M_{m \times k }(\mathbb{Q}) \\ 
-          \mathop{\mathrm{rank}}(D) = m \\ 
-  D \text{ is row reduced echelon}}}
-  N(D)^{-d} \int_{x \in K_\mathbb{R}^{d \times m }} g(x D ) dx,
-\end{align}\]</span> where <span class="math inline">\(N(D)\)</span> is the index of the sublattice <span class="math inline">\(\{ C \in M_{1 \times m }(\mathbb{Z}) \ | \ C \cdot D \in M_{1 \times n}(\mathbb{Z})\}\)</span> in <span class="math inline">\(M_{1 \times m}(\mathbb{Z})\)</span>.</p>
+<p>Consider the lattice in <span class="math inline">\(\mathbb{R}^{d}\)</span> given by <span class="math display">\[\begin{align}
+    \Lambda(\theta_1,\dots,\theta_{d-1})=
+\begin{bmatrix}
+\omega  &amp; &amp; &amp; &amp; &amp; \\
+    &amp; \omega &amp; &amp; &amp; &amp; \\
+    &amp; &amp; \omega &amp; &amp; &amp; \\
+ &amp;  &amp; &amp; \ddots &amp; \\
+\theta_1 &amp; \theta_2 &amp; \dots &amp; \theta_{d-2} &amp; \theta_{d-1} \omega^{d-1}
+\end{bmatrix}
+\mathbb{Z}^{d}.
+\end{align}\]</span></p>
+<p>Then, we have that</p>
+<p><span class="math display">\[\begin{equation}
+    \int_{ \theta \in [0,1]^{d-1}} \sum_{x \in \Lambda(\theta)}f(x) =  f(0) + \int_{\mathbb{R}^{d}} f(x) dx.
+\end{equation}\]</span></p>
 </div>
-<h2 id="rogers-mean-value-theorem">Rogers’ mean value theorem</h2>
-<p>See <a href="rmt.html">this page</a>.</p>
+<p>This is some analogue of horocycle equidistribution. Rogers’ used this theorem to prove the <a href="smt_higher.html">higher momemnts of SMT</a>.</p>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-R1955" class="csl-entry" role="doc-biblioentry">
@@ -73,11 +74,7 @@
 </div>
 </div>
 <hr />
-<<<<<<< HEAD
-	<small>	<p class="date">This page was updated on August 24, 2022.<br>
-=======
 	<small>	<p class="date">This page was updated on August 23, 2022.<br>
->>>>>>> f640cbe66a375afb791bb96f64df155385b50640
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
