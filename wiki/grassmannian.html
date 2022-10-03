@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2022-10-02" />
+  <meta name="dcterms.date" content="2022-10-03" />
   <title>Grassmannian variety</title>
   <style>
     code{white-space: pre-wrap;}
@@ -80,14 +80,17 @@ Here is Theorem 3 from <span class="citation" data-cites="S1967">[<a href="#ref-
 <div class="remark">
 <p>If I understood correctly (please verify), after Lemma 8 Thunder states in <span class="citation" data-cites="T1993">[<a href="#ref-T1993" role="doc-biblioref">2</a>]</span> the following.</p>
 <p>For a large enough <span class="math inline">\(T\)</span>, we can assume <span class="math inline">\(C_1=a(n,m)-\epsilon\)</span> and <span class="math inline">\(C_2 = a(n,m)+\epsilon\)</span> where <span class="math display">\[\begin{equation}
-a(n,m) = \frac{h_{K} R_{K}}{\omega_{K}} \left( \frac{2^{r_2}}{\Delta_{K}} \right)^{( n-m )m+1} \binom{n}{m}^{r_1+r_2} \frac{( V|^{n}_{m} )^{r_1}
+\label{eq:defi_of_anmK}
+a(n,m;K) = \frac{h_{K} R_{K}}{\omega_{K}} \left( \frac{2^{r_2}}{\Delta_{K}} \right)^{( n-m )m+1} \binom{n}{m}^{r_1+r_2} \frac{( V|^{n}_{m} )^{r_1}
 ( V_2|^{n}_{m})^{r_2}}{ \zeta_{K}|^{n}_{m}}.
+\end{equation}\]</span> Here <span class="math inline">\(h_{K}\)</span> is the class number of <span class="math inline">\(K\)</span>, <span class="math inline">\(R_{K}\)</span> is the regulator, <span class="math inline">\(\omega_{K}\)</span> is the size of the group of torsional units of <span class="math inline">\(\mathcal{O}_K^{*}\)</span>, <span class="math inline">\(\Delta_{K}\)</span> is the discriminant, <span class="math inline">\(r_1\)</span> is the number of real embeddings of <span class="math inline">\(K\)</span>, <span class="math inline">\(r_2\)</span> is the the number of complex embeddings, <span class="math inline">\(V_2(d) = V(2d)\)</span> is the size of a <span class="math inline">\(2d\)</span>-dimensional unit ball and for any function <span class="math inline">\(f: \mathbb{Z}\rightarrow \mathbb{C}\)</span>, we denote <span class="math display">\[\begin{equation}
+  f|^{n}_{m} = \frac{f(n)f(n-1)f(n-2)\dots f(n-m+1)}{f(1) f(2) \dots f(m)}.
 \end{equation}\]</span></p>
 <p>This might need some correction since the height here may differ from the height defined in <span class="citation" data-cites="T1993">[<a href="#ref-T1993" role="doc-biblioref">2</a>]</span> by a factor of some power of <span class="math inline">\(\Delta_{K}\)</span>.</p>
-<p>Kim in <span class="citation" data-cites="K19">[<a href="#ref-K19" role="doc-biblioref">3</a>]</span> seems to have made some improvements on this, for the case <span class="math inline">\(K=\mathbb{Q}\)</span>.</p>
+<p>Kim in <span class="citation" data-cites="K19">[<a href="#ref-K19" role="doc-biblioref">3</a>]</span> seems to have made some improvements on this, for the case <span class="math inline">\(K=\mathbb{Q}\)</span>. Sands has some upper bounds on the quantity <span class="math inline">\(h_K R_K / \omega_K\)</span> in terms of the discriminant <span class="math inline">\(\Delta_K\)</span> in <span class="citation" data-cites="S1991">[<a href="#ref-S1991" role="doc-biblioref">4</a>]</span>.</p>
 </div>
 <div class="remark">
-<p>Bombiery and Vaaler produce points of small heights in their work <span class="citation" data-cites="BV1983">[<a href="#ref-BV1983" role="doc-biblioref">4</a>]</span>.</p>
+<p>Bombiery and Vaaler produce points of small heights in their work <span class="citation" data-cites="BV1983">[<a href="#ref-BV1983" role="doc-biblioref">5</a>]</span>.</p>
 </div>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -100,12 +103,15 @@ a(n,m) = \frac{h_{K} R_{K}}{\omega_{K}} \left( \frac{2^{r_2}}{\Delta_{K}} \right
 <div id="ref-K19" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">3. </div><div class="csl-right-inline">S. Kim, Counting rational points on a grassmannian. <em>arXiv preprint arXiv:1908.01245</em>, (2019).</div>
 </div>
+<div id="ref-S1991" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">J. Sands, Generalization of a theorem of siegel. <em>Acta Arithmetica</em>, <strong>58</strong> (1991) 47–57.</div>
+</div>
 <div id="ref-BV1983" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">E. Bombieri &amp; J. Vaaler, On <span>S</span>iegel’s lemma. <em>Inventiones mathematicae</em>, <strong>73</strong> (1983) 11–32.</div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">E. Bombieri &amp; J. Vaaler, On <span>S</span>iegel’s lemma. <em>Inventiones mathematicae</em>, <strong>73</strong> (1983) 11–32.</div>
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on October 2, 2022.<br>
+	<small>	<p class="date">This page was updated on October 3, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
