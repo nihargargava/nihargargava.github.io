@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-11-19" />
+  <meta name="dcterms.date" content="2022-11-21" />
   <title>Shortest Vector Problem</title>
   <style>
     code{white-space: pre-wrap;}
@@ -42,6 +42,12 @@
 <header id="title-block-header">
 <h1 class="title">Shortest Vector Problem</h1>
 </header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#randomized-lattices-and-worst-case-svp">Randomized lattices and worst case SVP</a></li>
+</ul>
+</nav>
 <p>The Shortest Vector Problem (SVP) corresponds to deterministically solving the following algorithms problem.</p>
 <div class="question">
 <p>Given a lattice <span class="math inline">\(\Lambda \subseteq \mathbb{R}^{n}\)</span>, say by giving out a <span class="math inline">\(\mathbb{Z}\)</span>-basis of <span class="math inline">\(\Lambda\)</span>, can we find a shortest vector in <span class="math inline">\(\Lambda\)</span>?</p>
@@ -53,8 +59,11 @@
 <p>Currently known candidates for algorithm <span class="math inline">\(A\)</span> have exponential running time in <span class="math inline">\(n\)</span>. The SVP problem is <strong>NP-Hard</strong>.</p>
 <p><a href="https://cseweb.ucsd.edu/~daniele/LatticeLinks/SVP.html">This link</a> contains some useful information about time complexity of known algorithms.</p>
 <p><a href="https://www.math.uni-magdeburg.de/lattice_geometry/">This link</a> contains a C++ implementation.</p>
+<h1 id="randomized-lattices-and-worst-case-svp">Randomized lattices and worst case SVP</h1>
+<p>There’s a landmark result of Ajtai about worst case complexity of the SVP being as bad as the average case SVP.</p>
+<p>I don’t understand it a lot, but this <a href="https://uu.diva-portal.org/smash/get/diva2:1641300/FULLTEXT01.pdf">thesis</a> seems to be useful.</p>
 <hr />
-	<small>	<p class="date">This page was updated on November 19, 2021.<br>
+	<small>	<p class="date">This page was updated on November 21, 2022.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
