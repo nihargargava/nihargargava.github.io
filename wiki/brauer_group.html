@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2023-04-12" />
+  <title>Brauer group</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Brauer group</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#galois-cohomology">Galois cohomology</a></li>
+</ul>
+</nav>
+<p>For a field <span class="math inline">\(k\)</span>, the Braur group <span class="math inline">\(\mathop{\mathrm{Br}}(k)\)</span> is the group of all central division algebras over <span class="math inline">\(k\)</span>.</p>
+<p>By Wedderburn’s decomposition thereom, we know that if <span class="math inline">\(A\)</span> is a central simple algebra over <span class="math inline">\(k\)</span> <span class="math display">\[\begin{equation}
+  A \simeq M_n(D),
+\end{equation}\]</span> for some division ring <span class="math inline">\(D\)</span> over <span class="math inline">\(k\)</span>. To construct the Brauer group <span class="math inline">\(\mathop{\mathrm{Br}}(k)\)</span>, we take the collection of all central simple algebras over <span class="math inline">\(k\)</span> and identify <span class="math display">\[\begin{equation}
+M_{ n_1 }(D_1) \sim M_{n_2}(D_2) \Leftrightarrow D_1 \simeq D_2,
+\end{equation}\]</span> that is if the underlying division algebras are the same, we consider the central simple algebras to be the same. The group operation is via tensoring. <span class="math display">\[\begin{equation}
+    [A_1] \cdot [A_2 ] = [A_1 \otimes A_2].
+\end{equation}\]</span> To see that <span class="math inline">\(\mathop{\mathrm{Br}}(k)\)</span> is a group, we observe that the identity element is <span class="math inline">\(k\)</span> itself and for any division ring <span class="math inline">\(D\)</span> central over <span class="math inline">\(k\)</span> <span class="math display">\[\begin{equation}
+    D\otimes D_{\mathop{\mathrm{opp}}} \simeq M_{r}(k),
+\end{equation}\]</span> where <span class="math inline">\(r = {\dim_{k} D}\)</span> and <span class="math inline">\(D_{\mathop{\mathrm{opp}}}\)</span> is the <a href="opposite.html">opposite</a> division algebra of <span class="math inline">\(D\)</span>. The map <span class="math inline">\(a \otimes b \mapsto ( x \mapsto axb )\)</span> is the above isomorpism.</p>
+<h1 id="examples">Examples</h1>
+<ul>
+<li><span class="math inline">\(\mathop{\mathrm{Br}}(\mathbb{Q}_p) \simeq \mathbb{Q}/\mathbb{Z}\)</span>.</li>
+<li><span class="math inline">\(\mathop{\mathrm{Br}}(\mathbb{R}) \simeq \mathbb{Z}/2\mathbb{Z}\)</span>. The only central division algebra over <span class="math inline">\(\mathbb{R}\)</span> other that itself is <span class="math inline">\(\mathbb{H}\)</span>.</li>
+<li><span class="math inline">\(\mathop{\mathrm{Br}}(\mathbb{F}_q) = 0\)</span> for any finite field <span class="math inline">\(\mathbb{F}_q\)</span> since there are no non-trivial division rings over them.</li>
+</ul>
+<h1 id="galois-cohomology">Galois cohomology</h1>
+<p>Let <span class="math inline">\(K/k\)</span> be a Galois extenstion. Denote <span class="math inline">\(\mathop{\mathrm{Br}}(K/k)\)</span> as the kernel of the map <span class="math inline">\(\mathop{\mathrm{Br}}(k) \rightarrow \mathop{\mathrm{Br}}(K)\)</span> given by <span class="math inline">\([A] \mapsto [A \otimes_{k} K ]\)</span>. The kernel of this map are exactly central simple algebras over <span class="math inline">\(k\)</span> that split over <span class="math inline">\(K\)</span>.</p>
+<p>Then, we have an isomorphism <span class="math display">\[\begin{equation}
+  H^{2}(G,K^{*}) \simeq \mathop{\mathrm{Br}}(K/k).
+\end{equation}\]</span></p>
+<p>Since we have that <span class="math inline">\(\mathop{\mathrm{Br}}(k) = \bigcup_{K/k} \mathop{\mathrm{Br}}(K/k)\)</span>, in particular this implies that <span class="math inline">\(\mathop{\mathrm{Br}}(k)\)</span> is a torsion group. See the <a href="https://math.colorado.edu/~rohi1040/expository/brauergroup.pdf">notes here</a> for details.</p>
+<hr />
+	<small>	<p class="date">This page was updated on April 12, 2023.<br>
+		<a href="index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
