@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2023-11-13" />
-  <title>Welcome to my personal wiki!</title>
+  <title>Class group L-function</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -40,27 +40,20 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Welcome to my personal wiki!</h1>
+<h1 class="title">Class group L-function</h1>
 </header>
-<p>This is a place where I collect useful research related information that I frequently use. In here, you may find citations, important results, definitions, etc.</p>
-<h2 id="some-useful-pages">Some useful pages</h2>
-<ul>
-<li><a href="lattice_packing_constant.html">Sphere Packing Constant</a></li>
-<li><a href="conferences.html">Conferences, seminars, talks</a></li>
-<li><a href="databases.html">Databases</a></li>
-</ul>
-<h2 id="recently-modified-pages">Recently modified pages</h2>
-<ul>
-<li><a href="class_group_l_function.html">Class group L-function</a></li>
-<li><a href="class_group.html">Class group of a number field</a></li>
-<li><a href="dedekind_zeta.html">Dedekind-Zeta Function</a></li>
-<li><a href="hif.html">Hecke integration formula</a></li>
-<li><a href="fractional_ideal.html">Fractional ideal</a></li>
-</ul>
-<h1 id="about-this-wiki">About this wiki</h1>
-<p>This wiki runs with the help of <a href="https://github.com/vimwiki/vimwiki">vimwiki</a>, <a href="https://pandoc.org">pandoc</a> and a bunch of poorly written <code>bash</code> scripts.</p>
-<p>The pages of this wiki look like they are written in <span class="math inline">\(\LaTeX\)</span>. This is thanks to <a href="https://github.com/davidrzs/latexcss">latexcss</a>.</p>
-<p><strong>Caution</strong>: Even though I try to give citations, there may be mathematical mistakes on the wiki. If you find any, please write me an email.</p>
+<p>Let <span class="math inline">\(K\)</span> be a number field. Define, for a <a href="fractional_ideal.html">fractional ideal</a> <span class="math inline">\(\mathcal{I} \subseteq K\)</span>, define <span class="math display">\[\begin{equation}
+    \zeta_{[\mathcal{I}]}(s) =  \mathop{\mathrm{N}}(\mathcal{I})^{s} \sum_{v \in \mathcal{I}\setminus \{0\}} |\mathop{\mathrm{N}}(v)|^{-s}.
+\end{equation}\]</span> Observe that <span class="math inline">\(\zeta_{[\mathcal{I}]}(s)\)</span> depends only on the ideal class of <span class="math inline">\(\mathcal{I}\)</span> in the <a href="class_group.html">class group</a> <span class="math inline">\(\mathop{\mathrm{Cl}}(K)\)</span> of <span class="math inline">\(K\)</span>. Furthermore, observe that the Dedekind zeta function <span class="math inline">\(\zeta_{K}(s)\)</span> satisfies <span class="math display">\[\begin{equation}
+    \zeta_{K}(s) 
+    = \sum_{[\mathcal{I}] \in \mathop{\mathrm{Cl}}(K)}
+    \zeta_{[\mathcal{I}]}(s).
+\end{equation}\]</span></p>
+<p>In general, this can also be used to define class group <span class="math inline">\(L\)</span>-functions of a number fields as <span class="math display">\[\begin{equation}
+  L(s,\chi) 
+    = \sum_{[\mathcal{I}] \in \mathop{\mathrm{Cl}}(K)}
+    \zeta_{[\mathcal{I}]}(s) \chi([\mathcal{I}]),
+\end{equation}\]</span> for a character <span class="math inline">\(\chi:\mathop{\mathrm{Cl}}(K) \rightarrow \mathbb{C}\)</span>.</p>
 <hr />
 	<small>	<p class="date">This page was updated on November 13, 2023.<br>
 		<a href="-index.html">Main Page</a> </p>

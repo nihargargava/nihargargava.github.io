@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2023-11-13" />
-  <title>Hecke</title>
+  <title>Mellin transform</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -33,20 +33,22 @@
           margin-left: 2em;
         }  </style>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Hecke</h1>
+<h1 class="title">Mellin transform</h1>
 </header>
-<p>Things after Hecke</p>
-<ul>
-<li><a href="hecke_points.html">Hecke operators</a></li>
-<li><a href="hecke_points.html">Hecke points</a></li>
-<li><a href="hif.html">Hecke integration formula</a></li>
-</ul>
+<p>For a function <span class="math inline">\(f:\mathbb{R}\rightarrow \mathbb{C}\)</span>, the Mellin transform is defined as <span class="math display">\[\begin{equation}
+    M\{f\}(s) = \int_{0}^{\infty} x^{s-1} f(x)  dx.
+\end{equation}\]</span></p>
+<p>There are some theorems about when the above integral convergges and when is the Mellin transform <span class="math inline">\(M\{f\}\)</span> become analytic. See <a href="https://en.wikipedia.org/wiki/Mellin_transform">wikipedia</a>.</p>
+<p>There’s also the following inversion formula. <span class="math display">\[\begin{equation}
+  f(x) = \int_{c-i \infty}^{c+ i \infty}x^{-s} M\{f\}(s) ds,
+\end{equation}\]</span> for <span class="math inline">\(c \in \mathbb{R}\)</span> large enough.</p>
 <hr />
 	<small>	<p class="date">This page was updated on November 13, 2023.<br>
 		<a href="-index.html">Main Page</a> </p>
