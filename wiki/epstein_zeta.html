@@ -42,17 +42,20 @@
 <header id="title-block-header">
 <h1 class="title">Epstein zeta function</h1>
 </header>
+<div class="definition">
 <p>For a full-span lattice <span class="math inline">\(\Lambda \subseteq \mathbb{R}^{n}\)</span>, we define the Epstein zeta function as <span class="math display">\[\begin{equation}
   E(\Lambda,s)  = \tfrac{1}{2} |\mathop{\mathrm{vol}}(\mathbb{R}^{n}/\Lambda)|^{\frac{1}{n}s}\sum_{v \in \Lambda \subseteq 0} \frac{1}{\| v\|^{s}}
 \end{equation}\]</span></p>
-<p>The right hand side is absolutely convergent for <span class="math inline">\(\Re( s ) &gt; n\)</span>. The completed Epstein zeta function is defined as <span class="math display">\[\begin{equation}
+<p>The completed Epstein zeta function is defined as <span class="math display">\[\begin{equation}
   E^{*}(\Lambda,s)  = {\Gamma\left(\tfrac{s}{2}\right)}{\pi^{-\frac{s}{2}}} E(\Lambda,s).
 \end{equation}\]</span></p>
+<p>The right hand side is absolutely convergent for <span class="math inline">\(\Re( s ) &gt; n\)</span>.</p>
+</div>
 <p>Due to Poisson summation formula, the completed Epstein zeta function satisfies</p>
 <p><span class="math display">\[\begin{equation}
-  E^{*}(\Lambda,s)  = E^{*}(\Lambda^{*},n-s).
+E^{*}(\Lambda,s)  = E^{*}(\Lambda^{*},n-s).
 \end{equation}\]</span></p>
-<p>By taking writing a theta function of a lattice as the inverse <a href="mellin_transform.html">Mellin transform</a> of the theta function of <span class="math inline">\(\Lambda\)</span>, we can show the following proposition by doing some contour shifting.</p>
+<p>By taking writing a theta function of a lattice as the inverse <a href="mellin_transform.html">Mellin transform</a> of the Epstein zeta function of <span class="math inline">\(\Lambda\)</span>, we can show the following proposition by doing some contour shifting.</p>
 <div class="proposition">
 <p> <span class="math display">\[\begin{equation}
     E^{*}(\Lambda,s) = -\tfrac{1}{s} - \tfrac{1}{n-s} + \frac{1}{2} \sum_{v \in \Lambda\setminus \{0\}} f\left(s, \tfrac{\|v\|}{\mathop{\mathrm{vol}}(\mathbb{R}^{n}/\Lambda)^{\frac{1}{n}}}\right) + 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2021-12-12" />
+  <meta name="dcterms.date" content="2023-11-13" />
   <title>Cyclic codes</title>
   <style>
     code{white-space: pre-wrap;}
@@ -50,7 +50,7 @@
 <li><a href="#bibliography">References</a></li>
 </ul>
 </nav>
-<p>Cyclic codes are <a href="codes.html">codes</a> that are preserved under a cyclic permutations of coordinates.</p>
+<p>Cyclic codes are <a href="code.html">codes</a> that are preserved under a cyclic permutations of coordinates.</p>
 <p>More precisely, a cyclic code is a set <span class="math inline">\(C \subset \mathbb{F}_q^n\)</span> such that <span class="math inline">\((c_1, c_2 \dots c_{n-1}, c_n ) \in C \Rightarrow (c_n , c_1 , c_2 \dots c_{n-1}) \in C\)</span>. The cyclic code is linear if it is also a vector subspace (or just closed under addition, really) when <span class="math inline">\(\mathbb{F}_q^n\)</span> is seen as an <span class="math inline">\(\mathbb{F}_q\)</span>-vector space. If we model <span class="math inline">\(\mathbb{F}_q^n \simeq \frac{\mathbb{F}_q[x]}{\langle x^n - 1\rangle}\)</span> (by just mapping vectors on the coefficients), then we have this very useful lemma.</p>
 <div class="lemma">
 <p>A subset <span class="math inline">\(C \subset \frac{\mathbb{F}_q[x]}{\langle x^n -1 \rangle}\)</span> is a linear cyclic code if and only if it is an ideal inside <span class="math inline">\(\frac{\mathbb{F}_q[x]}{ \langle x^n -1\rangle}\)</span>. </p>
@@ -58,6 +58,9 @@
 <div class="proof">
 <p>Being <span class="math inline">\(C\)</span> being linear is equivalent to <span class="math inline">\(C\)</span> being an <span class="math inline">\(\mathbb{F}_q\)</span>-subspace. Being cyclic gives us that <span class="math inline">\(f \in C \Rightarrow xf \in C\)</span>. This means that for any polynomial <span class="math inline">\(g= \sum_{i=0}^{n-1} g_i x^{i}\)</span>, <span class="math inline">\(g f \in C\)</span>. Hence it is an ideal.</p>
 <p>On the other hand, being an ideal implies being linear and closed under multiplication with <span class="math inline">\(x\)</span>.</p>
+</div>
+<div class="example">
+<p>The code in Example  can be presented as the ideal <span class="math inline">\(\langle 1 + x\rangle \subset \frac{\mathbb{F}_2[x]}{\langle x^{3} - 1 \rangle}\)</span>.</p>
 </div>
 <h1 id="open-problem">Open problem</h1>
 <div class="question">
@@ -69,11 +72,11 @@
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-EKL" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">S. Evra, E. Kowalski, &amp; A. Lubotzky, Good cyclic codes and the uncertainty principle. <em>arXiv preprint arXiv:1703.01080</em>, (2017).</div>
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">S. Evra, E. Kowalski, &amp; A. Lubotzky, Good cyclic codes and the uncertainty principle. <em>L’Enseignement Math<span>é</span>matique</em>, <strong>63</strong> (2018) 305–332.</div>
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on December 12, 2021.<br>
+	<small>	<p class="date">This page was updated on November 13, 2023.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
