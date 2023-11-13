@@ -51,11 +51,16 @@
 <p>The following is an integration formula due to <a href="Hecke.html">Hecke</a> who used it to prove the analytic continuation of <a href="dedekind_zeta.html">Dedekind zeta function</a>.</p>
 <p>Let <span class="math inline">\(E^*(\Lambda,z)\)</span> be the <a href="epstein_zeta.html">completed Epstein zeta function</a> of a lattice <span class="math inline">\(\Lambda \subseteq \mathbb{R}^{n}\)</span>.</p>
 <p>Let <span class="math inline">\(\zeta_K(s)\)</span> be the <a href="dedekind_zeta.html">Dedekind zeta function</a> of a number field <span class="math inline">\(K\)</span> of degree <span class="math inline">\(n\)</span>. Then, the completed Dedekind zeta function is defined as <span class="math display">\[\begin{equation}
-    \zeta_{K}^{*}(s) = \pi^{-\frac{s}{2}} \Gamma(\tfrac{s}{2})^{r_1}  \left( (2 \pi)^{-s} \Gamma(s)\right)^{r_2} |\Delta_K|^{\frac{s}{2}} \zeta_K(s),
+\zeta_{K}^{*}(s) = \pi^{-\frac{s}{2}} \Gamma(\tfrac{s}{2})^{r_1}  \left( (2 \pi)^{-s} \Gamma(s)\right)^{r_2} |\Delta_K|^{\frac{s}{2}} \zeta_K(s),
 \end{equation}\]</span> where <span class="math inline">\(\Delta_K\)</span> is the discriminant of the number field <span class="math inline">\(K\)</span> and <span class="math inline">\(r_1\)</span> is the number of real embeddings and <span class="math inline">\(r_2\)</span> is the number of pairs of complex embeddings.</p>
-<p>Let <span class="math inline">\(\zeta^*_K(s)\)</span> be the completed Dedekind zeta function defined as</p>
+<p>Then, the following theorem is true.</p>
 <div class="theorem">
-<p></p>
+<p> <strong>(Hecke)</strong></p>
+<p>Identify <span class="math inline">\(K\otimes \mathbb{R} = \mathbb{R}^{n} = \mathbb{R}^{r_1} \oplus \mathbb{C}^{r_2}\)</span>.</p>
+<p>Consider the <a href="class_group.html">Arakelov class group</a> <span class="math inline">\(\widetilde{\mathop{\mathrm{Cl}}}(K)\)</span> and identify it as a collection of lattices in <span class="math inline">\(\mathop{\mathrm{SL}}_{n}(\mathbb{R})/\mathop{\mathrm{SL}}_{n}(\mathbb{Z})\)</span>. Then, the Hecke integration formula basically says that <span class="math display">\[\begin{equation}
+    \int_{\widetilde{\mathop{\mathrm{Cl}}}(K)} E^{*}(\Lambda,s) d\Lambda 
+    = \frac{\omega_K}{2^{r_1} n R_K}  \zeta_K^{*}(s)
+\end{equation}\]</span> Here <span class="math inline">\(\omega_K\)</span> is the number of roots of unity in <span class="math inline">\(K\)</span> and <span class="math inline">\(R_K\)</span> is the <a href="regulator.html">regulator</a> of <span class="math inline">\(K\)</span>. The measure <span class="math inline">\(d\Lambda\)</span> is with respect to a Haar measure on <span class="math inline">\(\widetilde{\mathop{\mathrm{Cl}}}(K)\)</span> that makes every connected component of unit covolume.</p>
 </div>
 <p>The same theorem can also be done with <a href="class_group_l_function.html">class group L functions</a>. See <span class="citation" data-cites="K20">[<a href="#ref-K20" role="doc-biblioref">1</a>]</span></p>
 <h1 class="unnumbered" id="bibliography">References</h1>
@@ -66,7 +71,7 @@
 </div>
 <hr />
 	<small>	<p class="date">This page was updated on November 13, 2023.<br>
-		<a href="-index.html">Main Page</a> </p>
+		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
 </html>
