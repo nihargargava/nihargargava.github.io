@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2023-03-13" />
+  <meta name="dcterms.date" content="2024-02-08" />
   <title>Dedekind-Zeta Function for Cyclotomic Fields.</title>
   <style>
     code{white-space: pre-wrap;}
@@ -54,7 +54,8 @@
 <li><a href="#some-outputs">Some outputs</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#conjecture">Conjecture</a></li>
+<li><a href="#bounded-value-of-zeta-function">Bounded value of zeta function</a></li>
+<li><a href="#bibliography">References</a></li>
 </ul>
 </nav>
 <p>The following lemma allows easy computation of the <a href="dedekind_zeta">Dedekind-zeta function</a> when the field is a <a href="cyclotomic_number_field.html">cyclotomic extension</a> of <span class="math inline">\(\mathbb{Q}\)</span>.</p>
@@ -166,14 +167,21 @@
 <p><span class="math display">\[
 \zeta_{\mathbb{Q}(\mu_{30})}(s)=\frac{1}{1^s}+\frac{2}{16^s}+\frac{1}{25^s}+\frac{8}{31^s}+\frac{8}{61^s}+\frac{1}{81^s}+\frac{4}{121^s}+\ldots
 \]</span></p>
-<h1 id="conjecture">Conjecture</h1>
-<div class="question">
-<p>Can you show that <span class="math inline">\(\zeta_K(s)\)</span> is bounded for a fixed <span class="math inline">\(s &gt; 1\)</span> as <span class="math inline">\(K\)</span> varies across cyclotomic number fields?</p>
+<h1 id="bounded-value-of-zeta-function">Bounded value of zeta function</h1>
+<div class="theorem">
+<p>The value of <span class="math inline">\(\zeta_K(s)\)</span> is bounded for a fixed <span class="math inline">\(s &gt; 1\)</span> as <span class="math inline">\(K\)</span> varies across cyclotomic number fields.</p>
 </div>
 <p>Here is some data to support the evidence. On the <span class="math inline">\(x\)</span>-axis is the value of <span class="math inline">\(n\)</span>. On the <span class="math inline">\(y\)</span>-axis is the value of <span class="math inline">\(\zeta_K(s)\)</span> for <span class="math inline">\(K\)</span> being the <span class="math inline">\(n\)</span>th cyclotomic number field.</p>
+<p>The proof can be found in <span class="citation" data-cites="GSV23">[<a href="#ref-GSV23" role="doc-biblioref">1</a>]</span>.</p>
 <p><img src="https://nihargargava.com/wiki/images/dz_for_cyclotomic.png" style="width: 100%; align: center;" /></p>
+<h1 class="unnumbered" id="bibliography">References</h1>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-GSV23" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">N. P. Gargava, V. Serban, &amp; M. Viazovska, Moments of the number of points in a bounded set for number field lattices. <em>in preparation</em>, (2023).</div>
+</div>
+</div>
 <hr />
-	<small>	<p class="date">This page was updated on March 13, 2023.<br>
+	<small>	<p class="date">This page was updated on February 8, 2024.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
