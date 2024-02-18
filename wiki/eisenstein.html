@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2023-03-16" />
+  <title>Eisenstein Series</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Eisenstein Series</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#the-classical-case">The classical case</a></li>
+<li><a href="#for-other-groups">For other groups</a></li>
+<li><a href="#bibliography">References</a></li>
+</ul>
+</nav>
+<h1 id="the-classical-case">The classical case</h1>
+<p>An Eisenstein series over <span class="math inline">\(\Gamma = SL_2(\mathbb{Z})\)</span> is the following series <span class="math display">\[\begin{equation}
+    E(s,z) = \sum_{ \gamma \in \Gamma_{\infty}  \backslash \Gamma } |\Im ( \gamma z ) |^{s},
+\end{equation}\]</span> where <span class="math inline">\(\Gamma_\infty\)</span> is the group of matrices that fix <span class="math inline">\(\infty\)</span> on the upper half-plane,<br />
+namely <span class="math inline">\(\pm \left( \begin{smallmatrix} 1 &amp; \mathbb{Z} \\ 0 &amp; 1 \end{smallmatrix} \right)\)</span>.</p>
+<p>This series is absolutely convergent for <span class="math inline">\(\Re(s)&gt; 1\)</span> (but meromorphically continues in the <span class="math inline">\(s\)</span> variable to <span class="math inline">\(\mathbb{C}\)</span>). On the other hand, in the <span class="math inline">\(s\)</span> variable, it is automorphic under the action of <span class="math inline">\(\Gamma\)</span> and is an eigenfunction of the Laplacian on <span class="math inline">\(\mathbb{H}\)</span>.</p>
+<h1 id="for-other-groups">For other groups</h1>
+<p>For something less technical and directly for <span class="math inline">\(GL_n\)</span>, see <span class="citation" data-cites="G06">[<a href="#ref-G06" role="doc-biblioref">1</a>]</span>.</p>
+<p>For the full-on technical description, see <span class="citation" data-cites="MW1995">[<a href="#ref-MW1995" role="doc-biblioref">2</a>]</span>.</p>
+<h1 class="unnumbered" id="bibliography">References</h1>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-G06" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">D. Goldfeld, <em>Automorphic forms and l-functions for the group GL (n, r)</em> (Cambridge University Press, 2006).</div>
+</div>
+<div id="ref-MW1995" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">C. Moeglin &amp; J.-L. Waldspurger, <em>Spectral decomposition and eisenstein series: A paraphrase of the scriptures</em> (Cambridge University Press, 1995).</div>
+</div>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on March 16, 2023.<br>
+		<a href="index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>

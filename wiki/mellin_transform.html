@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2023-11-13" />
+  <title>Mellin transform</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Mellin transform</h1>
+</header>
+<p>For a function <span class="math inline">\(f:\mathbb{R}\rightarrow \mathbb{C}\)</span>, the Mellin transform is defined as <span class="math display">\[\begin{equation}
+    M\{f\}(s) = \int_{0}^{\infty} x^{s-1} f(x)  dx.
+\end{equation}\]</span></p>
+<p>There are some theorems about when the above integral convergges and when is the Mellin transform <span class="math inline">\(M\{f\}\)</span> become analytic. See <a href="https://en.wikipedia.org/wiki/Mellin_transform">wikipedia</a>.</p>
+<p>There’s also the following inversion formula. <span class="math display">\[\begin{equation}
+  f(x) = \int_{c-i \infty}^{c+ i \infty}x^{-s} M\{f\}(s) ds,
+\end{equation}\]</span> for <span class="math inline">\(c \in \mathbb{R}\)</span> large enough.</p>
+<hr />
+	<small>	<p class="date">This page was updated on November 13, 2023.<br>
+		<a href="-index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>

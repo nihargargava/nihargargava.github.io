@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2023-11-13" />
+  <title>Epstein zeta function</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Epstein zeta function</h1>
+</header>
+<div class="definition">
+<p>For a full-span lattice <span class="math inline">\(\Lambda \subseteq \mathbb{R}^{n}\)</span>, we define the Epstein zeta function as <span class="math display">\[\begin{equation}
+  E(\Lambda,s)  = \tfrac{1}{2} |\mathop{\mathrm{vol}}(\mathbb{R}^{n}/\Lambda)|^{\frac{1}{n}s}\sum_{v \in \Lambda \subseteq 0} \frac{1}{\| v\|^{s}}
+\end{equation}\]</span></p>
+<p>The completed Epstein zeta function is defined as <span class="math display">\[\begin{equation}
+  E^{*}(\Lambda,s)  = {\Gamma\left(\tfrac{s}{2}\right)}{\pi^{-\frac{s}{2}}} E(\Lambda,s).
+\end{equation}\]</span></p>
+<p>The right hand side is absolutely convergent for <span class="math inline">\(\Re( s ) &gt; n\)</span>.</p>
+</div>
+<p>Due to Poisson summation formula, the completed Epstein zeta function satisfies</p>
+<p><span class="math display">\[\begin{equation}
+E^{*}(\Lambda,s)  = E^{*}(\Lambda^{*},n-s).
+\end{equation}\]</span></p>
+<p>By taking writing a theta function of a lattice as the inverse <a href="mellin_transform.html">Mellin transform</a> of the Epstein zeta function of <span class="math inline">\(\Lambda\)</span>, we can show the following proposition by doing some contour shifting.</p>
+<div class="proposition">
+<p> <span class="math display">\[\begin{equation}
+    E^{*}(\Lambda,s) = -\tfrac{1}{s} - \tfrac{1}{n-s} + \frac{1}{2} \sum_{v \in \Lambda\setminus \{0\}} f\left(s, \tfrac{\|v\|}{\mathop{\mathrm{vol}}(\mathbb{R}^{n}/\Lambda)^{\frac{1}{n}}}\right) + 
+    \frac{1}{2}\sum_{v \in \Lambda^{*}\setminus \{0\}} f\left(s, \tfrac{\|v\|}{\mathop{\mathrm{vol}}(\mathbb{R}^{n}/\Lambda^{*})^{\frac{1}{n}}}\right),
+\end{equation}\]</span> where <span class="math display">\[\begin{equation}
+  f(s,a) = \tfrac{1}{( \pi a^{2} )^{\frac{s}{2}}} \Gamma(\tfrac{s}{2}, \pi a^{2}) = \int_{1}^{\infty} t^{\frac{s}{2}-1} \exp( - \pi t a^{2})  dt.
+\end{equation}\]</span></p>
+</div>
+<p>The proof of this expression also implies thee existence of a meromorphic continuation of the Epstein zeta function.</p>
+<hr />
+	<small>	<p class="date">This page was updated on November 13, 2023.<br>
+		<a href="-index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
