@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2024-02-20" />
+  <title>Buser-Sarnak construction</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Buser-Sarnak construction</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#bibliography" id="toc-bibliography">References</a></li>
+</ul>
+</nav>
+<p>This is a construction of an explcit <a
+href="riemann_surface.html">Riemann surface</a> that holds the record
+for having the largest smallest closed geodesic. This sort of a
+construction is called a Shimura curve. It is mentioned in <span
+class="citation" data-cites="BS1994">[<a href="#ref-BS1994"
+role="doc-biblioref">1</a>]</span>.</p>
+<p>Here is how it works. Take <span class="math inline">\(D = (a,b;
+\mathbb{Q})\)</span>, a <a href="quaternion">quaternion</a> <a
+href="division%20algebra.html">division algebra</a>. We want the
+division algebra to be split at infinity, that is <span
+class="math display">\[\begin{equation}
+    D \otimes \mathbb{R} = M_2(\mathbb{R}),
+\end{equation}\]</span> where the right hand side is the ring of <span
+class="math inline">\(2 \times 2\)</span> matrices over the reals. To
+have that <span class="math inline">\(D\)</span> is a division algebra
+over <span class="math inline">\(\mathbb{Q}\)</span>, we demand that
+<span class="math display">\[\begin{equation}
+x_0^{2} - ax_1^{2} - b x_2^{2} + ab x_3^{2}  = 0
+\end{equation}\]</span> has no solutions for <span
+class="math inline">\(x_0,x_1,x_2,x_3 \in \mathbb{Q}\)</span> but of
+course we admit solutions over <span
+class="math inline">\(\mathbb{R}\)</span>. This gives us an isomorphism
+<span class="math display">\[\begin{equation}
+    \left(D \otimes \mathbb{R}\right)^{(1)} \simeq SL_2(\mathbb{R}).
+\end{equation}\]</span></p>
+<p>Fix a prime <span class="math inline">\(p\)</span>. The set of
+elements of the form <span class="math display">\[\begin{align}
+    \Gamma  &amp; = \{ x_0+ x_1 i +  x_2 j +  x_3  k , \ x_0,x_1,x_2,x_3
+\in \mathbb{Z}  \} \cap \left( D \otimes \mathbb{R} \right)^{(1)}, \\
+    \Gamma(p)  &amp; = \{ x_0+ x_1 i +  x_2 j +  x_3  k  \in \Gamma,
+p\mid x_1,x_2,x_3 \},
+\end{align}\]</span> form a discrete subgroups of <span
+class="math inline">\(SL_2(\mathbb{R})\)</span>. The space <span
+class="math inline">\(\Gamma(p) \backslash \mathbb{H}\)</span> is the
+one with a large systole.</p>
+<h1 class="unnumbered" id="bibliography">References</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-BS1994" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">P.
+Buser &amp; P. Sarnak, On the period matrix of a riemann surface of
+large genus. <em>Inventiones mathematicae</em>, <strong>117</strong>
+(1994) 27–56.</div>
+</div>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on February 20, 2024.<br>
+		<a href="index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>

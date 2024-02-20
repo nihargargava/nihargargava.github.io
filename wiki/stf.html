@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2023-10-03" />
+  <meta name="dcterms.date" content="2024-02-20" />
   <title>Selberg Trace Formula</title>
   <style>
     code{white-space: pre-wrap;}
@@ -33,7 +33,9 @@
           margin-left: 2em;
         }  </style>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -45,22 +47,48 @@
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#how-to-prove">How to prove</a></li>
+<li><a href="#how-to-prove" id="toc-how-to-prove">How to prove</a></li>
 </ul>
 </nav>
-<p>Let <span class="math inline">\(f:\mathbb{R} \rightarrow \mathbb{C}\)</span> be a function that is integrable, has a holomorphic <a href="fourier.html">Fourier transform</a> in a strip <span class="math display">\[\begin{equation}
+<p>Let <span class="math inline">\(f:\mathbb{R} \rightarrow
+\mathbb{C}\)</span> be a function that is integrable, has a holomorphic
+<a href="fourier.html">Fourier transform</a> in a strip <span
+class="math display">\[\begin{equation}
     \{z \in \mathbb{C} \mid |\Im(z)| &lt; \frac{1}{2} + \varepsilon\}
-\end{equation}\]</span> for some <span class="math inline">\(\varepsilon &gt; 0\)</span> and satisfies that <span class="math display">\[\begin{equation}
+\end{equation}\]</span> for some <span class="math inline">\(\varepsilon
+&gt; 0\)</span> and satisfies that <span
+class="math display">\[\begin{equation}
   |\hat{f}(z)| = O\left( \frac{1}{1+ |z|^{p}}\right) .
 \end{equation}\]</span></p>
-<p>Let <span class="math inline">\(M\)</span> be a <a href="compact_riemann_surface.html">closed hyperbolic surface</a> of curvature <span class="math inline">\(-1\)</span> and genus <span class="math inline">\(g\)</span>. Let <span class="math inline">\(0 = \lambda_0 \leq \lambda_1 \leq \lambda_2 \leq \dots\)</span> be the eigenvalues of the Laplacian on <span class="math inline">\(M\)</span> and let <span class="math inline">\(\mathcal{C}(M)\)</span> be the set of closed oriented geodesics in <span class="math inline">\(M\)</span>. For any <span class="math inline">\(\gamma \in \mathcal{C}(M)\)</span> we denote <span class="math inline">\(l(\gamma)\)</span> to be the length and <span class="math inline">\(l(\gamma^{*})\)</span> to be the length of the shortest geodesic <span class="math inline">\(\gamma^{*}\)</span> such that <span class="math inline">\(\gamma = (\gamma^{*})^{k}\)</span> for some <span class="math inline">\(k \geq 1\)</span> (so <span class="math inline">\(\gamma^{*}\)</span> is <span class="math inline">\(\gamma\)</span> without repititions).</p>
-<p>Then, with these assumptions, we can write the Selberg trace formula <span class="math display">\[\begin{equation}
-    \sum_{j=0}^{\infty}\hat{f}( 2 \pi \sqrt{ \lambda_{j}- \tfrac{1}{4} }) = 2(g-1)\int_{0}^{\infty}\hat{f}( 2 \pi x)x \tanh(\pi x) dx +  \sum_{\gamma \in \mathcal{C}(M)} \frac{l(\gamma^{*}) f(l(\gamma))}{ 2 \sinh \left( l(\gamma)/2\right)}
+<p>Let <span class="math inline">\(M\)</span> be a <a
+href="compact_riemann_surface.html">closed hyperbolic surface</a> of
+curvature <span class="math inline">\(-1\)</span> and genus <span
+class="math inline">\(g\)</span>. Let <span class="math inline">\(0 =
+\lambda_0 \leq \lambda_1 \leq \lambda_2 \leq \dots\)</span> be the
+eigenvalues of the Laplacian on <span class="math inline">\(M\)</span>
+and let <span class="math inline">\(\mathcal{C}(M)\)</span> be the set
+of closed oriented geodesics in <span class="math inline">\(M\)</span>.
+For any <span class="math inline">\(\gamma \in \mathcal{C}(M)\)</span>
+we denote <span class="math inline">\(l(\gamma)\)</span> to be the
+length and <span class="math inline">\(l(\gamma^{*})\)</span> to be the
+length of the shortest geodesic <span
+class="math inline">\(\gamma^{*}\)</span> such that <span
+class="math inline">\(\gamma = (\gamma^{*})^{k}\)</span> for some <span
+class="math inline">\(k \geq 1\)</span> (so <span
+class="math inline">\(\gamma^{*}\)</span> is <span
+class="math inline">\(\gamma\)</span> without repititions).</p>
+<p>Then, with these assumptions, we can write the Selberg trace formula
+<span class="math display">\[\begin{equation}
+    \sum_{j=0}^{\infty}\hat{f}( \tfrac{1}{2 \pi}\sqrt{ \lambda_{j}-
+\tfrac{1}{4} }) = 2(g-1)\int_{0}^{\infty}\hat{f}( \tfrac{1}{2 \pi} x)x
+\tanh(\pi x) dx +  \sum_{\gamma \in \mathcal{C}(M)} \frac{l(\gamma^{*})
+f(l(\gamma))}{ 2 \sinh \left( l(\gamma)/2\right)}
 \end{equation}\]</span></p>
 <h1 id="how-to-prove">How to prove</h1>
-<p>The proof is heavily inspired from graph theory. Basically computing trace of the Laplacian in two different ways. See</p>
+<p>The proof is heavily inspired from graph theory. Basically computing
+trace of the Laplacian in two different ways.</p>
 <hr />
-	<small>	<p class="date">This page was updated on October 3, 2023.<br>
+	<small>	<p class="date">This page was updated on February 20, 2024.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
