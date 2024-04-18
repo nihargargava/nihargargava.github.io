@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2023-10-18" />
+  <meta name="dcterms.date" content="2024-03-06" />
   <title>Quaternion algebra</title>
   <style>
     code{white-space: pre-wrap;}
@@ -33,7 +33,9 @@
           margin-left: 2em;
         }  </style>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -45,29 +47,54 @@
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#hamiltonian-quaternions">Hamiltonian quaternions</a></li>
-<li><a href="#bibliography">References</a></li>
+<li><a href="#hamiltonian-quaternions"
+id="toc-hamiltonian-quaternions">Hamiltonian quaternions</a></li>
+<li><a href="#pari-gp" id="toc-pari-gp">PARI-GP</a></li>
+<li><a href="#bibliography" id="toc-bibliography">References</a></li>
 </ul>
 </nav>
-<p>It is an attempt to construct a division algebra of degree 4 over a given field <span class="math inline">\(F\)</span> of odd characteristic.</p>
-<p>The best reference on this topic is Voight <span class="citation" data-cites="V21">[<a href="#ref-V21" role="doc-biblioref">1</a>]</span>.</p>
-<p><a href="https://math.dartmouth.edu/~trs/expository-papers/ABHN.pdf">These</a> notes are really good.</p>
-<p>There is also <span class="citation" data-cites="AS18">[<a href="#ref-AS18" role="doc-biblioref">2</a>]</span> that claims a resolution of what quaternion algebras are division rings over towers of quadratic number fields.</p>
+<p>It is an attempt to construct a division algebra of degree 4 over a
+given field <span class="math inline">\(F\)</span> of odd
+characteristic.</p>
+<p>The best reference on this topic is Voight <span class="citation"
+data-cites="V21">[<a href="#ref-V21"
+role="doc-biblioref">1</a>]</span>.</p>
+<p><a
+href="https://math.dartmouth.edu/~trs/expository-papers/ABHN.pdf">These</a>
+notes are really good.</p>
+<p>There is also <span class="citation" data-cites="AS18">[<a
+href="#ref-AS18" role="doc-biblioref">2</a>]</span> that claims a
+resolution of what quaternion algebras are division rings over towers of
+quadratic number fields.</p>
 <h1 id="hamiltonian-quaternions">Hamiltonian quaternions</h1>
 <p>It is given by <span class="math display">\[\begin{equation}
-  \mathbb{R} + \mathbb{R} i + \mathbb{R} j + \mathbb{R} k 
-\end{equation}\]</span> where <span class="math inline">\(i^2 = j^{2} = k^{2} = ijk = -1\)</span>. This gives a <a href="division_ring.html">division algebra</a> over <span class="math inline">\(\mathbb{R}\)</span>. This</p>
+  \mathbb{R} + \mathbb{R} i + \mathbb{R} j + \mathbb{R} k
+\end{equation}\]</span> where <span class="math inline">\(i^2 = j^{2} =
+k^{2} = ijk = -1\)</span>. This gives a <a
+href="division_ring.html">division algebra</a> over <span
+class="math inline">\(\mathbb{R}\)</span>. This</p>
+<h1 id="pari-gp">PARI-GP</h1>
+<p>The software <code>gp</code> has some good support for quaternion
+algebras. See <a href="quaternion_gp.html">this</a> page.</p>
+<p><a
+href="https://pari.math.u-bordeaux.fr/dochtml/html/Associative_and_central_simple_algebras.html#se:alginit">Here</a>
+is a link to the official instructions.</p>
 <h1 class="unnumbered" id="bibliography">References</h1>
-<div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-V21" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">J. Voight, <em>Quaternion algebras</em> (Springer Nature, 2021).</div>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-V21" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">J.
+Voight, <em>Quaternion algebras</em> (Springer Nature, 2021).</div>
 </div>
-<div id="ref-AS18" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">V. Acciaro &amp; D. Savin, On quaternion algebra over the composite of quadratic number fields and over some dihedral fields. <em>arXiv preprint arXiv:1802.08185</em>, (2018).</div>
+<div id="ref-AS18" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">V.
+Acciaro &amp; D. Savin, On quaternion algebra over the composite of
+quadratic number fields and over some dihedral fields.
+<em>arXiv:1802.08185</em>, (2018).</div>
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on October 18, 2023.<br>
+	<small>	<p class="date">This page was updated on March 6, 2024.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
