@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2024-08-09" />
+  <title>Algebraic group</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Algebraic group</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#morphisms" id="toc-morphisms">Morphisms</a></li>
+<li><a href="#borel-harish-chandra-theorem"
+id="toc-borel-harish-chandra-theorem">Borel-Harish Chandra
+theorem</a></li>
+<li><a href="#bibliography" id="toc-bibliography">References</a></li>
+</ul>
+</nav>
+<p><span class="math inline">\(\DeclareMathOperator{\SL}{SL}\)</span>
+<span class="math inline">\(\DeclareMathOperator{\GL}{GL}\)</span> For
+in-depth understanding, the reader may refer to <span class="citation"
+data-cites="B19">[<a href="#ref-B19" role="doc-biblioref">1</a>]</span>
+or <span class="citation" data-cites="B12">[<a href="#ref-B12"
+role="doc-biblioref">2</a>]</span>.</p>
+<div class="definition">
+<p> A linear algebraic group is a subgroup <span
+class="math inline">\(\mathcal{G}\)</span> of <span
+class="math inline">\(\SL_n(\mathbb{C})\)</span> for some <span
+class="math inline">\(n \ge 1\)</span> that is given as a zero set of
+some polynomials in the matrix entries <span
+class="math inline">\(X_{ij}: \SL_n(\mathbb{C}) \rightarrow
+\mathbb{C}\)</span>.</p>
+<p>We say that <span class="math inline">\(\mathcal{G}\)</span> is an
+algebraic <span class="math inline">\(k\)</span>-group for a subfield
+<span class="math inline">\(k \subseteq \mathbb{C}\)</span> if the ideal
+of the vanishing polynomials that define <span
+class="math inline">\(\mathcal{G}\)</span> has generators in the ring
+<span class="math inline">\(k[{ X_{ij}]}_{1 \le i ,j \le
+n}\)</span>.</p>
+<p>For a subring <span class="math inline">\(R \subseteq
+\mathbb{C}\)</span>, we denote <span
+class="math inline">\(\mathcal{G}(R)\)</span> to be the set of solutions
+of the polynomials in <span class="math inline">\(\SL_{n}(R)\)</span>.
+We call <span class="math inline">\(\mathcal{G}(R)\)</span> to be the
+<span class="math inline">\(R\)</span>-points of <span
+class="math inline">\(\mathcal{G}\)</span>.</p>
+</div>
+<div class="remark">
+<p> The actual definition is slightly subtler. For an in-depth
+discussion on these subtleties, see <span class="citation"
+data-cites="Mo2001">[<a href="#ref-Mo2001"
+role="doc-biblioref">3</a>]</span>.</p>
+</div>
+</div>
+<div class="example">
+<p> The group <span class="math inline">\(\GL_n(\mathbb{C})\)</span> can
+be embedded in <span
+class="math inline">\(\SL_{n+1}(\mathbb{C})\)</span> as per the
+following map: <span class="math display">\[\begin{align}
+    g \mapsto \begin{bmatrix} g &amp; 0_{n \times 1}  \\ 0_{1 \times n}
+&amp; \det(g)^{-1} \end{bmatrix}.
+  \end{align}\]</span> The image can easily be described as the zero set
+of some polynomials. Hence, it is an example of an algebraic group. In
+this sense, the group <span
+class="math inline">\(\GL_n(\mathbb{R})\)</span> and <span
+class="math inline">\(\GL_n(\mathbb{Z})\)</span> hold the obvious
+meanings as above.</p>
+<p>So, in this framework, whenever we write <span
+class="math inline">\(\GL_n(\mathbb{C})\)</span> as an algebraic group,
+we secretly mean that it is embedded in <span
+class="math inline">\(\SL_{n+1}(\mathbb{C})\)</span>. In more technical
+terms, this gives <span class="math inline">\(\GL_n\)</span> a structure
+of an affine algebraic variety and this is the algebraic structure that
+we care about on <span class="math inline">\(\GL_n\)</span>.</p>
+</div>
+<div class="example">
+<p>Every finite group <span class="math inline">\(G\)</span> can be seen
+as an algebraic group.</p>
+</div>
+<p>Since <span class="math inline">\(\SL_n(\mathbb{C})\)</span> and
+<span class="math inline">\(\SL_n(\mathbb{R})\)</span> are Lie groups,
+and closed subgroups of Lie groups are also Lie groups (according to the
+classically known closed subgroup theorem, see <span class="citation"
+data-cites="knapp2013">[<a href="#ref-knapp2013"
+role="doc-biblioref">4</a>]</span>). In general, this is also true for
+<span class="math inline">\(\mathcal{G}(\mathbb{R})\)</span> and <span
+class="math inline">\(\mathcal{G}(\mathbb{C})\)</span> for an algebraic
+group <span class="math inline">\(\mathcal{G}\)</span>.</p>
+<h2 id="morphisms">Morphisms</h2>
+<p>We also have a notion of algebraic morphisms.</p>
+<div class="definition">
+<p>For algebraic groups <span class="math inline">\(\mathcal{G}\)</span>
+and <span class="math inline">\(\mathcal{H}\)</span>, a group
+homomorphism <span class="math inline">\(f:\mathcal{G} \rightarrow
+\mathcal{H}\)</span> is a morphism of algebraic groups if the individual
+matrix entries of <span class="math inline">\(f(X) \in
+\mathcal{H}\)</span> can be expressed as functions that are <span
+class="math inline">\(\mathbb{C}\)</span>-polynomials in the entries
+<span class="math inline">\((X_{ij})_{1\le i, j \le r}\)</span> of <span
+class="math inline">\(X\)</span>. If those polynomials can actually be
+allowed to have coefficients in a subring <span class="math inline">\(R
+\subseteq \mathbb{C}\)</span>, then the morphism <span
+class="math inline">\(f\)</span> will be called an <span
+class="math inline">\(R\)</span>-morphism.</p>
+<p>An <span class="math inline">\(R\)</span>-morphism from <span
+class="math inline">\(\mathcal{G} \rightarrow GL_d(\mathbb{C})\)</span>
+is called a <span class="math inline">\(d\)</span>-dimensional <span
+class="math inline">\(R\)</span>-representation. <span
+class="math inline">\(1\)</span>-dimensional <span
+class="math inline">\(R\)</span>-representations are called <span
+class="math inline">\(R\)</span>-characters.</p>
+</div>
+<p>Let us present an interesting lemma that could aid the reader in
+putting these concepts together.</p>
+<div class="lemma">
+<p> Suppose <span class="math inline">\(\mathcal{G}\)</span> is an
+algebraic group and let there be an arbitrary <span
+class="math inline">\(\mathbb{Q}\)</span>-character <span
+class="math inline">\(\chi:\mathcal{G}\rightarrow
+\GL_1(\mathbb{C})\)</span>. Then <span
+class="math inline">\(\chi(\mathcal{G}( \mathbb{Z} )) \subseteq \{
+-1,1\}\)</span>. Furthermore, if <span
+class="math inline">\(\mathcal{G}(\mathbb{R})\)</span> is connected as a
+Lie group, then <span
+class="math inline">\(\chi(\mathcal{G}(\mathbb{Z})) = \{
+1\}.\)</span></p>
+</div>
+<div class="proof">
+<p>Clearly, image of <span class="math inline">\(\mathcal{G}( \mathbb{Z}
+)\)</span> under <span class="math inline">\(\chi\)</span> will be a
+subgroup of <span class="math inline">\(\GL_1(\mathbb{Q})\)</span>. Now,
+we identify $_1() = { , t } $. Observe that since <span
+class="math inline">\(\chi\)</span> is a <span
+class="math inline">\(\mathbb{Q}\)</span>-morphism, <span
+class="math inline">\(t(X)\)</span> can be expressed as a <span
+class="math inline">\(\mathbb{Q}\)</span>-polynomial in the entries of
+<span class="math inline">\(X \in \mathcal{G}( \mathbb{Z} )\)</span>
+which are integers. The coefficients of these polynomials are rational
+and will have a least common denominator <span
+class="math inline">\(N\)</span> and therefore <span
+class="math inline">\(t \in \frac{1}{N} \mathbb{Z} \subset
+\mathbb{Q}^{*}\)</span>. However, the only multiplicatively closed
+subgroups of <span class="math inline">\(\frac{1}{N} \mathbb{Z}\)</span>
+are <span class="math inline">\(\{ -1,1\}\)</span> and <span
+class="math inline">\(\{ 1\}\)</span>.</p>
+<p>For the latter statement, observe that <span
+class="math inline">\(\mathbb{Q}\)</span>-morphisms are continuous
+functions and therefore, take connected sets to connected sets. Hence,
+<span class="math inline">\(\chi(G_{\mathbb{R}})\)</span> is a connected
+subset of <span class="math inline">\(\GL_1(\mathbb{R})\)</span> and
+must be entirely contained in the identity component of <span
+class="math inline">\(\GL_{1}(\mathbb{R})\)</span>. This <span
+class="math inline">\(\chi(g) \neq -1\)</span> for any <span
+class="math inline">\(g \in \mathcal{G}( \mathbb{Z} )\)</span>.</p>
+</div>
+<p>The group of all <span
+class="math inline">\(\mathbb{Q}\)</span>-characters of an algebraic
+group <span class="math inline">\(\mathcal{G}\)</span> is denoted as
+<span class="math inline">\(X(\mathcal{G})\)</span>.</p>
+<h1 id="borel-harish-chandra-theorem">Borel-Harish Chandra theorem</h1>
+<p><em>See <a href="bhc.html">Borel-Harish Chandra</a> for the main
+article.</em></p>
+<p>Observe that both <span
+class="math inline">\(\SL_d(\mathbb{Z})\)</span> and <span
+class="math inline">\(\SL_d(\mathbb{R})\)</span> are unimodular groups.
+For <span class="math inline">\(\SL_d(\mathbb{Z})\)</span>, this follows
+since it is discrete and for <span
+class="math inline">\(\SL_d(\mathbb{R})\)</span>, this is a consequence
+of the fact that the modular function is a homomorphism <span
+class="math inline">\(\SL_d(\mathbb{R}) \rightarrow
+\mathbb{R}^{*}\)</span> which must be trivial since <span
+class="math inline">\(\SL_d(\mathbb{R})\)</span> can be generated by
+commutators in the group.</p>
+The following is a classical theorem, due to Siegel <span
+class="citation" data-cites="Sie45">[<a href="#ref-Sie45"
+role="doc-biblioref">5</a>]</span>.
+<div class="theorem">
+<p> With respect to any left <span
+class="math inline">\(\SL_d(\mathbb{R})\)</span>-invariant Haar measure
+on <span class="math inline">\(\SL_d(\mathbb{R})/\SL_d\left(
+\mathbb{Z}\right)\)</span>, the volume of <span
+class="math inline">\(\SL_d(\mathbb{R})/\SL_d(\mathbb{Z})\)</span> is
+finite.</p>
+</div>
+<p>The fact that <span
+class="math inline">\(\SL_d(\mathbb{R})/\SL_d(\mathbb{Z})\)</span> has a
+finite volume makes it a probability space up to rescaling of the
+measure appropriately. In analogy with the finiteness of the Haar
+measure on <span
+class="math inline">\(\SL_d(\mathbb{R})/\SL_d(\mathbb{Z})\)</span>, the
+question we would like to ask is the following. As we will later see,
+answering this question will be important while addressing the existence
+of random lattices.</p>
+<div class="question">
+<p>For a given <span class="math inline">\(\mathbb{Q}\)</span>-algebraic
+group <span class="math inline">\(\mathcal{G} \subseteq
+\SL_d(\mathbb{C})\)</span>, does the quotient space <span
+class="math inline">\(\mathcal{G}(\mathbb{R})/\mathcal{G}( \mathbb{Z}
+)\)</span> admit a finite left <span
+class="math inline">\(\mathcal{G}(\mathbb{R})\)</span>-invariant
+measure?</p>
+</div>
+<p>Here is an obstruction that must be navigated while attempting this
+question.</p>
+<div class="proposition">
+<p> Suppose <span class="math inline">\(\chi: \mathcal{G}\rightarrow
+\GL_1(\mathbb{C})\)</span> is a <span
+class="math inline">\(\mathbb{Q}\)</span>-character such that <span
+class="math inline">\(\chi|_{\mathcal{G}( \mathbb{R} )}:\mathcal{G}(
+\mathbb{R} ) \rightarrow \mathbb{R}^{*}\)</span> takes non-trivial
+values in a neighbourhood of identity. Let <span
+class="math inline">\(\mathcal{G}( \mathbb{R} )^{0} \subset \mathcal{G}(
+\mathbb{R} )\)</span> be the identity component of the Lie group <span
+class="math inline">\(\mathcal{G}( \mathbb{R} )\)</span> and <span
+class="math inline">\(\mathcal{G}( \mathbb{Z} )^{0} = \mathcal{G}(
+\mathbb{Z} ) \cap \mathcal{G}( \mathbb{R} )^{0}\)</span>. Then <span
+class="math inline">\(\mathcal{G}({\mathbb{R}})^{0}/\mathcal{G}({\mathbb{Z}})^{0}\)</span>
+cannot have a finite volume with respect to the Haar measure on <span
+class="math inline">\(\mathcal{G}_{0}\)</span>.</p>
+</div>
+<div class="proof">
+<p>Suppose that there is a finite Haar measure <span
+class="math inline">\(\mu\)</span> on <span
+class="math inline">\(\mathcal{G}( \mathbb{R} )^{0}/\mathcal{G}(
+\mathbb{Z} )^{0}\)</span>. By , we know that <span
+class="math inline">\(\chi : \mathcal{G}( \mathbb{R} )^{0} \rightarrow
+\mathbb{R}^{*}\)</span> descends to become a continuous surjective
+function <span class="math inline">\(\chi: \mathcal{G}( \mathbb{R}
+)^{0}/ \mathcal{G}( \mathbb{Z} )^{0} \rightarrow
+\mathbb{R}^{*}\)</span>. This surjective function can be used to push a
+Borel measure on <span class="math inline">\(\mathbb{R}^{*}\)</span> by
+taking the measure of a Borel set <span class="math inline">\(E \subset
+\mathbb{R}^{*}\)</span> to be <span
+class="math inline">\(\mu(\chi^{-1}(E))\)</span>. This gives us a finite
+measure on <span class="math inline">\(\mathbb{R}^{*}\)</span>. However,
+by the left-invariance of <span class="math inline">\(\mu\)</span>, the
+measure induced must be left-invariant under multiplication in <span
+class="math inline">\(\mathbb{R}^{*}\)</span> (since <span
+class="math inline">\(\chi\)</span> is surjective). This means that the
+usual Haar measure on <span
+class="math inline">\(\mathbb{R}^{*}\)</span> equips it with the
+structure of a finite topological measure group, which is clearly
+false.</p>
+</div>
+<p>What Borel and Harish-Chandra proved in their 1962 work is that
+morally speaking, this is the only obstruction. The precise version of
+their statements is the following.</p>
+<div class="theorem">
+<p><span class="citation" data-cites="BHC62">[<a href="#ref-BHC62"
+role="doc-biblioref">6</a>]</span> </p>
+<p>Let <span class="math inline">\(\mathcal{G}\)</span> be an algebraic
+group defined over <span class="math inline">\(\mathbb{Q}\)</span>. Then
+<span class="math inline">\(\mathcal{G}(\mathbb{R})/\mathcal{G}(
+\mathbb{Z} )\)</span> has a finite invariant measure if and only if
+<span class="math inline">\(X(\mathcal{G}^{0}) = \{ 1\}\)</span>, where
+<span class="math inline">\(\mathcal{G}^{0} \subseteq
+\mathcal{G}\)</span> is the connected component of identity in the
+Zariski topology.</p>
+</div>
+<div class="remark">
+<p>As a subgroup of <span
+class="math inline">\(\SL_{r+1}(\mathbb{C})\)</span>, the Zariski
+connected components and the usual connected components are the same for
+<span class="math inline">\(\mathcal{G}\)</span>.</p>
+</div>
+<h1 class="unnumbered" id="bibliography">References</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-B19" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">A.
+Borel, <em>Introduction to arithmetic groups</em> (American Mathematical
+Soc., 2019).</div>
+</div>
+<div id="ref-B12" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">A.
+Borel, <em>Linear algebraic groups</em> (Springer Science &amp; Business
+Media, 2012).</div>
+</div>
+<div id="ref-Mo2001" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">D.
+W. Morris, <em>Introduction to arithmetic groups</em> (Deductive Press
+Lieu de publication inconnu, 2015).</div>
+</div>
+<div id="ref-knapp2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">A.
+W. Knapp, <em>Lie groups beyond an introduction</em> (Springer Science
+&amp; Business Media, 2013).</div>
+</div>
+<div id="ref-Sie45" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">C.
+L. Siegel, A mean value theorem in geometry of numbers. <em>Annals of
+Mathematics</em>, (1945) 340–347.</div>
+</div>
+<div id="ref-BHC62" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">A.
+Borel &amp; Harish-Chandra, <em>Annals of Mathematics</em>,
+<strong>75</strong> (1962) 485–535.</div>
+</div>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on August 9, 2024.<br>
+		<a href="index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
