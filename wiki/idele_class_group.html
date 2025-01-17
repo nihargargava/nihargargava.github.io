@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2025-01-07" />
-  <title>Number fields and Quaternion algebras in PARI-GP</title>
+  <title>Idele Class group</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -33,28 +33,33 @@
           margin-left: 2em;
         }  </style>
   <link rel="stylesheet" href="style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Number fields and Quaternion algebras in PARI-GP</h1>
+<h1 class="title">Idele Class group</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<h3 id="toc-title">Contents</h3>
-<ul>
-<li><a href="#number-fields" id="toc-number-fields">Number
-fields</a></li>
-<li><a href="#quaternion-algebra" id="toc-quaternion-algebra">Quaternion
-algebra</a></li>
-</ul>
-</nav>
-<h1 id="number-fields">Number fields</h1>
-<p>See <a href="nf_in_gp.html">nf_in_gp</a></p>
-<h1 id="quaternion-algebra">Quaternion algebra</h1>
-<pre><code>F=nfinit(y^2-2)
-A = alginit(F, [-1,-1]);</code></pre>
+<p>The idele class group of a number field <span
+class="math inline">\(K\)</span> is defined as the following quotient.
+<span class="math display">\[\begin{equation}
+\mathop{\mathrm{\mathfrak{C}}}(K) =  \mathbb{A}_K^{\times} / K^{\times}.
+\end{equation}\]</span></p>
+<p>Here <span class="math inline">\(\mathbb{A}_K^{\times}\)</span> is
+the restricted product of <span class="math inline">\(\prod_{v \in M_K}
+K_v^{\times}\)</span> where <span class="math inline">\(M_K\)</span> is
+the set of all places <span class="math inline">\(v\)</span> of <span
+class="math inline">\(K\)</span> and <span
+class="math inline">\(K_v\)</span> is the <span
+class="math inline">\(v\)</span>-adic completion of <span
+class="math inline">\(K\)</span> at <span
+class="math inline">\(v\)</span>.</p>
+<p>The idele class group is not compact and is not a finite dimensional
+manifold. It is however a locally compact Abelian group.</p>
 <hr />
 	<small>	<p class="date">This page was updated on January 7, 2025.<br>
 		<a href="index.html">Main Page</a> </p>

@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2025-01-07" />
-  <title>Number fields and Quaternion algebras in PARI-GP</title>
+  <title>PARI-GP</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -39,22 +39,37 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Number fields and Quaternion algebras in PARI-GP</h1>
+<h1 class="title">PARI-GP</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#number-fields" id="toc-number-fields">Number
-fields</a></li>
-<li><a href="#quaternion-algebra" id="toc-quaternion-algebra">Quaternion
-algebra</a></li>
+<li><a href="#some-usage-tips" id="toc-some-usage-tips">Some usage
+tips</a></li>
+<li><a href="#topics" id="toc-topics">Topics</a></li>
 </ul>
 </nav>
-<h1 id="number-fields">Number fields</h1>
-<p>See <a href="nf_in_gp.html">nf_in_gp</a></p>
-<h1 id="quaternion-algebra">Quaternion algebra</h1>
-<pre><code>F=nfinit(y^2-2)
-A = alginit(F, [-1,-1]);</code></pre>
+<p>It is a cool software for computing number theoretical stuff. More
+commonly known as <code>gp</code>. The official website is <a
+href="https://pari.math.u-bordeaux.fr">here</a>.</p>
+<h1 id="some-usage-tips">Some usage tips</h1>
+<p>Use <code>?</code> before a function to see what it does. For
+example</p>
+<pre><code>?bnfinit</code></pre>
+<p>To see the long documentation, use <code>??</code> instead of
+<code>?</code>. To see a lot of related documentation, do
+<code>???</code>.</p>
+<p>The two important pdfs to look up for general help are
+<code>users.pdf</code> and <code>refcard-nf.pdf</code>. Both can be
+found online with a simple web search.</p>
+<p>To transpose a vector, add a <code>~</code> after it. For example
+<code>[1,2]~</code> is a column vector. To count the number of elements
+in a vector <code>vec</code>, try <code>#vec</code>.</p>
+<h1 id="topics">Topics</h1>
+<ul>
+<li><a href="quaternion_gp.html">Quaternion algebras</a></li>
+<li><a href="hecke_gp.html">Hecke characters</a></li>
+</ul>
 <hr />
 	<small>	<p class="date">This page was updated on January 7, 2025.<br>
 		<a href="index.html">Main Page</a> </p>

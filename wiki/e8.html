@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2025-01-07" />
-  <title>Number fields and Quaternion algebras in PARI-GP</title>
+  <meta name="dcterms.date" content="2025-01-17" />
+  <title>E8 lattice</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -33,30 +33,44 @@
           margin-left: 2em;
         }  </style>
   <link rel="stylesheet" href="style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Number fields and Quaternion algebras in PARI-GP</h1>
+<h1 class="title">E8 lattice</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#number-fields" id="toc-number-fields">Number
-fields</a></li>
-<li><a href="#quaternion-algebra" id="toc-quaternion-algebra">Quaternion
-algebra</a></li>
+<li><a href="#as-an-ideal-lattice" id="toc-as-an-ideal-lattice">As an
+ideal lattice</a></li>
+<li><a href="#bibliography" id="toc-bibliography">References</a></li>
 </ul>
 </nav>
-<h1 id="number-fields">Number fields</h1>
-<p>See <a href="nf_in_gp.html">nf_in_gp</a></p>
-<h1 id="quaternion-algebra">Quaternion algebra</h1>
-<pre><code>F=nfinit(y^2-2)
-A = alginit(F, [-1,-1]);</code></pre>
+<p>It is a lattice in 8 dimensions that has produces the best possible
+sphere packing in that dimension among all point configurations.</p>
+<h1 id="as-an-ideal-lattice">As an ideal lattice</h1>
+<p>One can write the <span class="math inline">\(E8\)</span> lattice as
+an ideal lattice. This is given in <span class="citation"
+data-cites="BS06">[<a href="#ref-BS06"
+role="doc-biblioref">1</a>]</span>.</p>
+<h1 class="unnumbered" id="bibliography">References</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-BS06" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">E.
+Bayer-Fluckiger &amp; I. Suarez, Ideal lattices over totally real number
+fields and euclidean minima. <em>Archiv der Mathematik</em>,
+<strong>86</strong> (2006) 217–225.</div>
+</div>
+</div>
 <hr />
-	<small>	<p class="date">This page was updated on January 7, 2025.<br>
+	<small>	<p class="date">This page was updated on January 17, 2025.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>

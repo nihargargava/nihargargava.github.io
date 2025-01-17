@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2025-01-07" />
-  <title>Number fields and Quaternion algebras in PARI-GP</title>
+  <title>Hecke Characters</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -33,28 +33,28 @@
           margin-left: 2em;
         }  </style>
   <link rel="stylesheet" href="style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Number fields and Quaternion algebras in PARI-GP</h1>
+<h1 class="title">Hecke Characters</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<h3 id="toc-title">Contents</h3>
-<ul>
-<li><a href="#number-fields" id="toc-number-fields">Number
-fields</a></li>
-<li><a href="#quaternion-algebra" id="toc-quaternion-algebra">Quaternion
-algebra</a></li>
-</ul>
-</nav>
-<h1 id="number-fields">Number fields</h1>
-<p>See <a href="nf_in_gp.html">nf_in_gp</a></p>
-<h1 id="quaternion-algebra">Quaternion algebra</h1>
-<pre><code>F=nfinit(y^2-2)
-A = alginit(F, [-1,-1]);</code></pre>
+<p>Let <span class="math inline">\(K\)</span> be a number field. A Hecke
+Grossencharacter, or simply known as Hecke character, is a continuous
+complex-valued multiplicative homomorphism from the idele class group of
+<span class="math inline">\(K\)</span> to <span
+class="math inline">\(\mathbb{C}^{\times}\)</span>.</p>
+<p>The <a href="idele_class_group.html">idele class group</a> is defined
+as <span class="math display">\[\begin{equation}
+\mathop{\mathrm{\mathfrak{C}}}(K) =  \mathbb{A}_K^{\times} / K^{\times}.
+\end{equation}\]</span></p>
+<p>For any place <span class="math inline">\(v \in M_K\)</span>, we know
+that</p>
 <hr />
 	<small>	<p class="date">This page was updated on January 7, 2025.<br>
 		<a href="index.html">Main Page</a> </p>
