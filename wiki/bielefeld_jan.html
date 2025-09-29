@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2025-09-29" />
+  <title>Jan’s lecture</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Jan’s lecture</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#jans-lecture-1" id="toc-jans-lecture-1">Jan’s Lecture
+1</a>
+<ul>
+<li><a href="#theta-series" id="toc-theta-series">Theta series</a></li>
+</ul></li>
+<li><a href="#bibliography" id="toc-bibliography">References</a></li>
+</ul>
+</nav>
+<p><span class="math inline">\(\DeclareMathOperator{\gen}{gen}\)</span>
+<span class="math inline">\(\DeclareMathOperator{\card}{\#}\)</span>
+<span
+class="math inline">\(\DeclareMathOperator{\level}{level}\)</span></p>
+<h1 id="jans-lecture-1">Jan’s Lecture 1</h1>
+<p>Let <span class="math inline">\((L,Q)\)</span> be a given lattice of
+rank <span class="math inline">\(n\)</span>. Assume <span
+class="math inline">\(2 \mid n\)</span>. Let <span
+class="math inline">\(Q: L \rightarrow  \mathbb{Z}\)</span> be a
+quadratic form. We define <span class="math inline">\((x,y) =
+Q(x+y)-Q(x)-Q(y)\)</span>. Let <span class="math inline">\(L\)</span> be
+a positive definite lattice.</p>
+<p>Let <span class="math inline">\(p\)</span> be a prime. Let <span
+class="math inline">\(L_{p} = L \otimes_{\mathbb{Z}}
+\mathbb{Z}_{p}\)</span>. Let <span class="math inline">\(L_{\infty} = L
+\otimes_\mathbb{Z} \mathbb{R}\)</span>. We say that <span
+class="math inline">\((L_{1},Q_{1})\)</span> is the genus of <span
+class="math inline">\((L_{2},Q_{2})\)</span> ig <span
+class="math display">\[\begin{equation}
+    (L_{1} )_{p}\simeq (L_{2})_{p} \text{ for each } p \text{ and for }
+\infty.
+\end{equation}\]</span></p>
+<p>We denote by <span class="math inline">\(\gen(L)\)</span> all the
+lattices which are in the genus of <span
+class="math inline">\(L\)</span>.</p>
+<ul>
+<li>In this case, Hasse-Minkowski theorem gives <span
+class="math display">\[\begin{align}
+  &amp; (L_{1} )_{\mathbb{Q}_p}\simeq (L_{2})_{\mathbb{Q}_p} \text{ for
+each } p \text{ and for } \infty \\
+    \implies   &amp;
+(L_1)_{\mathbb{Q}}
+\simeq (L_1)_{\mathbb{Q}} .
+\end{align}\]</span></li>
+</ul>
+<p>Therefore, we can assume that <span
+class="math inline">\(L_{1}\)</span> and <span
+class="math inline">\(L_{2}\)</span> are embedded in the same quadratic
+vector <span class="math inline">\(\mathbb{Q}\)</span>-space. The set
+<span class="math inline">\(\gen(L)\)</span> consists of finitely many
+isometry classes.</p>
+<ul>
+<li><p>Two lattices in the same genus have the same discriminant. It is
+equal to <span class="math display">\[\begin{equation}
+    \Delta = (-1)^{n/2}  \# L&#39;/L,
+\end{equation}\]</span> where <span class="math inline">\(L&#39; =\{x
+\in L_{\mathbb{Q}}  \mid   (x,y) \in \mathbb{Z} \text{ for each } y \in
+L\}\)</span>.</p>
+<p>One has that <span class="math inline">\(\Delta \sim
+0,1\pmod{4}\)</span>. Also <span class="math display">\[\begin{equation}
+    \card L&#39;/L = \det S, \text{ where } S = ((b_{i},b_{j}))_{i,j}.
+\end{equation}\]</span></p></li>
+<li><p>We know that <span class="math inline">\(Q\)</span> induces a
+<span class="math inline">\(\mathbb{Q}/\mathbb{Z}\)</span>-valued
+quadratic form <span class="math inline">\(\overline{Q}\)</span> on
+<span class="math inline">\(L&#39;/L\)</span>. Then <span
+class="math inline">\((L&#39;/L, \overline{Q})\)</span> is a finite
+quadratic module.</p></li>
+<li><p>One has <span class="math display">\[\begin{equation}
+M \in \gen(L) \rightarrow   (M&#39;/M,\overline{Q}_{M}) \simeq
+(L&#39;/L,\overline{Q}_{L}).
+\end{equation}\]</span> Converse if <span class="math inline">\(M&#39;/M
+\simeq L&#39;/L\)</span> and <span class="math inline">\(M_{\infty} =
+L_{\infty}\)</span> then <span class="math inline">\(M \in
+\gen(L)\)</span> (due to Nikulin).</p></li>
+</ul>
+<div class="exercise">
+<p>Prove/read about these facts.</p>
+</div>
+<h2 id="theta-series">Theta series</h2>
+<div class="definition">
+<p>The theta series assiciated with <span
+class="math inline">\(L\)</span> is <span
+class="math display">\[\begin{equation}
+  \Theta_{L}(\tau) = \sum_{x \in L}^{} e^{2 \pi i Q(x)\tau}, \tau \in
+\mathbb{H}.
+\end{equation}\]</span> For <span class="math inline">\(\mu \in
+L&#39;/L\)</span>, we define <span
+class="math display">\[\begin{equation}
+  \Theta_{\mu + L}(\tau) = \sum_{x \in \mu + L}^{} e^{2 \pi i Q(x)
+\tau}.
+\end{equation}\]</span></p>
+</div>
+<div class="theorem">
+<p>One has <span class="math display">\[\Theta_{\Lambda}(\tau) \in
+\mathcal{M}_{n/2}(\Gamma_{0}(N), \chi_{\Delta}).\]</span> Here <span
+class="math inline">\(\mathcal{M}_{n/2}\)</span> is the space of modular
+forms, <span class="math inline">\(\chi_{\Delta}(x) =
+(\Delta/x)\)</span> is the Legendre symbol and <span
+class="math display">\[N = \level(L) = \min \{\alpha \in
+\mathbb{Z}_{\geq 0} \mid \alpha Q(x) \in \mathbb{Z} \text{ for each } x
+\in L&#39;\}.\]</span> We also have <span
+class="math display">\[\begin{equation}
+    \Theta_{\mu + L} \in \mathcal{M}_{n/2} (\Gamma(N)).
+\end{equation}\]</span></p>
+</div>
+<p>When <span class="math inline">\(L= E_{8}\)</span>, the even
+unimodular positive definite lattices of rank <span
+class="math inline">\(8\)</span>, one has <span
+class="math display">\[\begin{equation}
+    \Theta_{E_{8}} (\tau)
+    \in \mathcal{M}_{4}(\Gamma(1)) = \mathbb{C} \cdot E_{4}.
+\end{equation}\]</span> Using this one-dimensionality, we have <span
+class="math display">\[\begin{equation}
+    \Theta_{E_{8}} = E_{4}.
+\end{equation}\]</span></p>
+<p>Using this, one can say that the representation numbers defined as
+<span class="math display">\[\begin{equation}
+r_L(m) = \# \{x \in L \mid Q(x) = m\} ,
+\end{equation}\]</span> satisfy <span
+class="math display">\[\begin{equation}
+r_{E_{8}}(m) = 240 \sigma_{3}(m).
+\end{equation}\]</span></p>
+<p>In general, one can get exact formulas for the average representation
+numbers. <span class="math display">\[\begin{equation}
+  E_{k}(\tau) = \sum_{\gamma \in \Gamma_{\infty} \setminus \Gamma(1)}^{}
+(c \tau + d)^{-k} \text{  for }k &gt; 2  \in
+\mathcal{M}_{k/2}(\Gamma(1)).
+\end{equation}\]</span> This is equal to <span
+class="math display">\[\begin{equation}
+    1 + \frac{2k}{ B_{k}} \sum_{n=1}^{\infty} \sigma_{k-1}(n) q^{n}.
+\end{equation}\]</span></p>
+<div class="theorem">
+<p><strong>(Siegel)</strong></p>
+<p>Assume <span class="math inline">\(L\)</span> is positive definite
+unimodular of rank <span class="math inline">\(n\)</span>. Then <span
+class="math display">\[\begin{equation}
+    \sum_{M \in \gen(L)/\sim}^{} \frac{1}{\# O(M)} \Theta_{M}(\tau) =
+    \Big( \sum_{M \in \gen(L)/\sim}^{} \frac{1}{\card O(M)}\Big)
+E_{n/2}(\tau).
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p>Define <span class="math inline">\(h(\tau)\)</span> to be the
+difference of lhs and rhs. Let <span class="math inline">\(k =
+n/2\)</span>. We want to show that <span class="math inline">\(h(\tau) =
+0\)</span>. Observe that <span class="math inline">\(h \in
+\mathcal{M}_{n/2}(\Gamma(1))\)</span> and in fact <span
+class="math inline">\(h \in \mathcal{S}_{n/2}(\Gamma(1))\)</span> (the
+space of cusp forms).</p>
+<p>Let <span class="math inline">\(p\)</span> be a prime and let <span
+class="math inline">\(T_{p}\)</span> be the <span
+class="math inline">\(p\)</span>th Hecke operator on <span
+class="math inline">\(\Gamma_{n/2}(\Gamma(1))\)</span>. Here we know
+that <span class="math display">\[\begin{equation}
+T_{p}E_{k} = \sigma_{k-1}(p) \cdot E_{k}.
+\end{equation}\]</span></p>
+We then show the following lemma.
+<div class="lemma">
+<p><span class="math display">\[\begin{equation}
+      T_{p}(\text{ LHS }) = \sigma_{k-1}(p) (\text{ LHS }).
+  \end{equation}\]</span></p>
+</div>
+And then we need the following lemma.
+<div class="lemma">
+<p>If <span class="math inline">\(0 \neq f \in
+\mathcal{S}_{k}(\Gamma(1))\)</span> and if <span
+class="math inline">\(T_{p}(f)= \lambda_{p}\cdot f\)</span>, then <span
+class="math display">\[\begin{equation}
+      |\lambda_{p}| \leq 2 p^{ (k-1)/2}.
+  \end{equation}\]</span></p>
+</div>
+<p>Then, since we have <span class="math display">\[\begin{equation}
+    |\lambda_{p}| \leq p^{k/2} + p^{k/2-1} ,
+  \end{equation}\]</span> and <span class="math inline">\(k = n/2 \geq
+4\)</span>. So <span class="math display">\[\begin{equation}
+      \sigma_{k-1} = p^{k-1} + 1 &gt; p^{\frac{n}{4}  }+
+p^{\frac{n}{4}-1}  \implies  h=0.
+  \end{equation}\]</span></p>
+</div>
+<p>Read <span class="citation" data-cites="KK25">[<a href="#ref-KK25"
+role="doc-biblioref">1</a>]</span> for more.</p>
+<h1 class="unnumbered" id="bibliography">References</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-KK25" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">M.
+Koecher &amp; A. Krieg, <em>Elliptic functions and modular forms</em>
+(Springer, 2025).</div>
+</div>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on September 29, 2025.<br>
+		<a href="index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
