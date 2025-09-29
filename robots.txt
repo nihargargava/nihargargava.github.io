@@ -1,5 +1,3 @@
 User-agent: *
 
 Disallow: /Everything
-Disallow: /wiki/*
-Disallow: /ShortCV.pdf
