@@ -166,6 +166,17 @@ dl dd {
     font-style: normal;
 }
 
+.exercise {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.exercise:before {
+    content: "Exercise";
+    font-weight: bold;
+    font-style: normal;
+}
+
 .example {
     display: block;
     margin: 12px 0;
