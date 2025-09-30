@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2025-09-29" />
+  <meta name="dcterms.date" content="2025-09-30" />
   <title>Jan’s lecture</title>
   <style>
     code{white-space: pre-wrap;}
@@ -52,13 +52,37 @@
 <ul>
 <li><a href="#theta-series" id="toc-theta-series">Theta series</a></li>
 </ul></li>
+<li><a href="#jans-lecture-2" id="toc-jans-lecture-2">Jan’s Lecture
+2</a>
+<ul>
+<li><a href="#adelic-version-of-the-sw-formula."
+id="toc-adelic-version-of-the-sw-formula.">Adelic version of the SW
+formula.</a></li>
+<li><a href="#theta-functions" id="toc-theta-functions">Theta
+functions</a></li>
+</ul></li>
+<li><a href="#jans-lecture-3" id="toc-jans-lecture-3">Jan’s Lecture
+3</a>
+<ul>
+<li><a href="#siegel-eisenstein-series"
+id="toc-siegel-eisenstein-series">Siegel Eisenstein series</a></li>
+<li><a href="#geometric-theta-series"
+id="toc-geometric-theta-series">Geometric theta series</a></li>
+</ul></li>
 <li><a href="#bibliography" id="toc-bibliography">References</a></li>
 </ul>
 </nav>
-<p><span class="math inline">\(\DeclareMathOperator{\gen}{gen}\)</span>
-<span class="math inline">\(\DeclareMathOperator{\card}{\#}\)</span>
-<span
-class="math inline">\(\DeclareMathOperator{\level}{level}\)</span></p>
+<p><span
+class="math inline">\(\DeclareMathOperator{\char}{char}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\Ind}{Ind}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\gen}{gen}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\Sp}{Sp}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\card}{\#}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\level}{level}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\sig}{sig}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\diff}{\, d}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\vol}{vol}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\Tr}{tr}\)</span></p>
 <h1 id="jans-lecture-1">Jan’s Lecture 1</h1>
 <p>Let <span class="math inline">\((L,Q)\)</span> be an even lattice of
 rank <span class="math inline">\(n\)</span>. Assume <span
@@ -227,6 +251,332 @@ p^{\frac{n}{4}-1}  \implies  h=0.
 </div>
 <p>Read <span class="citation" data-cites="KK25">[<a href="#ref-KK25"
 role="doc-biblioref">1</a>]</span> for more.</p>
+<h1 id="jans-lecture-2">Jan’s Lecture 2</h1>
+<h2 id="adelic-version-of-the-sw-formula.">Adelic version of the SW
+formula.</h2>
+<p>The following is our setup. Let <span
+class="math inline">\((V,Q)\)</span> be a quadratic space over <span
+class="math inline">\(\mathbb{Q}\)</span>. More precisely, let <span
+class="math inline">\(Q:V \rightarrow  \mathbb{Q}\)</span> be a
+quadratic form, non-degenerate. We write <span
+class="math display">\[\begin{equation}
+  \sig(Q) = (b^{+},b^{-}), b^{+} + b^{-}  = l.
+\end{equation}\]</span> We define <span
+class="math inline">\(O(V)\)</span> to be the orthogonal group of <span
+class="math inline">\((V,Q)\)</span>. We have a quadratic character
+<span class="math inline">\(\chi_{V} :
+\mathbb{A}^{\times}/\mathbb{Q}^{\times} \rightarrow  \{ \pm 1\}\)</span>
+, defined using the Hilbert symbol <span
+class="math inline">\(\chi_{V}(x) = (x,(-1)^{l/2} \det
+(V))_{\mathbb{Q}}\)</span></p>
+<p>Let <span class="math inline">\(W = \mathbb{Q}^{2r}\)</span>
+(row-vectors). Each <span class="math inline">\(x \in
+\mathbb{Q}^{2r}\)</span> is written as <span
+class="math inline">\(x=(x,x&#39;)\)</span>. We define <span
+class="math display">\[\begin{equation}
+     \langle(x,x&#39;) , (y,y&#39;)\rangle = x (y &#39;)^{\dagger} -
+x&#39; y^{\dagger}.
+\end{equation}\]</span> We write <span class="math inline">\((W,
+\langle\ , \ \rangle)\)</span> to be the symplectic space of dimension
+<span class="math inline">\(2r\)</span>.</p>
+<p>We denote <span class="math inline">\(G= \Sp(W) =
+\Sp_{r}\)</span>.bin. We have <span
+class="math inline">\(\Sp_{r}(\mathbb{Q})= \{ g \in \GL_{2r}(\mathbb{Q})
+\mid g^{\dagger} J g = J \}\)</span><br />
+where <span class="math display">\[\begin{equation}
+     J =
+     \begin{bmatrix}
+       0 &amp; -1_{r} \\
+       1_{r} &amp; 0
+     \end{bmatrix}.
+\end{equation}\]</span> We denote <span class="math inline">\(P = \{
+\Big(
+\begin{smallmatrix}
+   * &amp; * \\ 0_{r} &amp; *
+\end{smallmatrix}
+\Big)\} \subseteq \Sp_{r}\)</span> to be the matrices in a certain block
+form. This is called the Siegel Parabolic subgroup.</p>
+<p>Note that <span class="math display">\[\begin{equation}
+    P = M N
+\end{equation}\]</span> where <span
+class="math display">\[\begin{equation}
+    M =\{m(\alpha) =
+      \Big(      \begin{smallmatrix}
+             \alpha &amp; 0 \\
+             0 &amp; \alpha^{-1}
+           \end{smallmatrix}\Big)
+    \in  \mid \alpha \in \GL_{r}
+  \}
+\end{equation}\]</span> and <span
+class="math display">\[\begin{equation}
+    N =\{n(\beta) =
+      \Big(      \begin{smallmatrix}
+             1_{r} &amp; \beta \\
+             0 &amp; 1_{r}
+           \end{smallmatrix}\Big)
+    \in  \mid \beta \in \Symm_{r} \}
+\end{equation}\]</span></p>
+<p>We have <span class="math inline">\(K_{\infty} = U(r)\)</span> which
+is <span class="math display">\[\begin{equation}
+  U(r)
+  = \Big(
+        \begin{smallmatrix}
+         a &amp; b \\
+          -b &amp; a
+        \end{smallmatrix}\Big)
+      \mid z = a + i b,  ??(illegible)
+  \}
+\end{equation}\]</span></p>
+Let <span class="math inline">\(H \times G\)</span> be a dual reductive
+pair. Let <span class="math inline">\(\mathbb{W} = V
+\otimes_{\mathbb{Q}} W\)</span> be endowed with a symplectic form <span
+class="math display">\[\begin{equation}
+    \langle v \otimes w , v&#39; \otimes w&#39; \rangle = \langle
+v,v&#39;\rangle \cdot \langle w , w&#39;\rangle.
+\end{equation}\]</span> Get <span class="math inline">\(G \times H
+\rightarrow  \Sp(W , \langle \ , \ \rangle)\)</span> mutually contra??
+(illegible).
+<div class="remark">
+<p>The <a href="bielefeld_maryna.html">lectures</a> of Maryna were about
+the bigger simplectic group <span class="math inline">\(\Sp(W, \langle \
+, \ \rangle)\)</span>.</p>
+</div>
+<p>Let <span class="math inline">\(\omega = \omega_{\psi}\)</span> be
+the Weil representation of <span class="math inline">\(G \times
+H\)</span> associated with the additive character <span
+class="math inline">\(\psi: \mathbb{A}/\mathbb{Q}
+\rightarrow  \mathbb{C}^{(1)}\)</span>.</p>
+<p><span class="math inline">\(\omega\)</span> can be realized on the
+Schwartz-Bruhat functions <span class="math display">\[\begin{equation}
+    \mathcal{S}(V(\mathbb{A})^{r})
+\simeq  \mathcal{S}(V(\mathbb{A}_{f})^{r}) \otimes
+\mathcal{S}(V(\mathbb{R})^{r}).
+\end{equation}\]</span></p>
+<p>With <span class="math inline">\(\varphi \in
+\mathcal{S}(V(\mathbb{A}))\)</span>, $$ is characterized by <span
+class="math display">\[\begin{equation}
+  (\omega(h) \varphi )(x) = \varphi(h^{-1} x ), \text{  for }  h \in
+H(\mathbb{A}),
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+  (\omega(m(\alpha))\varphi)(x) = \chi_{v}( \det (\alpha)) |\det
+\alpha|_{\mathbb{A}}^{l/2} \varphi(x \alpha),
+\end{equation}\]</span> and <span
+class="math display">\[\begin{equation}
+  (  \omega(n(b)) \varphi)(x) = \psi( \Tr(b Q(x))) \cdot \varphi(x),
+\end{equation}\]</span> where <span class="math inline">\(Q(x) = 1/2
+(x_{i,x_{j}})_{i,j}\)</span></p>
+<p>Here <span class="math inline">\(x = (x_{1},\dots,x_{r}) \in
+V^{r}(\mathbb{A})\)</span> and <span class="math inline">\(h^{-1} x =
+(h^{-1 x_{1}, \dots, h^{-1} x_{r}})\)</span>. The most interesting
+action is <span class="math display">\[\begin{equation}
+  (\omega(J) \varphi)(x) = \gamma(V)^{r} \int_{
+V(\mathbb{A})^{r}}^{}  \varphi(y) \psi(-\Tr(x,y)) \diff y,
+\end{equation}\]</span> where <span
+class="math inline">\(\gamma(V)\)</span> is some eigth root of
+unity.</p>
+<h2 id="theta-functions">Theta functions</h2>
+For <span class="math inline">\(\varphi \in
+\mathcal{S}(V(\mathbb{A})^{r})\)</span>, we can consider a theta
+function on <span class="math display">\[\begin{equation}
+    G(\mathbb{A}) \times H(\mathbb{A}) by
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \theta(g,h,Y) = \sum_{x \in V(\mathbb{Q})^{r}}^{} (\omega(g)
+\varphi)(h^{-1} x) = \sum_{x \in
+V(\mathbb{Q})^{r}}^{}  (\omega(g,h)\varphi) (x).
+\end{equation}\]</span> This is left-invariant under <span
+class="math inline">\(H(\mathbb{Q})\)</span> and <span
+class="math inline">\(G(\mathbb{Q})\)</span>.
+<div class="remark">
+<p>The about the Poisson summation formula here.</p>
+</div>
+<p>The average value with respect to <span
+class="math inline">\(H\)</span> is <span
+class="math display">\[\begin{equation}
+    I(g,\varphi) = \int_{H(\mathbb{Q}) \setminus H(\mathbb{A})}^{}
+    \theta(g,h,\varphi)
+    \diff  h,
+\end{equation}\]</span> where <span class="math inline">\(\diff
+h\)</span> is the unique Haar measure on <span
+class="math inline">\(H(\mathbb{A})\)</span> such that <span
+class="math inline">\(\vol(H(\mathbb{Q}) \setminus H(\mathbb{A})) =
+1\)</span> . In general, we don’t know if this integral converges.
+However, we can use the criterion given by Weil.</p>
+<div class="proposition">
+<p>(<strong>Weil convergence criterion</strong>)</p>
+<p>The integral <span class="math inline">\(I(g, \varphi)\)</span>
+converges for all <span class="math inline">\(\varphi \in
+\mathcal{S}(V(\mathbb{A})^{r})\)</span> if 1. <span
+class="math inline">\(V\)</span> is anisotropic over <span
+class="math inline">\(\mathbb{Q}\)</span> and 2. The <span
+class="math inline">\(l\)</span>-Witt rank of <span
+class="math inline">\(V\)</span> is <span class="math inline">\(&gt; r+
+1\)</span>.</p>
+</div>
+<p>The integral <span class="math inline">\(I(g,\varphi)\)</span>
+defines an automorphic form.</p>
+<div class="question">
+<p>What is this integral? Next time!</p>
+</div>
+<div class="exercise">
+<p>The character <span class="math inline">\(\psi: \mathbb{A}/\mathbb{Q}
+\rightarrow  \mathbb{C}^{(1)}\)</span> is a product of local characters.
+That is, <span class="math display">\[\begin{equation}
+\psi = \prod_{p \leq \infty}^{}  \psi_{p}.
+\end{equation}\]</span> Here for <span class="math inline">\(p\)</span>
+non-Archimidean, one has maps like <span class="math inline">\(\psi_{p}:
+\mathbb{Q}_{p} \rightarrow  \mathbb{C}^{(1)}\)</span> that come from
+<span class="math inline">\(\mathbb{Q}_{p}/\mathbb{Z}_{p}
+\rightarrow  \mathbb{Q}/\mathbb{Z}\)</span>. For <span
+class="math inline">\(p= \infty\)</span>, we have <span
+class="math display">\[\begin{equation}
+\psi_{\infty}(x)  = e^{2 \pi i x}.
+\end{equation}\]</span></p>
+<p>The exercise is to figure out all these details.</p>
+</div>
+<h1 id="jans-lecture-3">Jan’s Lecture 3</h1>
+<h2 id="siegel-eisenstein-series">Siegel Eisenstein series</h2>
+<p>We have <span class="math inline">\(G(\mathbb{A}) = P(\mathbb{A})
+\cdot K\)</span> where <span class="math inline">\(K = \prod_{p \leq
+\infty }^{} K_{p}\)</span> where <span
+class="math display">\[\begin{equation}
+    \text{ for }p&lt; \infty, K_{p} =  \Sp_{r}(\mathbb{Z}_{p}) \text{
+and } p = \infty, K_{p} = U(r) \subseteq \Sp_{r}(\mathbb{R}).
+\end{equation}\]</span></p>
+<p>For <span class="math inline">\(g \in  G(\mathbb{A})\)</span>, write
+<span class="math inline">\(q = n m(\alpha) k\)</span> for <span
+class="math inline">\(n \in N\)</span>, <span
+class="math inline">\(m(\alpha) \in M\)</span> and <span
+class="math inline">\(k \in K\)</span>. Put <span
+class="math inline">\(|a(g)|= |\det a|_{\mathbb{A}}\)</span>. Let <span
+class="math inline">\(g \mapsto  |\alpha(g)|\)</span> is norm on <span
+class="math inline">\(G(\mathbb{A})\)</span> . For <span
+class="math inline">\(\varphi \in \mathcal{S}(V(\mathbb{A}))\)</span>,
+we put for <span class="math inline">\(s \in \mathbb{C}\)</span> <span
+class="math display">\[\begin{equation}
+    \phi(g,s)  = (\omega(g) \varphi)(0) |a(g)|^{s-s_{0}},
+\end{equation}\]</span> where <span class="math inline">\(s_{0} = l/2 -
+s_{r}, s_{r} = (r+1)/2\)</span>.</p>
+<p>For <span class="math inline">\(\phi(n(b) n(\alpha) g , s) =
+\chi_{V}(\det(a)) |\det  \alpha|^{s} \phi(g,s)\)</span> . This implies
+<span class="math display">\[\begin{equation}
+  \phi(g,s) \in I_{r}(s_{0},\chi_{v})
+=  \Ind^{G(\mathbb{A})}_{P(\mathbb{A})} (\chi_{V} |\cdot |^{s})
+\end{equation}\]</span> This is to say, <span
+class="math inline">\(\phi\)</span> is a section of the induced
+representation (I don’t understand what that means).</p>
+<div class="remark">
+<p>The map <span class="math inline">\(\lambda :
+\mathcal{S}(V(\mathbb{A})^{r}) \rightarrow  I_{r}(s_{0},
+\chi_{V})\)</span> defined as <span
+class="math display">\[\begin{equation}
+\varphi \mapsto \phi(s_{0}) = (\omega(g) \varphi)(0)
+\end{equation}\]</span> is a <span
+class="math inline">\(G(\mathbb{A})\)</span>-intertwining operator.</p>
+</div>
+<div class="exercise">
+<p>Use formulas of the Weil representation to show that <span
+class="math inline">\(\lambda\)</span> is a <span
+class="math inline">\(G(\mathbb{A})\)</span>-intertwining operator.</p>
+</div>
+<p>For any <span class="math inline">\(\phi(s) \in I_{r}(s,\chi_{V}), g
+\in G(\mathbb{A})\)</span> the Eisenstein series is defined as <span
+class="math display">\[\begin{equation}
+    E(g,s,\Phi) = \sum_{\gamma \in P(\mathbb{Q}) \setminus
+G(\mathbb{Q})}^{} \phi(\gamma g,s)
+\end{equation}\]</span> converges for <span class="math inline">\(\Re(s)
+&gt; s_{r}\)</span> if <span class="math inline">\(\phi\)</span> is
+standard, i.e. <span class="math inline">\(\phi(k,s)\)</span> is
+independendent of <span class="math inline">\(s\)</span>.</p>
+<div class="theorem">
+<p><strong>(Siegel, Weil, Kudla-Rallis)</strong></p>
+<p>Assume that Weil-convergence criteria holds. Let <span
+class="math inline">\(\gamma \in \mathcal{S}(V(\mathbb{A})^{r})\)</span>
+and put <span class="math inline">\(\phi(s) = \lambda(\phi)(s) =
+\phi(g,s) \in I_{r}(s,\chi_{V})\)</span>. 1. Then, <span
+class="math inline">\(E(g,s,\phi)\)</span> is holomorphic at <span
+class="math inline">\(s=s_{0}\)</span>. 2. <span
+class="math inline">\(E(g,s_{0},\Phi) = \kappa I(g,\phi)\)</span> where
+<span class="math display">\[\begin{equation}
+   \kappa =
+   \begin{cases}
+     1 &amp; \text{ if } l &gt; r+1 \\
+     2 &amp; \text{ when } l \leq r+1
+   \end{cases}.
+\end{equation}\]</span></p>
+</div>
+<div class="exercise">
+<p>To get the classical formula from yesterday, put <span
+class="math inline">\((V,Q)\)</span> positive definite, <span
+class="math inline">\((b^{+},b^{-}) = (n,0)\)</span>, <span
+class="math inline">\(l=n\)</span> even $L V $ is even unimodular. We
+put <span class="math inline">\(r=1\)</span>, <span
+class="math inline">\(\varphi = \varphi_{f} \cdot
+\varphi_{\infty}\)</span> where <span
+class="math display">\[\begin{equation}
+  \varphi_{f} = \char(\hat{L}), \hat{L} = \prod_{p &lt; \infty} L_{p}
+\subseteq V(\mathbb{A}_{f}),
+\end{equation}\]</span> and <span
+class="math inline">\(\varphi_{\infty}(x)  = e^{- \pi (x,x)} \text{ is a
+Gaussian }.\)</span> Put <span class="math inline">\(K_{\infty} \simeq
+\SO(2) \subseteq \SL_{2}(\mathbb{R}) \simeq
+\Sp_{2}(\mathbb{R})\)</span>. We have for <span class="math inline">\(k
+\in \SO(2)\)</span> a rotation by <span
+class="math inline">\(\theta\)</span> <span
+class="math display">\[\begin{equation}
+        \omega(k) \varphi_{\infty} = e^{i \theta n /2 }
+\varphi_{\infty}.
+    \end{equation}\]</span> Then, we get <span
+class="math display">\[\begin{equation}
+        \nu^{-n/4} \theta( (g_{\tau},1,1,\dots),h,\varphi) = \theta_{hL}
+(\tau),
+    \end{equation}\]</span> where <span class="math inline">\(\tau \in
+\mathbb{H}\)</span>, $g_{} i = $ and <span class="math inline">\(h \in
+H(\mathbb{A})\)</span>.</p>
+</div>
+<h2 id="geometric-theta-series">Geometric theta series</h2>
+<p>Look at independend ?? (illegible) . Some motivation:</p>
+<ul>
+<li>Hirzebuch-Zagier: intersection numbers of curves on Hilbert Modular
+Surface appear as coefficients of elements of <span
+class="math inline">\(\mathcal{M}_{2}(\Gamma_{0}(D),
+\chi_{D})\)</span>.</li>
+<li>Kudla-Milson: Special cycles are related to coefficeints of Siegel
+modular forms.</li>
+</ul>
+<p>Here is the setup. Let <span class="math inline">\((V,Q)\)</span> be
+a quadratic space over <span class="math inline">\(\mathbb{Q}\)</span>
+of signature <span class="math inline">\((n,2)\)</span>. Let <span
+class="math inline">\(2 \mid n\)</span>. Let $L V $ be an even lattice.
+Let <span class="math inline">\(\SO(V), \SO(L)\)</span> be the Lie group
+and discrete subgroup. Let <span class="math inline">\(H =
+GSpin(V)  =\{g \in  C^{0}(V)^{\times} \mid g Vg^{-1} = V \}\)</span>.
+Then <span class="math display">\[\begin{equation}
+    1 \rightarrow  \mathbb{G}_{m} \rightarrow  H \rightarrow  \SO(V)
+\rightarrow  1.
+\end{equation}\]</span><br />
+We then look at <span class="math display">\[\begin{equation}
+   D = \{z \in V_{\mathbb{C}} \mid (z,z) = 0, (z,\overline{z} &lt; 0)\}
+/ \mathbb{C}^{\times}.
+\end{equation}\]</span> We write $D = D^{+} D^{-} P(V_{}) $. Let <span
+class="math inline">\(K \subseteq H(\mathbb{A}_{f})\)</span> be a
+compact open. We denote <span class="math inline">\(X_{K}(\mathbb{C}) =
+H(\mathbb{Q}) \setminus D \times H(\mathbb{A}_{f})/K\)</span>. The
+complex space of a ??(illegible) , defined over <span
+class="math inline">\(\mathbb{Q}\)</span>. This is quasi-projective of
+dimension <span class="math inline">\(n\)</span>.</p>
+<div class="exercise">
+<p>If <span class="math inline">\(F/\mathbb{Q}\)</span> is a real
+quadratic field. Let <span class="math inline">\(V= \{x \in
+\mathcal{M}_{2}(F) \mid x^{\dagger} = x&#39;\}\)</span>. Write <span
+class="math inline">\(Q(x) = \det\)</span> and <span
+class="math inline">\((V,Q)\)</span> be a rational quadratic structure
+of signature <span class="math inline">\((2,2)\)</span>. Then <span
+class="math inline">\(D^{+} = \mathbb{H} \times \mathbb{H}\)</span>.
+Take <span class="math inline">\(H(\mathbb{Q}) = \{ g\in \GL_{2}(F) \mid
+\det g \in \mathbb{Q}^{\times}\}\)</span>. We put <span
+class="math inline">\(K = \Stab(\M_{2}(\mathcal{O}_{F}) \cap V)
+\subseteq H(\mathbb{A}_{f})\)</span>.</p>
+</div>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="0"
 role="list">
@@ -237,7 +587,7 @@ Koecher &amp; A. Krieg, <em>Elliptic functions and modular forms</em>
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on September 29, 2025.<br>
+	<small>	<p class="date">This page was updated on September 30, 2025.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
