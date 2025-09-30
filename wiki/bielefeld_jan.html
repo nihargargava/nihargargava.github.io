@@ -72,7 +72,13 @@ id="toc-geometric-theta-series">Geometric theta series</a></li>
 <li><a href="#bibliography" id="toc-bibliography">References</a></li>
 </ul>
 </nav>
-<p><span
+<p><span class="math inline">\(\DeclareMathOperator{\SL}{SL}\)</span>
+<span class="math inline">\(\DeclareMathOperator{\M}{M}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\Stab}{Stab}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\SO}{SO}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\GSpin}{GSpin}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\GL}{GL}\)</span> <span
+class="math inline">\(\DeclareMathOperator{\Symm}{Symm}\)</span> <span
 class="math inline">\(\DeclareMathOperator{\char}{char}\)</span> <span
 class="math inline">\(\DeclareMathOperator{\Ind}{Ind}\)</span> <span
 class="math inline">\(\DeclareMathOperator{\gen}{gen}\)</span> <span
@@ -274,8 +280,8 @@ class="math inline">\(\chi_{V}(x) = (x,(-1)^{l/2} \det
 \mathbb{Q}^{2r}\)</span> is written as <span
 class="math inline">\(x=(x,x&#39;)\)</span>. We define <span
 class="math display">\[\begin{equation}
-     \langle(x,x&#39;) , (y,y&#39;)\rangle = x (y &#39;)^{\dagger} -
-x&#39; y^{\dagger}.
+\langle(x,x&#39;) , (y,y&#39;)\rangle = x (y &#39;)^{\dagger} - x&#39;
+y^{\dagger}.
 \end{equation}\]</span> We write <span class="math inline">\((W,
 \langle\ , \ \rangle)\)</span> to be the symplectic space of dimension
 <span class="math inline">\(2r\)</span>.</p>
@@ -319,12 +325,12 @@ class="math display">\[\begin{equation}
 <p>We have <span class="math inline">\(K_{\infty} = U(r)\)</span> which
 is <span class="math display">\[\begin{equation}
   U(r)
-  = \Big(
+  = \{\Big(
         \begin{smallmatrix}
          a &amp; b \\
           -b &amp; a
         \end{smallmatrix}\Big)
-      \mid z = a + i b,  ??(illegible)
+      \mid z = a + i b,  z z^{\dagger} = 1
   \}
 \end{equation}\]</span></p>
 Let <span class="math inline">\(H \times G\)</span> be a dual reductive
@@ -334,8 +340,8 @@ class="math display">\[\begin{equation}
     \langle v \otimes w , v&#39; \otimes w&#39; \rangle = \langle
 v,v&#39;\rangle \cdot \langle w , w&#39;\rangle.
 \end{equation}\]</span> Get <span class="math inline">\(G \times H
-\rightarrow  \Sp(W , \langle \ , \ \rangle)\)</span> mutually contra??
-(illegible).
+\rightarrow  \Sp(W , \langle \ , \ \rangle)\)</span> mutual
+centralizers.
 <div class="remark">
 <p>The <a href="bielefeld_maryna.html">lectures</a> of Maryna were about
 the bigger simplectic group <span class="math inline">\(\Sp(W, \langle \
@@ -492,17 +498,19 @@ independendent of <span class="math inline">\(s\)</span>.</p>
 <p>Assume that Weil-convergence criteria holds. Let <span
 class="math inline">\(\gamma \in \mathcal{S}(V(\mathbb{A})^{r})\)</span>
 and put <span class="math inline">\(\phi(s) = \lambda(\phi)(s) =
-\phi(g,s) \in I_{r}(s,\chi_{V})\)</span>. 1. Then, <span
-class="math inline">\(E(g,s,\phi)\)</span> is holomorphic at <span
-class="math inline">\(s=s_{0}\)</span>. 2. <span
-class="math inline">\(E(g,s_{0},\Phi) = \kappa I(g,\phi)\)</span> where
-<span class="math display">\[\begin{equation}
-   \kappa =
-   \begin{cases}
-     1 &amp; \text{ if } l &gt; r+1 \\
-     2 &amp; \text{ when } l \leq r+1
-   \end{cases}.
-\end{equation}\]</span></p>
+\phi(g,s) \in I_{r}(s,\chi_{V})\)</span>.</p>
+<ol type="1">
+<li>Then, <span class="math inline">\(E(g,s,\phi)\)</span> is
+holomorphic at <span class="math inline">\(s=s_{0}\)</span>.</li>
+<li><span class="math inline">\(E(g,s_{0},\Phi) = \kappa
+I(g,\phi)\)</span> where <span class="math display">\[\begin{equation}
+\kappa =
+\begin{cases}
+  1 &amp; \text{ if } l &gt; r+1 \\
+  2 &amp; \text{ when } l \leq r+1
+\end{cases}.
+\end{equation}\]</span></li>
+</ol>
 </div>
 <div class="exercise">
 <p>To get the classical formula from yesterday, put <span
@@ -534,7 +542,7 @@ class="math display">\[\begin{equation}
 H(\mathbb{A})\)</span>.</p>
 </div>
 <h2 id="geometric-theta-series">Geometric theta series</h2>
-<p>Look at independend ?? (illegible) . Some motivation:</p>
+<p>Look at indefinite quadratic spaces. Some motivation:</p>
 <ul>
 <li>Hirzebuch-Zagier: intersection numbers of curves on Hilbert Modular
 Surface appear as coefficients of elements of <span
@@ -549,19 +557,20 @@ of signature <span class="math inline">\((n,2)\)</span>. Let <span
 class="math inline">\(2 \mid n\)</span>. Let $L V $ be an even lattice.
 Let <span class="math inline">\(\SO(V), \SO(L)\)</span> be the Lie group
 and discrete subgroup. Let <span class="math inline">\(H =
-GSpin(V)  =\{g \in  C^{0}(V)^{\times} \mid g Vg^{-1} = V \}\)</span>.
+\GSpin(V)  =\{g \in  C^{0}(V)^{\times} \mid g Vg^{-1} = V \}\)</span>.
 Then <span class="math display">\[\begin{equation}
     1 \rightarrow  \mathbb{G}_{m} \rightarrow  H \rightarrow  \SO(V)
 \rightarrow  1.
 \end{equation}\]</span><br />
 We then look at <span class="math display">\[\begin{equation}
-   D = \{z \in V_{\mathbb{C}} \mid (z,z) = 0, (z,\overline{z} &lt; 0)\}
-/ \mathbb{C}^{\times}.
-\end{equation}\]</span> We write $D = D^{+} D^{-} P(V_{}) $. Let <span
+D = \{z \in V_{\mathbb{C}} \mid (z,z) = 0, (z,\overline{z} &lt; 0)\} /
+\mathbb{C}^{\times}.
+\end{equation}\]</span> We write <span class="math inline">\(D = D^{+}
+\cup D^{-} \subseteq P(V_{\mathbb{C}})\)</span>. Let <span
 class="math inline">\(K \subseteq H(\mathbb{A}_{f})\)</span> be a
 compact open. We denote <span class="math inline">\(X_{K}(\mathbb{C}) =
 H(\mathbb{Q}) \setminus D \times H(\mathbb{A}_{f})/K\)</span>. The
-complex space of a ??(illegible) , defined over <span
+complex space of a Shimura variety defined over <span
 class="math inline">\(\mathbb{Q}\)</span>. This is quasi-projective of
 dimension <span class="math inline">\(n\)</span>.</p>
 <div class="exercise">
