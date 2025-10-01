@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="dcterms.date" content="2025-09-30" />
-  <title>Zeta Function</title>
+  <title>Subgroup zeta function</title>
   <style>
     code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -33,13 +33,16 @@
           margin-left: 2em;
         }  </style>
   <link rel="stylesheet" href="style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Zeta Function</h1>
+<h1 class="title">Subgroup zeta function</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
@@ -47,24 +50,31 @@
 <li><a href="#bibliography" id="toc-bibliography">References</a></li>
 </ul>
 </nav>
-<p>Here are some zeta functions.</p>
-<ul>
-<li><a href="dedekind_zeta.html">Dedekind Zeta Function</a></li>
-<li><a href="riemann_zeta.html">Riemann Zeta Function</a></li>
-<li><a href="epstein_zeta.html">Epstein Zeta Function</a></li>
-<li><a href="subgroup_zeta.html">Subgroup zeta function</a></li>
-</ul>
-<p><span class="citation" data-cites="DZ1994">[<a href="#ref-DZ1994"
-role="doc-biblioref">1</a>]</span> is an interesting survey about
-special values of zeta functions.</p>
+<p>For a finitely generated subgroup <span
+class="math inline">\(\Gamma\)</span>, we write <span
+class="math display">\[\begin{equation}
+    a_{\Gamma}(n) = \#\{ H \subseteq \Gamma \text{ is a finite index
+subgroup }  \mid  [\Gamma:H]  = n\}.
+\end{equation}\]</span></p>
+<p>One then defines a Dirichlet series of this sequence <span
+class="math display">\[\begin{equation}
+\zeta_{\Gamma}(n) = \sum_{n=1}^{ \infty } \frac{a_{n}}{n^{s}},
+\end{equation}\]</span> for <span class="math inline">\(\Re(s) \gg
+1\)</span>.</p>
+<div class="example">
+<p>For <span class="math inline">\(\Gamma  = \mathbb{Z}\)</span>, you’re
+defining the Riemann zeta function.</p>
+</div>
+<p>This zeta function sometimes has often an analytic continuation. See
+<span class="citation" data-cites="V10">[<a href="#ref-V10"
+role="doc-biblioref">1</a>]</span>.</p>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="0"
 role="list">
-<div id="ref-DZ1994" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">D.
-Zagier, Values Of Zeta Functions And Their Applications. <em>First
-european congress of mathematics paris, july 6–10, 1992</em> (Springer,
-1994), pp. 497–512.</div>
+<div id="ref-V10" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">C.
+Voll, Functional equations for zeta functions of groups and rings.
+<em>Annals of mathematics</em>, (2010) 1181–1218.</div>
 </div>
 </div>
 <hr />
