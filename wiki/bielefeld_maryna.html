@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2025-10-01" />
+  <meta name="dcterms.date" content="2025-10-02" />
   <title>Maryna’s mini-course at Bielefeld</title>
   <style>
     code{white-space: pre-wrap;}
@@ -70,6 +70,12 @@ Lecture 3</a>
 series</a></li>
 <li><a href="#uniqueness-theorem."
 id="toc-uniqueness-theorem.">Uniqueness theorem.</a></li>
+</ul></li>
+<li><a href="#marynas-lecture-4" id="toc-marynas-lecture-4">Maryna’s
+Lecture 4</a>
+<ul>
+<li><a href="#proof-of-siegels-formula"
+id="toc-proof-of-siegels-formula">Proof of Siegel’s formula</a></li>
 </ul></li>
 <li><a href="#bibliography" id="toc-bibliography">References</a></li>
 </ul>
@@ -700,7 +706,7 @@ f(x) = [\iota_{X}(x),f].
 <p>For any <span class="math inline">\(i \in I(X)\)</span>, let <span
 class="math inline">\(U(i)\)</span> be the set of elements of <span
 class="math inline">\(\iota_{X}^{-1}(\{i\})\)</span> which of of maximal
-rnak in <span class="math inline">\(X\)</span> (i.e. <span
+rank in <span class="math inline">\(X\)</span> (i.e. <span
 class="math inline">\(x\)</span> has maximal rank if <span
 class="math inline">\(A x = X\)</span>) ; then if <span
 class="math inline">\(U(i)\)</span> is not empty, it is an orbit of
@@ -730,6 +736,179 @@ class="math inline">\(U(i)_{\mathbb{A}}\)</span> for <span
 class="math inline">\(i \in I(X)_{k}\)</span>. Then <span
 class="math inline">\(E&#39; = E\)</span>.</p>
 </div>
+<h1 id="marynas-lecture-4">Maryna’s Lecture 4</h1>
+<p>Recall <span class="math inline">\(I(X)\)</span> and the map <span
+class="math inline">\(\iota_{X} :X \rightarrow  I(X)\)</span> given by
+<span class="math inline">\(x \mapsto  x \otimes_{\iota} x\)</span>. We
+have <span class="math display">\[\begin{equation}
+    U(i) =\{x  \in \iota_{X}^{-1}({i}) \mid x \text{ has minimal rank }
+\}.
+\end{equation}\]</span> In fact, <span class="math inline">\(x\)</span>
+has maximal rank <span class="math inline">\(\Leftrightarrow A x =
+X\)</span> . (Why?)</p>
+<div class="theorem">
+<p>Let <span class="math inline">\(A_{k}\)</span> be an algebra of type
+(I). Let <span class="math inline">\(X_{k}\)</span> be a left <span
+class="math inline">\(A_{k}\)</span>-module + convergence condition
+(<span class="math inline">\(m &gt; 2n + 4e - 2\)</span>). Let <span
+class="math inline">\(v\)</span> be a place of <span
+class="math inline">\(k\)</span> such that <span
+class="math inline">\(U(0)_{v}\)</span> is non-empty. Let <span
+class="math inline">\(G_{v}&#39;\)</span> a subgroup of <span
+class="math inline">\(G_{v}\)</span> acting trasnsitively on <span
+class="math inline">\(U(i)_{v}\)</span> for any <span
+class="math inline">\(i \in I(X)_{k}\)</span>.</p>
+<p>Let <span class="math inline">\(E&#39;\)</span> be a positive
+tempered measure on <span class="math inline">\(X_{\mathbb{A}}\)</span>
+invariant by <span class="math inline">\(P_{S}(X_{k},A_{k})\)</span> and
+invariant under <span class="math inline">\(G&#39;_{v}\)</span>. If
+<span class="math inline">\(E-E&#39;\)</span> is a sum of measures
+supported on <span class="math inline">\(U(i)_{\mathbb{A}}\)</span> for
+<span class="math inline">\(i \in I(X)_{k}\)</span>, then we have <span
+class="math inline">\(E&#39;=E\)</span>.</p>
+</div>
+<p>We will only be able to give an idea of the proof. Define <span
+class="math display">\[\begin{equation}
+    E&#39;&#39; = E&#39;-E.
+\end{equation}\]</span> We know that <span
+class="math inline">\(E&#39;&#39;\)</span> is invariant under <span
+class="math inline">\(P_{S}(X_{k}/A_{k})\)</span>.</p>
+<div class="lemma">
+<p>The function <span class="math inline">\(S \mapsto  E&#39;&#39;(S
+\Phi)\)</span> is bounded <span
+class="math inline">\(\Mp_{\mathbb{A}}\)</span> for any <span
+class="math inline">\(\Phi \in \mathcal{S}(X_{\mathbb{A}})\)</span>. So
+for any <span class="math inline">\(\Phi \in S(X_{\mathbb{A}})\)</span>,
+we will denote by <span class="math display">\[\begin{equation}
+M(\Phi) := \sup_{S \in \Mp(\mathbb{A})} |E&#39;&#39;(S \Phi)|.
+\end{equation}\]</span></p>
+</div>
+<p>Then <span class="math inline">\(E&#39;&#39;(\Phi) = \sum_{i \in
+I(X)_{k}}^{}  \int_{X_{\mathbb{A}}} \Phi \diff
+\mu_{i}&#39;&#39;\)</span> where <span
+class="math inline">\(\mu_{i}\)</span> is a measure supported on <span
+class="math inline">\(U(i)_{\mathbb{A}}\)</span>.</p>
+<p><strong>Next step:</strong> Show that <span
+class="math display">\[\begin{equation}
+\Big|\int S \Phi \diff \mu&#39;&#39;_{} \Big| \leq M(\Phi) ,
+\end{equation}\]</span> Let <span class="math inline">\(i^{*} \in
+I(X)^{*}_{\mathbb{A}}\)</span>. Let <span class="math inline">\(q \in
+Q(X,A)_{\mathbb{A}}\)</span> corresponds to <span
+class="math inline">\(i^{*}\)</span> by <span class="math inline">\(q(x)
+= [i{X}(x),i^{*}]\)</span>, <span class="math inline">\(x \in
+X_{\mathbb{A}}\)</span>.</p>
+<p>For <span class="math inline">\(\Phi
+\in  \mathcal{S}(X_{\mathbb{A}})\)</span> we have <span
+class="math display">\[\begin{equation}
+    t(q) \Phi(x) = \Phi(x) \chi (q(x)),
+\end{equation}\]</span> given by <span
+class="math display">\[\begin{equation}
+    \Phi(x) \chi( [i_{X}(x),i^{*}]).
+\end{equation}\]</span> This is now given by <span
+class="math display">\[\begin{equation}
+    E&#39;&#39;(t(q) \Phi ) = \sum_{i \in I(X)_{k}} \chi([i,i^{*}])
+\int_{}^{} \Phi \diff \mu_{i}^{&#39;&#39;}.
+\end{equation}\]</span> Fourier series of the function is <span
+class="math inline">\(i^{*} \mapsto  E&#39;&#39;(t(q) \Phi)\)</span> on
+a compact abelian group <span
+class="math inline">\(I(X)_{\mathbb{A}}^{*}/ I(X)_{k}^{*}\)</span>. By
+Fourier formula, we get <span class="math display">\[\begin{equation}
+|\Phi \diff \mu_{i}&#39;&#39;| \leq M(\Phi),
+\end{equation}\]</span> replace <span
+class="math inline">\(\Phi\)</span> by <span class="math inline">\(S
+\Phi\)</span> given by <span class="math inline">\(\Big| \int_{}^{}
+S  \Phi \diff  \mu_{i}^{&#39;&#39;}\Big| &lt; M(\Phi)\)</span>.</p>
+<div class="remark">
+<p>At this point there was a question if the <span
+class="math inline">\(\mu_{i}&#39;&#39;\)</span> are normalized so that
+<span class="math inline">\(U(i)\)</span> have probability measure.
+Maryna said, it does not matter for the conclusion.</p>
+</div>
+<p>We know that <span class="math inline">\(\mu_{i}&#39;&#39;\)</span>
+are invariant under <span class="math inline">\(G_{v}&#39;\)</span>.
+Take <span class="math inline">\(X_{\mathbb{A}} = X_{v} \cdot
+X&#39;\)</span>. Then <span class="math inline">\(\Phi = \Phi_{v} \cdot
+\Phi&#39;\)</span> , for <span class="math inline">\(\Phi_{v} \in
+\mathcal{S}(X_{v})\)</span>, <span class="math inline">\(\Phi&#39; \in
+\mathcal{S}(X&#39;)\)</span>.</p>
+<div class="lemma">
+<p><span class="math display">\[\begin{equation}
+    \int_{}^{} \Phi \diff \mu_{i}&#39;&#39; = c_{i}(\Phi&#39;) \cdot
+\int_{U(i)_{v}}^{} \Phi_{v} |\theta_{i}|_{v}  ,
+\end{equation}\]</span> where <span class="math inline">\(\theta_{i} = (
+\tfrac{\diff x}{ \diff \iota_{X}(X)})_{i}\)</span>, <span
+class="math inline">\(|\theta_{i}|_{v}\)</span> is a measure on <span
+class="math inline">\(\overline{U(i)}\)</span>. <span
+class="math inline">\(c_{i}\)</span> is a measure on <span
+class="math inline">\(X&#39;\)</span>. In this formula, replace <span
+class="math inline">\(\Phi\)</span> by <span class="math inline">\(d
+\lambda_{t} \Phi,\)</span> <span class="math inline">\(t \in
+T_{v}\)</span></p>
+</div>
+<p>Maryna said that this is some kind of integration in radial
+coordinates.</p>
+In this formula, replace <span class="math inline">\(\Phi\)</span> by
+<span class="math inline">\(d(\lambda_{t} \Phi), t \in T_{v}\)</span>.
+<span class="math display">\[\begin{equation}
+\Phi_{v} \cdot \Phi&#39; \mapsto  ( d(\lambda_{t}) \Phi_{v} )  \cdot
+\Phi&#39;.
+\end{equation}\]</span>
+<div class="lemma">
+<p><span class="math display">\[\begin{equation}
+\theta_{i}(x \lambda_{t}^{-1}) = (t_{1}\dots t_{n})^{\delta(-m + n _ 2
+\epsilon -1 )} \cdot \theta_{i&#39;}(x).
+\end{equation}\]</span> Then <span class="math inline">\(i&#39; = i
+\cdot \overline{\lambda_{t}}\)</span>, and <span
+class="math inline">\(\lambda_{t}\)</span> acts on <span
+class="math inline">\(X_{k}\)</span> and <span
+class="math inline">\(\overline{\lambda}_{t}\)</span> acts on <span
+class="math inline">\(I(X)\)</span>.</p>
+</div>
+<p>Let <span class="math inline">\(t=(t_{1},\dots,t_{n})
+\rightarrow  0\)</span> . Let <span class="math inline">\(\int_{}^{}
+d(\lambda_{t}) \Phi \diff \mu_{i}&#39;&#39;\)</span> is bounded as <span
+class="math inline">\(t \in T_{v}\)</span>. The <span
+class="math inline">\(c_{i}(\Phi&#39;)\)</span> is constant and <span
+class="math inline">\(|t_{1} \dots t_{n}|_{v}^{ \delta (-m + 2n + 4
+\epsilon -2)} \rightarrow  \infty, t \rightarrow  0\)</span>. Finally
+<span class="math display">\[\begin{equation}
+\int_{U(i&#39;)_{v}}^{} \Phi_{v} |\theta_{i&#39;}|_{v}
+\rightarrow  \int_{U(0)_{v}}^{} \Phi_{v |\theta_{0}|_{v}}  , t \to 0.
+\end{equation}\]</span> Then <span
+class="math inline">\(U(0)_{v}\)</span> is non-empty <span
+class="math inline">\(\implies\)</span> we can choose <span
+class="math inline">\(\Phi_{v}\)</span> so that <span
+class="math inline">\(\int_{U(0)_{v}}^{} \Phi_{v}|\theta_{0}|_{v}  \neq
+0\)</span> <span class="math display">\[\begin{equation}
+\implies  \mu_{i}&#39;&#39;=0.
+\end{equation}\]</span></p>
+<h2 id="proof-of-siegels-formula">Proof of Siegel’s formula</h2>
+<div class="theorem">
+<p>Let <span class="math inline">\(A_{k}\)</span> (type I) and <span
+class="math inline">\(X_{k}\)</span> be as before. Let <span
+class="math inline">\(v\)</span> be a place of <span
+class="math inline">\(k\)</span> as before. Let <span
+class="math inline">\(G_{v}&#39;\)</span> be a subgroup of <span
+class="math inline">\(G_{v}\)</span> as in the uniqueness theorem (the
+place <span class="math inline">\(v\)</span> has non-empty condition).
+Let <span class="math inline">\(\nu\)</span> be a positive measure on
+<span class="math inline">\(G_{\mathbb{A}}/G_{k}\)</span> is invariant
+under <span class="math inline">\(G_{v}&#39;\)</span>, such that <span
+class="math inline">\(\nu(G_{\mathbb{A}}/G_{k}) =1\)</span> .</p>
+<p>We define <span class="math display">\[\begin{equation}
+    I_{\nu}(\Phi) = \int_{G(\mathbb{A}/G_{k})}^{} \sum_{\xi \in
+X_{k}}^{} \Phi(u \xi) \diff \mu(u),
+\end{equation}\]</span> here the integration is with respect to the
+other measure.</p>
+<p>Then we have <span class="math inline">\(I_{\nu}(\Phi) =
+E(\Phi)\)</span>.</p>
+</div>
+<p>Proof is by induction over <span class="math inline">\(n\)</span>. We
+must show that the difference <span class="math inline">\(I_{v}(\Phi) -
+E(\Phi)\)</span> satisfies the condition of the uniqueness theorem. For
+this we need to show that the difference of measures need to be
+supported on <span class="math inline">\(U(i)\)</span>, and everything
+of smaller rank can be worked out somehow by induction.</p>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="0"
 role="list">
@@ -746,7 +925,7 @@ des groupes classiques. <em>Acta mathematica</em>, <strong>113</strong>
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on October 1, 2025.<br>
+	<small>	<p class="date">This page was updated on October 2, 2025.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
