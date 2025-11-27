@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2025-11-27" />
+  <title>Nalini’s Lecture 1</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="/home/breakfast/work_from_git/nihargargava.github.io/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Nalini’s Lecture 1</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#lecture-1-spectral-convergence-and-fundamental-notes"
+id="toc-lecture-1-spectral-convergence-and-fundamental-notes">Lecture 1:
+Spectral convergence and fundamental notes</a>
+<ul>
+<li><a href="#example-1" id="toc-example-1">Example 1</a></li>
+<li><a href="#example-2" id="toc-example-2">Example 2</a></li>
+<li><a href="#notions-of-convergence-of-spectra"
+id="toc-notions-of-convergence-of-spectra">Notions of convergence of
+spectra</a></li>
+<li><a href="#example-3" id="toc-example-3">Example 3</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+<p>The main objectives of this course</p>
+<ul>
+<li>is to look at strong convergence and spectrum of different geometric
+examples,</li>
+<li>speak about the recent polynomial method of Chen, Garza-Vargas,
+Trop, Van Handel.</li>
+</ul>
+<h1 id="lecture-1-spectral-convergence-and-fundamental-notes">Lecture 1:
+Spectral convergence and fundamental notes</h1>
+<p>We will always speak of spectrum of self-adjoint operators. Most of
+the time it will be the Laplacian <span
+class="math inline">\(\Delta\)</span>.</p>
+<h2 id="example-1">Example 1</h2>
+<p>Consider a box of size <span class="math inline">\(\varepsilon \times
+1\)</span>. The Dirichlet spectrum is <span
+class="math display">\[\begin{equation}
+(\frac{\Pi m}{ \varepsilon})^{2} + (\pi k)^{2}, \text{ for each } k,m
+\in \mathbb{Z}_{&gt;0}.
+\end{equation}\]</span> The is the spectrum of <span
+class="math inline">\(\sin (\pi k x) \sin (\pi m y /
+\varepsilon)\)</span>. The Neumann spectrum has functions <span
+class="math inline">\(\cos( \pi k x) \cos(\pi m y /\varepsilon)\)</span>
+for <span class="math inline">\(k,m \geq 0\)</span>.</p>
+<pre><code>1. When $m \neq 0$, the spectral part is at infinity.
+2. When $m=0$, the eigenvalues are $(\pi k)^{2}$ which are the eigenvalues of the interval $[0,1]$ with respect to $-\partial^{2}/\partial x^{2}$ with Neumann conditions.</code></pre>
+<p><span class="math display">\[\begin{equation}
+\text{ for each } M, \mathop{\mathrm{sp}}(\Delta_{\varepsilon}) \cap
+[-M,M] = \mathop{\mathrm{sp}}( - \partial^{2}/\partial x^{2}) \cap
+[-M,M].
+\end{equation}\]</span> Here, with periodic conditions, we have
+convergence of spectrum to the convergence of the circle.</p>
+<h2 id="example-2">Example 2</h2>
+<p>Consider a cone of angel <span class="math inline">\(\alpha\)</span>
+as <span class="math inline">\(\alpha \rightarrow  0\)</span>. Call it
+<span class="math inline">\(C_{\alpha}\)</span>. Then <span
+class="math inline">\(\Delta\)</span> on the functions <span
+class="math inline">\(C_{0}^{\infty}( C_{\alpha} \setminus
+\{0\})\)</span> is not necessarily self-adjoint. We have to choose the
+conditions for limits. This gives us the Neumann Laplacian. The
+quadratic form <span class="math inline">\(\mathcal{E}(f,g) = \int_{}
+\nabla f \cdot \nabla g r \mathop{\mathrm{\,d}}r
+\mathop{\mathrm{\,d}}\theta\)</span> on <span
+class="math display">\[\begin{equation}
+\mathop{\mathrm{Dom}}( \mathcal{E})  = \{ f , \nabla f \in L^{2}\}.
+\end{equation}\]</span> The associated operator <span
+class="math inline">\(\Delta\)</span> has <span
+class="math display">\[\begin{equation}
+\mathop{\mathrm{Dom}}(\Delta) = \{f, g \mapsto  \mathcal{E}(f,g) \text{
+bounded on }L^{2}\}.
+\end{equation}\]</span></p>
+<p>The eigenfunctions of the form are <span
+class="math inline">\(\varphi(r) e^{-i m \theta/\alpha}\)</span> where
+<span class="math inline">\(\varphi(r)\)</span> is a Bessel function
+<span class="math inline">\(J_{m/\alpha}( \sqrt{\lambda} r)\)</span>.
+Then again</p>
+<ol type="1">
+<li><span class="math inline">\(m \neq 0\)</span> is the spectral part
+at <span class="math inline">\(\infty\)</span></li>
+<li><span class="math inline">\(m=0\)</span> are the proper radial
+functions.</li>
+</ol>
+<p>The radial spectrum converges to the spectrum associated to the
+quadratic form. The limit geometric object is finite. <span
+class="math display">\[\begin{equation}
+\mathcal{E}_{1}(f,g) = \int_{0}^{1} \frac{\partial f}{ \partial r}
+\frac{\partial g}{ \partial r} r\mathop{\mathrm{\,d}}r.
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+\Delta^{(1)}= \frac{\partial^{2}}{\partial r^{2}} + \frac{1}{r}
+\frac{\partial}{ \partial r}.
+\end{equation}\]</span> The spectre of <span
+class="math inline">\(\Delta_{\alpha}\)</span> converges towards the
+spectrum of <span class="math inline">\(\Delta^{(1)}\)</span>.</p>
+<h2 id="notions-of-convergence-of-spectra">Notions of convergence of
+spectra</h2>
+<p>(Beckus-Bellisard 2016)<br />
+This is the convergence of spectrum as sets. <span
+class="math inline">\((\mathcal{H}_{t})_{t \in T}\)</span> are Hilbert
+spaces indexed by topological spaces <span
+class="math inline">\(T\)</span>. <span
+class="math inline">\(A_{t}\)</span> are self-adjoint operators and
+<span class="math inline">\(F_{t} = \mathop{\mathrm{sp}}(A_{t})\)</span>
+is a closed subset of <span class="math inline">\(\mathbb{R}\)</span>.
+As <span class="math inline">\(t \rightarrow  t_{0}\)</span>, we
+define</p>
+<ol type="1">
+<li>Hausdorff distance:
+<div class="definition">
+<p><span class="math inline">\(d_{H}(F_{t},F_{t_{0}})
+\rightarrow  0\)</span> if <span class="math display">\[\begin{align}
+\text{ for each } \varepsilon&gt;0 &amp; \quad F_{t} \subseteq
+U_{\varepsilon}(F_{t_{0}})  \\
+&amp; \quad F_{t_{0}}  \subseteq U_{\varepsilon}(F_{t}),
+\end{align}\]</span> such that <span class="math inline">\(t\)</span> is
+close enough to <span class="math inline">\(t_{0}\)</span>.</p>
+</div></li>
+<li>Convergence in the sense of Victoris
+<div class="definition">
+<p><span class="math display">\[\begin{equation}
+F_{t} \rightarrow  F_{t_{0}}
+\end{equation}\]</span> if <span class="math display">\[\begin{align}
+&amp; \text{ for each } K \subseteq R \text{ closed such that  } K \cap
+F_{t_{0}} \neq \phi \\
+&amp; \text{ then } K \cap F_{t}  = \phi \text{ for a disk} t \text{
+close to } t_{0} \\
+&amp; \text{ for }\mathcal{O} \subseteq \mathbb{R} \text{ open such that
+} \mathcal{O} \cap F_{t_{0}} \neq \phi \\
+&amp; \text{ then } \mathcal{O} \cap F_{t} \neq \phi \text{ for each } t
+\text{ close to } t_{0}
+\end{align}\]</span></p>
+</div></li>
+<li>Convergence in Fell topology: Identical to Vietoris but with <span
+class="math inline">\(K\)</span> compact. In the given examples, we have
+a convergnce in the Fell topology but not in the sense of Vietoris.</li>
+<li>“Convergence with respect to spectral edges”
+<div class="definition">
+<p>A Spectral gap of <span class="math inline">\(\mathbb{F}_{t}\)</span>
+is the connected component of <span
+class="math inline">\(F_{t}^{c}\)</span>. The spectral edge of <span
+class="math inline">\(F_{t}\)</span> converges to that of <span
+class="math inline">\(F_{t_{0}}\)</span> if</p>
+</div>
+<div class="theorem">
+<p>If <span class="math inline">\(A_{t}\)</span> are bounded operators
+then as <span class="math inline">\(t \rightarrow  t_{0}\)</span> we
+have <span class="math display">\[\begin{align}
+\text{ CV of spectral edges } &#39;&#39; &amp;  \Leftrightarrow
+\text{ CV of Vietoris } \\
+  &amp;  
+\Leftrightarrow  
+\|P(A_{t})\| \rightarrow  \|P(A_{t_{0}})\| \text{  as  }t
+\rightarrow  t_{0} \forall \text{ polynomial }P, \deg(P) \leq 2.
+\end{align}\]</span></p>
+</div>
+<div class="theorem">
+<p>If the <span class="math inline">\(A_{t}\)</span> are not necessarily
+bounded, <span class="math display">\[\begin{equation}
+\text{ CV of spectral edges } \Leftrightarrow
+\text{ CV of Fell } \Leftrightarrow
+\text{ for all } $z \in \mathbb{C} \setminus \mathbb{R}$
+\|(z-A_{t})^{-1}\| \rightarrow  \|(z-A_{t_{0}})^{-1}\|.
+\end{equation}\]</span></p>
+</div></li>
+</ol>
+<div class="remark">
+<p>The <span class="math inline">\(A_{t}\)</span> live on the different
+spaces <span class="math inline">\(\mathcal{H}_{t}\)</span>.</p>
+</div>
+<h2 id="example-3">Example 3</h2>
+<p><strong>“Graphes épaissis” Exner-Post 2000 - ongoing </strong></p>
+<p>Metric graph <span class="math inline">\(G =(V,E)\)</span>. <span
+class="math inline">\(L_{e} =\)</span> length of the arête <span
+class="math inline">\(e\)</span>. We take <span
+class="math inline">\(\frac{\partial^{2}}{ \partial x^{2}}\)</span> on
+each edge. Choice of conditions are taken on the limits of the vertices.
+We have Kirchoff conditions. <span class="math inline">\(f\)</span> is
+continuous on vertices. We define <span
+class="math display">\[\begin{equation}
+    \mathcal{E}(f,g) = \sum_{e}^{} \int_{}^{} f&#39;
+g&#39;\mathop{\mathrm{\,d}}x,
+\end{equation}\]</span> where <span class="math inline">\(f,g \in
+H^{1}\)</span> on each edge and continues to the vertices.</p>
+<p>We suppose that <span class="math inline">\(G\)</span> is embedded
+isometrically in <span class="math inline">\(\mathbb{R}^{n}\)</span>.
+Then <span class="math inline">\(G_{\varepsilon} =\)</span>
+neighbourhood <span class="math inline">\(\varepsilon \subseteq
+\mathbb{R}^{n}\)</span>, <span
+class="math inline">\(\Delta_{\varepsilon}\)</span> = Neumann’s
+Laplacian.</p>
+We have
+<div class="theorem">
+<p>As <span class="math inline">\(\varepsilon \rightarrow 0\)</span>,
+<span class="math inline">\(\lambda_{k}^{(\varepsilon)}
+\rightarrow  \lambda_{k}\)</span>. Moreover, we have convergence in norm
+of resolvents.</p>
+</div>
+Here, as before we have
+<div class="definition">
+<p><span class="math inline">\(A_{\varepsilon}, A_{0}\)</span><br />
+are operators on the same Hilbert space <span
+class="math inline">\(\mathcal{H}\)</span> then <span
+class="math display">\[\begin{equation}
+A_{\varepsilon} \rightarrow_{\text{ resolvent }} \text{ if } \text{ for
+all } z \in \mathbb{C} \setminus \mathbb{R},
+\|(z - A_{\varepsilon})^{-1} - (z- A_{0})^{-1}\| \rightarrow  0.
+\end{equation}\]</span></p>
+</div>
+<div class="remark">
+<p>Because of the resolvent identity, it is sufficient to verify it for
+one complex number <span class="math inline">\(z\)</span>.</p>
+</div>
+<p>One has <span class="math display">\[\begin{equation}
+P_{0}^{\hat{}} = \frac{1}{ 2 i\pi} \int_{\Gamma}^{} (z-
+A_{0})^{-1}\mathop{\mathrm{\,d}}z
+= \lim_{ \varepsilon \rightarrow  0} P_{\varepsilon}^{\hat{}}
+\end{equation}\]</span></p>
+<p>We generalize notions of convergence of norm of spectrum by
+Post-Weidman. Take <span class="math inline">\(A_{\varepsilon}\)</span>
+on <span class="math inline">\(\mathcal{H}_{\varepsilon}\)</span>, take
+<span class="math inline">\(A_{0}\)</span> on <span
+class="math inline">\(H_{0}\)</span>. We have <span
+class="math display">\[\begin{equation}
+    A_{\varepsilon} \xrightarrow{\text{ generalized resolvent }} A_{0}
+\end{equation}\]</span> if there exists a Hilbert space <span
+class="math inline">\(\mathcal{H}\)</span> and injections <span
+class="math inline">\(i_{\varepsilon} : \mathcal{H}_{\varepsilon}
+\rightarrow  \mathcal{H}\)</span> and <span class="math inline">\(i_{0}
+: \mathcal{H}_{0} \rightarrow  \mathcal{H}\)</span> with <span
+class="math inline">\(i_{\varepsilon}^{*} i_{\varepsilon} = I\)</span>
+and <span class="math inline">\(i_{0}^{*} i_{0} = I\)</span> with <span
+class="math display">\[\begin{equation}
+    \| i_{\varepsilon} ( z- A_{\varepsilon})^{-1} i_{\varepsilon}^{*}
+    -
+    i_{0} ( z- A_{0})^{-1} i_{0}^{*}  \|_{\mathcal{B}(\mathcal{H})}
+\xrightarrow[]{{\varepsilon \rightarrow  0}}  0.
+\end{equation}\]</span></p>
+<p>Ex 4) Gromov-Hausdorff convergence. One defines <span
+class="math inline">\((X,d,x,m)\)</span> a pointed metric space. Take
+<span class="math inline">\((X,d)\)</span> complete, separable and a
+point <span class="math inline">\(x \in X\)</span>, <span
+class="math inline">\(m\)</span> is a Radon measure, non-zero and <span
+class="math inline">\(x \in \sup(m)\)</span>.</p>
+<div class="definition">
+<p>(Minimalist definition of Gigli-Mondion-Savaré)</p>
+<p>One has <span class="math inline">\((X_{n},d_{n},x_{n},m_{n})
+\xrightarrow{\text{ pm GH }} (X_{\infty}, d_{\infty}, x_{\infty},
+m_{\infty})\)</span> if for each <span
+class="math inline">\((Z,d)\)</span> completely separable and <span
+class="math display">\[\begin{align}
+&amp; i_{n}: (X_{n},d_{n})\rightarrow  (Z,d) \text{ isometric injection
+},\\
+&amp; i_{\infty}: (X_{\infty},d_{\infty}) \rightarrow  (Z,d) \text{
+isometric injection }
+\end{align}\]</span></p>
+</div>
+<p>That is, <span class="math display">\[\begin{equation}
+i_{n \sharp} m_{n} \rightarrow  i_{\infty \sharp}  m_{\infty}
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \int_{}^{} \varphi \circ i_{n}\mathop{\mathrm{\,d}}m_{n} \rightarrow
+    \int_{}^{} \varphi \circ i_{\infty}\mathop{\mathrm{\,d}}m_{\infty}
+\end{equation}\]</span> for all <span
+class="math inline">\(\varphi\)</span> that are continuous and have
+bounded support.</p>
+<div class="remark">
+<p>This implies <span class="math inline">\(i_{n}(x_{n})
+\rightarrow  i_{\infty}(x_{\infty})\)</span> and also that <span
+class="math display">\[\begin{equation}
+(\mathop{\mathrm{supp}}( m_{n}), x_{n}) \implies i_{\infty}(
+\mathop{\mathrm{supp}}m_{\infty}, x_{\infty})
+\end{equation}\]</span> in the sense of the topology of pointed
+Hausdorff.</p>
+</div>
+<p>Here are some references</p>
+<ul>
+<li>Fukaya 85</li>
+<li>Colding Naber</li>
+<li>Lott-Villani</li>
+<li>Sturm</li>
+<li>Ambrosio-Gigli-Savaré</li>
+</ul>
+<p>Case where the <span class="math inline">\(X_{n}\)</span> are
+varieties of dimension <span class="math inline">\(N\)</span>, Ricci
+<span class="math inline">\(X_{n} \geq K\)</span> and <span
+class="math inline">\(d_{n}\)</span> is Ramanujan distance. We have
+<span class="math inline">\(m_{n} =
+\mathop{\mathrm{vol}}{x_{n}}/\mathop{\mathrm{vol}}(B_{X_{n}}(x_{n},1))\)</span>.
+The limit object <span
+class="math inline">\((X_{\infty},d_{\infty},x_{\infty},m_{\infty})\)</span>.</p>
+<ul>
+<li><span class="math inline">\(\exists R \subseteq X_{\infty}\)</span>
+with “ensemble régulier” and <span
+class="math inline">\(m_{\infty}(X_{\infty} \setminus R) =
+0\)</span>.</li>
+<li><span class="math inline">\(\exists k \leq N\)</span> such that
+<span class="math inline">\(R\)</span> is equipped with bi-Lipshitz maps
+of values in <span class="math inline">\(\mathbb{R}^{k}\)</span></li>
+<li><span class="math inline">\(m_{\infty}\)</span> is a Hausdorff
+measure that is <span class="math inline">\(k\)</span>-dimensional</li>
+<li><span class="math inline">\(X_{\infty}\)</span> satisfies a
+condition <span class="math inline">\(R \subseteq D(K,N)\)</span> which
+is the synthetic curvature. This is given by Sturm/Lott-Villani. This is
+“Riemannian”.</li>
+</ul>
+<div class="theorem">
+<pre><code>(Cheeger-Colding 2000)</code></pre>
+<p>We suppose that <span class="math inline">\(X_{n}\)</span> is
+compact. Then, the limit <span class="math inline">\(X_{\infty}\)</span>
+is compact and <span class="math display">\[\begin{equation}
+    \lambda_{k}^{n} \rightarrow_{n
+\rightarrow  \infty}   \lambda_{k}^{\infty}
+\end{equation}\]</span></p>
+</div>
+<div class="theorem">
+<pre><code>(Gigli-Mondino-Savaré)</code></pre>
+<ul>
+<li><span class="math display">\[\begin{equation}
+  \varepsilon_{n} \rightarrow  \varepsilon_{\infty} \text{
+$\Gamma$-convergence },
+\end{equation}\]</span> if <span class="math inline">\(f_{n} \in
+L^{2}(m_{n}) \rightarrow f \in L^{2}(m_{\infty})\)</span> then <span
+class="math inline">\(\lim \mathcal{E}_{n}(f_{n},f_{n}) \geq
+\varepsilon_{\infty}(f,f)\)</span>,</li>
+<li><span class="math inline">\(\text{ for all } f \in
+L^{2}(m_{\infty})\)</span>, there exists <span
+class="math inline">\(f_{n} \rightarrow  f\)</span> such that <span
+class="math inline">\(\varepsilon_{\infty}(f,f) = \lim
+\mathcal{E}_n(f_n,f_n)\)</span>.</li>
+</ul>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on November 27, 2025.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>

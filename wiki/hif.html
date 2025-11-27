@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2025-10-08" />
+  <meta name="dcterms.date" content="2025-10-29" />
   <title>Hecke integration formula</title>
   <style>
     code{white-space: pre-wrap;}
@@ -51,11 +51,9 @@
 <li><a href="#bibliography" id="toc-bibliography">References</a></li>
 </ul>
 </nav>
-<p><span
-class="math inline">\(\DeclareMathOperator{\KR}{K_{\mathbb{R}}}\)</span>
-<span class="math inline">\(\DeclareMathOperator{\diffx}{\,
-d^{\times}}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\diff}{\, d}\)</span> </p>
+$$
+
+$$
 <p>The following is an integration formula due to <a
 href="hecke.html">Hecke</a> who used it to prove the analytic
 continuation of <a href="dedekind_zeta.html">Dedekind zeta
@@ -114,7 +112,8 @@ connects diagonal orbits to norms.</p>
 <div class="lemma">
 <p>{For <span class="math inline">\(\Re(s)&gt;1\)</span>} we have that
 <span class="math display">\[\begin{align}
-\int_{a \in \KR^{(1)}} \|av\|^{-sd} \diffx a
+\int_{a \in \mathop{\mathrm{K_{\mathbb{R}}}}^{(1)}} \|av\|^{-sd}
+\mathop{\mathrm{\, d^{\times}}}a
 &amp; =  |\mathop{\mathrm{N}}(v)|^{-s} \cdot
 {  \frac{(2 \pi )^{r_2} \Gamma(\tfrac{s}{2})^{r_1} \Gamma(s)^{r_2} }{
 2^{sr_2} \cdot \frac{d}{2} \Gamma(\frac{sd}{2})  } }.
@@ -124,48 +123,60 @@ connects diagonal orbits to norms.</p>
 <p>Let us prove it for <span class="math inline">\(v=1\)</span>.
 Consider the integral <span class="math display">\[\begin{equation}
 \label{eq:first_one}
-  \int_{x \in \KR} e^{-\|x\|^{2}} |\mathop{\mathrm{N}}(x)|^{s-1} \diff x
-  = \int_{x \in \KR^{\times}} e^{-\|x\|^{2}}
-|\mathop{\mathrm{N}}(x)|^{s}  |\mathop{\mathrm{N}}(x)|^{-1}\diff x.
+  \int_{x \in \mathop{\mathrm{K_{\mathbb{R}}}}} e^{-\|x\|^{2}}
+|\mathop{\mathrm{N}}(x)|^{s-1} \mathop{\mathrm{\, d}}x
+  = \int_{x \in \mathop{\mathrm{K_{\mathbb{R}}}}^{\times}}
+e^{-\|x\|^{2}}
+|\mathop{\mathrm{N}}(x)|^{s}  |\mathop{\mathrm{N}}(x)|^{-1}\mathop{\mathrm{\,
+d}}x.
 \end{equation}\]</span> We can evaluate it two ways. One way is to write
 the Haar measure on <span
-class="math inline">\(|\mathop{\mathrm{N}}(x)|^{-1} \diff x\)</span> on
-<span class="math inline">\(\KR^{\times}\)</span> by writing <span
-class="math display">\[\begin{align}
-    \KR^{\times}  &amp; \simeq \mathbb{R}_{&gt;0} \times \KR^{(1)} \\
+class="math inline">\(|\mathop{\mathrm{N}}(x)|^{-1} \mathop{\mathrm{\,
+d}}x\)</span> on <span
+class="math inline">\(\mathop{\mathrm{K_{\mathbb{R}}}}^{\times}\)</span>
+by writing <span class="math display">\[\begin{align}
+    \mathop{\mathrm{K_{\mathbb{R}}}}^{\times}  &amp; \simeq
+\mathbb{R}_{&gt;0} \times \mathop{\mathrm{K_{\mathbb{R}}}}^{(1)} \\
     x  &amp; = t \cdot a \\
-    |\mathop{\mathrm{N}}(x)|^{-1} \diff x &amp; =  \deg K \cdot \left(
-\tfrac{1}{t}\diff t  \right)\cdot \diffx a.
+    |\mathop{\mathrm{N}}(x)|^{-1} \mathop{\mathrm{\, d}}x &amp; =  \deg
+K \cdot \left( \tfrac{1}{t}\mathop{\mathrm{\, d}}t  \right)\cdot
+\mathop{\mathrm{\, d^{\times}}}a.
 \end{align}\]</span> Observe then that for <span
 class="math inline">\(d=\deg K\)</span> we have <span
 class="math inline">\(\mathop{\mathrm{N}}(at)
 =t^{d}\mathop{\mathrm{N}}(a)\)</span>. Hence, <span
 class="math display">\[\begin{align}
-  \int_{x \in \KR} e^{-\|x\|^{2}} |\mathop{\mathrm{N}}(x)|^{s-1} \diff x
+  \int_{x \in \mathop{\mathrm{K_{\mathbb{R}}}}} e^{-\|x\|^{2}}
+|\mathop{\mathrm{N}}(x)|^{s-1} \mathop{\mathrm{\, d}}x
   &amp; =
-  \int_{t \in \mathbb{R}_{&gt;0}}\int_{a \in \KR^{(1)}}
-e^{-t^2\|a\|^{2}} d t^{sd-1} \diffx a \diff t .\\
+  \int_{t \in \mathbb{R}_{&gt;0}}\int_{a \in
+\mathop{\mathrm{K_{\mathbb{R}}}}^{(1)}} e^{-t^2\|a\|^{2}} d t^{sd-1}
+\mathop{\mathrm{\, d^{\times}}}a \mathop{\mathrm{\, d}}t .\\
   &amp; =
-  \int_{t \in \mathbb{R}_{&gt;0}}e^{-t^2} d t^{sd-1} \diff t  \int_{a
-\in \KR^{(1)}} \|a\|^{-sd} \diffx a  \\
+  \int_{t \in \mathbb{R}_{&gt;0}}e^{-t^2} d t^{sd-1} \mathop{\mathrm{\,
+d}}t  \int_{a \in \mathop{\mathrm{K_{\mathbb{R}}}}^{(1)}} \|a\|^{-sd}
+\mathop{\mathrm{\, d^{\times}}}a  \\
   &amp; =
   \tfrac{d}{2}\Gamma(\tfrac{sd}{2})
-  \int_{a \in \KR^{(1)}} \|a\|^{-sd}\diffx a.
+  \int_{a \in \mathop{\mathrm{K_{\mathbb{R}}}}^{(1)}}
+\|a\|^{-sd}\mathop{\mathrm{\, d^{\times}}}a.
 \end{align}\]</span> On the other hand, one can also write <span
 class="math inline">\(x=(x_1,\dots,x_{r_1+r_2}) \in \mathbb{R}^{r_1}
 \times \mathbb{C}^{r_2}\)</span>. <span
 class="math display">\[\begin{align}
-  \int_{x \in \KR} &amp;  e^{-\|x\|^{2}} |\mathop{\mathrm{N}}(x)|^{s-1}
-\diff x \\
+  \int_{x \in \mathop{\mathrm{K_{\mathbb{R}}}}} &amp;  e^{-\|x\|^{2}}
+|\mathop{\mathrm{N}}(x)|^{s-1} \mathop{\mathrm{\, d}}x \\
   &amp; =
-  \int_{x \in \KR} e^{-\left( \sum_{i=1}^{r_1}|x_i|^{2} +2
-\sum_{i=r_1+1}^{r_2}|x_i|^{2} \right)} |x_1 x_2 \dots x_{r_1}|^{s-1}
-|x_{r_1+1} \dots x_{r_1+r_2}|^{2( s-1 )} \diff x\\
+  \int_{x \in \mathop{\mathrm{K_{\mathbb{R}}}}} e^{-\left(
+\sum_{i=1}^{r_1}|x_i|^{2} +2 \sum_{i=r_1+1}^{r_2}|x_i|^{2} \right)} |x_1
+x_2 \dots x_{r_1}|^{s-1} |x_{r_1+1} \dots x_{r_1+r_2}|^{2( s-1 )}
+\mathop{\mathrm{\, d}}x\\
   &amp; =
 \prod_{i=1}^{r_1}\left( 2\int_{x \in {\mathbb{R}_{&gt; 0}} } e^{- x^{2}}
-x^{s-1} \diff x \right)
+x^{s-1} \mathop{\mathrm{\, d}}x \right)
 \prod_{i=r_1+1}^{r_1+r_2}\left( 2\cdot 2 \pi \int_{x \in
-{\mathbb{R}_{&gt; 0}} } e^{- 2 x^{2}} x^{2(s-1)} x\diff x \right)\\
+{\mathbb{R}_{&gt; 0}} } e^{- 2 x^{2}} x^{2(s-1)} x\mathop{\mathrm{\,
+d}}x \right)\\
   &amp; =  (2\pi)^{r_2} 2^{-sr_2} \Gamma(\tfrac{s}{2})^{r_1}
 \Gamma(s)^{r_2}.
 \end{align}\]</span> The factor of <span
@@ -187,7 +198,7 @@ number fields with a small regulator. <em>Compositio Mathematica</em>,
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on October 8, 2025.<br>
+	<small>	<p class="date">This page was updated on October 29, 2025.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>

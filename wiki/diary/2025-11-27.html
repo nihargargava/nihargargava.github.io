@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2025-11-27" />
+  <title>Rigidity of some quantum representations of mapping class groups</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="/home/breakfast/work_from_git/nihargargava.github.io/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Rigidity of some quantum representations of mapping
+class groups</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#fusion-rules" id="toc-fusion-rules">Fusion rules</a></li>
+</ul>
+</nav>
+$$
+
+$$
+
+
+
+<p>I am attending the geometry seminar. The speaker is Pierre
+Godfard.</p>
+<p>The abstract is <a
+href="https://www.imo.universite-paris-saclay.fr/en/events/7779">here</a>.</p>
+<p>The topics to be covered are</p>
+<ol type="1">
+<li>Mapping class groups and rigidity conjectures</li>
+<li>Quantum represnetations and main results</li>
+<li>Twisted moduli space of curves <strong>(no time)</strong></li>
+</ol>
+<p>We take a surface <span class="math inline">\(S_{g}^{n}\)</span> of
+genus <span class="math inline">\(g\)</span> and <span
+class="math inline">\(n\)</span> components. The mapping class group is
+<span class="math display">\[\begin{equation}
+\mathrm{Mod}(S_{g}^{n}) = \pi_{0}( \mathrm{Homeo}^{+}(S_{g}^{n},
+\underbrace{\delta S_{g}^{n}}_{\text{Fix the boundary pointwise}})).
+\end{equation}\]</span></p>
+<div class="example">
+<p>When <span class="math inline">\(g \geq 1\)</span> and <span
+class="math inline">\(n=0\)</span>, we have <span
+class="math display">\[\begin{equation}
+\mathrm{Mod}(S_{g}^{n}) = \mathrm{Out}^{+}(\pi_{1}(S_{g})) \simeq
+\pi_{1}(\underbrace{\mathcal{M}_{g}}_{\text{ Moduli of curces }})
+\end{equation}\]</span></p>
+</div>
+<div class="example">
+<p><span class="math inline">\(\mathrm{Mod}(S_{0}^{n})\)</span> is a
+quotient of <span class="math inline">\(\underbrace{PB_{n}}_{\text{ pure
+braid group }} \times \mathbb{Z}^{n}\)</span></p>
+</div>
+<p>We have analogies with <span
+class="math inline">\(\mathop{\mathrm{SL}}_{n}(\mathbb{Z})\)</span> and
+<span class="math inline">\(\mathrm{Aut}(\underbrace{F_{n}}_{\text{ Free
+group on $m$ generators }})\)</span>.</p>
+<p>We’ll be concerned with representations of <span
+class="math inline">\(\mathrm{Mod}(S_{g}^{n})\)</span>. Unlike for <span
+class="math inline">\(\mathop{\mathrm{SL}}_{n}(\mathbb{Z})\)</span>, the
+representation theory is more wild because those quantum representations
+exist</p>
+<div class="definition">
+<p>For a group <span class="math inline">\(G\)</span>, Kahzdan’s
+property (T) is the following.</p>
+<p>For all unitary representations <span
+class="math inline">\(\rho\)</span> of <span
+class="math inline">\(G\)</span> in a Hilbert space <span
+class="math inline">\(H^{1}(G,W) = 0\)</span>.</p>
+</div>
+<p>Here are some known results.</p>
+<ul>
+<li><p><span class="math inline">\(\mathop{\mathrm{SL}}_{n}(\mathbb{Z}),
+n \geq 3\)</span> proved by Kahzdan in 1967</p></li>
+<li><p><span class="math inline">\(\mathrm{Aut}(F_{n})\)</span>, <span
+class="math inline">\(n \geq 5\)</span> proved by Kaluba et al 2019,
+2021. The proof is computer assisted. The method is due to
+Ozawa.</p></li>
+<li><p><span class="math inline">\(\mathrm{Mod}(S_{g}^{n})\)</span> does
+not have property (T) for <span class="math inline">\(g \leq 2\)</span>.
+For <span class="math inline">\(\geq 3\)</span>, it is open and some
+people expect it.</p>
+<p>What would property (T) say about finite dimensional
+representations?</p>
+<p>The most studied consequence of property (T) is the following.</p>
+<div class="conjecture">
+<p><strong>(Ivanov)</strong></p>
+<p>For <span class="math inline">\(g \geq 3\)</span>, for all <span
+class="math inline">\(\rho\)</span> finite image, one has <span
+class="math inline">\(H^{1}( \mathrm{Mod}(S_{g}^{n}), \rho) =
+0\)</span>.</p>
+</div></li>
+</ul>
+<p>This is known for <span class="math inline">\(\ker \rho\)</span>
+containing some known subgroups of <span
+class="math inline">\(\mathrm{Mod}(S_{g}^{n})\)</span> by Ershov-He’
+17.</p>
+<div class="remark">
+<p>For a representations <span class="math inline">\(\rho: G
+\rightarrow  \mathop{\mathrm{GL}}_{n}(\mathbb{C})\)</span>, <span
+class="math inline">\(H^{1}(G, \mathrm{ad}\rho)\)</span> classifies
+deformations of <span class="math inline">\(\rho\)</span>. If it is
+trivial, then <span class="math display">\[\begin{equation}
+      \text{ for all } \rho_{\varepsilon} \in G \times
+(-\varepsilon,\varepsilon) \rightarrow
+\mathop{\mathrm{GL}}_{m}(\mathbb{C})
+  \end{equation}\]</span> with <span
+class="math inline">\(\rho_{0}=\rho\)</span>, <span
+class="math inline">\(\rho_{\varepsilon}\)</span> is conjugate to <span
+class="math inline">\(\rho\)</span> for all <span
+class="math inline">\(\varepsilon\)</span>.</p>
+</div>
+<p>Property (T) will imply more generally the <strong>finite dimensional
+property (T) conjecture</strong>. This says that <span
+class="math display">\[\begin{equation}
+    \text{ for all } \rho: \mathrm{Mod}(S_{g}^{n})
+\rightarrow  \mathbb{U}_{d},
+\end{equation}\]</span> for all <span class="math inline">\(g \geq
+3\)</span>, <span
+class="math inline">\(H^{1}(\mathrm{Mod}(S_{g}^{n}),\rho)=0\)</span>.</p>
+<p>In particular, <span class="math display">\[\begin{equation}
+    \text{ for all } \rho: \mathrm{Mod}(S_{g}^{n})
+\rightarrow  P\mathbb{U}_{d}, g \geq 3
+\end{equation}\]</span> we would expect <span
+class="math inline">\(H^{1}(\mathrm{Mod}(S_{g}^{n}),
+\mathrm{ad}\rho)=0\)</span>.</p>
+<p>Then some strange correspondence happens.</p>
+<figure>
+<embed src="images/IMG_20251127-142806.jpg" />
+<figcaption aria-hidden="true">Correspondence with modular
+categories</figcaption>
+</figure>
+<h1 id="fusion-rules">Fusion rules</h1>
+<p>For <span class="math inline">\(S_{g&#39;}^{n} \subseteq
+S_{g}^{n}\)</span> , one has <span
+class="math display">\[\begin{equation}
+\mathrm{Mod}(S_{g&#39;}^{n&#39;})
+\rightarrow^{P}  \mathrm{Mod}(S_{g}^{n}) ,
+\end{equation}\]</span> then <span class="math inline">\(\rho^{*} P
+g(\lambda_{1},\dots,\lambda_{n})\)</span> is a <span
+class="math inline">\(\oplus\)</span> of representations of the form
+<span class="math inline">\(\rho_{g&#39;}(
+u_{1}&#39;,\dots,u&#39;_{n&#39;})\)</span> in a prescribed manner.</p>
+<p>The data of the <span
+class="math inline">\(\rho_{g}(\lambda_{1},\dots,\lambda_{n})_{g,
+\lambda_{1},\dots, \lambda_{n}}\)</span> together with the fusion rules
+is called a modular function. This data is equivalent to that of a
+modular category.</p>
+<div class="example">
+<pre><code>Let $G$</code></pre>
+be a finite group and let <span class="math inline">\(\mathcal{E} =
+\mathcal{Z}(\underbrace{\mathop{\mathrm{Rep}}G}_{\text{ finite
+dimensional rep of $G$}})\)</span>. Then <span
+class="math inline">\(\rho_{g}\)</span> is <span
+class="math inline">\(\mathbb{C}[\underbrace{\mathrm{Hom}(\pi_{1}(S_{g}),G)/G}_{\text{
+upto conjugation }}]\)</span>
+</div>
+<ul>
+<li>Very different class of examples</li>
+<li><span class="math inline">\(SU(2)\)</span> modular categories.</li>
+</ul>
+<p>For every <span class="math inline">\(l \geq 3\)</span>, the object
+<span
+class="math inline">\(\mathcal{E}_{\mathop{\mathrm{SU}}(2),l}\)</span>
+are related to quantum representations. When <span
+class="math inline">\(l\)</span> is a prime number, all the <span
+class="math inline">\(\rho_{g}(\lambda_{1},\dots,\lambda_{m})\)</span>
+are irreducible. This is due to Roberts’ 01. For <span
+class="math inline">\(g \geq 2\)</span>, <span
+class="math inline">\(\rho_{g}\)</span> has an infinite image.</p>
+<p>Here is now the main result:</p>
+<div class="theorem">
+<p><strong>(G 2025)</strong></p>
+<p>For <span class="math inline">\(\mathcal{E} =
+\mathcal{E}_{\mathop{\mathrm{SU}}(2),l}\)</span> and <span
+class="math inline">\(l\)</span> prime, for <span
+class="math inline">\(g \geq 7\)</span>, <span
+class="math inline">\(\rho_{g}\)</span> is rigid and <span
+class="math inline">\(H^{1}(\mathrm{Mod}(S_{g}, \mathrm{ad}\rho_{g}) =
+0\)</span>.</p>
+</div>
+<p>The rest of the talk was the sketch of this theorem. I will write
+some keywords that I could pick up.</p>
+<ul>
+<li>Use deformation of representations. <span class="math inline">\(\{
+\text{ deformations of $\varphi$ }\}\)</span> upto isometry are
+trivial.</li>
+<li>Ocneanu rigidity. What does it mean?: It means that quantum
+representation do not have deformations that are quantum
+representations. In terms of fusion rules, for any colection <span
+class="math inline">\(\rho_{g}(\lambda_{1},\dots,\lambda_{n})_{g,
+\lambda_{1},\dots, \lambda_{n}}\)</span> satisfying the fusion rules,
+one has <span class="math display">\[\begin{equation}
+  \tilde{\rho}_{g}(\lambda_{1},\dots,\lambda_) \simeq
+\rho_{g}(\lambda_{1},\dots,\lambda_{n}).
+\end{equation}\]</span></li>
+</ul>
+<p>Then we follow the following picture.</p>
+<figure>
+<embed src="images/IMG_20251127_150012560.jpg" />
+<figcaption aria-hidden="true">Final sketch of proof</figcaption>
+</figure>
+<p>Comments:</p>
+<ul>
+<li>Why only <span
+class="math inline">\(\mathop{\mathrm{SU}}(2)\)</span>? Because
+irreducibility of the <span
+class="math inline">\(\rho_{g}(\lambda_{1},\dots,\lambda_{n})\)</span>
+is used?</li>
+<li>We used partial homological stability of degree 1. What about other
+degrees?</li>
+</ul>
+<hr />
+	<small>	<p class="date">This page was updated on November 27, 2025.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>

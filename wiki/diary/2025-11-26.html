@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2025-11-27" />
+  <title>Nalini’s lecture 4</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="/home/breakfast/work_from_git/nihargargava.github.io/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Nalini’s lecture 4</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a
+href="#lecture-4-some-consequences-of-convergence-in-the-sense-of-benjamini-schramm"
+id="toc-lecture-4-some-consequences-of-convergence-in-the-sense-of-benjamini-schramm">Lecture
+4: Some consequences of convergence in the sense of
+Benjamini-Schramm</a>
+<ul>
+<li><a href="#examples" id="toc-examples">Examples</a></li>
+<li><a href="#strong-spectral-convergence"
+id="toc-strong-spectral-convergence">Strong spectral
+convergence</a></li>
+<li><a href="#trace-formula" id="toc-trace-formula">Trace
+formula</a></li>
+<li><a href="#denumeration" id="toc-denumeration">Denumeration</a></li>
+<li><a href="#shape-of-gamma" id="toc-shape-of-gamma">Shape of <span
+class="math inline">\(\Gamma\)</span></a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+<p>I am attending Nalini’s College de France course. This is Lecture
+4.</p>
+<h1
+id="lecture-4-some-consequences-of-convergence-in-the-sense-of-benjamini-schramm">Lecture
+4: Some consequences of convergence in the sense of
+Benjamini-Schramm</h1>
+<div class="theorem">
+<p>Let <span class="math inline">\((X_{n},d_{n},m_{n})\)</span> be a
+sequence of metric spaces such that <span
+class="math inline">\(m_{n}(X_{n}) &lt; \infty\)</span> and it satisfies
+the condition <span
+class="math inline">\(\mathop{\mathrm{RCD}}(K,N)\)</span> for Ricci
+curvature <span class="math inline">\(\geq K\)</span> and dimension
+<span class="math inline">\(\leq N\)</span>. We assume that <span
+class="math inline">\((X_{n},d_{n},m_{n}) \rightarrow _{BS} (X_{\infty},
+d_{\infty},x,m_{\infty})\)</span> random in <span
+class="math inline">\(\mathbb{P}_{\infty}\)</span> and <span
+class="math inline">\(m_{n}(B(x,1)) \geq v_{0} &gt; 0\)</span> uniformly
+for all <span class="math inline">\(x,n\)</span>. Then for all <span
+class="math inline">\(t &gt; 0\)</span>, we have <span
+class="math display">\[\begin{equation}
+    \frac{1}{m_{n}(X_{n})}\mathop{\mathrm{Tr}}(e^{t \Delta_{X_{n}}})
+\rightarrow _{n \rightarrow  \infty} \mathbb{E}_{\infty}(e^{t \Delta
+x_{\infty}} ( x,x)),
+\end{equation}\]</span> which is <span
+class="math display">\[\begin{equation}
+= \frac{1}{m_{n}(X_{n})} \int_{X_{n}}^{}
+p_{t}^{X_{n}}\mathop{\mathrm{\,d}}m_{n}(z) =   \frac{1}{m_{n}(X_{n})}
+\sum_{j=1}^{+ \infty} e^{-t \lambda_{j}^{(n)}}.
+\end{equation}\]</span></p>
+</div>
+<p>The proof uses results of Gigle-Mondino-Savaré on the stability of
+<span class="math inline">\(p_{t}^{X_{n}}\)</span>, along with a priori
+boundedness of <span class="math inline">\(p_{t}\)</span> which demands
+<span class="math inline">\(m(B(x,1)) \geq v_{0}\)</span>.</p>
+<h2 id="examples">Examples</h2>
+<ul>
+<li><p><strong>1)</strong> Let <span class="math inline">\(X_{n} =
+\Gamma_{n} \backslash G / K\)</span> be a compact set under the
+hypothesis that <span class="math inline">\(X_{n} \rightarrow_{\text{ BS
+}} G / K\)</span> and that the injectivity radius is bounded from below
+(the base point is not relevant here (one can take it as the
+origin)).</p></li>
+<li><p><strong>2)</strong> Let <span class="math inline">\(\tilde{M}
+=\)</span> universal cover of a manifold <span
+class="math inline">\(M\)</span>, which is a compact Riemannian
+manifold. Let <span class="math inline">\(\Gamma_{n} \subseteq
+\mathop{\mathrm{Iso}}(\tilde{M})\)</span> such that <span
+class="math inline">\(X_{n} = \Gamma_{n} \backslash \tilde{M}\)</span>
+is compact. Then, if the injectivity radius <span
+class="math inline">\(\rightarrow  + \infty\)</span> then <span
+class="math inline">\(X_{n} \rightarrow
+\frac{1}{\mathop{\mathrm{vol}}(D)} \int_{D}^{}
+\delta_{(\tilde{M},x)}\mathop{\mathrm{\,d}}\mathop{\mathrm{vol}}(x)\)</span>,
+where <span class="math inline">\(D \subseteq \tilde{M}\)</span> is a
+fundamental domain of <span class="math inline">\(M= \Gamma \backslash
+\tilde{M}\)</span>.</p></li>
+<li><p><strong>3)</strong> Compact random hyperbolic surfaces also are
+convergent in the sense of Benjamini Schramm.</p>
+<ul>
+<li>This is true in the Weil-Petersson model, random cover model. The
+convergence is almost sure when <span
+class="math inline">\(\mathop{\mathrm{vol}}\rightarrow +\infty\)</span>
+to <span class="math inline">\(\mathbb{H}\)</span>, the hyperbolic
+plane.</li>
+<li>Budziki-Curien-Petri in 2019 also showed in the random <span
+class="math inline">\(3\)</span>-regular graph model of hyperbolic
+surface. The limit is described by the picture below</li>
+</ul></li>
+</ul>
+<figure>
+<embed src="images/IMG_20251126-102901.jpg" />
+<figcaption aria-hidden="true">Picture of 3-regular graph model and
+7-Samurai theorem</figcaption>
+</figure>
+<div class="theorem">
+<p>In the case of Example <strong>1)</strong>, on has for each <span
+class="math inline">\(k\)</span> and <span
+class="math inline">\(\Delta_{(k)}\)</span> being the Laplacian on <span
+class="math inline">\(k\)</span>-forms that <span
+class="math display">\[\begin{equation}
+    \frac{1}{\mathop{\mathrm{vol}}(X_{n})} \mathop{\mathrm{Tr}}(e^{t
+\Delta_{(k)}^{X_{n}}}) \rightarrow_{n \rightarrow  \infty}
+\mathop{\mathrm{Tr}}( e^{t \Delta^{X_{n}}_{(k),L^{2}}}) (0,0).
+\end{equation}\]</span> Here <span
+class="math inline">\(\Delta_{(k),L^{2}}\)</span> is the Laplacian on
+<span class="math inline">\(L^{2}\)</span> <span
+class="math inline">\(k\)</span>-forms. When <span
+class="math inline">\(t=\infty\)</span>, this implies <span
+class="math display">\[\begin{equation}
+\frac{f_{k}(X_{n},\mathbb{R})}{\mathop{\mathrm{vol}}(X_{n})}
+\rightarrow  ??
+\end{equation}\]</span></p>
+</div>
+From this, we have
+<div class="theorem">
+<p><strong>(Elek, Bowen, Albert-Bergeron,Beiringet,
+Gelander)</strong></p>
+<p>The <span class="math inline">\((X_{n},d_{n},m_{n}) \rightarrow
+_{\text{ BS }} (X_{\infty},d_{\infty},m_{\infty})\)</span> that
+satisfies “good conditions” then for all <span
+class="math inline">\(k\)</span> one has <span
+class="math inline">\(\frac{f_{k}(X_{n})}{m_{n}(X_{n})}\)</span> has a
+limit when <span class="math inline">\(n \rightarrow  \infty\)</span>
+defined with simplicial complexes.</p>
+</div>
+<h2 id="strong-spectral-convergence">Strong spectral convergence</h2>
+<p>In the case of random regular graphs (according to Friedman), one has
+the following model. It’s called ofen the “algebraic model”.</p>
+<p>Here we take <span class="math inline">\(N\)</span> vertices and
+<span class="math inline">\(d/2\)</span> edges per vertex. That is <span
+class="math inline">\(Nd\)</span> pairs of vertices and edges. This
+means the number of graphs is <span class="math inline">\((Nd-1)(Nd-3)
+\dots 5 \cdot 3 \cdot 1 = (Nd-1)!!\)</span> (how?).</p>
+<p>For a ranadom graph, one has the eigenvalues <span
+class="math display">\[\begin{equation}
+\lambda_{0} &gt; \lambda_{1} \geq \dots \geq \lambda_{N-1} .
+\end{equation}\]</span> Here the multiplicity of <span
+class="math inline">\(\lambda_{0}\)</span> is the number of connected
+components. We then take <span class="math display">\[\begin{equation}
+    \frac{1}{N} \sum_{i=0}^{N-1} f(\lambda_{i}) \rightarrow_{N
+\rightarrow  + \infty}
+    \langle \delta_{0}, f( A_{t_{d}}) \delta_{0}  \rangle
+_{l^{2}(T_{d})} = \int_{}^{} f(\lambda)\mathop{\mathrm{\,d}}m(\lambda),
+\end{equation}\]</span> where <span
+class="math display">\[\begin{equation}
+dm(\lambda) = \frac{(q+1) \sqrt{4 q - \lambda^{2}}}{ 2 \pi ( (q+1)^{2} -
+\lambda^{2})} \mathbb{I}_{[-2 \sqrt{q}, 2 \sqrt{ q}]}(\lambda)
+\mathop{\mathrm{\,d}}\lambda
+\end{equation}\]</span></p>
+<p>This in particular shows the conjecture of Alon by Joel Friedman in
+2008. That is for a random graph <span
+class="math inline">\(G_{N}\)</span> one has <span
+class="math display">\[\begin{equation}
+\mathbb{P}_{N}( \mathop{\mathrm{sp}}(A_{G_{N}}) \setminus \lambda_{0}
+\subseteq [- 2 \sqrt{q} - \varepsilon, 2 \sqrt{q} + \varepsilon] )
+\rightarrow _{N \rightarrow  + \infty} 1.
+\end{equation}\]</span></p>
+<p>For a regular graph <span class="math inline">\(G = (V,E)\)</span>,
+the matrix of Hashimoto <span class="math inline">\(B\)</span> is
+defined by</p>
+<ul>
+<li>Indexed by oriented edges, entries 0,1</li>
+<li>Size is <span class="math inline">\(Nd \times Nd\)</span> Each edge
+can go to the next <span class="math inline">\(d-1\)</span> edges. If
+for the adjacency matrix <span class="math inline">\(A\)</span> one has
+<span class="math inline">\(\mathop{\mathrm{sp}}(A) = \{\lambda_{0}\geq
+\lambda_{1} \leq \dots  \leq \lambda_{N-1}\}\)</span>, and <span
+class="math inline">\(\lambda_{j} = q^{\frac{1}{2}+ i s_{j}} +
+q^{\frac{1}{2} - i s_{j}}\)</span>. Then <span
+class="math display">\[\mathop{\mathrm{sp}}(B) =
+\underbrace{\{q^{\frac{1}{2} + i s_{j}}\} }_{2N \text{ eigenvalues }}
+\cap \underbrace{\{ \frac{N(d-2)}{2} \pm 1\}}_{\text{ topological
+eigenvalues }}.\]</span> The multiplicities of the topological
+eigenvalues are controlled by the Euler characteristic <span
+class="math inline">\(f(G) = |E| - |V|+1\)</span>.</li>
+</ul>
+<figure>
+<embed src="images/IMG_20251126-110136.jpg" />
+<figcaption aria-hidden="true">Pictures of topological
+drawings</figcaption>
+</figure>
+<p>Then, we observe that <span class="math display">\[\begin{equation}
+\mathop{\mathrm{Tr}}( \frac{B^{k}}{q^{k/2}}) = \sum_{\substack{\gamma
+\text{ oriented geodesic } \\ \mathrm{len}(\gamma) = k}}^{} T(\gamma),
+\end{equation}\]</span> where <span
+class="math inline">\(T(\gamma)\)</span> is the smallest period of <span
+class="math inline">\(\gamma\)</span>. The last expression is <span
+class="math display">\[\begin{equation}
+= \sum_{j=0}^{N-1} q^{\pm i k s_{j}} + \frac{N(d-2)}{2} \frac{1 +
+(-1)^{k}}{q^{\frac{k}{2}}}.
+\end{equation}\]</span></p>
+<p>If <span class="math inline">\(\varphi: \mathbb{Z}
+\rightarrow  \mathbb{C}\)</span> is an even function, then <span
+class="math display">\[\begin{equation}
+\mathop{\mathrm{Tr}}( \sum_{l &gt;0}^{} \varphi(l)
+\frac{B^{l}}{q^{l/2}}) =
+\sum_{j=0}^{N-1} \widehat{\varphi}(s_{j}) - N \varphi(0) + \frac{N
+(d-2)}{2} \sum_{l &gt; 0}^{} \varphi(l) \frac{1 + (-1)^{l}}{ q^{l/2}},
+\end{equation}\]</span> where <span
+class="math inline">\(\varphi\)</span> is of bounded support in <span
+class="math inline">\([-L,L]\)</span> and <span
+class="math display">\[\begin{equation}
+    \widehat{\varphi}(s) = \sum_{l \in \mathbb{Z}}^{} \varphi(l) q^{i l
+s}
+\end{equation}\]</span> is the Fourier-transform of period <span
+class="math inline">\(\tfrac{2 \pi }{ \log q}\)</span>. For finitely
+supported <span class="math inline">\(\varphi\)</span>, this is indeed a
+trignometric polynomial <span
+class="math inline">\(P_{L}(\lambda)\)</span> whose degree is controlled
+by <span class="math inline">\(L\)</span>.</p>
+<div class="remark">
+<p>Observe that <span class="math inline">\(q^{ils} + q^{-ils} =
+P_{l}(q^{is} + q^{-is})\)</span> (what?).</p>
+</div>
+<h2 id="trace-formula">Trace formula</h2>
+<p>One has <span class="math display">\[\begin{equation}
+\frac{1}{N} \widehat{\varphi}(s_{j}) =
+\int_{ \mathbb{R} / ( \frac{2 \pi }{ \log q} \mathbb{Z} )}^{}
+\widehat{\varphi}(s) \mathop{\mathrm{\,d}}m(s) +
+\frac{1}{N} \sum_{ \gamma \text{ oriented geod.
+}}^{}  \frac{T(\gamma)}{q^{\frac{l(\gamma)}{2}}} \varphi(l(\gamma)).
+\end{equation}\]</span> The measure of <span
+class="math inline">\(m\)</span> is defined by the Fourier
+coefficients.</p>
+<p>We have <span class="math inline">\(l(\gamma)\)</span> = period of
+<span class="math inline">\(\gamma\)</span> and <span
+class="math inline">\(T(\gamma)\)</span> = primitive period. So <span
+class="math inline">\(l(\gamma) = n T(\gamma)\)</span> where <span
+class="math inline">\(n \geq 1\)</span>. One has <span
+class="math inline">\(\int_{}^{} \mathop{\mathrm{\,d}}m\)</span> and
+<span class="math inline">\(\int_{}^{} q^{i s l }\mathop{\mathrm{\,d}}m
+= - \frac{d-2}{2} \frac{(1+ (-1)^{l})}{q^{l/2}}\)</span>. Here <span
+class="math inline">\(m\)</span> is the same measure comes from the
+change of variables <span class="math inline">\(\lambda = q^{\frac{1}{2}
++ i s } + q^{\frac{1}{2} - i s}.\)</span></p>
+<h2 id="denumeration">Denumeration</h2>
+<p>For <span class="math inline">\(\Gamma = (V(\Gamma),
+E(\Gamma))\)</span> is a graph of vertices and edges whose degree is
+<span class="math inline">\(\leq d = q+1\)</span>. (actually we had
+<span class="math inline">\(q = d-1\)</span> all this time,)</p>
+<p>Consider the labelings <span class="math display">\[\begin{equation}
+x : V(\Gamma) \rightarrow [[1,\dots,N]],
+\end{equation}\]</span> <span class="math inline">\(t\)</span> be labels
+in <span class="math inline">\([[1,\dots,d]]\)</span> on the <span
+class="math inline">\(1/2\)</span>-edges of Gamma.</p>
+<p>Denote <span class="math display">\[\begin{equation}
+\mathbb{P}_{N} ((\Gamma,x,t) \text{ is realized in the configuration
+model})
+= \frac{1}{(Nd-1)!!} (Nd-2a-1)(Nd-2a - 3) \dots 5 \cdot 3 \cdot 1 =
+\frac{(Nd-2a-1)!!}{(Nd-1)!!}.
+\end{equation}\]</span></p>
+<p>Then by definition <span class="math display">\[\begin{equation}
+\mathbb{E}_{N}( \text{  number of realizations of $\Gamma$ in $G_{N}$ })
+=
+\frac{(Nd - 2a -1)!!}{ (Nd-1)!!} \frac{\mathop{\mathrm{\sharp}}\{(x,t)
+\text{ possible }\}}{ N (N-1) \cdot (N-v+1)},
+\end{equation}\]</span> and we have <span
+class="math display">\[\begin{equation}
+\prod_{i=1}^{m} (d(d-1))^{l_{i}-1} \times C(F) ,
+\end{equation}\]</span> where <span class="math inline">\(C(F)\)</span>
+are the labelings of <span class="math inline">\(1/2\)</span>-edges that
+take share the vertices of <span class="math inline">\(F\)</span>.</p>
+<h2 id="shape-of-gamma">Shape of <span
+class="math inline">\(\Gamma\)</span></h2>
+<p>This was followed by some calculations that I did not follow. But the
+point seems to be that <span
+class="math inline">\(\mathbb{E}_{N}\)</span> is a rational polynomial
+in <span class="math inline">\(\tfrac{1}{N}\)</span> and that makes all
+the difference.</p>
+<div class="proposition">
+<ol type="1">
+<li><p>For <span class="math inline">\(f_{a}(x) = (1-x)(1-2x) \dots (1-
+ax)\)</span> for <span class="math inline">\(a \in \mathbb{N}\)</span>,
+we write this as <span class="math inline">\(1 - x Q_{1}(a) + x^{2}
+Q_{2}(a) + \dots + x^{n+1} F_{n+1}(x,a)\)</span>.</p></li>
+<li><p>We have <span class="math inline">\(g_{n}(x) = \frac{1}{
+(1-x)(1-2x) \dots (1-ax) } = 1 + x R_{1}(a) + \dots x^{n+{1}}
+G_{n+1}(x,a)\)</span>.</p></li>
+<li><p>The terms not mentioned are small in a quanititative sense.
+Quantifying this is important in the polynomial method.</p></li>
+</ol>
+</div>
+<p>More next time.</p>
+<hr />
+	<small>	<p class="date">This page was updated on November 27, 2025.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>

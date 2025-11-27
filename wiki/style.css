@@ -261,3 +261,34 @@ code {
 	margin-bottom: 3px;
 }
 
+
+figure {
+  display: block;
+  max-width: 600px;
+  margin: 1em auto;
+  padding: 0;
+  text-align: center;        /* lets inline-block figcaption be centered */
+}
+
+figure img,
+figure embed,
+figure object,
+figure iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* caption hugs text but is centered under the image */
+figure figcaption {
+  display: inline-block;     /* shrink-to-fit */
+  margin: 0.5em auto 0;
+  padding: 0.35em 0.65em;
+  border: 1px solid #444;
+  background: transparent;
+  text-align: center;        /* centers text inside the small box */
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+

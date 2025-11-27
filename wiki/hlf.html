@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2025-10-03" />
+  <meta name="dcterms.date" content="2025-10-29" />
   <title>Hecke L-functions</title>
   <style>
     code{white-space: pre-wrap;}
@@ -44,10 +44,9 @@
 <header id="title-block-header">
 <h1 class="title">Hecke L-functions</h1>
 </header>
-<p><span class="math inline">\(\DeclareMathOperator{\diff}{\,
-d}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\vol}{vol}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Res}{Res}\)</span></p>
+$$
+
+$$
 <p>Let <span class="math inline">\(K\)</span> be a number field. Let
 <span class="math inline">\(\chi :
 \mathbb{A}_{K}^{\times}/K^{\times}\)</span> be a Hecke character.
@@ -57,7 +56,8 @@ following <a href="tate_integral.html">Tate integral</a> to express a
 Hecke <span class="math inline">\(L\)</span>-function.</p>
 <p><span class="math display">\[\begin{equation}
 L(\chi, \varphi ,s) = \int_{\mathbb{A}_{K}^{\times}}^{} \varphi(x)
-\chi(x) |x|_{\mathbb{A}}^{s}\diff ^{\times}x.
+\chi(x) |x|_{\mathbb{A}}^{s}\mathop{\mathrm{\,
+d^{\times}\hspace{-0.1cm}}}x.
 \end{equation}\]</span></p>
 <p>Since <span class="math inline">\(\chi\)</span> is invariant under
 multiplication by <span class="math inline">\(K^{\times}\)</span>, one
@@ -66,7 +66,8 @@ class="math display">\[\begin{equation}
     L(\chi,\varphi,s) =
     \int_{\mathbb{A}_{K}^{\times}/K^{\times}}^{} \Big(\sum_{y
 \in  K^{\times}}^{} \varphi(xy)\Big) \chi(x)
-|x|^{s}_{\mathbb{A}_{K}^{\times}} \diff ^{\times} x .
+|x|^{s}_{\mathbb{A}_{K}^{\times}} \mathop{\mathrm{\,
+d^{\times}\hspace{-0.1cm}}}x .
 \end{equation}\]</span></p>
 <p>This allows one to prove the functional equation of the Hecke <span
 class="math inline">\(L\)</span>-function. One has to use the Adelic <a
@@ -81,15 +82,15 @@ L(\chi,\varphi , s) = L(\chi^{-1}, \widehat{\varphi} , 1-s).
 href="https://www-users.cse.umn.edu/~garrett/m/mfms/notes_c/Iwasawa-Tate.pdf">Paul
 Garrett</a> for some more information. In particular, he states that
 <span class="math display">\[\begin{equation}
-\Res_{s=1} L(\chi, \varphi , s ) =
+\mathop{\mathrm{Res}}_{s=1} L(\chi, \varphi , s ) =
 \begin{cases}
-   \vol(\mathbb{A}_{K}^{\times}/K^{\times}) \cdot \widehat{\varphi}(0)
-&amp; \text{ if } \chi \text{ is trivial }\\
+   \mathop{\mathrm{vol}}(\mathbb{A}_{K}^{\times}/K^{\times}) \cdot
+\widehat{\varphi}(0) &amp; \text{ if } \chi \text{ is trivial }\\
    0 &amp;  \text{ otherwise}
 \end{cases}.
 \end{equation}\]</span></p>
 <hr />
-	<small>	<p class="date">This page was updated on October 3, 2025.<br>
+	<small>	<p class="date">This page was updated on October 29, 2025.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
