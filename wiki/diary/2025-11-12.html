@@ -67,6 +67,8 @@ Homogenization</a></li>
 id="toc-convergence-in-the-sense-of-benjamini-schramm">Convergence in
 the sense of Benjamini-Schramm</a>
 <ul>
+<li><a href="#for-discrete-graphs" id="toc-for-discrete-graphs">For
+discrete graphs</a></li>
 <li><a href="#example-of-discrete-torus"
 id="toc-example-of-discrete-torus">Example of discrete torus</a></li>
 </ul></li>
@@ -84,10 +86,10 @@ Nalini.</p>
 metric spaces</h2>
 <p>Sequence of measured metric spaces satisfying the condition <span
 class="math inline">\(\mathop{\mathrm{RCD}}(K,N)\)</span> or <span
-class="math inline">\(\mathop{\mathrm{CD}}(K,N)\)</span>. Here $K $
-Ricci curvature is a lower bound and dimension <span
-class="math inline">\(\leq N\)</span>. The definitions are by Sturm,
-Lott-Villani and perhaps</p>
+class="math inline">\(\mathop{\mathrm{CD}}(K,N)\)</span>. Here <span
+class="math inline">\(K \leq\)</span> Ricci curvature is a lower bound
+and dimension <span class="math inline">\(\leq N\)</span>. The
+definitions are by Sturm, Lott-Villani and perhaps</p>
 One has
 <div class="theorem">
 <p><strong>(Gigli, Mondino, Savaré)</strong></p>
@@ -96,9 +98,9 @@ class="math inline">\((X_{n},d_{n},\underbrace{x_{n}}_{\text{ Base Point
 }},m_{n}) \rightarrow^{\text{ GH }}
 (X_{\infty},d_{\infty},x_{\infty},m_{\infty})\)</span> then the Cheeger
 (Dirichlet) energies are convergent in the “sense of Mosco” (convergence
-in the weak sense and in strong sense).A</p>
-<p>Càd: If <span class="math inline">\(f_{n} \in L^{2}(m_{n})
-\rightarrow^{\text{ Weak $L^2$ }}f_{\infty}\)</span> then <span
+in the weak sense and in strong sense).</p>
+<p>If <span class="math inline">\(f_{n} \in L^{2}(m_{n})
+\xrightarrow{\text{ Weak $L^2$ }}f_{\infty}\)</span> then <span
 class="math inline">\(\lim \mathcal{E}_{n}(f_{n},f_{n})\geq
 \mathcal{E}_{\infty}(f_{\infty},f_{\infty})\)</span>,</p>
 <p>and for all <span class="math inline">\(f \in
@@ -121,7 +123,7 @@ eigenfunctions and spectral projectors.</p>
 </div>
 <div class="remark">
 <p><span class="math inline">\((X_{n},d_{n},x_{n},m_{n})
-{\hookrightarrow}_{\text{ isometry $i_{n}$}} (X,d)\)</span> for <span
+\xhookrightarrow{\text{ isometry $i_{n}$}} (X,d)\)</span> for <span
 class="math inline">\(n \in \mathbb{N} \cup \{\infty\}\)</span>, then
 <span class="math inline">\(f_{n} \rightarrow  f_{\infty}\)</span> in
 <span class="math inline">\(L^{2}\)</span> signifies that <span
@@ -130,9 +132,9 @@ class="math inline">\(\int_{}^{} \varphi  f_{n} \circ i_{n}^{-1}
 \rightarrow  \int_{}^{}  f_{\infty} \circ i_{n}
 \mathop{\mathrm{\,d}}_{n} \sharp m_{\infty}\)</span> for all <span
 class="math inline">\(\varphi : X \rightarrow  \mathbb{R}\)</span>
-bounded and continuous. So $f_{n} <em>{L^{2}} f</em>{} $ is more than
-just convergence of <span class="math inline">\(L^{2}\)</span>
-norms.</p>
+bounded and continuous. So <span class="math inline">\(f_{n}
+\rightarrow_{L^{2}} f_{\infty}\)</span> is more than just convergence of
+<span class="math inline">\(L^{2}\)</span> norms.</p>
 </div>
 <h2 id="homogenization">5. Homogenization</h2>
 <p><strong>Bensonsson-Lions-Papanicoloan-Kasavan in ~78,79</strong></p>
@@ -262,8 +264,9 @@ Abert-Bergrein-Beringer-Gelander-Nikolov-Raimbault-Sainet 2012 and
 Lewin-Bowen in 2013 (only used for sequences of locally symmetric
 spaces).</li>
 <li>For a sequence of metric graphs, it was done by
-A-Ingremeau-Sabri-Winn e ### For discrete graphs</li>
+A-Ingremeau-Sabri-Winn e</li>
 </ul>
+<h3 id="for-discrete-graphs">For discrete graphs</h3>
 <p>Let <span class="math inline">\(\mathbb{G}^{d}_{*} = \{ \text{ graphs
 of valency} \leq d, \text{  rooted }\}/ \sim\)</span> where <span
 class="math inline">\(\sim\)</span> is equivalence upto root-preserving
@@ -303,7 +306,7 @@ class="math inline">\(\mathbb{G}_{*}^{d}\)</span>. The limit object is a
 random rooted graph.</p>
 </div>
 <div class="theorem">
-<p>If <span class="math inline">\((G_{N}) \rightarrow_{BS}
+<p>If <span class="math inline">\((G_{N}) \xrightarrow{BS}
 \mathbb{P}_{\infty}\)</span>. Let <span
 class="math inline">\((\lambda_{k}^{(N)})^{N}\)</span> be the
 eigenvalues of the adjacency matrix <span
@@ -312,9 +315,9 @@ class="math inline">\(G_{N}\)</span>, so they lie in <span
 class="math inline">\([-d,d]\)</span>. Then for <span
 class="math inline">\(f \in C^{\circ} ( \mathbb{R})\)</span> one has
 <span class="math display">\[\begin{equation}
-   \frac{1}{|V_{N}|}  \sum_{k=1}^{N} f(\lambda_{k}^{(N)}) \rightarrow_{N
-\rightarrow  + \infty} {\underbrace{\mathbb{E}}_{\text{ with respect to
-the measure $\mathbb{P}_{\infty}$ }}}_{\infty}( \langle  \delta_{0},
+   \frac{1}{|V_{N}|}  \sum_{k=1}^{N} f(\lambda_{k}^{(N)}) \xrightarrow{N
+\rightarrow  + \infty} {\underbrace{\mathbb{E}_{\infty}}_{\text{ with
+respect to the measure $\mathbb{P}_{\infty}$ }}}( \langle  \delta_{0},
 f(A_{g}) \delta_{0}\rangle_{l^{2}(g)}).
 \end{equation}\]</span></p>
 </div>
@@ -327,7 +330,7 @@ the Laplacian.</p>
 </div>
 <p>Note that this implies <span class="math display">\[\begin{equation}
     \text{ for all } (H,y) \in \mathbb{G}_{*}^{d} \text{ for all } R
-\geq 0 fixed,
+\geq 0 \text{ fixed },
     \frac{1}{ |V_{N}|} \mathop{\mathrm{\sharp}}\{ x \in V_{N} ,
 B_{G_{N}(x,R) \sim B_{H}(y,R)}\}
 \end{equation}\]</span> has a limit <span
