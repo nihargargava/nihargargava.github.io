@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2025-10-03" />
+  <meta name="dcterms.date" content="2025-12-10" />
   <title>Maryna’s mini-course at Bielefeld</title>
   <style>
     code{white-space: pre-wrap;}
@@ -32,13 +32,17 @@
         div.csl-indent {
           margin-left: 2em;
         }  </style>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
   <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
   type="text/javascript"></script>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
 </head>
 <body>
 <header id="title-block-header">
@@ -80,17 +84,9 @@ id="toc-proof-of-siegels-formula">Proof of Siegel’s formula</a></li>
 <li><a href="#bibliography" id="toc-bibliography">References</a></li>
 </ul>
 </nav>
-<p><span
-class="math inline">\(\DeclareMathOperator{\rank}{rank}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\char}{char}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Mp}{Mp}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Sp}{Sp}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Iso}{Iso}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\diff}{\, d}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Aut}{Aut}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Symm}{Symm}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Gen}{Gen}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Tr}{tr}\)</span></p>
+
+
+
 <p>These are some lecture notes takes during the <strong><a
 href="https://www.math.uni-bielefeld.de/sw25/">Summer school on formulas
 of Siegel and Weil</a></strong> at Bielefeld. Feel free to let me know
@@ -156,8 +152,9 @@ class="math display">\[\begin{equation}
 \end{equation}\]</span> That is, <span class="math inline">\(B\)</span>
 is the associated quadratic form of <span class="math inline">\(Q(z) =
 \tfrac{1}{2}B (x,y)\)</span>.</p>
-Let <span class="math inline">\(\Symm_{n}(\mathbb{Z})\)</span> be the
-set of symmetric matrices given as <span
+Let <span
+class="math inline">\(\mathop{\mathrm{Symm}}_{n}(\mathbb{Z})\)</span> be
+the set of symmetric matrices given as <span
 class="math display">\[\begin{equation}
 \begin{bmatrix}
 \mathbb{Z} &amp; \tfrac{1}{2} \mathbb{Z} &amp; \dots &amp; \tfrac{1}{2}
@@ -169,11 +166,12 @@ class="math display">\[\begin{equation}
 \mathbb{Z}
 \end{bmatrix}.
 \end{equation}\]</span> Denote <span
-class="math inline">\(\Symm_{n}(\mathbb{Z})_{\geq 0}\)</span> the subset
-of positive semi-definite matrices.
+class="math inline">\(\mathop{\mathrm{Symm}}_{n}(\mathbb{Z})_{\geq
+0}\)</span> the subset of positive semi-definite matrices.
 <div class="definition">
-<p>For <span class="math inline">\(T \in \Symm_{n}(\mathbb{Z})_{\geq
-0}\)</span>, the generalized representation number <span
+<p>For <span class="math inline">\(T \in
+\mathop{\mathrm{Symm}}_{n}(\mathbb{Z})_{\geq 0}\)</span>, the
+generalized representation number <span
 class="math display">\[\begin{equation}
     r_{\Lambda}(T) = \#\{ (x_{1},\dots,x_{n})\in \Lambda^{n}
 \in  \mid  (\tfrac{1}{2} B (x_{i},x_{j})_{1 \leq i,j \leq n} = T \}.
@@ -181,16 +179,17 @@ class="math display">\[\begin{equation}
 </div>
 <p>We have Siegel’s half space <span
 class="math display">\[\begin{equation}
-    \mathbb{H}_{n} =\{ \tau = x+iy \mid  x \in \Symm_{n}(\mathbb{R}), y
-\in \Symm_{n}(\mathbb{R})_{\geq 0} \}.
+    \mathbb{H}_{n} =\{ \tau = x+iy \mid  x \in
+\mathop{\mathrm{Symm}}_{n}(\mathbb{R}), y \in
+\mathop{\mathrm{Symm}}_{n}(\mathbb{R})_{\geq 0} \}.
 \end{equation}\]</span></p>
 <div class="definition">
 <p>Siegel’s theta series associated to <span
 class="math inline">\(\Lambda\)</span> is <span
 class="math display">\[\begin{equation}
     \Theta_{\Lambda} ( \tau) = \sum_{\tau \in
-\Symm_{n}(\mathbb{Z})_{\geq 0}} r_{\Lambda}(\tau) e^{\pi i \Tr(T \cdot
-\tau)}.
+\mathop{\mathrm{Symm}}_{n}(\mathbb{Z})_{\geq 0}} r_{\Lambda}(\tau)
+e^{\pi i \mathop{\mathrm{tr}}(T \cdot \tau)}.
 \end{equation}\]</span></p>
 </div>
 <p>Siegel proved using the Poisson summation formula that the Siegel
@@ -209,20 +208,22 @@ genus if they are isomotric over <span
 class="math inline">\(\mathbb{R}\)</span> and over <span
 class="math inline">\(\mathbb{Z}_{p}\)</span> for every prime <span
 class="math inline">\(p\)</span>.</p>
-<p>We define <span class="math inline">\(\Gen(\Lambda)\)</span> to be
-the set of isomorphism classes of quadratic lattices in the same genus
-as <span class="math inline">\(\Lambda\)</span>. We define <span
-class="math inline">\(\Aut(\Lambda)\)</span> to be the automorphism
-group of <span class="math inline">\(\Lambda\)</span> as a quadratic
-lattice.</p>
+<p>We define <span
+class="math inline">\(\mathop{\mathrm{Gen}}(\Lambda)\)</span> to be the
+set of isomorphism classes of quadratic lattices in the same genus as
+<span class="math inline">\(\Lambda\)</span>. We define <span
+class="math inline">\(\mathop{\mathrm{Aut}}(\Lambda)\)</span> to be the
+automorphism group of <span class="math inline">\(\Lambda\)</span> as a
+quadratic lattice.</p>
 </div>
 <div class="theorem">
 <p><strong>(Siegel)</strong></p>
 <p>One has <span class="math display">\[\begin{equation}
-    \frac{1}{\sum_{\Lambda&#39; \in \Gen(\Lambda)} (\#
-\Aut(\Lambda&#39;) )^{-1} }
-    \sum_{\Lambda&#39; \in \Gen(\Lambda)}
-\frac{\Theta_{\Lambda&#39;}(\tau)}{\# \Aut(\Lambda&#39;) }
+    \frac{1}{\sum_{\Lambda&#39; \in \mathop{\mathrm{Gen}}(\Lambda)} (\#
+\mathop{\mathrm{Aut}}(\Lambda&#39;) )^{-1} }
+    \sum_{\Lambda&#39; \in \mathop{\mathrm{Gen}}(\Lambda)}
+\frac{\Theta_{\Lambda&#39;}(\tau)}{\#
+\mathop{\mathrm{Aut}}(\Lambda&#39;) }
      = E_{\Lambda}(\tau)
      ,
 \end{equation}\]</span> where <span
@@ -246,9 +247,10 @@ is the space of Shwartz Bruhat functions on <span
 class="math inline">\(V_{\mathbb{A}}^{n}\)</span>. Weil representation
 gives an action of a symplectic group (or its double cover) on <span
 class="math inline">\(\mathcal{S}(V_{\mathbb{A}}^{n})\)</span>. Let
-<span class="math inline">\((G,H) = (\Sp(2n),\mathcal{O}(V))\)</span>.
-We denote <span class="math inline">\(\omega\)</span> to be the Weil
-representation of <span class="math inline">\(\Sp(2n)\)</span> on <span
+<span class="math inline">\((G,H) =
+(\mathop{\mathrm{Sp}}(2n),\mathcal{O}(V))\)</span>. We denote <span
+class="math inline">\(\omega\)</span> to be the Weil representation of
+<span class="math inline">\(\mathop{\mathrm{Sp}}(2n)\)</span> on <span
 class="math inline">\(\mathcal{S}(V(\mathbb{A})^{n})\)</span>.</p>
 <div class="definition">
 <p>Associated to <span class="math inline">\(\Phi \in
@@ -275,11 +277,12 @@ E(h,\Phi)  = \sum_{\gamma \in P(\mathbb{Q}) \backslash H(\mathbb{Q})}
 \end{equation}\]</span></p>
 </div>
 <div class="theorem">
-<p>For <span class="math inline">\((H,G) = (\Sp(2n),O(V))\)</span> and
-<span class="math inline">\(k=\mathbb{Q}\)</span> one has <span
+<p>For <span class="math inline">\((H,G) =
+(\mathop{\mathrm{Sp}}(2n),O(V))\)</span> and <span
+class="math inline">\(k=\mathbb{Q}\)</span> one has <span
 class="math display">\[\begin{equation}
     x \int_{G(\mathbb{Q}) \backslash G(\mathbb{A})} \Theta(h,g, \Theta)
-\diff g = E(h,\Phi),
+\mathop{\mathrm{\, d}}g = E(h,\Phi),
 \end{equation}\]</span> where <span class="math inline">\(x \in
 \{1,2\}\)</span>. There are also some conditions on <span
 class="math inline">\(m\)</span> and <span
@@ -379,15 +382,15 @@ of <span class="math inline">\(\mathcal{G}\)</span>.</p>
 <p>This is the space of characters <span class="math display">\[x^{*}:
 \mathcal{G} \rightarrow  T =\{z \in \mathbb{C} \mid |z|=1 \} .
 \]</span></p>
-<p>Let <span class="math inline">\(\diff x\)</span> be a Haar measure on
-<span class="math inline">\(\mathcal{G}\)</span>. Let <span
-class="math inline">\(\Phi\)</span> be a function on <span
+<p>Let <span class="math inline">\(\mathop{\mathrm{\, d}}x\)</span> be a
+Haar measure on <span class="math inline">\(\mathcal{G}\)</span>. Let
+<span class="math inline">\(\Phi\)</span> be a function on <span
 class="math inline">\(\mathcal{G}\)</span>, Let <span
 class="math inline">\(\Phi^{*}\)</span> be a function on <span
 class="math inline">\(\mathcal{G}^{*}\)</span> defined by <span
 class="math display">\[\begin{equation}
     \Phi^{*}(x^{*}) = \int_{\mathcal{G}}^{} \Phi(x) \langle
-x,x^{*}\rangle\diff x,
+x,x^{*}\rangle\mathop{\mathrm{\, d}}x,
 \end{equation}\]</span> where <span class="math inline">\(\langle x,
 x^{*}\rangle\)</span> is the evaluation of <span
 class="math inline">\(x^{*}\)</span> on <span
@@ -398,8 +401,9 @@ we will talk about convergence later.</p>
 <span class="math inline">\(k\)</span>. Let <span
 class="math inline">\(X^{*}\)</span> be the dual vector space of <span
 class="math inline">\(X\)</span>. Let <span
-class="math inline">\(\Sp(X)\)</span> be the group of automorphisms of
-<span class="math inline">\(X \oplus X^{*}\)</span>.</p>
+class="math inline">\(\mathop{\mathrm{Sp}}(X)\)</span> be the group of
+automorphisms of <span class="math inline">\(X \oplus
+X^{*}\)</span>.</p>
 <p>This can also be described as the set of <span
 class="math inline">\(G\)</span> such that <span
 class="math display">\[\begin{equation}
@@ -415,26 +419,27 @@ class="math display">\[\begin{equation}
     \end{bmatrix},
 \end{equation}\]</span> and <span class="math inline">\(\sigma \sigma
 ^{\dagger} = 1\)</span>. Here <span class="math inline">\(\alpha \in
-\Aut(X), \beta \in \Iso(X^{*},X), \gamma \in \Iso(X,X^{*}), \delta \in
+\mathop{\mathrm{Aut}}(X), \beta \in \mathop{\mathrm{Iso}}(X^{*},X),
+\gamma \in \mathop{\mathrm{Iso}}(X,X^{*}), \delta \in
 Aut(X^{*})\)</span>.</p>
 <div class="exercise">
-<p>Show that this is how <span class="math inline">\(\Sp(X)\)</span> is
-defined.</p>
+<p>Show that this is how <span
+class="math inline">\(\mathop{\mathrm{Sp}}(X)\)</span> is defined.</p>
 </div>
-<p>Elements <span class="math inline">\(\sigma \in \Sp(X)\)</span>
-preserve the alternating <span class="math inline">\(k\)</span>-form
-<span class="math inline">\([ \cdot , \cdot ] : (X \oplus X^{*}) \times
-(X \oplus X^{*})\)</span> given by <span
-class="math display">\[\begin{equation}
+<p>Elements <span class="math inline">\(\sigma \in
+\mathop{\mathrm{Sp}}(X)\)</span> preserve the alternating <span
+class="math inline">\(k\)</span>-form <span class="math inline">\([
+\cdot , \cdot ] : (X \oplus X^{*}) \times (X \oplus X^{*})\)</span>
+given by <span class="math display">\[\begin{equation}
     [(x_{1},x_{1}^{*}) , (x_{2},x_{2}^{*}) ] = \{x_{1},x_{2}^{*}\} -
 \{x_{2}^{*},x_{1}\}.
 \end{equation}\]</span></p>
 <p>Consider the pairs <span class="math inline">\(s  =
 (\sigma,f)\)</span> with <span class="math inline">\(\sigma \in
-\Sp(X)\)</span>, <span class="math inline">\(f\)</span> is a quadratic
-form on <span class="math inline">\(X \oplus X^{*}\)</span>. For <span
-class="math inline">\(z_{1},z_{2} \in X \oplus X^{*}\)</span>, one has
-<span class="math display">\[\begin{equation}
+\mathop{\mathrm{Sp}}(X)\)</span>, <span class="math inline">\(f\)</span>
+is a quadratic form on <span class="math inline">\(X \oplus
+X^{*}\)</span>. For <span class="math inline">\(z_{1},z_{2} \in X \oplus
+X^{*}\)</span>, one has <span class="math display">\[\begin{equation}
 f(z_{1}+z_{2}) - f(z_{1}) - f(z_{2}) = B(\sigma(z_{1}),\sigma(z_{2})) -
 B(z_{1},z_{2}).
 \end{equation}\]</span> Here <span class="math inline">\(B\)</span> is
@@ -453,9 +458,10 @@ class="math inline">\(P_{S}(X)\)</span>. Here <span
 class="math inline">\(P_{S}\)</span> stands for psuedo-symplectic.</p>
 </div>
 <ul>
-<li>Let <span class="math inline">\(\alpha \in \Aut(X)\)</span>, <span
-class="math inline">\(d : \Aut(X) \rightarrow  P_{S}(X)\)</span>. Then
-<span class="math display">\[\begin{equation}
+<li>Let <span class="math inline">\(\alpha \in
+\mathop{\mathrm{Aut}}(X)\)</span>, <span class="math inline">\(d :
+\mathop{\mathrm{Aut}}(X) \rightarrow  P_{S}(X)\)</span>. Then <span
+class="math display">\[\begin{equation}
   d(\alpha) =
   \Big(
       \Big(
@@ -466,7 +472,7 @@ class="math inline">\(d : \Aut(X) \rightarrow  P_{S}(X)\)</span>. Then
       \Big),0
   \Big).
 \end{equation}\]</span></li>
-<li><span class="math inline">\(d&#39;: \Iso(X^{*},X)
+<li><span class="math inline">\(d&#39;: \mathop{\mathrm{Iso}}(X^{*},X)
 \rightarrow  P_{S}(X)\)</span> <span
 class="math display">\[\begin{equation}
 d&#39;(\alpha) =
@@ -498,9 +504,9 @@ Q(X^{\times}) \rightarrow  P_{S}(X)\)</span> is some map.</li>
 </ul>
 <div class="definition">
 <p>Let <span class="math inline">\(\Phi \in L^{2}(X)\)</span>. For an
-automorphism <span class="math inline">\(\alpha \in  \Aut X\)</span>,
-<span class="math inline">\(f \in Q(x)\)</span> , <span
-class="math display">\[\begin{equation}
+automorphism <span class="math inline">\(\alpha
+\in  \mathop{\mathrm{Aut}}X\)</span>, <span class="math inline">\(f \in
+Q(x)\)</span> , <span class="math display">\[\begin{equation}
 d(\alpha) \Phi (x) = |\alpha|^{\tfrac{1}{2}} \Phi(x) ,
 \end{equation}\]</span> <span class="math display">\[\begin{equation}
     t(f)\Phi(x)  = \Phi(x) \cdot \chi(f(x)) ,  \chi  : (k,+)
@@ -538,9 +544,10 @@ class="math display">\[\begin{equation}
 class="math display">\[F(tx_{1},u x_{2}) = t F(x_{1},x_{2})
 u^{i}\]</span> where <span class="math inline">\(x_{1},x_{2} \in
 X\)</span> and <span class="math inline">\(t,u \in A\)</span>.</p>
-<p>We denote <span class="math inline">\(\Sp(X/A)\)</span> to be the
-group of automorphisms <span class="math inline">\(\sigma\)</span> of
-the left <span class="math inline">\(A\)</span>-module <span
+<p>We denote <span
+class="math inline">\(\mathop{\mathrm{Sp}}(X/A)\)</span> to be the group
+of automorphisms <span class="math inline">\(\sigma\)</span> of the left
+<span class="math inline">\(A\)</span>-module <span
 class="math inline">\(X \oplus X^*\)</span> that satisfy <span
 class="math inline">\(\sigma \sigma^{\dagger} = I\)</span>. <span
 class="math display">\[\begin{equation}
@@ -556,29 +563,31 @@ class="math display">\[\begin{equation}
     \end{bmatrix},
 \end{equation}\]</span></p>
 <div class="exercise">
-<p>Elements <span class="math inline">\(\sigma \in \Sp(X/A)\)</span>
-preserve the alternating <span class="math inline">\(k\)</span>-linear
-form <span class="math display">\[\begin{equation}
+<p>Elements <span class="math inline">\(\sigma \in
+\mathop{\mathrm{Sp}}(X/A)\)</span> preserve the alternating <span
+class="math inline">\(k\)</span>-linear form <span
+class="math display">\[\begin{equation}
 [(x_{1},x_{1}^{*}), (x_{2},x_{2}^{*}) ] = \tau (\{x_{1},x_{2}^{*}\} -
 \{x_{2},x_{1}^{*}\})
 \end{equation}\]</span></p>
 </div>
 <p>The group of automorphisms of <span class="math inline">\(X\)</span>
 as an <span class="math inline">\(A\)</span>-module is <span
-class="math inline">\(\Aut_{A}(X)\)</span>.</p>
+class="math inline">\(\mathop{\mathrm{Aut}}_{A}(X)\)</span>.</p>
 <p>We denote <span class="math inline">\(P_{S_{k}}(X)\)</span> to be the
 pseudosymplectic group attached to the <span
 class="math inline">\(k\)</span>-vector space. We denote <span
 class="math inline">\(P_{S_{A}}(X)\)</span> to be the subgroup of the
 pseudosymplectic group <span class="math inline">\(P_{S_{k}}(X)\)</span>
 of those elements <span class="math inline">\((\sigma,f)\)</span> for
-which <span class="math inline">\(\sigma \in \Aut_{A}(X \oplus X^{*}), f
-\in Q_{A}(X \oplus X^{*})\)</span>.</p>
+which <span class="math inline">\(\sigma \in \mathop{\mathrm{Aut}}_{A}(X
+\oplus X^{*}), f \in Q_{A}(X \oplus X^{*})\)</span>.</p>
 <p>We recall and extend the maps</p>
 <ul>
-<li><span class="math inline">\(d: \Aut_{A}(X)
+<li><span class="math inline">\(d: \mathop{\mathrm{Aut}}_{A}(X)
 \rightarrow  P_{S_{A}}(X)\)</span></li>
-<li><span class="math inline">\(d&#39;: \Iso_{A}(X,X^{*})
+<li><span class="math inline">\(d&#39;:
+\mathop{\mathrm{Iso}}_{A}(X,X^{*})
 \rightarrow  P_{S_{A}}(X)\)</span></li>
 <li><span class="math inline">\(t:Q_{A}(X)
 \rightarrow  P_{S_{A}}(X)\)</span></li>
@@ -590,15 +599,16 @@ which <span class="math inline">\(\sigma \in \Aut_{A}(X \oplus X^{*}), f
 field <span class="math inline">\(k\)</span> (with an involution <span
 class="math inline">\(\iota\)</span> and a trace function <span
 class="math inline">\(\tau\)</span>). Suppose that either <span
-class="math inline">\(\char(k) \neq 2\)</span> or <span
+class="math inline">\(\mathop{\mathrm{char}}(k) \neq 2\)</span> or <span
 class="math inline">\(\mathcal{A}\)</span> is semisimple.</p>
 <p>For <span class="math inline">\(X\)</span> a left <span
 class="math inline">\(A\)</span>-module and <span
-class="math inline">\(\Mp_{A}(X)\)</span> being a metaplectic group,
-every element of <span class="math inline">\(\Mp_{A}(x)\)</span>
-commutes with all elements of <span
-class="math inline">\(\Mp_{k}(X)\)</span> of the form <span
-class="math inline">\(d(\chi_{a})\)</span>.</p>
+class="math inline">\(\mathop{\mathrm{Mp}}_{A}(X)\)</span> being a
+metaplectic group, every element of <span
+class="math inline">\(\mathop{\mathrm{Mp}}_{A}(x)\)</span> commutes with
+all elements of <span
+class="math inline">\(\mathop{\mathrm{Mp}}_{k}(X)\)</span> of the form
+<span class="math inline">\(d(\chi_{a})\)</span>.</p>
 <p>Here <span class="math inline">\(\xi_{a}\)</span> is the homothety
 <span class="math inline">\(x \mapsto  a x\)</span> and <span
 class="math inline">\(a \in A\)</span> satisfies <span
@@ -609,11 +619,12 @@ class="math display">\[\begin{equation}
 \end{equation}\]</span></p>
 </div>
 <div class="remark">
-<p>When <span class="math inline">\(\char(k) \neq 2\)</span>, the group
-<span class="math inline">\(\Mp_{A}(X)\)</span> and <span
+<p>When <span class="math inline">\(\mathop{\mathrm{char}}(k) \neq
+2\)</span>, the group <span
+class="math inline">\(\mathop{\mathrm{Mp}}_{A}(X)\)</span> and <span
 class="math inline">\(P_{S_{A}}(X)\)</span> are the same (and resp. for
-<span class="math inline">\(\Mp_{k}(X)\)</span> and <span
-class="math inline">\(P_{S_{k}}(X)\)</span>).</p>
+<span class="math inline">\(\mathop{\mathrm{Mp}}_{k}(X)\)</span> and
+<span class="math inline">\(P_{S_{k}}(X)\)</span>).</p>
 </div>
 <div class="exercise">
 <p>What should be <span class="math inline">\((A,\iota,\tau)\)</span>
@@ -629,7 +640,7 @@ class="math inline">\(k\)</span>-algebra over <span
 class="math inline">\(k\)</span> with the inclusion <span
 class="math inline">\(i\)</span> and trace function <span
 class="math inline">\(\tau\)</span>. # Suppose that <span
-class="math inline">\(\char(k) \neq 2\)</span> or <span
+class="math inline">\(\mathop{\mathrm{char}}(k) \neq 2\)</span> or <span
 class="math inline">\(A\)</span> is semisimple. Let <span
 class="math inline">\(G_{k}\)</span> and <span
 class="math inline">\(G_{\mathbb{A}}\)</span> be as before. Let <span
@@ -638,10 +649,10 @@ class="math inline">\(A\)</span>-module and let <span
 class="math inline">\(X_{\mathbb{A}} = X_{k} \otimes
 \mathbb{A}_{k}\)</span>.</p>
 <p>Then for all <span class="math inline">\(S \in
-\Mp(X/A)_{\mathbb{A}}\)</span> and all <span class="math inline">\(a \in
-G_{\mathbb{A}}\)</span> the operator <span class="math inline">\(\Phi
-\mapsto  S \Phi\)</span> and <span class="math inline">\(\Phi(x)
-\mapsto  \Phi(ax)\)</span> in <span
+\mathop{\mathrm{Mp}}(X/A)_{\mathbb{A}}\)</span> and all <span
+class="math inline">\(a \in G_{\mathbb{A}}\)</span> the operator <span
+class="math inline">\(\Phi \mapsto  S \Phi\)</span> and <span
+class="math inline">\(\Phi(x) \mapsto  \Phi(ax)\)</span> in <span
 class="math inline">\(L^{2}(X_{\mathbb{A}})\)</span> commute.</p>
 </div>
 <h2 id="eisenstein-series">Eisenstein series</h2>
@@ -649,7 +660,8 @@ class="math inline">\(L^{2}(X_{\mathbb{A}})\)</span> commute.</p>
 Eisenstein series. Let <span class="math inline">\(\Phi \in
 \mathcal{S}(X_{\mathbb{A}})\)</span>. Let <span
 class="math display">\[\begin{equation}
-I(\Phi) = \int_{G_{\mathbb{A}}/G_{k}}^{} \Phi(u \xi)\diff \mu(u),
+I(\Phi) = \int_{G_{\mathbb{A}}/G_{k}}^{} \Phi(u \xi)\mathop{\mathrm{\,
+d}}\mu(u),
 \end{equation}\]</span> where <span class="math inline">\(\mu\)</span>
 is a Haar measure such that <span
 class="math inline">\(G_{\mathbb{A}}/G_{k}=1\)</span>.</p>
@@ -679,9 +691,9 @@ Type (I)) <span class="math display">\[\begin{equation}
     m &gt; 2n + 4 \epsilon - 2,
 \end{equation}\]</span> where <span class="math inline">\(m =
 \dim(A/k)\)</span> and <span class="math inline">\(n =
-\rank(X/A)\)</span>. Here <span class="math inline">\(\epsilon\)</span>
-is an invariant of the algebra <span class="math inline">\(A\)</span>
-which Maryna did not define.</p>
+\mathop{\mathrm{rank}}(X/A)\)</span>. Here <span
+class="math inline">\(\epsilon\)</span> is an invariant of the algebra
+<span class="math inline">\(A\)</span> which Maryna did not define.</p>
 </div>
 <p>We want to now show that the theta integral is the Eisenstein
 series.</p>
@@ -689,7 +701,8 @@ series.</p>
 X \otimes_{\iota} X = (X \otimes_{k} X ) / \{ t^{\iota}x \otimes y - x
 \otimes t y = 0, \text{ for each } x,y \in X, t \in A\}.
 \end{equation}\]</span></p>
-<p>Take the swap map $s : X <em>{} X X </em>{i} X $ to be <span
+<p>Take the swap map <span class="math inline">\(s : X \otimes_{\iota} X
+\rightarrow  X \otimes_{i} X\)</span> to be <span
 class="math inline">\(s(x \otimes y) = y \otimes x\)</span>.</p>
 <p>We write <span class="math display">\[\begin{equation}
 I(X) = \{u \in X \otimes_{i} X \mid s u = s\},
@@ -776,21 +789,24 @@ class="math inline">\(P_{S}(X_{k}/A_{k})\)</span>.</p>
 <div class="lemma">
 <p>The function <span class="math inline">\(S \mapsto  E&#39;&#39;(S
 \Phi)\)</span> is bounded <span
-class="math inline">\(\Mp_{\mathbb{A}}\)</span> for any <span
-class="math inline">\(\Phi \in \mathcal{S}(X_{\mathbb{A}})\)</span>. So
-for any <span class="math inline">\(\Phi \in S(X_{\mathbb{A}})\)</span>,
-we will denote by <span class="math display">\[\begin{equation}
-M(\Phi) := \sup_{S \in \Mp(\mathbb{A})} |E&#39;&#39;(S \Phi)|.
+class="math inline">\(\mathop{\mathrm{Mp}}_{\mathbb{A}}\)</span> for any
+<span class="math inline">\(\Phi \in
+\mathcal{S}(X_{\mathbb{A}})\)</span>. So for any <span
+class="math inline">\(\Phi \in S(X_{\mathbb{A}})\)</span>, we will
+denote by <span class="math display">\[\begin{equation}
+M(\Phi) := \sup_{S \in \mathop{\mathrm{Mp}}(\mathbb{A})} |E&#39;&#39;(S
+\Phi)|.
 \end{equation}\]</span></p>
 </div>
 <p>Then <span class="math inline">\(E&#39;&#39;(\Phi) = \sum_{i \in
-I(X)_{k}}^{}  \int_{X_{\mathbb{A}}} \Phi \diff
-\mu_{i}&#39;&#39;\)</span> where <span
+I(X)_{k}}^{}  \int_{X_{\mathbb{A}}} \Phi \mathop{\mathrm{\,
+d}}\mu_{i}&#39;&#39;\)</span> where <span
 class="math inline">\(\mu_{i}\)</span> is a measure supported on <span
 class="math inline">\(U(i)_{\mathbb{A}}\)</span>.</p>
 <p><strong>Next step:</strong> Show that <span
 class="math display">\[\begin{equation}
-\Big|\int S \Phi \diff \mu&#39;&#39;_{} \Big| \leq M(\Phi) ,
+\Big|\int S \Phi \mathop{\mathrm{\, d}}\mu&#39;&#39;_{} \Big| \leq
+M(\Phi) ,
 \end{equation}\]</span> Let <span class="math inline">\(i^{*} \in
 I(X)^{*}_{\mathbb{A}}\)</span>. Let <span class="math inline">\(q \in
 Q(X,A)_{\mathbb{A}}\)</span> corresponds to <span
@@ -807,17 +823,18 @@ class="math display">\[\begin{equation}
 \end{equation}\]</span> This is now given by <span
 class="math display">\[\begin{equation}
     E&#39;&#39;(t(q) \Phi ) = \sum_{i \in I(X)_{k}} \chi([i,i^{*}])
-\int_{}^{} \Phi \diff \mu_{i}^{&#39;&#39;}.
+\int_{}^{} \Phi \mathop{\mathrm{\, d}}\mu_{i}^{&#39;&#39;}.
 \end{equation}\]</span> Fourier series of the function is <span
 class="math inline">\(i^{*} \mapsto  E&#39;&#39;(t(q) \Phi)\)</span> on
 a compact abelian group <span
 class="math inline">\(I(X)_{\mathbb{A}}^{*}/ I(X)_{k}^{*}\)</span>. By
 Fourier formula, we get <span class="math display">\[\begin{equation}
-|\Phi \diff \mu_{i}&#39;&#39;| \leq M(\Phi),
+|\Phi \mathop{\mathrm{\, d}}\mu_{i}&#39;&#39;| \leq M(\Phi),
 \end{equation}\]</span> replace <span
 class="math inline">\(\Phi\)</span> by <span class="math inline">\(S
 \Phi\)</span> given by <span class="math inline">\(\Big| \int_{}^{}
-S  \Phi \diff  \mu_{i}^{&#39;&#39;}\Big| &lt; M(\Phi)\)</span>.</p>
+S  \Phi \mathop{\mathrm{\, d}}\mu_{i}^{&#39;&#39;}\Big| &lt;
+M(\Phi)\)</span>.</p>
 <div class="remark">
 <p>At this point there was a question if the <span
 class="math inline">\(\mu_{i}&#39;&#39;\)</span> are normalized so that
@@ -833,10 +850,11 @@ X&#39;\)</span>. Then <span class="math inline">\(\Phi = \Phi_{v} \cdot
 \mathcal{S}(X&#39;)\)</span>.</p>
 <div class="lemma">
 <p><span class="math display">\[\begin{equation}
-    \int_{}^{} \Phi \diff \mu_{i}&#39;&#39; = c_{i}(\Phi&#39;) \cdot
-\int_{U(i)_{v}}^{} \Phi_{v} |\theta_{i}|_{v}  ,
+    \int_{}^{} \Phi \mathop{\mathrm{\, d}}\mu_{i}&#39;&#39; =
+c_{i}(\Phi&#39;) \cdot \int_{U(i)_{v}}^{} \Phi_{v} |\theta_{i}|_{v}  ,
 \end{equation}\]</span> where <span class="math inline">\(\theta_{i} = (
-\tfrac{\diff x}{ \diff \iota_{X}(X)})_{i}\)</span>, <span
+\tfrac{\mathop{\mathrm{\, d}}x}{ \mathop{\mathrm{\,
+d}}\iota_{X}(X)})_{i}\)</span>, <span
 class="math inline">\(|\theta_{i}|_{v}\)</span> is a measure on <span
 class="math inline">\(\overline{U(i)}\)</span>. <span
 class="math inline">\(c_{i}\)</span> is a measure on <span
@@ -866,13 +884,14 @@ class="math inline">\(I(X)\)</span>.</p>
 </div>
 <p>Let <span class="math inline">\(t=(t_{1},\dots,t_{n})
 \rightarrow  0\)</span> . Let <span class="math inline">\(\int_{}^{}
-d(\lambda_{t}) \Phi \diff \mu_{i}&#39;&#39;\)</span> is bounded as <span
-class="math inline">\(t \in T_{v}\)</span>. The <span
+d(\lambda_{t}) \Phi \mathop{\mathrm{\, d}}\mu_{i}&#39;&#39;\)</span> is
+bounded as <span class="math inline">\(t \in T_{v}\)</span>. The <span
 class="math inline">\(c_{i}(\Phi&#39;)\)</span> is constant and <span
 class="math inline">\(|t_{1} \dots t_{n}|_{v}^{ \delta (-m + 2n + 4
 \epsilon -2)} \rightarrow  \infty, t \rightarrow  0\)</span>. Finally
-$$<em>{U(i’)</em>{v}}^{} <em>{v} |</em>{i’}|<em>{v}
-</em>{U(0)<em>{v}}^{} </em>{v |<em>{0}|</em>{v}} , t . Then <span
+<span class="math display">\[\int_{U(i&#39;)_{v}}^{} \Phi_{v}
+|\theta_{i&#39;}|_{v} \rightarrow  \int_{U(0)_{v}}^{} \Phi_{v
+|\theta_{0}|_{v}}  , t \to 0.\]</span> Then <span
 class="math inline">\(U(0)_{v}\)</span> is non-empty <span
 class="math inline">\(\implies\)</span> we can choose <span
 class="math inline">\(\Phi_{v}\)</span> so that <span
@@ -895,7 +914,7 @@ under <span class="math inline">\(G_{v}&#39;\)</span>, such that <span
 class="math inline">\(\nu(G_{\mathbb{A}}/G_{k}) =1\)</span> .</p>
 <p>We define <span class="math display">\[\begin{equation}
 I_{\nu}(\Phi) = \int_{G(\mathbb{A}/G_{k})}^{} \sum_{\xi \in X_{k}}^{}
-\Phi(u \xi) \diff \mu(u),
+\Phi(u \xi) \mathop{\mathrm{\, d}}\mu(u),
 \end{equation}\]</span> here the integration is with respect to the
 other measure.</p>
 <p>Then we have <span class="math inline">\(I_{\nu}(\Phi) =
@@ -923,7 +942,7 @@ des groupes classiques. <em>Acta mathematica</em>, <strong>113</strong>
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on October 3, 2025.<br>
+	<small>	<p class="date">This page was updated on December 10, 2025.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>

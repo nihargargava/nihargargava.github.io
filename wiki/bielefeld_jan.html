@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2025-10-03" />
+  <meta name="dcterms.date" content="2025-12-10" />
   <title>Jan’s lecture</title>
   <style>
     code{white-space: pre-wrap;}
@@ -32,13 +32,17 @@
         div.csl-indent {
           margin-left: 2em;
         }  </style>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
   <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
   type="text/javascript"></script>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
 </head>
 <body>
 <header id="title-block-header">
@@ -83,27 +87,9 @@ series</a></li>
 <li><a href="#bibliography" id="toc-bibliography">References</a></li>
 </ul>
 </nav>
-<p><span
-class="math inline">\(\DeclareMathOperator{\coh}{coh}\)</span></p>
-<p><span
-class="math inline">\(\DeclareMathOperator{\rank}{rank}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\SL}{SL}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\M}{M}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Stab}{Stab}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\SO}{SO}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\GSpin}{GSpin}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\GL}{GL}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Symm}{Symm}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\char}{char}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Ind}{Ind}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\gen}{gen}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Sp}{Sp}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\card}{\#}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\level}{level}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\sig}{sig}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\diff}{\, d}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\vol}{vol}\)</span> <span
-class="math inline">\(\DeclareMathOperator{\Tr}{tr}\)</span></p>
+
+
+
 <p>These are some lecture notes takes during the <strong><a
 href="https://www.math.uni-bielefeld.de/sw25/">Summer school on formulas
 of Siegel and Weil</a></strong> at Bielefeld. Feel free to let me know
@@ -126,9 +112,9 @@ class="math display">\[\begin{equation}
     (L_{1} )_{p}\simeq (L_{2})_{p} \text{ for each } p \text{ and for }
 \infty.
 \end{equation}\]</span></p>
-<p>We denote by <span class="math inline">\(\gen(L)\)</span> all the
-lattices which are in the genus of <span
-class="math inline">\(L\)</span>.</p>
+<p>We denote by <span
+class="math inline">\(\mathop{\mathrm{gen}}(L)\)</span> all the lattices
+which are in the genus of <span class="math inline">\(L\)</span>.</p>
 <ul>
 <li>In this case, Hasse-Minkowski theorem gives <span
 class="math display">\[\begin{align}
@@ -143,8 +129,8 @@ each } p \text{ and for } \infty \\
 class="math inline">\(L_{1}\)</span> and <span
 class="math inline">\(L_{2}\)</span> are embedded in the same quadratic
 vector <span class="math inline">\(\mathbb{Q}\)</span>-space. The set
-<span class="math inline">\(\gen(L)\)</span> consists of finitely many
-isometry classes.</p>
+<span class="math inline">\(\mathop{\mathrm{gen}}(L)\)</span> consists
+of finitely many isometry classes.</p>
 <ul>
 <li><p>Two lattices in the same genus have the same discriminant. It is
 equal to <span class="math display">\[\begin{equation}
@@ -154,7 +140,8 @@ equal to <span class="math display">\[\begin{equation}
 L\}\)</span>.</p>
 <p>One has that <span class="math inline">\(\Delta \sim
 0,1\pmod{4}\)</span>. Also <span class="math display">\[\begin{equation}
-    \card L&#39;/L = \det S, \text{ where } S = ((b_{i},b_{j}))_{i,j}.
+    \mathop{\mathrm{\#}}L&#39;/L = \det S, \text{ where } S =
+((b_{i},b_{j}))_{i,j}.
 \end{equation}\]</span></p></li>
 <li><p>We know that <span class="math inline">\(Q\)</span> induces a
 <span class="math inline">\(\mathbb{Q}/\mathbb{Z}\)</span>-valued
@@ -163,12 +150,12 @@ quadratic form <span class="math inline">\(\overline{Q}\)</span> on
 class="math inline">\((L&#39;/L, \overline{Q})\)</span> is a finite
 quadratic module.</p></li>
 <li><p>One has <span class="math display">\[\begin{equation}
-M \in \gen(L) \rightarrow   (M&#39;/M,\overline{Q}_{M}) \simeq
-(L&#39;/L,\overline{Q}_{L}).
+M \in \mathop{\mathrm{gen}}(L) \rightarrow   (M&#39;/M,\overline{Q}_{M})
+\simeq (L&#39;/L,\overline{Q}_{L}).
 \end{equation}\]</span> Converse if <span class="math inline">\(M&#39;/M
 \simeq L&#39;/L\)</span> and <span class="math inline">\(M_{\infty} =
 L_{\infty}\)</span> then <span class="math inline">\(M \in
-\gen(L)\)</span> (due to Nikulin).</p></li>
+\mathop{\mathrm{gen}}(L)\)</span> (due to Nikulin).</p></li>
 </ul>
 <div class="exercise">
 <p>Prove/read about these facts.</p>
@@ -193,9 +180,9 @@ class="math display">\[\begin{equation}
 class="math inline">\(\mathcal{M}_{n/2}\)</span> is the space of modular
 forms, <span class="math inline">\(\chi_{\Delta}(x) =
 (\Delta/x)\)</span> is the Legendre symbol and <span
-class="math display">\[N = \level(L) = \min \{\alpha \in
-\mathbb{Z}_{\geq 0} \mid \alpha Q(x) \in \mathbb{Z} \text{ for each } x
-\in L&#39;\}.\]</span> We also have <span
+class="math display">\[N = \mathop{\mathrm{level}}(L) = \min \{\alpha
+\in \mathbb{Z}_{\geq 0} \mid \alpha Q(x) \in \mathbb{Z} \text{ for each
+} x \in L&#39;\}.\]</span> We also have <span
 class="math display">\[\begin{equation}
     \Theta_{\mu + L} \in \mathcal{M}_{n/2} (\Gamma(N)).
 \end{equation}\]</span></p>
@@ -231,9 +218,10 @@ class="math display">\[\begin{equation}
 <p>Assume <span class="math inline">\(L\)</span> is positive definite
 unimodular of rank <span class="math inline">\(n\)</span>. Then <span
 class="math display">\[\begin{equation}
-    \sum_{M \in \gen(L)/\sim}^{} \frac{1}{\# O(M)} \Theta_{M}(\tau) =
-    \Big( \sum_{M \in \gen(L)/\sim}^{} \frac{1}{\card O(M)}\Big)
-E_{n/2}(\tau).
+    \sum_{M \in \mathop{\mathrm{gen}}(L)/\sim}^{} \frac{1}{\# O(M)}
+\Theta_{M}(\tau) =
+    \Big( \sum_{M \in \mathop{\mathrm{gen}}(L)/\sim}^{}
+\frac{1}{\mathop{\mathrm{\#}}O(M)}\Big) E_{n/2}(\tau).
 \end{equation}\]</span></p>
 </div>
 <div class="proof">
@@ -285,7 +273,7 @@ class="math inline">\(\mathbb{Q}\)</span>. More precisely, let <span
 class="math inline">\(Q:V \rightarrow  \mathbb{Q}\)</span> be a
 quadratic form, non-degenerate. We write <span
 class="math display">\[\begin{equation}
-  \sig(Q) = (b^{+},b^{-}), b^{+} + b^{-}  = l.
+  \mathop{\mathrm{sig}}(Q) = (b^{+},b^{-}), b^{+} + b^{-}  = l.
 \end{equation}\]</span> We define <span
 class="math inline">\(O(V)\)</span> to be the orthogonal group of <span
 class="math inline">\((V,Q)\)</span>. We have a quadratic character
@@ -304,9 +292,11 @@ y^{\dagger}.
 \end{equation}\]</span> We write <span class="math inline">\((W,
 \langle\ , \ \rangle)\)</span> to be the symplectic space of dimension
 <span class="math inline">\(2r\)</span>.</p>
-<p>We denote <span class="math inline">\(G= \Sp(W) = \Sp_{r}\)</span>.
-We have <span class="math inline">\(\Sp_{r}(\mathbb{Q})= \{ g \in
-\GL_{2r}(\mathbb{Q}) \mid g^{\dagger} J g = J \}\)</span><br />
+<p>We denote <span class="math inline">\(G= \mathop{\mathrm{Sp}}(W) =
+\mathop{\mathrm{Sp}}_{r}\)</span>. We have <span
+class="math inline">\(\mathop{\mathrm{Sp}}_{r}(\mathbb{Q})= \{ g \in
+\mathop{\mathrm{GL}}_{2r}(\mathbb{Q}) \mid g^{\dagger} J g = J
+\}\)</span><br />
 where <span class="math display">\[\begin{equation}
      J =
      \begin{bmatrix}
@@ -318,8 +308,9 @@ where <span class="math display">\[\begin{equation}
 \begin{smallmatrix}
    * &amp; * \\ 0_{r} &amp; *
 \end{smallmatrix}
-\Big)\} \subseteq \Sp_{r}\)</span> to be the matrices in a certain block
-form. This is called the Siegel Parabolic subgroup.</p>
+\Big)\} \subseteq \mathop{\mathrm{Sp}}_{r}\)</span> to be the matrices
+in a certain block form. This is called the Siegel Parabolic
+subgroup.</p>
 <p>Note that <span class="math display">\[\begin{equation}
     P = M N
 \end{equation}\]</span> where <span
@@ -329,7 +320,7 @@ class="math display">\[\begin{equation}
              \alpha &amp; 0 \\
              0 &amp; \alpha^{-1}
            \end{smallmatrix}\Big)
-    \in  \mid \alpha \in \GL_{r}
+    \in  \mid \alpha \in \mathop{\mathrm{GL}}_{r}
   \}
 \end{equation}\]</span> and <span
 class="math display">\[\begin{equation}
@@ -338,7 +329,7 @@ class="math display">\[\begin{equation}
              1_{r} &amp; \beta \\
              0 &amp; 1_{r}
            \end{smallmatrix}\Big)
-    \in  \mid \beta \in \Symm_{r} \}
+    \in  \mid \beta \in \mathop{\mathrm{Symm}}_{r} \}
 \end{equation}\]</span></p>
 <p>We have <span class="math inline">\(K_{\infty} = U(r)\)</span> which
 is <span class="math display">\[\begin{equation}
@@ -358,12 +349,13 @@ class="math display">\[\begin{equation}
     \langle v \otimes w , v&#39; \otimes w&#39; \rangle = \langle
 v,v&#39;\rangle \cdot \langle w , w&#39;\rangle.
 \end{equation}\]</span> Get <span class="math inline">\(G \times H
-\rightarrow  \Sp(W , \langle \ , \ \rangle)\)</span> mutual
-centralizers.
+\rightarrow  \mathop{\mathrm{Sp}}(W , \langle \ , \ \rangle)\)</span>
+mutual centralizers.
 <div class="remark">
 <p>The <a href="bielefeld_maryna.html">lectures</a> of Maryna were about
-the bigger simplectic group <span class="math inline">\(\Sp(W, \langle \
-, \ \rangle)\)</span>.</p>
+the bigger simplectic group <span
+class="math inline">\(\mathop{\mathrm{Sp}}(W, \langle \ , \
+\rangle)\)</span>.</p>
 </div>
 <p>Let <span class="math inline">\(\omega = \omega_{\psi}\)</span> be
 the Weil representation of <span class="math inline">\(G \times
@@ -386,7 +378,8 @@ H(\mathbb{A}),
 \alpha|_{\mathbb{A}}^{l/2} \varphi(x \alpha),
 \end{equation}\]</span> and <span
 class="math display">\[\begin{equation}
-  (  \omega(n(b)) \varphi)(x) = \psi( \Tr(b Q(x))) \cdot \varphi(x),
+  (  \omega(n(b)) \varphi)(x) = \psi( \mathop{\mathrm{tr}}(b Q(x)))
+\cdot \varphi(x),
 \end{equation}\]</span> where <span class="math inline">\(Q(x) = 1/2
 (x_{i,x_{j}})_{i,j}\)</span></p>
 <p>Here <span class="math inline">\(x = (x_{1},\dots,x_{r}) \in
@@ -394,7 +387,8 @@ V^{r}(\mathbb{A})\)</span> and <span class="math inline">\(h^{-1} x =
 (h^{-1 x_{1}, \dots, h^{-1} x_{r}})\)</span>. The most interesting
 action is <span class="math display">\[\begin{equation}
   (\omega(J) \varphi)(x) = \gamma(V)^{r} \int_{
-V(\mathbb{A})^{r}}^{}  \varphi(y) \psi(-\Tr(x,y)) \diff y,
+V(\mathbb{A})^{r}}^{}  \varphi(y) \psi(-\mathop{\mathrm{tr}}(x,y))
+\mathop{\mathrm{\, d}}y,
 \end{equation}\]</span> where <span
 class="math inline">\(\gamma(V)\)</span> is some eigth root of
 unity.</p>
@@ -418,13 +412,14 @@ class="math inline">\(H\)</span> is <span
 class="math display">\[\begin{equation}
     I(g,\varphi) = \int_{H(\mathbb{Q}) \setminus H(\mathbb{A})}^{}
     \theta(g,h,\varphi)
-    \diff  h,
-\end{equation}\]</span> where <span class="math inline">\(\diff
-h\)</span> is the unique Haar measure on <span
-class="math inline">\(H(\mathbb{A})\)</span> such that <span
-class="math inline">\(\vol(H(\mathbb{Q}) \setminus H(\mathbb{A})) =
-1\)</span> . In general, we don’t know if this integral converges.
-However, we can use the criterion given by Weil.</p>
+    \mathop{\mathrm{\, d}}h,
+\end{equation}\]</span> where <span
+class="math inline">\(\mathop{\mathrm{\, d}}h\)</span> is the unique
+Haar measure on <span class="math inline">\(H(\mathbb{A})\)</span> such
+that <span class="math inline">\(\mathop{\mathrm{vol}}(H(\mathbb{Q})
+\setminus H(\mathbb{A})) = 1\)</span> . In general, we don’t know if
+this integral converges. However, we can use the criterion given by
+Weil.</p>
 <div class="proposition">
 <p>(<strong>Weil convergence criterion</strong>)</p>
 <p>The integral <span class="math inline">\(I(g, \varphi)\)</span>
@@ -463,8 +458,9 @@ class="math display">\[\begin{equation}
 \cdot K\)</span> where <span class="math inline">\(K = \prod_{p \leq
 \infty }^{} K_{p}\)</span> where <span
 class="math display">\[\begin{equation}
-    \text{ for }p&lt; \infty, K_{p} =  \Sp_{r}(\mathbb{Z}_{p}) \text{
-and } p = \infty, K_{p} = U(r) \subseteq \Sp_{r}(\mathbb{R}).
+    \text{ for }p&lt; \infty, K_{p}
+=  \mathop{\mathrm{Sp}}_{r}(\mathbb{Z}_{p}) \text{ and } p = \infty,
+K_{p} = U(r) \subseteq \mathop{\mathrm{Sp}}_{r}(\mathbb{R}).
 \end{equation}\]</span></p>
 <p>For <span class="math inline">\(g \in  G(\mathbb{A})\)</span>, write
 <span class="math inline">\(q = n m(\alpha) k\)</span> for <span
@@ -484,7 +480,8 @@ s_{r}, s_{r} = (r+1)/2\)</span>.</p>
 \chi_{V}(\det(a)) |\det  \alpha|^{s} \phi(g,s)\)</span> . This implies
 <span class="math display">\[\begin{equation}
   \phi(g,s) \in I_{r}(s_{0},\chi_{v})
-=  \Ind^{G(\mathbb{A})}_{P(\mathbb{A})} (\chi_{V} |\cdot |^{s})
+=  \mathop{\mathrm{Ind}}^{G(\mathbb{A})}_{P(\mathbb{A})} (\chi_{V}
+|\cdot |^{s})
 \end{equation}\]</span> This is to say, <span
 class="math inline">\(\phi\)</span> is a section of the induced
 representation (I don’t understand what that means).</p>
@@ -539,15 +536,15 @@ put <span class="math inline">\(r=1\)</span>, <span
 class="math inline">\(\varphi = \varphi_{f} \cdot
 \varphi_{\infty}\)</span> where <span
 class="math display">\[\begin{equation}
-  \varphi_{f} = \char(\hat{L}), \hat{L} = \prod_{p &lt; \infty} L_{p}
-\subseteq V(\mathbb{A}_{f}),
+  \varphi_{f} = \mathop{\mathrm{char}}(\hat{L}), \hat{L} = \prod_{p &lt;
+\infty} L_{p} \subseteq V(\mathbb{A}_{f}),
 \end{equation}\]</span> and <span
 class="math inline">\(\varphi_{\infty}(x)  = e^{- \pi (x,x)} \text{ is a
 Gaussian }.\)</span> Put <span class="math inline">\(K_{\infty} \simeq
-\SO(2) \subseteq \SL_{2}(\mathbb{R}) \simeq
-\Sp_{2}(\mathbb{R})\)</span>. We have for <span class="math inline">\(k
-\in \SO(2)\)</span> a rotation by <span
-class="math inline">\(\theta\)</span> <span
+\mathop{\mathrm{SO}}(2) \subseteq \mathop{\mathrm{SL}}_{2}(\mathbb{R})
+\simeq \mathop{\mathrm{Sp}}_{2}(\mathbb{R})\)</span>. We have for <span
+class="math inline">\(k \in \mathop{\mathrm{SO}}(2)\)</span> a rotation
+by <span class="math inline">\(\theta\)</span> <span
 class="math display">\[\begin{equation}
         \omega(k) \varphi_{\infty} = e^{i \theta n /2 }
 \varphi_{\infty}.
@@ -573,13 +570,15 @@ modular forms.</li>
 <p>Here is the setup. Let <span class="math inline">\((V,Q)\)</span> be
 a quadratic space over <span class="math inline">\(\mathbb{Q}\)</span>
 of signature <span class="math inline">\((n,2)\)</span>. Let <span
-class="math inline">\(2 \mid n\)</span>. Let $L V $ be an even lattice.
-Let <span class="math inline">\(\SO(V), \SO(L)\)</span> be the Lie group
-and discrete subgroup. Let <span class="math inline">\(H =
-\GSpin(V)  =\{g \in  C^{0}(V)^{\times} \mid g Vg^{-1} = V \}\)</span>.
-Then <span class="math display">\[\begin{equation}
-    1 \rightarrow  \mathbb{G}_{m} \rightarrow  H \rightarrow  \SO(V)
-\rightarrow  1.
+class="math inline">\(2 \mid n\)</span>. Let <span
+class="math inline">\(L \subseteq V\)</span> be an even lattice. Let
+<span class="math inline">\(\mathop{\mathrm{SO}}(V),
+\mathop{\mathrm{SO}}(L)\)</span> be the Lie group and discrete subgroup.
+Let <span class="math inline">\(H = \mathop{\mathrm{GSpin}}(V)  =\{g
+\in  C^{0}(V)^{\times} \mid g Vg^{-1} = V \}\)</span>. Then <span
+class="math display">\[\begin{equation}
+    1 \rightarrow  \mathbb{G}_{m} \rightarrow  H
+\rightarrow  \mathop{\mathrm{SO}}(V) \rightarrow  1.
 \end{equation}\]</span><br />
 We then look at <span class="math display">\[\begin{equation}
 D = \{z \in V_{\mathbb{C}} \mid (z,z) = 0, (z,\overline{z}) &lt; 0\} /
@@ -600,17 +599,18 @@ class="math inline">\(Q(x) = \det\)</span> and <span
 class="math inline">\((V,Q)\)</span> be a rational quadratic structure
 of signature <span class="math inline">\((2,2)\)</span>. Then <span
 class="math inline">\(D^{+} = \mathbb{H} \times \mathbb{H}\)</span>.
-Take <span class="math inline">\(H(\mathbb{Q}) = \{ g\in \GL_{2}(F) \mid
-\det g \in \mathbb{Q}^{\times}\}\)</span>. We put <span
-class="math inline">\(K = \Stab(\M_{2}(\mathcal{O}_{F}) \cap V)
+Take <span class="math inline">\(H(\mathbb{Q}) = \{ g\in
+\mathop{\mathrm{GL}}_{2}(F) \mid \det g \in
+\mathbb{Q}^{\times}\}\)</span>. We put <span class="math inline">\(K =
+\mathop{\mathrm{Stab}}(\mathop{\mathrm{M}}_{2}(\mathcal{O}_{F}) \cap V)
 \subseteq H(\mathbb{A}_{f})\)</span>.</p>
 </div>
 <h1 id="jans-lecture-3-1">Jan’s Lecture 3</h1>
 <p>Consider <span class="math inline">\((V,Q)\)</span> of signature
 <span class="math inline">\((n,2)\)</span>. We have an exact sequence.
 <span class="math display">\[\begin{equation}
-    1 \rightarrow \mathbb{G}_{m} \rightarrow \GSpin( V ) \rightarrow
-\SO(V) \rightarrow 0.
+    1 \rightarrow \mathbb{G}_{m} \rightarrow \mathop{\mathrm{GSpin}}( V
+) \rightarrow \mathop{\mathrm{SO}}(V) \rightarrow 0.
 \end{equation}\]</span></p>
 <p>We consider <span class="math display">\[\begin{equation}
     X_{K}(\mathbb{C}) = H(\mathbb{Q}) \setminus D \times
@@ -651,8 +651,9 @@ class="math inline">\(t\)</span>? illegible). We get <span
 class="math inline">\(Z(x,h) \subset X_{k}\)</span>.</p>
 <h2 id="weighted-special-cycles">Weighted special cycles</h2>
 <p>Take <span class="math inline">\(\Gamma \in
-\Symm_{r}(\mathbb{Q})\)</span>, <span class="math inline">\(\Gamma &gt;
-0\)</span> and <span class="math inline">\(\varphi \in
+\mathop{\mathrm{Symm}}_{r}(\mathbb{Q})\)</span>, <span
+class="math inline">\(\Gamma &gt; 0\)</span> and <span
+class="math inline">\(\varphi \in
 \mathcal{S}(V(\mathbb{A}_{f})^{r})\)</span>. If there exists <span
 class="math inline">\(x \in V^{r}\)</span> such that <span
 class="math inline">\(Q(x) = \Gamma\)</span>, put <span
@@ -666,16 +667,19 @@ class="math inline">\(Z(\Gamma,\varphi) = 0\)</span>.</p>
 \geq 0\)</span> by <span class="math display">\[\begin{equation}
   [Z(\Gamma,\varphi) ] \cdot [Z^{v}] \in H^{2r}(X_{K},\mathbb{C}),
 \end{equation}\]</span> where <span class="math inline">\(r =
-\rank(\Gamma)\)</span>.</p>
+\mathop{\mathrm{rank}}(\Gamma)\)</span>.</p>
 <h2 id="generating-series">Generating series</h2>
-<p>One has <span class="math display">\[\theta_{r}^{\coh}(\tau , \varphi
+<p>One has <span
+class="math display">\[\theta_{r}^{\mathop{\mathrm{coh}}}(\tau , \varphi
 ) = \sum_{ \Gamma \geq 0}^{} [Z(T,\varphi)] q^{\Gamma}.\]</span> Here
-<span class="math inline">\(\Gamma \in \Symm_{r}(\mathbb{Q}), \Gamma
-\geq 0\)</span> We define <span class="math inline">\(q^{\Gamma} = e^{2
-\pi i \Tr(\Gamma \tau)}\)</span>.</p>
+<span class="math inline">\(\Gamma \in
+\mathop{\mathrm{Symm}}_{r}(\mathbb{Q}), \Gamma \geq 0\)</span> We define
+<span class="math inline">\(q^{\Gamma} = e^{2 \pi i
+\mathop{\mathrm{tr}}(\Gamma \tau)}\)</span>.</p>
 <div class="theorem">
 <p><strong>(Kudla-Millson, 1990-1997)</strong></p>
-<p>We have <span class="math inline">\(\theta_{r}^{\coh}(\tau,
+<p>We have <span
+class="math inline">\(\theta_{r}^{\mathop{\mathrm{coh}}}(\tau,
 \varphi)\)</span> is a holomorphic Siegel modular form of weight <span
 class="math inline">\(1+n/2\)</span>, of genus <span
 class="math inline">\(r\)</span> (illegible) and values in <span
@@ -696,7 +700,8 @@ class="math display">\[\begin{equation}
 )\)</span> is Poincare dual to <span
 class="math inline">\(\mathcal{D}_{+} \subset D\)</span></li>
 <li>Weight is <span class="math inline">\(k=1+n/2\)</span> under <span
-class="math inline">\(U(r) \subset \Sp_{r}(\mathbb{R})\)</span></li>
+class="math inline">\(U(r) \subset
+\mathop{\mathrm{Sp}}_{r}(\mathbb{R})\)</span></li>
 <li><span class="math display">\[\theta_{r}(\tau ,  h, \varphi) = \det
 (v)^{-k/2} . \sum_{x \in V(\mathbb{Q})^{r}}^{} \varphi(h^{-1} x ) \cdot
 (\omega(g_{\tau}) \varphi^{r}_{KM})(x).\]</span> Here <span
@@ -704,12 +709,14 @@ class="math inline">\(\mathbb{H}_{r}, z \in D, h \in
 H(\mathbb{A}_{f})\)</span> and <span class="math inline">\(\varphi \in
 \mathcal{S}(V(\mathbb{A}_{f})^{r})^{K}\)</span>. We also have <span
 class="math inline">\(g_{\tau} \cdot i = \tau = k+ i v \in
-\Sp_{r}(\mathbb{R})\)</span>. The above is a non-holomorphic Siegel
-modular form for <span class="math inline">\(\Sp_{r}\)</span> of weight
-<span class="math inline">\(k\)</span> with values in <span
+\mathop{\mathrm{Sp}}_{r}(\mathbb{R})\)</span>. The above is a
+non-holomorphic Siegel modular form for <span
+class="math inline">\(\mathop{\mathrm{Sp}}_{r}\)</span> of weight <span
+class="math inline">\(k\)</span> with values in <span
 class="math inline">\(A^{2r}(X_{K})\)</span>. <span
 class="math display">\[\begin{equation}
-[\Theta_{r}(\tau, z,h,\varphi)] = \theta_{r}^{\coh}(\tau,\varphi).
+[\Theta_{r}(\tau, z,h,\varphi)] =
+\theta_{r}^{\mathop{\mathrm{coh}}}(\tau,\varphi).
 \end{equation}\]</span></li>
 </ul>
 </div>
@@ -726,17 +733,17 @@ H(\mathbb{A_{f}} / K )
 \end{equation}\]</span></p>
 <p>From Kudla-Millson theorem, we have <span
 class="math display">\[\begin{equation}
-  \deg \theta_{r}^{\coh} (\tau , \varphi ) = \sum_{\Gamma \geq 0}^{}
-\deg [ Z (\Gamma, \Phi)] q^{\Gamma}
+  \deg \theta_{r}^{\mathop{\mathrm{coh}}} (\tau , \varphi ) =
+\sum_{\Gamma \geq 0}^{} \deg [ Z (\Gamma, \Phi)] q^{\Gamma}
 \end{equation}\]</span> is holomorphic SMF of weight <span
 class="math inline">\(k\)</span> for <span
-class="math inline">\(\Sp_{r}\)</span>.</p>
+class="math inline">\(\mathop{\mathrm{Sp}}_{r}\)</span>.</p>
 <div class="theorem">
 <p><strong>(Kudla)</strong></p>
 <p>Assume that Weil convergence criterion holds. Then <span
-class="math inline">\(\deg \theta_{r}^{\coh}(\tau, \varphi) =
-\vol(X_{K}(\mathbb{C}), \Omega^{r}) \cdot E(\tau, s , \lambda(\varphi
-\otimes \Phi_{k}) )\)</span> .</p>
+class="math inline">\(\deg \theta_{r}^{\mathop{\mathrm{coh}}}(\tau,
+\varphi) = \mathop{\mathrm{vol}}(X_{K}(\mathbb{C}), \Omega^{r}) \cdot
+E(\tau, s , \lambda(\varphi \otimes \Phi_{k}) )\)</span> .</p>
 </div>
 <h1 class="unnumbered" id="bibliography">References</h1>
 <div id="refs" class="references csl-bib-body" data-entry-spacing="0"
@@ -748,7 +755,7 @@ Koecher &amp; A. Krieg, <em>Elliptic functions and modular forms</em>
 </div>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on October 3, 2025.<br>
+	<small>	<p class="date">This page was updated on December 10, 2025.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
