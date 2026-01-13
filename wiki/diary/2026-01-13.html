@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-01-14" />
+  <title>Timothy’s mini-course</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Timothy’s mini-course</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#fractal-kintchine" id="toc-fractal-kintchine">Fractal
+Kintchine</a></li>
+<li><a href="#something-tangential"
+id="toc-something-tangential">Something tangential</a></li>
+<li><a href="#sketch-of-proof" id="toc-sketch-of-proof">Sketch of
+proof</a>
+<ul>
+<li><a href="#step-1-positive-dimension"
+id="toc-step-1-positive-dimension">Step 1: Positive dimension</a></li>
+<li><a href="#step-2-dimensional-bootstrap"
+id="toc-step-2-dimensional-bootstrap">Step 2: Dimensional
+bootstrap</a></li>
+<li><a href="#step-3-go-from-high-dimension-to-equidistribution"
+id="toc-step-3-go-from-high-dimension-to-equidistribution">Step 3: Go
+from high dimension to equidistribution</a></li>
+</ul></li>
+<li><a href="#more-details-of-the-three-step-procedure"
+id="toc-more-details-of-the-three-step-procedure">More details of the
+three step procedure</a>
+<ul>
+<li><a href="#proof-of-step-1" id="toc-proof-of-step-1">Proof of Step
+1</a></li>
+<li><a href="#step-3" id="toc-step-3">Step 3</a></li>
+<li><a href="#step-2-bootstrapping-the-dimension"
+id="toc-step-2-bootstrapping-the-dimension">Step 2: Bootstrapping the
+dimension</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+<p>We are at the WeWork in Pune. This was a mini-course organized by
+Anish Ghosh.</p>
+<h2 id="fractal-kintchine">Fractal Kintchine</h2>
+<p>Kintchine theorem is a fundamental theorem that tells us about how
+well approximable is a typical point in the real numbers. The fractal
+Kintchine does this for Cantor sets.</p>
+<div class="definition">
+<p>A probability measure <span class="math inline">\(\sigma\)</span> on
+<span class="math inline">\(\mathbb{R}\)</span> is self-similar if it
+satisfies <span class="math display">\[\begin{equation}
+\sigma = \sum \lambda_{i}(\phi_{i})_{*} \sigma,
+\end{equation}\]</span> where <span class="math inline">\(m \geq
+1\)</span>, <span class="math inline">\(\lambda_{i} &gt; 0\)</span> (
+<span class="math inline">\(\sum_{}^{} \lambda_{i} = 1\)</span>), and
+<span class="math inline">\(\phi_{i}\)</span> are invariant affine
+transformation of <span class="math inline">\(\mathbb{R}\)</span>
+transformation of <span class="math inline">\(\mathbb{R}\)</span>
+without common fixed point.</p>
+</div>
+<div class="remark">
+<p>A good reference for this is Bougead-Picard.</p>
+</div>
+<div class="definition">
+<p><span class="math inline">\(s \in \mathbb{R}\)</span> is <span
+class="math inline">\(\psi\)</span>-approximable if <span
+class="math display">\[\begin{equation}
+    |q s - p | &lt; \psi(q)
+\end{equation}\]</span> has infinitely many solutions for <span
+class="math inline">\(p \in \mathbb{Z}\)</span> and <span
+class="math inline">\(q \in \mathbb{N}\)</span>.</p>
+</div>
+<div class="theorem">
+<p><strong>(Timothée Bénard, He, Zhang, 2024)</strong></p>
+<p>Let <span class="math inline">\(\sigma\)</span> be self-similar on
+<span class="math inline">\(\mathbb{R}\)</span> and let <span
+class="math inline">\(\psi: \mathbb{N} \rightarrow  \mathbb{R}\)</span>
+be a non-increasing. Then <span class="math display">\[\begin{equation}
+\sigma(s: \text{ $\psi$-approximable}) =
+\begin{cases}
+0 &amp; \text{ if } \sum_{q \geq 0}^{\psi(q)} &lt; \infty \\
+1 &amp; \text{ if } \sum_{q \geq 0}^{} \psi(q) = \infty .
+\end{cases}.
+\end{equation}\]</span></p>
+</div>
+<h2 id="something-tangential">Something tangential</h2>
+<p>Take <span class="math inline">\(X = \mathrm{SL}_{2}(\mathbb{R}
+)/\mathrm{SL}_{2}(\mathbb{Z})\)</span>. Take <span
+class="math inline">\(\mu\)</span> to be some probability measure on
+<span class="math inline">\(\mathrm{SL}_{2}(\mathbb{R})\)</span>. This
+can be used to define a random walk on <span
+class="math inline">\(X\)</span>. Just take a point <span
+class="math inline">\(x \in X\)</span> and act with a <span
+class="math inline">\(g \in \mathrm{SL}_{2}(\mathbb{R})\)</span>. Then
+we can <span class="math inline">\(n\)</span>-step distribution which
+gives us <span class="math inline">\(\mu ^{*n} *
+\delta_{x}\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+    \mu^{*n} * \delta_{x} = \text{ law of  }g_{1},\dots,g_{n} \text{ as
+} g_{i} \sim \mu^{\otimes \mathbb{N}_{*}}
+\end{equation}\]</span></p>
+<p>This was studied by Benoit-Quint among other people.</p>
+<div class="theorem">
+<p><strong>(BHZ)</strong></p>
+<p>Assume support of <span class="math inline">\(\mu\)</span> in <span
+class="math inline">\(\left(\begin{smallmatrix} * &amp; * \\ 0 &amp; *
+\end{smallmatrix}\right)\)</span>, finite and not simultaneously
+diagonalizable, and <span class="math display">\[\begin{equation}
+\int_{}^{} \log \| g_{1,1}\|\, \mathrm{d}\mu (g) &gt; 0
+\end{equation}\]</span> (This means that the top-left coordiate is
+bigger than 1 on average).</p>
+<p>Let <span class="math inline">\(x \in X\)</span> and <span
+class="math inline">\(f \in C^{1}(X), n \geq 1\)</span>. Then <span
+class="math display">\[\begin{equation}
+| \mu^{n} * \delta_{n}(f) -  \mathrm{Haar}_{X}(f) | \leq A \|f\|_{C}
+\cdot \mathrm{inj}(x)^{-1} e^{- \Sigma n},
+\end{equation}\]</span> where <span class="math inline">\(A, \Sigma &gt;
+0\)</span> depend on <span class="math inline">\(\sigma\)</span>
+only.</p>
+</div>
+<p>Consider <span class="math inline">\(\Gamma_{\mu} = \langle
+\mathrm{supp}\mu \rangle , W_{R}= \{x \in X \mid |\Gamma_{\mu} x| \leq
+R\}\)</span>.</p>
+<p>Assume <span class="math inline">\(\Gamma_{\mu}\)</span> Zariski
+dense in <span
+class="math inline">\(\mathrm{SL}_{2}(\mathbb{R})\)</span>. Then for any
+<span class="math inline">\(\rho &gt; 0\)</span>, any <span
+class="math inline">\(x\)</span>, <span class="math inline">\(n \geq
+1\)</span> <span class="math display">\[\begin{equation}
+| \mu^{*n} * \delta_{n}(f) -\mathrm{Haar}_{X}(f) | \leq \rho
+\end{equation}\]</span> provided <span
+class="math display">\[\begin{equation}
+n \geq A ( |\log \rho| + |\log \|f\|_{\mathrm{Lip}}| + |\log
+\mathrm{inj}(x)| + |\log \mathrm{dist}(x,W_{\rho^{-A}})|)
+\end{equation}\]</span></p>
+<h2 id="sketch-of-proof">Sketch of proof</h2>
+<p>There is a three step strategy which originates in
+Bourgain-Gamburd.</p>
+<h3 id="step-1-positive-dimension">Step 1: Positive dimension</h3>
+<p><span class="math inline">\(\exists A, \kappa &gt; 0\)</span> such
+that <span class="math inline">\(\forall n \geq 1\)</span>, <span
+class="math inline">\(\forall \rho \geq e^{-n}\)</span>, <span
+class="math inline">\(\forall x,y \in X\)</span> <span
+class="math display">\[\begin{equation}
+     \mu^{n} * \delta_{x} (B_{\rho} y ) \leq A \rho^{\kappa}.
+\end{equation}\]</span></p>
+<h3 id="step-2-dimensional-bootstrap">Step 2: Dimensional bootstrap</h3>
+<p>Go from <span class="math inline">\(\kappa\)</span> to <span
+class="math inline">\(\dim X - \varepsilon\)</span> using more
+conditions by <span class="math inline">\(\mu\)</span>. Uses harmonic
+analysis.</p>
+<h3 id="step-3-go-from-high-dimension-to-equidistribution">Step 3: Go
+from high dimension to equidistribution</h3>
+<p>We use spectral gap of <span class="math inline">\(f \mapsto  f *
+\mu\)</span> on <span class="math inline">\(L^{2}(X)\)</span> where
+<span class="math display">\[\begin{equation}
+    f * \mu (x) = \int_{}^{} f(gx)\, \mathrm{d}\mu(g)
+\end{equation}\]</span></p>
+<div class="remark">
+There is a connection to Kakeya conjecture which uses dimensional
+bootstrap. There is also a 3-step strategy used in some upcoming work of
+Lindenstraus and some more people.
+</div>
+<h2 id="more-details-of-the-three-step-procedure">More details of the
+three step procedure</h2>
+<h3 id="proof-of-step-1">Proof of Step 1</h3>
+<p>We will follow what happens in the case of an example. Define <span
+class="math display">\[\begin{equation}
+    a_{t} =
+    \begin{bmatrix}
+     t^{\frac{1}{2}} &amp;  0 \\
+     0 &amp; t^{-\frac{1}{2}}
+    \end{bmatrix},
+    \mu_{s}
+    =
+    \begin{bmatrix}
+    1 &amp; s \\
+      0 &amp; 1
+    \end{bmatrix}.
+\end{equation}\]</span> Take <span class="math inline">\(\mu :=
+\tfrac{1}{2} \delta_{a_{3}} + \tfrac{1}{2} \delta_{a_{3} u_{
+2/3}}\)</span>. Observe that <span
+class="math display">\[\begin{equation}
+    \mu^{*n} = a_{3^{n}} \mu(\sigma^{(n)}) ,
+    \text{ where } \sigma^{(n)}   \underbrace{=}_{\text{ law }}
+\sum_{i=1}^{n} \tfrac{2 \varepsilon_{i}}{3},
+\end{equation}\]</span> where <span
+class="math inline">\(\varepsilon_{i} \in \mathrm{Bool}\)</span>. So it
+is an approximation of the Cantor set.</p>
+<p><strong>To prove step 1</strong>: Let <span class="math inline">\(A,
+\kappa, n,\rho\)</span> parameters. Assume <span
+class="math display">\[\begin{equation}
+     \mu^{n} * \delta_{x}(B_{\rho} y) \geq \rho^{\kappa} \text{ for some
+} x,y \in X.
+\end{equation}\]</span> Assume <span class="math inline">\(n \geq |\log
+\rho|\)</span>, take <span class="math inline">\(c &gt; 0\)</span>
+(small problem to be decided later). Write <span class="math inline">\(m
+= \lfloor c |\log \rho | \rfloor\)</span>. Note <span
+class="math inline">\(\exists x&#39;\)</span> such that <span
+class="math display">\[\begin{equation}
+     \mu^{m} * \delta_{x&#39;}(B_{\rho} y ) \geq \rho^{ \kappa}.
+\end{equation}\]</span></p>
+<figure>
+<embed src="images/IMG_20260113_152456501.jpg" />
+<figcaption aria-hidden="true">Action of <span
+class="math inline">\(g_{1},g_{2}\)</span> explained</figcaption>
+</figure>
+<p>Then <span class="math display">\[\begin{equation}
+(\mu^{m})^{\otimes 2} \left( (g_{1},g_{2}) \mid g_{1} x&#39;, g_{2}
+x&#39; \in B_{\rho}y\right) \geq \rho^{2 \kappa}
+\end{equation}\]</span> This can be seen as measuring <span
+class="math inline">\(g_{1},g_{2}\)</span> such that <span
+class="math inline">\(g_{2}^{-1} g_{1} x&#39; \in B_{\rho^{1-c}}
+x&#39;\)</span>.</p>
+<p>Note <span class="math inline">\(g_{2}^{-1} g_{1}
+\underbrace{=}_{\text{law}}
+\left(\begin{smallmatrix} 1 &amp; s^{m} \\ 0 &amp; 1
+\end{smallmatrix}\right)\)</span>, where <span
+class="math inline">\(s^{m} := \sigma^{(m)}
+\ominus\sigma^{(m)}\)</span>. This is the law of <span
+class="math inline">\(s_{1} - s_{2}\)</span> where <span
+class="math inline">\(s_{1},s_{2} \sim \sigma^{(m)}\)</span>.</p>
+<p>The set <span class="math inline">\(u([-1,1]) u&#39; \cap
+B_{\mathrm{inj(x&#39;)}}\)</span> has <span
+class="math inline">\(O(1)\)</span> many segments.</p>
+<figure>
+<embed src="images/IMG_20260113_154056955.jpg" />
+<figcaption aria-hidden="true">Picture Timothée explaining <span
+class="math inline">\(O(1)\)</span> segments</figcaption>
+</figure>
+<p>Hence <span class="math inline">\(\{s \in [-1,1] \mid u(s)x&#39;
+\in  B_{\rho^{1-c}(x&#39;)}  \} \subseteq \cap_{\substack{\text{ finite
+} \\ \text{ card $O(1)$ }}} B_{\rho^{1-c}(x&#39;)}\)</span>.</p>
+<p>Because <span class="math inline">\(\rho\)</span> is Frostman (means
+positive dimension), one has <span
+class="math display">\[\begin{equation}
+    s^{(m)} ( [\rho^{1- 2c}, \rho^{1-2c}] + s_{0}) \leq \rho^{\alpha},
+\end{equation}\]</span> where <span
+class="math inline">\(\alpha\)</span> is absolute. There is a
+contradiction here when <span class="math inline">\(\kappa\)</span> is
+small enough.</p>
+<div class="definition">
+<p><span class="math inline">\(\sigma\)</span> is Frostman if <span
+class="math inline">\(\sigma([-r,r] + s) \leq C r^{\alpha}\)</span> for
+every <span class="math inline">\(r,s\)</span> and where <span
+class="math inline">\(C, \alpha\)</span> depend only on <span
+class="math inline">\(\sigma\)</span>.</p>
+</div>
+<h3 id="step-3">Step 3</h3>
+<p>We are doing step 3 before step 2. Observe</p>
+<p><strong>Fact</strong>: <span class="math inline">\(f \in
+C^{\infty}(X), P_{\mu} f(x) = \int_{}^{} f(gx) \, \mathrm{d}\mu g \in
+C^{\infty}(X)\)</span>. This <span
+class="math inline">\(P_{\mu}\)</span> is called the Markov operator.
+Then <span class="math display">\[\begin{equation}
+    \| P_{\mu}^{n} f \|_{L^{2}} \leq e^{- s n } \|f\|_{C&#39;} ,
+\end{equation}\]</span> for <span class="math inline">\(\int_{}^{} f =
+0\)</span>.</p>
+<p>This is a corollary of</p>
+<ul>
+<li>Positive dimension of <span
+class="math inline">\(\sigma\)</span></li>
+<li>Effective decay of matrix coefficients: For <span
+class="math inline">\(f_{1},f_{2} \in L^{2}_{0}(X), g \in
+\mathrm{SL}_{2}(\mathbb{R})\)</span> <span
+class="math display">\[\begin{equation}
+\langle f_{1} \circ g , f_{2}\rangle \leq C \|g\|^{-\Sigma}
+\|f_{1}\|_{L^{1}} \|f_{2}\|_{L^{1}}.
+\end{equation}\]</span></li>
+</ul>
+<p>To get from here to the <strong>fact</strong>, we write <span
+class="math display">\[\begin{equation}
+    \langle P_{\mu}^{n} f , P_{\mu}^{n} f \rangle
+    = \int_{}^{} \langle f \circ g_{1}, f \circ g_{2} \rangle \,
+\mathrm{d}\mu^{n} (g_{1}) \, \mathrm{d}\mu^{n}(g_{2}).
+\end{equation}\]</span></p>
+<figure>
+<embed src="images/IMG_20260113_161311993.jpg" />
+<figcaption aria-hidden="true">Picture of thickened atomic
+measure</figcaption>
+</figure>
+<p>Consider <span class="math inline">\(\nu\)</span> a probability
+measure on <span class="math inline">\(X\)</span> such that for some
+parameters <span class="math inline">\(\varepsilon, \rho  &gt;
+0\)</span> <span class="math display">\[\begin{equation}
+    \sup_{y \in  X} \nu( B_{\rho} y) \leq \rho^{3 - \varepsilon}.
+\end{equation}\]</span> This <span class="math inline">\(3\)</span> is
+the dimension of <span class="math inline">\(X\)</span>. Let <span
+class="math inline">\(f \in C^{\infty}(X)\)</span>, <span
+class="math inline">\(\mathrm{Haar}_{X}(f) = 0\)</span>. We want to
+choose <span class="math inline">\(n = n(\rho)\)</span> such that <span
+class="math inline">\(|\mu^{n} * \nu(f)| \leq \rho^{*}\)</span>.</p>
+<p>We compute <span class="math display">\[\begin{equation}
+| \mu^{n} * \nu(f) | = | \nu(P^{n}_{\mu}f) | = | \nu_{\rho}(P_{\mu}^{n}
+f ) | + \underbrace{O(\rho \mathrm{Lip}(P_{\mu}^{n} f )) }_{O(\rho
+e^{O_{\mu}(n)}) \mathrm{Lip}(f)}
+\end{equation}\]</span> Here the main term term before the big-<span
+class="math inline">\(O\)</span> is <span
+class="math display">\[\begin{equation}
+    \int_{}^{} (P_{\mu}^{n} f )(x)  \varphi(x)\,
+\mathrm{d}\mathrm{Haar}_{X}(x)
+    \leq \underbrace{\|\varphi\|_{L^{\infty}}}_{\rho^{- \varepsilon}}
+\underbrace{\| P_{\mu}^{n} f \|_{L^{2}}}_{e^{-sn} \text{  by spectral
+gap}} .
+\end{equation}\]</span></p>
+<p>To conclude, take <span class="math inline">\(\varepsilon\)</span> to
+be very small. Then <span class="math inline">\(n =\)</span> small
+multiple of <span class="math inline">\(|\log \rho|\)</span>. Then <span
+class="math inline">\(| \mu^{n} * \nu| \leq \rho^{*}\)</span></p>
+<h3 id="step-2-bootstrapping-the-dimension">Step 2: Bootstrapping the
+dimension</h3>
+<p>We have <span class="math inline">\(\mu^{k} * \delta_{x}\)</span>, we
+know that <span class="math display">\[\begin{equation}
+\mu^{k} * \delta_{x}(B_{l}) \leq e^{\kappa}.
+\end{equation}\]</span> We want to show that for some <span
+class="math inline">\(n = n(\rho)\)</span>, <span
+class="math inline">\(\varepsilon &gt; 0\)</span>, <span
+class="math display">\[\begin{equation}
+\mu^{n + k} * \delta_{x}( B_{\rho^{1/2}}) \leq \rho^{\frac{k +
+\varepsilon}{2}}
+\end{equation}\]</span></p>
+<h4 id="bourgains-projection-theorem">Bourgain’s projection theorem</h4>
+<p>Consider <span class="math inline">\(A \subseteq
+\mathbb{R}^{2}\)</span> to be any subset. Let <span
+class="math inline">\(\pi_{\theta}:\mathbb{R}^{2} \xrightarrow[ ]{ }
+L_{\theta}\)</span> be the projection map to a line at origin with angle
+<span class="math inline">\(\theta\)</span> (say from the <span
+class="math inline">\(x\)</span>-axis).</p>
+<div class="theorem">
+<p><strong>Mastrand theorem</strong></p>
+<p>For Lebesgue-measure 1, with respect to any <span
+class="math inline">\(\theta \in \mathbb{R}/ \mathbb{Z}\)</span>, one
+has <span class="math inline">\(\dim \pi_{\theta} A = \min \{1, \dim
+A\}\)</span>.</p>
+</div>
+<p><strong>Bourgain</strong>: Take <span
+class="math inline">\(\sigma\)</span> probability measure which is
+Frostman. That is <span class="math inline">\(\sigma([-r,r]+s) \leq C
+r^{\kappa}\)</span> Then for <span
+class="math inline">\(\sigma\)</span>-almost every <span
+class="math inline">\(\theta\)</span>, one has <span
+class="math display">\[\begin{equation}
+    \dim ( \pi_{{\theta}} A ) \geq \tfrac{1}{2} \dim A.
+\end{equation}\]</span></p>
+<div class="remark">
+<p><span class="math display">\[\begin{equation}
+A&#39; \leq \pi_{\theta_{1}&#39;} (A&#39;) \times
+\pi_{\theta_{2}&#39;}(A&#39;)
+\end{equation}\]</span></p>
+So <span class="math display">\[\begin{equation}
+\dim A&#39; \leq \dim\pi_{\theta_{1}&#39;} (A&#39;) + \dim
+\pi_{\theta_{2}&#39;}(A&#39;)
+\end{equation}\]</span>
+</div>
+<p>Let <span class="math inline">\(\eta \in (0,1/2),\)</span> <span
+class="math inline">\(A \subseteq B^{\mathbb{R}^{2}}\)</span> with <span
+class="math inline">\(\dim A \in (\eta,2-\eta)\)</span>. Then for <span
+class="math inline">\(\sigma\)</span>-almost <span
+class="math inline">\(\theta\)</span>, <span
+class="math display">\[\begin{equation}
+     \dim (\pi_{\theta} A) \geq \tfrac{1}{2} \dim(A) + \varepsilon_{0}.
+\end{equation}\]</span></p>
+<p>So the dimension gain is upto <span
+class="math inline">\(\varepsilon_{0}\)</span>. In fact, Bourgain’s
+theorem is established at “macroscopic” scales.</p>
+<p><strong>Bourgain 2nd version:</strong> Let <span
+class="math inline">\(\rho \in (0,1)\)</span>. Let <span
+class="math inline">\(\kappa, \eta \in(0,1)\)</span>, let <span
+class="math inline">\(C&gt;1\)</span>, Assume <span
+class="math inline">\(\sigma\)</span> satisfies <span
+class="math display">\[\begin{equation}
+    \forall r \geq \rho, \sigma([-r,r] + s) \leq C r^{\kappa},
+\end{equation}\]</span></p>
+<p>Let <span class="math inline">\(\alpha \in [\eta, 2- \eta], A
+\subseteq B^{\mathbb{R}^{2}}_{1}\)</span> such that: <span
+class="math display">\[\begin{equation}
+    \forall x \in \mathbb{R}^{2}, \forall r \geq \rho
+    \tfrac{N_{\rho} ( A \cap B_{r}(x))}{N_{\rho}(A)} \leq C r^{\alpha}.
+\end{equation}\]</span> Here <span
+class="math inline">\(N_{\rho}\)</span> is the smallest number of <span
+class="math inline">\(\rho\)</span>-balls needed to cover <span
+class="math inline">\(A\)</span>.</p>
+<p>If <span class="math inline">\(\rho, \varepsilon_{0}\)</span> small
+enough depending on <span class="math inline">\(C,\kappa,\eta\)</span>
+then with <span class="math inline">\(\sigma\)</span>-prob is <span
+class="math inline">\(\geq 1 - \rho^{\Sigma_{0}}\)</span> one has: <span
+class="math display">\[\begin{equation}
+N_{\rho} ( \pi_{\theta}(A)) \geq \rho^{ - \alpha/2 - \varepsilon_{0}}.
+\end{equation}\]</span></p>
+<div class="remark">
+We can replace <span class="math inline">\(A\)</span> by a probablity
+measure <span class="math inline">\(\nu\)</span> on <span
+class="math inline">\(B_{1}^{\mathbb{R}^{2}}\)</span> such that <span
+class="math display">\[\begin{equation}
+\nu(B_{r}(x)) \leq C r^{\alpha} , \forall r \geq \rho, x \in X.
+\end{equation}\]</span>
+</div>
+<p>In other words, we have the assumption that <span
+class="math display">\[\begin{equation}
+\nu(B_{r}(x)) \leq C \mathrm{vol}_{\mathbb{R}^{2}}(B_{r}(x))^{\alpha/2}
+, \forall r \geq \rho, x \in X.
+\end{equation}\]</span></p>
+<p>The conclusion is then upto ignoring a small subset of <span
+class="math inline">\(\nu\)</span> <span
+class="math display">\[\begin{equation}
+    \underbrace{ \pi_{\theta} ( \nu) (B_{\rho}^{L_{\theta}}(x))
+}_{\pi_{\theta}^{-1} B_{\rho}(x)}\leq \underbrace{\rho^{\alpha/2 +
+\varepsilon}}_{= \mathrm{vol}_{B_{1}^{\mathbb{R}^{2}}(\pi^{-1}_{\theta}
+B_{\rho}(x))  }},
+\end{equation}\]</span></p>
+<p>This is a gain in dimension from <span
+class="math inline">\(\alpha/2\)</span> to <span
+class="math inline">\(\alpha/2 + \varepsilon_{0}\)</span>.</p>
+<div class="remark">
+There are two papers of Timothee on this, the easier one to read is the
+shorter one.
+</div>
+<h4 id="back-to-step-3">Back to step 3</h4>
+<p>Now back to <span class="math inline">\(X\)</span>, <span
+class="math inline">\(\mu\)</span>-radom walk on <span
+class="math inline">\(X\)</span>. We take <span
+class="math inline">\(\nu = \mu^{k} * \delta_{x}\)</span>. Note <span
+class="math inline">\(\nu(B_{r}(u)) \leq C r^{\kappa}\)</span> thanks to
+Step 1.</p>
+<p>Let <span class="math inline">\(n \geq 1\)</span>, <span
+class="math display">\[\begin{equation}
+    \mu^{n} * v (B_{\rho}(x)) =
+    \int_{\mathrm{SL}_{2}(\mathbb{R})}^{} \underbrace{\nu(g^{-1}
+B_{\rho}(x))}_{\substack{\text{ looks like box } \\
+\mathrm{Ad}(g^{-1})B_{\rho}^{\mathrm{sl}_{2}(\mathbb{R})} \text{ in exp
+chart}} }
+    \, \mathrm{d}\mu^{n}(g)
+\end{equation}\]</span></p>
+<ul>
+<li>Sidelenths are <span class="math inline">\((\|g\|_{\rho}^{2}, \rho,
+\|g\|^{-2} \rho)\)</span>.</li>
+<li>One controls the axes using Cartan decomposition. So <span
+class="math inline">\(g^{-1} = k a \rho\)</span> with <span
+class="math inline">\(k, \rho \in \mathrm{SO}(2)\)</span> and <span
+class="math inline">\(a = \mathrm{diag}(e^{t},e^{-t})\)</span>, longest
+axis is <span class="math inline">\(\mathrm{Ad}(k)\left(
+  \begin{smallmatrix}
+   0 &amp; * \\ 0 &amp; 0
+  \end{smallmatrix}
+\right)\)</span>.</li>
+</ul>
+<p>Now, the thing to do is prove an abstract version of Bourgain’s
+theorem to random boxes of the form <span
+class="math display">\[\begin{equation}
+\underbrace{R_{\theta}}_{\text{ rotation } \in \mathrm{SO}(3)}( [0,1]
+e_{1} + [0,\rho^{1/2}] e_{2} + [0,\rho] e_{3}).
+\end{equation}\]</span> And then, we have to use this three dimensional
+version to get what we need for <span
+class="math inline">\(\mathrm{sl}_{2}(\mathbb{R})\)</span>.</p>
+<p>The abstract dimensional gain theorem we need in <span
+class="math inline">\(\mathbb{R}^{3}\)</span> is the following. Consider
+the cuboid in the picture below.</p>
+<figure>
+<embed src="images/IMG_20260113_174226094.jpg" />
+<figcaption aria-hidden="true">Cuboid to be considered, along with
+Tim</figcaption>
+</figure>
+<p>Let <span class="math inline">\(\rho, \eta \in(0,1/2)\)</span>.</p>
+<p>Consider <span class="math inline">\(\nu\)</span> probability measure
+on <span class="math inline">\(B_{1}^{\mathbb{R}^{3}}\)</span> with the
+following property: <span class="math display">\[
+\forall r \geq \rho$, $x \in \mathbb{R}^{3}$, $ \nu(B_{r} x ) \leq
+\mathrm{vol}(B_{r}(x))^{\alpha} \text{ where } \alpha \in
+[\eta,1-\eta].\]</span> Take <span class="math inline">\(\sigma\)</span>
+to be a probability measure on <span
+class="math inline">\(\mathrm{SO}(3)\)</span> such that <span
+class="math display">\[\begin{equation}
+    \forall P \subseteq \mathbb{R}^{3}, 2-\text{planes},
+     \forall L \subseteq \mathbb{R}^{3} \text{ lines }
+\end{equation}\]</span> one has <span
+class="math display">\[\begin{equation}
+    \sigma\{\theta \in \mathrm{SO}(3) \mid d_{\angle}(
+R_{\theta}(\mathbb{R} e_{1}, P)) \leq r \} \leq C r^{\kappa},
+\end{equation}\]</span> and <span
+class="math display">\[\begin{equation}
+    \sigma\{\theta \in \mathrm{SO}(3) \mid d_{\angle}(
+R_{\theta}(\mathbb{R} e_{1} \oplus \mathbb{R} e_{2}, L)) \leq r \} \leq
+C r^{\kappa}.
+\end{equation}\]</span></p>
+<p>Then, provided <span class="math inline">\(\rho, \varepsilon\)</span>
+are small enough depending on <span
+class="math inline">\((C,\kappa,\eta)\)</span>, for most <span
+class="math inline">\(\theta\)</span>, all <span
+class="math inline">\(x\)</span> <span
+class="math display">\[\begin{equation}
+\nu( R_{\theta}( \text{ box } + x)) \leq \mathrm{vol}( \text{ box
+})^{\alpha + \varepsilon}.
+\end{equation}\]</span></p>
+<hr />
+	<small>	<p class="date">This page was updated on January 14, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
