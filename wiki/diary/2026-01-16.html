@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-01-18" />
+  <title>Alex’s talk at the symposium</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Alex’s talk at the symposium</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#ingredients" id="toc-ingredients">Ingredients</a>
+<ul>
+<li><a href="#tesselations" id="toc-tesselations">Tesselations</a></li>
+<li><a href="#multiple-equidistribution-decorrolation-estimate"
+id="toc-multiple-equidistribution-decorrolation-estimate">Multiple
+equidistribution/ decorrolation estimate</a></li>
+<li><a href="#degenerate-equdisitribution"
+id="toc-degenerate-equdisitribution">Degenerate
+equdisitribution</a></li>
+<li><a href="#integrability-estimates"
+id="toc-integrability-estimates">Integrability estimates</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+<p>Joint work with Fregolli and Björklund.</p>
+<p>Let <span class="math inline">\(\alpha \in \mathbb{R}^{2}\)</span>,
+<span class="math inline">\(\alpha \simeq \tfrac{p}{q} \in
+\mathbb{Q}^{2}\)</span>.</p>
+<p>Fix <span class="math inline">\(c &gt; 0\)</span> and for <span
+class="math inline">\(b \in (0,1)\)</span> and <span
+class="math inline">\(T &gt;0\)</span>: <span
+class="math display">\[\begin{equation}
+N_{b, T }   = \#\{(p,q) \in \mathbb{Z}^{2} \times Z \mid (**) \text{  is
+satisfied }\}
+\end{equation}\]</span> where <span class="math inline">\((**)\)</span>
+is the condition given by <span class="math display">\[\begin{equation}
+    q(q \alpha_{1} - p_{1})(q \alpha_{2} - p_{2}) \in(0,b), |q
+\alpha_{1} - p_{1}| \leq c, 1 \leq q &lt; T .
+\end{equation}\]</span> For almost every <span
+class="math inline">\(\alpha : N_{b,T}(\alpha) \sim v_{0}( \log T)^{2}
+b\)</span></p>
+<div class="theorem">
+<p>When <span class="math inline">\(b \gg (\log T)^{-\frac{6}{5} +
+\varepsilon}\)</span> as <span class="math inline">\(T
+\rightarrow  \infty\)</span>. Furthermore <span
+class="math display">\[\begin{equation}
+\frac{N_{b,T}(\alpha) - v_{0} (\log T)^{2} b }{ (\log T)
+b^{\frac{1}{2}}}, \alpha \in [0,1)^{2}
+\end{equation}\]</span> converges in distribution to the normal law.</p>
+</div>
+<h2 id="ingredients">Ingredients</h2>
+<p>Define <span class="math display">\[\begin{equation}
+\Lambda_{\alpha} = \{ (q \alpha - p , q) \mid (p,q) \in
+\mathbb{Z}^{3}\}.
+\end{equation}\]</span> Let <span class="math inline">\(X =\)</span>
+“space of lattices in <span
+class="math inline">\(\mathbb{R}^{3}\)</span>, <span
+class="math inline">\(\mathrm{covol}= 1\)</span>”. Let <span
+class="math inline">\(Y \subseteq X\)</span> be defined as <span
+class="math display">\[\begin{equation}
+Y = \{ \Lambda_{\alpha} \mid \alpha \in [0,1)^{2}\}.
+\end{equation}\]</span> We define <span
+class="math display">\[\begin{equation}
+    a(t) =
+    \begin{bmatrix}
+        e^{t} &amp; &amp; \\
+        &amp; e^{t_{2}} &amp; \\
+        &amp; &amp; e^{-t_{1} - t_{2}}
+    \end{bmatrix}
+\end{equation}\]</span> We want to know <span class="math inline">\(a(t)
+Y \rightarrow ?\)</span></p>
+<h3 id="tesselations">Tesselations</h3>
+<p><span class="math display">\[\begin{equation}
+\Omega = \{(x,y) \in \underbrace{\mathbb{R}^{3} }_{\text{ for }a
+\in(0,b)}\mid x_{1}x_{2} \cdot y \in(a,b), |x_{1}|,|x_{2}| \leq C , 1
+\leq y &lt; T\}.
+\end{equation}\]</span> Then when <span class="math inline">\(a =
+0\)</span>, <span class="math inline">\(N_{b,T}(\alpha) =
+|\Lambda_{\alpha} \cap \Omega|\)</span>. For <span
+class="math inline">\(n \in \mathbb{N}_{0}\)</span>, <span
+class="math display">\[\Omega_{n} = \{(x,y) \in \mathbb{R}^{3} \mid
+x_{1} x_{2} y \in (a,b), e^{-1} \cdot c &lt; |x_{1}|, |x_{2}| \leq c\},
+e^{-n_{1}-n_{2} \leq y &lt; e^{-n_{1} - n_{2}} T }.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\Omega = \bigsqcup_{n \in \mathbb{N}_{0}^{2}} a(n)^{-1} \Omega_{n}.
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    N_{b,T}(\alpha) = \sum_{n \in \mathbb{N}_{0}^{2}} |\Lambda_{\alpha}
+\cap a(n)^{-1} \Omega_{n}|
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \int_{[0,1)^{2}}^{}  N_{b,T}(\alpha)^{r}\, d\alpha =
+\sum_{n_{1},\dots n_{r}}^{} \int_{[0,1)^{2}}^{} |\Lambda_{\alpha} \cap
+a(n_{1})^{-1} \Omega_{n_{r}}| \, d\alpha
+\end{equation}\]</span></p>
+<h3 id="multiple-equidistribution-decorrolation-estimate">Multiple
+equidistribution/ decorrolation estimate</h3>
+<p>For <span class="math inline">\(f_{1},\dots,f_{r} \in
+\mathcal{C}_{c}^{\infty}(X), t_{1},\dots,t_{r} \in \mathbb{R}^{2}_{ \geq
+0}\)</span> <span class="math display">\[\begin{equation}
+    \int_{Y}^{} f_{1} \circ a(t_{1}) \dots f_{r} \circ a(t_{r})  =
+\int_{X}^{} f_{1} \dots \int_{X}^{} f_{r}
+    + O(f_{1},\dots,f_{n}) ( e^{- \delta \min ( \lfloor t_{i}\rfloor, \|
+\underbrace{t_{i} - t_{j}}_{i \neq j}\| )})
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\int_{Y}^{}  f_{1} \circ a(t_{1}) \dots f_{r} \circ a(t_{r}) =
+(\int_{Y}^{} f \circ a(t_{1})  ) \dots ( \int_{Y} f \circ a(t_{r}))
+    + O(f_{1},\dots,f_{n}) ( e^{- \delta \min_{i} ( \| {t_{i} - t_{j}}\|
+)})
+\end{equation}\]</span></p>
+<h3 id="degenerate-equdisitribution">Degenerate equdisitribution</h3>
+<p><span class="math display">\[\begin{equation}
+    \int_{Y} f \circ a(t_{1},0) = \int_{Y_{1}} f + O_{f}(e^{-\delta
+t_{1}})
+\end{equation}\]</span></p>
+<h3 id="integrability-estimates">Integrability estimates</h3>
+<p><span class="math display">\[\begin{equation}
+    \int_{[0,1)}^{}  |\Lambda_{\alpha} \cap a(n)^{-1} \Omega_{n}| \,
+d\alpha \ll_{a,b} (1 + \|n\|e^{- \lfloor n\rfloor})
+\end{equation}\]</span></p>
+<hr />
+	<small>	<p class="date">This page was updated on January 18, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>

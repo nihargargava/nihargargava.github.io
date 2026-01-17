@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-01-18" />
+  <title>About shapes of unit lattices</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">About shapes of unit lattices</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#periodic-tori-and-shape-points"
+id="toc-periodic-tori-and-shape-points">Periodic tori and shape
+points</a></li>
+<li><a href="#periodic-tori-and-algebraic-units-in-orders"
+id="toc-periodic-tori-and-algebraic-units-in-orders">Periodic tori and
+algebraic units in orders</a>
+<ul>
+<li><a href="#from-totally-real-order-to-periodic-torus"
+id="toc-from-totally-real-order-to-periodic-torus">From totally real
+order to periodic torus</a></li>
+<li><a href="#from-periodic-torus-to-totally-real-cubic-order"
+id="toc-from-periodic-torus-to-totally-real-cubic-order">From periodic
+torus to totally real cubic order</a></li>
+</ul></li>
+<li><a href="#proving-density-of-shapes-of-orders"
+id="toc-proving-density-of-shapes-of-orders">Proving density of shapes
+of orders</a>
+<ul>
+<li><a href="#failed-attempt-with-cusicks-polynomials"
+id="toc-failed-attempt-with-cusicks-polynomials">Failed attempt with
+Cusick’s polynomials</a></li>
+<li><a href="#taking-congruence-covers-of-cusicks-orders"
+id="toc-taking-congruence-covers-of-cusicks-orders">Taking congruence
+covers of Cusick’s orders</a></li>
+<li><a href="#final-skech-of-the-proof"
+id="toc-final-skech-of-the-proof">Final skech of the proof</a></li>
+</ul></li>
+<li><a href="#bibliography" id="toc-bibliography">References</a></li>
+</ul>
+</nav>
+
+
+
+<p>Here are some details about my preprint <span class="citation"
+data-cites="DGL25">[<a href="#ref-DGL25"
+role="doc-biblioref">1</a>]</span>. This is based on discussions at
+Wework.</p>
+<h2 id="periodic-tori-and-shape-points">Periodic tori and shape
+points</h2>
+<p>Let <span class="math inline">\(G =
+\mathrm{SL}_{3}(\mathbb{R})\)</span> and let <span
+class="math inline">\(\Gamma = \mathrm{SL}_{3}(\mathbb{Z})\)</span>. Let
+<span class="math inline">\(A \subseteq G\)</span> be the subgroup of
+positive diagonal matrices. Let <span class="math inline">\(\mathfrak{a}
+\simeq \mathbb{R}^{2}\)</span> be the Lie algebra of <span
+class="math inline">\(A\)</span>. From now on, it means <span
+class="math display">\[\begin{equation}
+\mathfrak{a} =\{(x_{1},x_{2},x_{3})  \in  \mathbb{R}^{3} \mid
+x_{1}+x_{2}+x_{3}=0 \}.
+\end{equation}\]</span></p>
+<div class="definition">
+<p>A periodic torus <span class="math inline">\(F\)</span> is a compact
+diagonal orbit of <span class="math inline">\(A\)</span> on <span
+class="math inline">\(G/ \Gamma\)</span>.</p>
+</div>
+<p>One is classically interested in the counting problems <span
+class="math display">\[\begin{equation}
+\#\{F \text{ periodic tori }   \mid \mathrm{vol}(F) \leq T  \} \ll ?
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+\#\{F \text{ periodic tori }   \mid \mathrm{sys}(F) \leq T  \} \ll ?
+\end{equation}\]</span> It is clear that small volume implies small
+systole but the reverse direction is not clear. To understand this we
+define a shape.</p>
+<div class="definition">
+<p>Fix an isomorphism <span class="math inline">\(\mathfrak{a} \simeq
+\mathbb{R}^{2}\)</span>, . Given a periodic tori <span
+class="math inline">\(F\)</span>, the point <span
+class="math inline">\(sh(F) \in
+\mathrm{SL}_{2}(\mathbb{R})/\mathrm{SL}_{2}(\mathbb{Z})\)</span> is
+defined as follows. Consider a point <span class="math inline">\(x \in
+F\)</span> and take the periods <span
+class="math display">\[\begin{equation}
+P (F) = \{ a \in \mathfrak{a} \mid  \exp(a) x = x\}.
+\end{equation}\]</span> Then, <span class="math inline">\(P(F) \subseteq
+\mathfrak{a}\)</span> defines a lattice <span class="math inline">\(c
+\cdot h \cdot \mathbb{Z}^{2} \subseteq \mathbb{R}^{2}\)</span> where
+<span class="math inline">\(h \in \mathrm{SL}_{2}(\mathbb{R})\)</span>
+and <span class="math inline">\(c &gt; 0\)</span> is some constant. We
+define <span class="math inline">\(sh(F) = h
+\mathrm{SL}_{2}(\mathbb{Z})\)</span>.</p>
+</div>
+<div class="question">
+<p>What are the shape points <span class="math inline">\(\{sh(F)\}_{F
+\text{ p.t. }}\)</span>?</p>
+</div>
+<p>This is a good question because</p>
+<ol type="1">
+<li>Conjectured by David-Shapira <span class="citation"
+data-cites="DS17">[<a href="#ref-DS17"
+role="doc-biblioref">2</a>]</span> to be dense in <span
+class="math inline">\(\mathrm{SL}_{2}(\mathbb{R})/\mathrm{SL}_{2}(\mathbb{Z})\)</span>.</li>
+<li>There’s a MO question from 2010 (in the number theoretic form
+described below). See <a
+href="https://mathoverflow.net/questions/41716/how-random-are-unit-lattices-in-number-fields">here</a>.</li>
+</ol>
+<div class="theorem">
+<p><strong>(Dang, G., Li)</strong></p>
+<p>They are a dense subset of <span
+class="math inline">\(\mathrm{SL}_{2}(\mathbb{R})/\mathrm{SL}_{2}(\mathbb{Z})\)</span>.</p>
+</div>
+<div class="remark">
+<p>There is a technicality about a finite group <span
+class="math inline">\(M=\mathrm{diag}\{\pm 1, \pm 1, \pm 1\} \cap
+\mathrm{SL}_{3}(\mathbb{R})\)</span> which I will ignore. What we really
+prove is the density of shapes of compact <span
+class="math inline">\(A\)</span>-orbits of <span class="math inline">\(M
+\backslash G / \Gamma\)</span>. One then takes a small step to go from
+<span class="math inline">\(M \backslash G / \Gamma\)</span> to its
+<span class="math inline">\(4\)</span>-fold cover <span
+class="math inline">\(G/\Gamma\)</span>.</p>
+<p>See <span class="citation" data-cites="DGL25">[<a href="#ref-DGL25"
+role="doc-biblioref">1</a>]</span> for the gory details.</p>
+</div>
+<h2 id="periodic-tori-and-algebraic-units-in-orders">Periodic tori and
+algebraic units in orders</h2>
+<h3 id="from-totally-real-order-to-periodic-torus">From totally real
+order to periodic torus</h3>
+<div class="definition">
+<p>Given a totally real cubic number field <span
+class="math inline">\(K\)</span>, three embeddings <span
+class="math inline">\(\sigma_{1},\sigma_{2},\sigma_{3}: K
+\rightarrow  \mathbb{R}\)</span> and an <a href="../order">order</a>
+<span class="math inline">\(\mathcal{O} \subseteq K\)</span>, one can
+define <span class="math inline">\(sh(\mathcal{O}.html)\)</span> as the
+following.</p>
+<p>Map <span class="math inline">\(\mathcal{O}^{\times} \in
+\mathfrak{a}\)</span> by sending <span class="math inline">\(x
+\mapsto  (\log| \sigma_{1}(a) | , \log |\sigma_{2}(a)|, \log
+|\sigma_{3}(a)|)\)</span>. By <a href="../dut.html">Dirichlet unit
+theorem</a>, it is a lattice.</p>
+</div>
+<p>It is enough to show that <span
+class="math inline">\(sh(\mathcal{O})\)</span> are dense in <span
+class="math inline">\(\mathrm{SL}_{2}(\mathbb{R})/\mathrm{SL}_{2}(\mathbb{Z})\)</span>.
+Let us show this. If <span class="math inline">\(\mathcal{O}\)</span> is
+an order, we observe that <span class="math inline">\(\tilde{\sigma} =
+(\sigma_{1},\sigma_{2},\sigma_{3}) : K \otimes \mathbb{R}
+\rightarrow  \mathbb{R}^{3}\)</span> is an isomorphism in which <span
+class="math inline">\(|\mathrm{disc}\mathcal{O}|^{\frac{1}{3}}\mathcal{O}\)</span>
+is a lattice of unit covolume, and hence a point in <span
+class="math inline">\(G / \Gamma\)</span>. The lattice is preseved under
+<span class="math inline">\(\mathcal{O}^{\times}\)</span>. Let <span
+class="math inline">\(h_{\mathcal{O}} \in
+\mathrm{SL}_{3}(\mathbb{R})\)</span> be such that <span
+class="math inline">\(h_{\mathcal{O}} \mathbb{Z}^{3} \simeq
+|\mathrm{disc}\mathcal{O}|^{\frac{1}{3}} \mathcal{O}\)</span> under the
+mapping <span class="math inline">\(\sigma : K \otimes \mathbb{R}
+\rightarrow  \mathbb{R}^{3}\)</span>.</p>
+<p>Since one has the following equality of Abelian groups <span
+class="math display">\[\begin{equation}
+\{ x \in K \otimes \mathbb{R}  \mid  x \mathcal{O} = \mathcal{O} \}
+=
+\mathcal{O}^{\times},
+\end{equation}\]</span></p>
+<p>One can then see the action of <span class="math inline">\((K \otimes
+\mathbb{R})^{(1)} = \{ x \in K \otimes \mathbb{R} \mid |\mathrm{N}(x)|=1
+\}\)</span> on <span class="math inline">\(K\otimes \mathbb{R}\)</span>
+is via <span class="math display">\[\begin{equation}
+    x \mapsto  
+\left(    \begin{matrix}
+\sigma_{1}(x) &amp; &amp; \\
+&amp; \sigma_{2}(x) &amp; \\
+&amp; &amp; \sigma_{3}(x)
+\end{matrix} \right)
+\end{equation}\]</span> The image of <span
+class="math inline">\((K\otimes \mathbb{R})^{(1)}\)</span> under this
+map is the group <span class="math inline">\(M \cdot A \subseteq
+G\)</span> where <span class="math inline">\(M\)</span> is the sign
+group and the orbit of <span class="math inline">\(F = M \cdot A
+h_{\mathcal{O}} \Gamma\)</span> is periodic whose shape is <span
+class="math inline">\(sh(\mathcal{O})\)</span>.</p>
+<h3 id="from-periodic-torus-to-totally-real-cubic-order">From periodic
+torus to totally real cubic order</h3>
+<p>One can also show that each <span
+class="math inline">\(sh(F)\)</span> for a periodic torus <span
+class="math inline">\(F\)</span> is <span
+class="math inline">\(sh(\mathcal{O})\)</span> for some totally real
+cubic order <span class="math inline">\(\mathcal{O}\)</span>.</p>
+<p>Here is why. Given a periodic torus <span class="math inline">\(F = M
+\cdot A \cdot g \cdot \Gamma\)</span>, observe that if <span
+class="math inline">\(y \in A\)</span> fixes <span
+class="math inline">\(g \Gamma\)</span>, then <span
+class="math inline">\(g^{-1} y g \in \Gamma\)</span> and therefore the
+characterstic polynomial of <span class="math inline">\(y\)</span> is a
+monic polynomial in <span class="math inline">\(\mathbb{Z}[X]\)</span>
+with constant term <span class="math inline">\(-1\)</span>. By
+compactness of <span class="math inline">\(F\)</span>, we know that
+<span class="math inline">\(\exp P(F) = \{ u_{1}^{n_{1}} u_{2}^{n_{2}}
+\mid (n_{1},n_{2}) \in \mathbb{Z} \}\)</span> for two totally real
+algebraic units <span class="math inline">\(u_{1},u_{2}\)</span>. We
+consider <span class="math inline">\(K =
+\mathbb{Q}[u_{1},u_{2}]\)</span>. This is a field. The questions is what
+is <span class="math inline">\(\deg K\)</span>?</p>
+<p>Note that <span class="math inline">\(g^{-1} K g\)</span> embeds
+faithfully into diagonal matrices that are <span class="math inline">\(3
+\times 3\)</span>. Hence it must be a number field of degree <span
+class="math inline">\(3\)</span>.</p>
+<p>We define <span class="math display">\[\begin{equation}
+    \mathcal{O} = \{ k \in K \mid k g \mathbb{Z}^{3}  \subseteq g
+\mathbb{Z}^{3}\},
+\end{equation}\]</span> to recover the order. The three diagonal entries
+of <span class="math inline">\(g^{-1} K g\)</span> define the three real
+embeddings of <span class="math inline">\(K\)</span>.</p>
+<h2 id="proving-density-of-shapes-of-orders">Proving density of shapes
+of orders</h2>
+So the new question is the following?
+<div class="question">
+<p>As <span class="math inline">\(K,\mathcal{O},
+(\sigma_{1},\sigma_{2},\sigma_{3})\)</span> vary across totally real
+cubic fields <span class="math inline">\(K\)</span>, orders <span
+class="math inline">\(\mathcal{O} \subseteq K\)</span> and embeddings
+<span class="math inline">\(\sigma_{1},\sigma_{2},\sigma_{3} : K
+\rightarrow  \mathbb{R}\)</span>, what are the shape points <span
+class="math inline">\(sh(\mathcal{O})\)</span> in <span
+class="math inline">\(M \backslash
+\mathrm{SL}_{2}(\mathbb{R})/\mathrm{SL}_{2}(\mathbb{Z})\)</span>?</p>
+</div>
+<p>In general, it is a difficult question of finding generators of <span
+class="math inline">\(\mathcal{O}^{\times}\)</span> for a general <span
+class="math inline">\(\mathcal{O}\)</span>. But there is a good family
+of totally real orders whose generators are known.</p>
+<h3 id="failed-attempt-with-cusicks-polynomials">Failed attempt with
+Cusick’s polynomials</h3>
+<div class="proposition">
+<p>Take <span class="math inline">\(0 &lt; a_{1} &lt;a_{2}\)</span> to
+be integers <span class="math display">\[\begin{equation}
+f(X) = X(X-a_{1})(X-a_{1}) - 1
+\end{equation}\]</span> Then there is a choice of <span
+class="math inline">\(C&gt;0\)</span> such that for all <span
+class="math inline">\(a_{1},a_{2}\)</span> satisfying <span
+class="math inline">\(a_{1},a_{2},a_{2}-a_{1} &gt; C\)</span> one has
+for <span class="math inline">\(\mathcal{O} = \mathbb{Z}[X]/\langle
+f(X)\rangle\)</span> the unit group <span
+class="math display">\[\begin{equation}
+\mathcal{O}^{\times} = \{ \pm X^{n_{1}} (X-a_{1})^{n_{2}} \mid
+n_{1},n_{2} \in \mathbb{Z} \}.
+\end{equation}\]</span></p>
+</div>
+<p>Let us quickly sketch the proof. The polynomial <span
+class="math inline">\(f(X)= X(X-a_{1})(X-a_{2}) - 1\)</span> has roots
+very close to <span class="math inline">\(0,a_{1},a_{2}\)</span>. Hence,
+it is possible to have a good approximation of <span
+class="math inline">\(\mathrm{disc}\mathcal{O} =
+\mathrm{disc}f\)</span>. On the other hand, one knows that <span
+class="math inline">\(X,X-a_{1},X-a_{2}\)</span> generate a finite index
+subgroup <span class="math inline">\(H_{\mathcal{O}} \subseteq
+\mathcal{O}^{\times}\)</span> so we have an upper bound on the regulator
+<span class="math inline">\(\mathrm{reg}\mathcal{O}^{\times}\)</span>.
+One then has Cusick’s inequality <span class="citation"
+data-cites="C06">[<a href="#ref-C06" role="doc-biblioref">3</a>]</span>
+<span class="math display">\[\begin{equation}
+     \mathrm{reg}\mathcal{O} \geq \tfrac{1}{16} \log ^{2} \left(
+\tfrac{1}{4} |\mathrm{disc}\mathcal{O}|\right)
+\end{equation}\]</span> Then, on computation one sees that for the given
+conditions on <span
+class="math inline">\(a_{1},a_{2},a_{2}-a_{1}\)</span>, the upper bound
+and lower bound are at a ratio of <span class="math inline">\(\sim
+4/3\)</span>. Hence if the index of <span
+class="math inline">\(H_{\mathcal{O}} \subseteq
+\mathcal{O}^{\times}\)</span> were more than <span
+class="math inline">\(1\)</span>, we would have a contradiction.</p>
+One however fails to solve the problem with these polynomials. Since
+<div class="proposition">
+<p>The polynomials <span class="math inline">\(f(X)\)</span> of Cusick
+generate a compact set of shape points <span
+class="math inline">\(sh(\mathcal{O})\)</span> for <span
+class="math inline">\(\mathcal{O} = \mathbb{Z}[X]/\langle
+f(X)\rangle\)</span>.</p>
+</div>
+<p>However, this is a feature not a bug of our proof.</p>
+<h3 id="taking-congruence-covers-of-cusicks-orders">Taking congruence
+covers of Cusick’s orders</h3>
+<p>One can then try to take <span
+class="math inline">\(\mathcal{O}_{(n)} = \mathbb{Z}+ n
+\mathcal{O}\)</span>. We work with <span class="math inline">\(n=
+p_{1}^{c} p_{2}^{d} p_{3}^{e}\)</span> for <span class="math inline">\(1
+\leq c,d,e \leq N\)</span> for <span class="math inline">\(N
+\rightarrow  \infty\)</span>. We want to know what is <span
+class="math inline">\(\mathcal{O}^{\times}_{(n)}\)</span>. Take <span
+class="math inline">\(b_{1} = X, b_{2} = (X-a_{1})\)</span>, which are
+the generators of units in <span
+class="math inline">\(\mathcal{O}^{\times}\)</span>. Then <span
+class="math display">\[\begin{equation}
+\mathcal{O}_{(n)}^{\times} = \{ \pm b_{1}^{n_{1}} b_{2}^{n_{2}} \mid
+(n_{1},n_{2}) \in \Lambda_{(c,d,e)} \subseteq \mathbb{Z}^{2} \}.
+\end{equation}\]</span> The goal is then to understand these lattices
+<span class="math inline">\(\Lambda_{(c,d,e)}\)</span>.</p>
+<p>This is done by using the following proposition.</p>
+<div class="proposition">
+<p>Let <span class="math display">\[\begin{align}
+a_{1} \equiv 0 &amp;  \equiv a_{2} - 1\pmod{p_{1}^{c}} \\
+a_{1}-1 \equiv 0 &amp;  \equiv a_{2} \pmod{p_{2}^{c}} \\
+a_{1} -1 \equiv 0 &amp;  \equiv a_{2} - 1\pmod{p_{3}^{c}} \ \ \ \ \ \ \
+\  (**)
+\end{align}\]</span> Then the lattice <span
+class="math inline">\(\Lambda_{(c,d,e)}\)</span> defined above are <span
+class="math display">\[\begin{align}
+m+n \equiv &amp;  0\pmod{l_{1} p_{1}^{ \max(c-l_{1}&#39;,0)}} \\
+m-2n \equiv &amp;  0\pmod{l_{2} p_{2}^{ \max(c-l_{2}&#39;,0)}} \\
+n -2m\equiv &amp;  0\pmod{l_{3} p_{3}^{ \max(c-l_{3}&#39;,0)}},
+\end{align}\]</span> for some fixed constants <span
+class="math inline">\(l_{1},l_{2},l_{3},l_{1}&#39;,l_{2}&#39;,l_{3}&#39;\)</span>.</p>
+</div>
+The main idea is that the congruence conditions of <span
+class="math inline">\(a_{1},a_{2}\)</span> allow us to exploit the
+following lemma.
+<div class="lemma">
+<p>Let <span class="math inline">\(b \in \mathcal{O}^{\times}\)</span>
+be a non-torsional unit and let <span class="math inline">\(p \in
+\mathbb{P}\)</span>. Then <span class="math inline">\(\exists l,l&#39;
+\in \mathbb{Z}_{\geq 1}\)</span> some constants such that <span
+class="math display">\[\begin{equation}
+b^{n} \in \mathbb{Z} + p^{c} \mathcal{O} \Leftrightarrow n \in N
+\mathbb{Z}  \text{ where } N = l p^{\max{c-l&#39;,0}}.
+\end{equation}\]</span></p>
+</div>
+<p>The proof is via induction on <span
+class="math inline">\(c\)</span>.</p>
+<p>This is then used to finish the proof.</p>
+<h3 id="final-skech-of-the-proof">Final skech of the proof</h3>
+<p>Here is how to show the main theorem.</p>
+<p><strong>Step 1:</strong> We first take <span class="math inline">\(N
+\gg 1\)</span>. Take <span
+class="math inline">\(0&lt;a_{1}&lt;a_{2}\)</span> smallest satisfying
+the congruence conditions <span class="math inline">\((**)\)</span> for
+all <span class="math inline">\(1 \leq c,d,e \leq N\)</span>. Construct
+<span class="math inline">\(\mathcal{O}\)</span> (depending on <span
+class="math inline">\(N\)</span>) from the polynomial <span
+class="math inline">\(f(X)\)</span> using <span
+class="math inline">\(a_{1},a_{2}\)</span>.</p>
+<p><strong>Step 2:</strong> Take <span
+class="math inline">\(\mathcal{O}_{(n)} = \mathbb{Z} + n
+\mathcal{O}\)</span> where <span class="math inline">\(n = p_{1}^{c}
+p_{2}^{d} p_{3}^{e}\)</span>. We vary <span
+class="math inline">\(c,d,e\)</span> in <span
+class="math inline">\(1,\dots,N\)</span>. This creates <span
+class="math inline">\(\sim \mathbb{Z}^{3}\)</span>. Then <span
+class="math inline">\(sh(\mathcal{O}_{(n)})\)</span> is in Hecke
+correspondence with <span
+class="math inline">\(sh(\mathcal{O})\)</span>.</p>
+<p><strong>Step 3:</strong> Because <span
+class="math inline">\(sh(\mathcal{O})\)</span> live in a compact set as
+<span class="math inline">\(a_{1},a_{2}\)</span> vary, we can assume
+that upto taking a subsequence of <span
+class="math inline">\(N\)</span>, <span
+class="math inline">\(sh(\mathcal{O})\)</span> is a fixed point in <span
+class="math inline">\(M \backslash \mathrm{SL}_{2}(\mathbb{R})/
+\mathrm{SL}_{2}(\mathbb{Z})\)</span>.</p>
+<p><strong>Step 4:</strong> Enough to now that the lattices <span
+class="math inline">\(\{ \Lambda_{(c,d,e)}\}_{1 \leq c,d,e \leq
+N}\)</span> are dense for <span class="math inline">\(N \gg 1\)</span>.
+All of them are Hecke neighbours of <span
+class="math inline">\(\mathbb{Z}^{2}\)</span>.</p>
+<p>We finish the fourth step by showing that the closure of the union of
+points <span class="math inline">\(\{ \Lambda_{(c,d,e)}\}_{1 \leq c,d,e
+\leq N} \subseteq
+\mathrm{SL}_{2}(\mathbb{R})/\mathrm{SL}_{2}(\mathbb{Z})\)</span> as
+<span class="math inline">\(N \rightarrow  \infty\)</span> contains a
+horopsherical piece and is invariant under diagonal action.</p>
+<p>See <span class="citation" data-cites="DGL25">[<a href="#ref-DGL25"
+role="doc-biblioref">1</a>]</span> for the details!</p>
+<h1 class="unnumbered" id="bibliography">References</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-DGL25" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">N.
+T. Dang, N. Gargava, &amp; J. Li, Density of shapes of periodic tori in
+the cubic case. <em>arXiv preprint arXiv:2502.12754</em>, (2025).</div>
+</div>
+<div id="ref-DS17" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">O.
+David &amp; U. Shapira, Dirichlet shapes of unit lattices and escape of
+mass. <em>International Mathematics Research Notices</em>,
+<strong>2018</strong> (2018) 2810–2843.</div>
+</div>
+<div id="ref-C06" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">T.
+W. Cusick, Lower Bounds For Regulators. <em>Number theory
+noordwijkerhout 1983: Proceedings of the journ<span>é</span>es
+arithm<span>é</span>tiques held at <span>N</span>oordwijkerhout, <span>
+T</span>he <span>N</span>etherlands <span>J</span>uly 11–15, 1983</em>
+(Springer, 2006), pp. 63–73.</div>
+</div>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on January 18, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>

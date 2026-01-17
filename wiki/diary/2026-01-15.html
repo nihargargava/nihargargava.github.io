@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-01-18" />
+  <title>WeWork session in Pune</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">WeWork session in Pune</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#alex-gorodnik" id="toc-alex-gorodnik">Alex Gorodnik</a>
+<ul>
+<li><a href="#concrete-case" id="toc-concrete-case">Concrete
+case</a></li>
+<li><a href="#more-averaging" id="toc-more-averaging">More
+averaging</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+<p>This is the second day of the WeWork session in Pune organized by
+Anish. I am listening to Alex talk about some ideas related to
+Diophantine approximation using automorphic forms.</p>
+<h1 id="alex-gorodnik">Alex Gorodnik</h1>
+<p>Consider <span class="math inline">\(G_{1} \times G_{2} \supset
+\Gamma\)</span> . Let <span class="math inline">\(\gamma = (
+\gamma_{1},\gamma_{2})\in \Gamma\)</span>. We show that <span
+class="math inline">\(\Gamma\)</span> projects densely on <span
+class="math inline">\(G_{1}\)</span>. For <span class="math inline">\(r
+\simeq 0\)</span>, <span class="math inline">\(R
+\rightarrow  \infty\)</span> we have <span
+class="math display">\[\begin{equation}
+(*)
+    \begin{cases}
+      d(\gamma_{1} x m y_{1}) &lt; r\\
+       d(\gamma_{2}, e) &lt; R
+    \end{cases}
+\end{equation}\]</span> Want: there is some solution of <span
+class="math inline">\(\gamma \in \Gamma\)</span>, for almost everywhere
+<span class="math inline">\(x_{1},y_{1} \in G_{1}\)</span> whenever
+<span class="math display">\[\begin{equation}
+\mathrm{vol}(B_{r}^{(1)}) \cdot  \mathrm{vol}(B_{R}^{(2)})
+\xrightarrow[]{} \infty
+\end{equation}\]</span></p>
+<p>Some related work on this is</p>
+<ul>
+<li>Ghosh-G.-Nevo</li>
+<li>Jane-Kamber</li>
+<li>Assing-Jana</li>
+<li>Franchyk-G-Nevo</li>
+</ul>
+<p>Consider <span class="math inline">\(C_{1} \subseteq
+G\)</span>-compact. Let <span class="math inline">\(\Omega_{r,R} = \{ y
+\in C_{1} \mid \nexists \gamma \in \Gamma : (*)\}\)</span>. Take: <span
+class="math inline">\(\Psi_{1,r} \in \mathcal{C}_{c}(G_{1})\)</span>,
+<span class="math inline">\(\int_{G_{1}}^{} \psi_{1,r} =1 ,
+\mathrm{supp}(\psi_{1,r}) \subseteq B_{r}^{(1)}\)</span>. For fixed
+<span class="math inline">\(R_{0} &gt; 0\)</span>: <span
+class="math display">\[\begin{equation}
+\psi_{2,R_{0}}\in \mathcal{C}_{c}(G_{2}): \int_{G_{2}}^{} \psi_{2,R_{0}}
+=1, \mathrm{supp}(\psi_{2,R_{0}}) \subseteq B_{r_{0}}^{(2)}.
+\end{equation}\]</span> We then take <span
+class="math display">\[\begin{equation}
+\psi_{r}(g_{1},g_{2}) = \psi_{1,r}(g_{1}) \psi_{2,R_{0}}(g_{2})
+\end{equation}\]</span> For <span class="math inline">\(x \in G, g \in
+G\)</span> <span class="math display">\[\begin{equation}
+\psi_{x,r}(y) = \sum_{\gamma \in \Gamma}^{} \psi_{r}(x^{-1} \gamma y)
+\in \mathcal{C}_{c}(\Gamma \backslash G).
+\end{equation}\]</span></p>
+<div class="lemma">
+<p>For <span class="math inline">\(L&gt;0: x_{2},y_{2} \in
+B_{L}^{(2)}\)</span>, <span class="math inline">\(f_{2} \in
+\mathcal{C}_{c}(G_{2}): \mathrm{supp}(f_{2}) \subseteq
+B_{R}^{(2)}\)</span>. <span class="math display">\[\begin{equation}
+\int_{G}^{} \phi_{x,r}(y g )f_{2}(g) \, dg = \pi(f_{2}) \phi_{x,r}(y)
+\neq 0  \implies  
+\begin{cases}
+\exists \gamma \in \Gamma :  \\
+d(\gamma_{1} x_{1}, y_{1}) &lt; r \\
+d(\gamma_{2},e) &lt; 2 L + R_{0} + R
+\end{cases}.
+\end{equation}\]</span></p>
+</div>
+<div class="corollary">
+<p>If <span class="math inline">\(\int_{G_{2}}^{}  f_{2} = 1,\)</span>
+<span class="math display">\[\begin{equation}
+\mathrm{vol}( \Omega_{r,2L + R_{0} + R}) \ll_{C_{1}} \|\pi(f_{2})
+\phi_{x,r} - 1\|^{2}_{L^{2}(\Gamma \backslash G)}.
+\end{equation}\]</span></p>
+</div>
+<p><span class="math display">\[\begin{equation}
+    \|\pi(f_{2}) \phi - \int_{\Gamma \backslash G}^{} \phi \| _2 \ll
+\|f_{2}\| _p \|\phi\| _2
+\end{equation}\]</span> Then <span class="math inline">\(f_{2} =
+\frac{\chi_{B_{R}^{(2)}}}{\mathrm{vol}(B_{R}^{(2)})}\)</span> for <span
+class="math inline">\(p &lt; 2\)</span> and <span
+class="math inline">\(\mathrm{vol}(B_{R}^{(2)})^{- ( 1-\frac{1}{p})}
+\cdot \mathrm{vol}(B_{R}^{(1)})^{-1/2}\)</span></p>
+<p>Only works for <span class="math inline">\(p \simeq 2\)</span>. <span
+class="math display">\[\begin{equation}
+\Omega_{r,R} = \{ (x,y) \in C_{1}^{2} : (*)\}
+\end{equation}\]</span></p>
+We will rewrite the previous lemma.
+<div class="lemma">
+<p><span class="math inline">\(r&#39;&gt;0, y_{2},x_{2} \subseteq
+B_{L}^{(2)}: f_{1} \in \mathcal{C}_{c}(G_{1}) : \mathrm{supp}(f_{1})
+\subseteq B_{r&#39;}^{(1)}\)</span> and <span
+class="math inline">\(f_{2} \subseteq \mathcal{C}_{c}(G_{2}):
+\mathrm{supp}(f_{2}) \subseteq B_{R}^{(2)}\)</span>. Then, <span
+class="math inline">\(f = f_{1} \otimes f_{2}\)</span> and <span
+class="math display">\[\begin{equation}
+    \pi(f_{1}) \pi(f_{2})= \pi(f) \phi_{x,r}(y) \neq 0
+    \implies  
+  \begin{cases}
+  \exists \gamma \in \Gamma : \\
+   d(\gamma_{1} x, y_{1}) &lt; r+ r&#39; \\
+    d(\gamma_{2},e) &lt; 2L + R_{0}+ R
+  \end{cases}
+\end{equation}\]</span></p>
+</div>
+<p>Now consider <span class="math inline">\(G_{1},G_{2}\)</span> be
+semisimple. Let <span class="math inline">\(K_{1},K_{2}\)</span> be
+maximal compact in <span class="math inline">\(G_{1},G_{2}\)</span>
+respectively. Let <span class="math inline">\(\Gamma\)</span> be a
+cocompact lattice.</p>
+<p>Take <span class="math inline">\(\lambda = C^{2}( \Gamma \backslash
+G) = \oplus_{\pi \in\tilde{G}} m(\pi) \pi\)</span>.</p>
+<p>For <span class="math inline">\(\pi \in \tilde{G}\)</span>-spherical,
+<span class="math inline">\(\underbrace{v_{\pi}}_{\text{ unique }} \in
+\mathcal{H}_{\pi}: \|v_{\pi}\|=1, \pi(K)v_{\pi} = v_{\pi}\)</span>. Then
+<span class="math display">\[\begin{equation}
+\phi_{x,v} = \sum_{\pi}^{} \sum_{j=1}^{m(\pi)} \langle \phi_{x,m},
+v_{\pi}^{(j)}\rangle v_{\pi}^{(j)}
+\end{equation}\]</span></p>
+<p>Then <span class="math display">\[\begin{equation}
+\| \lambda(f) \phi_{x,v}\|^{2} = \sum_{\pi} \sum_{{j}}^{} |\langle
+\varphi_{x,v} , v_{\pi}^{(j)}\rangle|^{2} \langle \pi_{1}(f)
+v_{\pi}^{(j), \lambda(f) v_{\pi}^{(j)}}\rangle
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    = \sum_{\pi,j}^{} |\langle\phi_{x,v},  v_{\pi^{(j)}}\rangle|^{2}
+|\langle \pi(f) v_{\pi}^{(j)}, v_{\pi}^{(j)}\rangle|^{2}
+\end{equation}\]</span> <span class="math display">\[\begin{align}
+    =   &amp;   \int_{G}^{} \psi_{r}(x^{-1} y )
+\overline{v_{\pi}^{(j)(\Gamma y)}}  \, dy \\
+     = &amp; \pi(\Psi_{r}) \overline{v_{\pi}^{(j)}(\Gamma x )} \\
+     = \overline{ \pi( \psi_{r}) v_{\pi}^{(j)}, v_{\pi}^{(j)}}
+\overline{v_{\pi}^{(j)}(\Gamma x)} \\
+    = \sum_{\pi,j}^{} | \langle \pi(\psi_{r}) v_{\pi}^{(j)},
+v_{\pi}^{(j)}\rangle|^{2} \leq \|\pi(\psi_{r})\| \leq 1
+\end{align}\]</span></p>
+<p>So <span class="math display">\[\begin{equation}
+\int_{C_{1}}^{}
+\|\lambda(f) \phi_{x,r}\|\, dx
+\ll_{C_{1}} \sum_{\pi \in \widehat{G}}^{} m(\pi)
+| \langle \pi(\underbrace{f}_{f_{1} \otimes f_{2}} ) v_{\pi},
+v_{\pi}\rangle|^{2}.
+\end{equation}\]</span></p>
+<h2 id="concrete-case">Concrete case</h2>
+<p>Let us take <span class="math inline">\(G=\mathrm{SL}_{2}(\mathbb{R})
+\times \mathrm{SL}_{2}(\mathbb{R})\)</span></p>
+<div class="theorem">
+<p><strong>(FHMM)</strong></p>
+<p><span class="math display">\[\begin{equation}
+    \sum_{\sigma [1/2 - \sigma, 1/2}^{} m(\pi_{it} \otimes \pi_{s})
+\ll_{\varepsilon} (1+T)^{2 \sigma  + \varepsilon}
+\end{equation}\]</span></p>
+</div>
+<div class="remark">
+This is some paper in the American Journal of Math.
+</div>
+<h2 id="more-averaging">More averaging</h2>
+<p><span class="math display">\[\begin{equation}
+\psi_{2,R&#39;} \in \mathcal{C}_{c}(G_{2}) :
+\int_{G_{2}}^{}   \psi_{2,R&#39;} =1,
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    G_{2} \text{ acts on } L^{2}(\Gamma \backslash G)-\text{ spectral
+gap } \implies  \|\lambda( \psi_{2,R&#39;})\| &lt; e^{- \delta R&#39;}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \| \underbrace{\lambda(\psi_{2,R&#39;} )\lambda(f)
+}_{f&#39;=\psi_{2,R&#39;} * f}\phi_{x,r} -1 \|^{2}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \| \lambda(\psi_{2,R&#39;}) ( \lambda(f) \phi_{x,r} - 1)
+\|^{2}_{L^{2}( \Gamma \backslash G)}
+    \ll e^{- 2 \delta R&#39;} \| \lambda(f) \phi_{x,r} -
+1\|^{2}_{L^{2}(\Gamma \backslash G)}
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+    \int_{C_{1}}^{}  \| \cdots \|^{2} \, dx \ll_{\varepsilon} e^{-2
+\delta R&#39;} e^{ \varepsilon R}, R&#39; = c R \ll \|f\| _p \simeq e^{-
+\delta_{1} R}.
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \pi(f) \varphi_{x,r}(y) \neq \emptyset, \mathrm{supp}(f_{2})
+\subseteq B_{R}^{(2)}
+    \implies  d(\gamma_{2}, e) &lt; R .
+\end{equation}\]</span></p>
+<hr />
+	<small>	<p class="date">This page was updated on January 18, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
