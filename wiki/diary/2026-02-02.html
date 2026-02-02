@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-02-02" />
+  <title>Generically trivial torsors under algebraic group</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Generically trivial torsors under algebraic group</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#the-grothendieck-serre-conjecture-constant-case"
+id="toc-the-grothendieck-serre-conjecture-constant-case">1. The
+Grothendieck-Serre conjecture (constant case)</a></li>
+<li><a href="#the-difficulty-dèvissage"
+id="toc-the-difficulty-dèvissage">2.The difficulty: dèvissage</a></li>
+<li><a href="#proof-of-main-theorem"
+id="toc-proof-of-main-theorem">Proof of main theorem</a></li>
+</ul>
+</nav>
+
+
+
+<p>I am attending a number theory seminar in the Ramanujan guest house
+at TIFR. The speaker is Federico Scavia. This is joint work with A.
+Bouthier and K. Česnavičius.</p>
+<p>Let <span class="math inline">\(k\)</span> be a field.</p>
+<h2 id="the-grothendieck-serre-conjecture-constant-case">1. The
+Grothendieck-Serre conjecture (constant case)</h2>
+<div class="theorem">
+<p><strong>(BCS 2025)</strong></p>
+<p>Let <span class="math inline">\(X\)</span> be a smooth <span
+class="math inline">\(k\)</span>-scheme , let <span
+class="math inline">\(G\)</span> be a smooth <span
+class="math inline">\(k\)</span>-group. Then every generically trivial
+<span class="math inline">\(G\)</span>-torsors over <span
+class="math inline">\(X\)</span> is Zariski (semi-)locally trivial.</p>
+</div>
+<p>This was asked Serre (1958) for <span class="math inline">\(k  =
+\overline{k}\)</span>.</p>
+<ul>
+<li>When <span class="math inline">\(G= \mathrm{PGL}_{n}\)</span>, this
+was solved by Serre himself in 1958.</li>
+<li>When <span class="math inline">\(k\)</span> is perfect infinite for
+every <span class="math inline">\(G\)</span> over <span
+class="math inline">\(k\)</span>, or for all <span
+class="math inline">\(k\)</span> when <span
+class="math inline">\(G\)</span> over <span
+class="math inline">\(k\)</span> is reductive topologically isotropic
+(Collot-Thélène, Ojongureu 1992)</li>
+<li>When <span class="math inline">\(k\)</span> is infinite and <span
+class="math inline">\(G\)</span> over <span
+class="math inline">\(k\)</span> is reductive, this was solved by
+Ragunathan 1994-1995</li>
+<li>When <span class="math inline">\(k\)</span> is finite, for every
+<span class="math inline">\(G\)</span> over <span
+class="math inline">\(k\)</span> (Gobber 1990s, unpublished)</li>
+<li>When <span class="math inline">\(G\)</span> over <span
+class="math inline">\(k\)</span> is reductive, <span
+class="math inline">\(k\)</span> infinite (Fedorov-Penin 2015) and for
+<span class="math inline">\(k\)</span> finite (Penin 2020)</li>
+<li>When <span class="math inline">\(X = \mathrm{Spec}R[[t]]\)</span>,
+and <span class="math inline">\(G/k\)</span> is affine (Florence-Gille
+2021)</li>
+</ul>
+<p>What is remaining is the case of <span
+class="math inline">\(k\)</span> being imperfect and <span
+class="math inline">\(G/k\)</span> is non-reductive.</p>
+<p>It is enough to assume the following:</p>
+<ul>
+<li><span class="math inline">\(G/k\)</span> l.f.t (what is that?) and
+every <span class="math inline">\(\overline{k}\)</span>-torus of <span
+class="math inline">\(G_{\overline{k}}\)</span> lies in <span
+class="math inline">\((G^{\mathrm{grad}})_{\overline{k}}\)</span>, where
+<span class="math inline">\(G^{\mathrm{grad}} \leq G\)</span> maximal
+and smooth <span class="math inline">\(k\)</span>-subgroup of <span
+class="math inline">\(G\)</span>.
+<ul>
+<li>For example, when <span class="math inline">\(G\)</span> is
+unipotent, <span class="math inline">\(G\)</span> commutative (ex <span
+class="math inline">\(G = \mathrm{Pic}X\)</span> for some proper <span
+class="math inline">\(X/k\)</span>).</li>
+<li>This condition cannot be dropped</li>
+</ul></li>
+<li>Can replace <span class="math inline">\(X\)</span> by <span
+class="math inline">\(\mathrm{Spec}R\)</span> where <span
+class="math inline">\(R/k\)</span> is a geometry regular (semi-)local
+ring.</li>
+</ul>
+<h2 id="the-difficulty-dèvissage">2.The difficulty: dèvissage</h2>
+<p>Assume <span class="math inline">\(G/k\)</span> is smooth, <span
+class="math inline">\(X = \mathrm{Spec}R\)</span>, <span
+class="math inline">\((R/k)\)</span> is geometric regular semi-local. If
+<span class="math inline">\(k\)</span> is perfect, the main theorem
+reduces to the reductive case.</p>
+<p>We have the short exact sequence <span
+class="math display">\[\begin{equation}
+1 \xrightarrow[]{} N \rightarrow  G \rightarrow  H \rightarrow  1
+\end{equation}\]</span></p>
+<p>Then we have <span class="math display">\[\begin{equation}
+\begin{cases}
+\text{ Thm for $N$ } \\
+  E(\mathrm{Frac}R) = E(R) \\
+   \forall H-\text{torsion }  E/R
+\end{cases}
+\implies  \text{Thm for }G
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    1 \rightarrow  \underbrace{G^{\circ}}_{\text{ smooth comm }}
+\rightarrow  G \rightarrow  G / G^{\circ} \rightarrow  1
+\end{equation}\]</span> Hence this reduces the problem to <span
+class="math inline">\(G^{\circ}\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+1 \rightarrow  \underbrace{H}_{\text{ smooth affine connected}}
+\rightarrow  $G^{\infty}$ \rightarrow  \underbrace{A}_{\text{ ab var }}
+\rightarrow  1
+\end{equation}\]</span> By (Chevalley), we can reduce to <span
+class="math inline">\(H\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+1 \rightarrow  \underbrace{R_{u,k}(H)}_{\substack{\text{ split unipotent
+} \\ H^{1}(\text{ affine }, R_{u,k}(H)) = \{*\} }} \rightarrow  H
+\rightarrow  \underbrace{H/R_{u,t}(H)}_{\text{ reductive }}
+\rightarrow  1  
+\end{equation}\]</span> This will finish the proof.</p>
+<p>For arbitrary (imperfect) <span class="math inline">\(k\)</span>,</p>
+<ul>
+<li><span class="math inline">\(A\)</span> is just a a pseudo abelian
+variety (totorus) when <span class="math inline">\(R_{k&#39;/k}\)</span>
+is an abelian variety. (<span class="math inline">\(k&#39;/k\)</span>
+inseperable)</li>
+<li><span class="math inline">\(R_{u,k}(H)\)</span> not necessarily
+split, <span class="math inline">\(H&#39;\)</span> not necessarily
+trivial.</li>
+<li><span class="math inline">\(H/R_{u,k}(H)\)</span> just
+psuedo-reductive <span class="math inline">\(R_{k&#39;/k}\)</span>
+(red.) (<span class="math inline">\((k&#39;/k)\)</span> is
+inseparable).</li>
+<li>If <span class="math inline">\(A\)</span> is pseudo-abelian <span
+class="math inline">\(\rightarrow\)</span> <span
+class="math inline">\(R_{k&#39;/k}(\underbrace{A_{k&#39;}/R_{u}(A_{k&#39;})}_{\text{ab}})
+\implies\)</span> can still reduce to <span
+class="math inline">\(H\)</span>.</li>
+<li>We can assume: <span class="math inline">\(G\)</span> smooth affine
+connected and no <span class="math inline">\(\mathbb{G}_{k} \subseteq
+G\)</span> (<span class="math inline">\(G\)</span> quasi-reductive)</li>
+</ul>
+<h2 id="proof-of-main-theorem">Proof of main theorem</h2>
+<p>Geometric method of Federov-Penin (Gobber-Quillen presentation
+lemmas) gives: <span class="math display">\[\begin{align}
+&amp; \forall R/k \text{ geom reg semilocal } \forall E
+\rightarrow  \mathrm{Spec}R G-\text{torsor}, \\
+&amp; \exists \mathcal{E} \rightarrow  \mathbb{P}^{1}_{R} \text{ and } Z
+\text{ does not embed in } \mathbb{A}^{1}_{R}, R-\text{finite}\\
+&amp; \text{such that } \mathcal{E}|_{t=0} \simeq E \text{ and }
+\mathcal{E}_{\mathbb{P}^{1}_{R} \setminus \mathbb{Z} } \text{ trivial }
+\end{align}\]</span></p>
+<p>So main theorem reduces to showing that for all <span
+class="math inline">\(\mathcal{E} \rightarrow  \mathbb{P}^{1}_{R}
+G\)</span>-torsor, <span class="math display">\[\begin{equation}
+\mathcal{E}_{\{t = \infty\}} \text{ trivial }
+\implies  \mathcal{E}|_{\{t=0\}} \text{ trivial}.
+\end{equation}\]</span></p>
+<div class="theorem">
+<p><strong>(BCS 2025)</strong></p>
+<p>For <span class="math inline">\(G/k\)</span> smooth, <span
+class="math inline">\(E \rightarrow  \mathbb{P}_{k}^{1}\)</span> <span
+class="math inline">\(G\)</span>-torsion, the following are
+equivalent:</p>
+<ol type="1">
+<li><span class="math inline">\(E|_{t=\infty}\)</span> trivial</li>
+<li><span class="math inline">\(E|_{\mathbb{A}^{1}_{k}}\)</span>
+trival</li>
+<li><span class="math inline">\(E\)</span> Zariski locally trivial</li>
+</ol>
+<p>If <span class="math inline">\(G\)</span> is quasi reductive, the
+above three are equivalent to</p>
+<ol start="4" type="1">
+<li><span class="math inline">\(\exists \lambda: \mathbb{G}_{m}
+\rightarrow  G\)</span>, <span class="math inline">\(E \simeq
+\lambda_{*} O(1)\)</span> and moreover <span
+class="math display">\[\begin{align}
+H^{1}(\mathbb{P}^{1}_{k}, G ) &amp; \simeq
+\mathrm{Hom}(\mathbb{G}_{m},G) / G(k) \\
+\lambda_{k} O(1) &amp; \leftarrow \lambda
+\end{align}\]</span></li>
+</ol>
+</div>
+<ul>
+<li>For <span class="math inline">\(G=\mathrm{GL}_{n}\)</span>, this is
+known due to Grothendieck 1957</li>
+<li><span class="math inline">\(G\)</span> reductive is Herloer 1968
+(<span class="math inline">\(k=\overline{k}\)</span>) and generalized by
+Bizwas-Nagaraj (forall <span class="math inline">\(k\)</span>)</li>
+<li>False if <span class="math inline">\(G= \mathbb{G}_{m} \times
+\mathbb{G}_{m}\)</span></li>
+</ul>
+<p><strong>Proof idea</strong>: <span
+class="math inline">\(\mathbb{P}^{1}_{k} = \mathbb{A}^{2}_{k} \setminus
+\{0\}/ \mathbb{G}_{m} \rightarrow  [\mathbb{A}^{2}/
+\mathbb{G}_{m}]\)</span>. <span class="math display">\[\begin{equation}
+H^{1}(\mathbb{P}^{1},G) \leftarrow H^{1}([\mathbb{A}^{2}/\mathbb{G}_{m},
+G ]) \xrightarrow[]{} H^{1}(B \mathbb{G}_{m}, G).
+\end{equation}\]</span></p>
+<p><em>At this point the talk got extremely technical and I gave up on
+taking notes.</em></p>
+<hr />
+	<small>	<p class="date">This page was updated on February 2, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
