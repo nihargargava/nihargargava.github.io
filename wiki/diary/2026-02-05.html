@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-02-05" />
+  <title>As hyperbolic as they Comm</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">As hyperbolic as they Comm</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#motivation" id="toc-motivation">Motivation</a></li>
+<li><a href="#examples" id="toc-examples">Examples</a></li>
+<li><a href="#some-results" id="toc-some-results">Some results</a></li>
+<li><a href="#commutator-of-a-group"
+id="toc-commutator-of-a-group">Commutator of a group</a></li>
+</ul>
+</nav>
+
+
+
+<p>Nir Lazarovich is the speaker. He works at Technion in Israel. I am
+attending this seminar at the mathematics department at TIFR.</p>
+<h2 id="introduction">Introduction</h2>
+<p><span class="math inline">\(\Gamma\)</span> a f.g. group is
+hyperbolic if it is <span class="math inline">\(X =
+\mathrm{Cay}(\Gamma,S)\)</span> is hyperbolic, where <span
+class="math inline">\(\langle S\rangle = \Gamma\)</span> is a finite
+generating set. The Cayley tree being hyperbolic is equivalent to <span
+class="math display">\[\begin{equation}
+\exists \delta &gt; 0, \ \forall x,y,z \in X, [x,z] \subseteq N_{\delta}
+( [x,y] \cup [y,z]).
+\end{equation}\]</span> Here <span class="math inline">\([x,y]\)</span>
+is the shortest path between <span class="math inline">\(x,y\)</span>
+and <span class="math inline">\(N_{\delta}(A)\)</span> is the <span
+class="math inline">\(\delta\)</span>-neighbourhood of a set <span
+class="math inline">\(A\)</span>.</p>
+<h2 id="motivation">Motivation</h2>
+<figure>
+<embed src="images/IMG_20260205_140548317.jpg" />
+<figcaption aria-hidden="true">Nir explains why hyperbolic groups are at
+the center of interest</figcaption>
+</figure>
+<h2 id="examples">Examples</h2>
+<p>Just to get out of the way, <span
+class="math inline">\(\Gamma\)</span> is always torsion free for the
+rest of this talk.</p>
+<p>Here are some examples.</p>
+<ul>
+<li>Trivial group <span class="math inline">\(\{1\}\)</span></li>
+<li><span class="math inline">\(\mathbb{Z}\)</span></li>
+<li><span class="math inline">\(\mathbb{F}_{n}\)</span> or any finite
+group</li>
+<li><span class="math inline">\(\pi( \text{ genus 2 surface
+})\)</span></li>
+<li><span class="math inline">\(\pi_{1}( \text{ closed hyperbolic
+$3$-manifold })\)</span></li>
+</ul>
+<h2 id="some-results">Some results</h2>
+<div class="theorem">
+<p><strong>(Sela)</strong> 1. (not <span class="math inline">\(A \cdot
+B\)</span> with respect to <span
+class="math inline">\(\mathbb{Z}\)</span>). 1-ended hyperbolic groups
+are co-Hopfian i.e. <span class="math inline">\(\Gamma \simeq H
+\subseteq \Gamma\)</span>.</p>
+<p><strong>(Sela)</strong> 2. If <span class="math inline">\(H \subseteq
+\Gamma\)</span> are hyperbolic then <span
+class="math inline">\(H\)</span> is a free product of surface and free
+groups, <span class="math inline">\(\Gamma = A *_{\mathbb{Z}}
+B\)</span>.</p>
+<strong>(Paulin)</strong> 3. If <span
+class="math inline">\(\Gamma\)</span> does not split over <span
+class="math inline">\(\mathbb{Z}\)</span> then <span
+class="math inline">\(|\mathrm{Out}(F)|&lt; \infty\)</span>.
+</div>
+<div class="definition">
+<p>A (abstract) commensurator of <span
+class="math inline">\(\Gamma\)</span> is an isomorphism <span
+class="math inline">\(\varphi: H_{1} \xrightarrow[\simeq]{}
+H_{2}\)</span> such that <span class="math inline">\(H_{1} \subseteq
+\Gamma\)</span>, <span class="math inline">\(| \Gamma : H_{i}| &lt;
+\infty\)</span></p>
+</div>
+<div class="question">
+<p><strong>(Whyte)</strong></p>
+<p>Can <span class="math inline">\(1\)</span>-ended hyperbolic group
+<span class="math inline">\(\Gamma\)</span> have <span
+class="math inline">\(H_{1} \simeq H_{2} &lt; \Gamma\)</span> of
+different indices?</p>
+</div>
+<div class="theorem">
+<p><strong>(Stark-Woodhouse)</strong></p>
+<p>Yes, <span class="math inline">\(\exists \Gamma\)</span> 1-end
+hyperbolic such that <span class="math display">\[\begin{equation}
+    H_{1} \simeq H_{2} \leq \Gamma \text{ such that } [\Gamma: H_{1} ]
+&lt; \infty \text{ and  }[\Gamma : H_{2}] = \infty
+\end{equation}\]</span></p>
+</div>
+<div class="definition">
+<p><span class="math inline">\(\Gamma\)</span> is a finite index rigid
+if <span class="math inline">\(\forall H_{1} , H_{2} \subseteq
+\Gamma\)</span> of finite index if <span class="math inline">\(H_{1}
+\simeq H_{2} \implies  [\Gamma: H_{1}] = [\Gamma : H_{2}]\)</span>.</p>
+</div>
+<div class="example">
+<p><span class="math inline">\(\mathbb{Z}\)</span> is not f.i.r because
+<span class="math inline">\(\mathbb{Z} \simeq 2 \mathbb{Z}\)</span>.</p>
+</div>
+<div class="theorem">
+<p><strong>(L., 2023)</strong></p>
+<p>If <span class="math inline">\(\Gamma\)</span> is hyperbolic
+non-elementary then <span class="math inline">\(\Gamma\)</span> is
+f.i.r.</p>
+</div>
+<div class="theorem">
+<p><strong>(L.-Rahamain-Sisto, 25)</strong></p>
+<p><span class="math inline">\(\mathbb{Z} \simeq \Gamma\)</span> is t.f.
+hyperbolic relative to type <span class="math inline">\(F\)</span> NRH
+proper subgroups, then <span class="math inline">\(\Gamma\)</span> is
+f.i.r.</p>
+</div>
+<div class="definition">
+<p><span class="math inline">\(\Gamma \leq G\)</span> then <span
+class="math inline">\(\mathrm{Comm}_{G}(\Gamma)\)</span> is defined as
+<span class="math display">\[\begin{equation}
+\mathrm{Comm}_{G}(\Gamma) = \{ g\in G \mid [\Gamma : \Gamma \cap g
+\Gamma g^{-1}] &lt; \infty, [g \Gamma g^{-1},  \dots ] &lt; \infty\}.
+\end{equation}\]</span> We also define <span
+class="math display">\[\begin{equation}
+\mathrm{N}_{G}(\Gamma) = \{ g\in G \mid  g \Gamma g^{-1} = \Gamma \}
+\end{equation}\]</span></p>
+</div>
+<p><span class="math display">\[\begin{equation}
+\Gamma \simeq G \Leftrightarrow N_{G}(\Gamma) = G
+\end{equation}\]</span></p>
+<div class="definition">
+<p><span class="math inline">\(\Gamma\)</span> be a normal subgroup
+<span class="math inline">\(G\)</span> if <span
+class="math inline">\(\mathrm{Comm}_{G}(\Gamma) = G\)</span>: almost
+normal commensurated subgroups.</p>
+</div>
+<p>There is an example of this given by <span
+class="math display">\[\begin{equation}
+G = \langle a, t \mid t a^{p} t^{-1} = a^{q}\rangle
+\end{equation}\]</span></p>
+<p>If <span class="math inline">\(G\)</span> is finitely generated, one
+has <span class="math display">\[\begin{equation}
+\Gamma \triangleleft G \Leftrightarrow \Gamma - \mathrm{Stab}_{G}(v)
+\text{ for an action } G \curvearrowright\underbrace{Y}_{\text{ hc.
+finite graph}.}
+\end{equation}\]</span></p>
+<div class="theorem">
+<p><strong>(L-Margolis-Mj)</strong></p>
+<p>If <span class="math inline">\(\Gamma \triangleleft G\)</span> is
+hyperbolic then <span class="math inline">\(\Gamma\)</span> is a free
+product of surface and free groups.</p>
+</div>
+<p><em>(Then there was a sketch of the proof which was a bit too
+technical for me)</em></p>
+<h2 id="commutator-of-a-group">Commutator of a group</h2>
+<p><span class="math display">\[\begin{equation}
+\mathrm{Comm}(\Gamma) = \{ \phi :  H_{1} \xrightarrow[\simeq]{} H_{2}
+\mid H_{i} \leq_{ \text{ f.i. }} \Gamma \} / \sim
+\end{equation}\]</span> A priori <span
+class="math inline">\(\mathrm{Comm}(\Gamma)\)</span> is a groupoid but
+by passing to subgroup <span class="math inline">\(H_{1} \cap
+H_{2}\)</span> which are finite index in both <span
+class="math inline">\(H_{1},H_{2}\)</span> one can compose maps.
+Therefore this becomes a group.</p>
+<div class="example">
+For example, <span class="math display">\[\begin{equation}
+\mathrm{Comm}(\mathbb{Z}) \simeq \mathbb{Q}^{\times}.
+\end{equation}\]</span> To see this, observe that <span
+class="math inline">\(q \mathbb{Z} \rightarrow  p \mathbb{Z}\)</span> is
+the map <span class="math inline">\(x \mapsto  \pm \tfrac{p}{q}
+x\)</span>.
+</div>
+<div class="example">
+<span class="math display">\[\begin{equation}
+\underbrace{\pi_{1} ( \text{ closed hyperbolic $3$-manifolds
+})}_{\Gamma} \leq \mathrm{PSL}_{2}(\mathbb{C})
+\end{equation}\]</span>
+</div>
+<div class="example">
+<span class="math display">\[\begin{equation}
+\mathrm{Comm}_{\mathrm{PSL}_{2}(\mathbb{C})}(
+\mathrm{PSL}_{2}(\mathbb{Z})) \geq \mathrm{PSL}_{2}(\mathbb{Q})
+\end{equation}\]</span>
+</div>
+<div class="question">
+<span class="math inline">\(\Gamma\)</span> is rigid <span
+class="math inline">\(\implies\)</span> <span
+class="math inline">\((\mathrm{Comm}(\Gamma) : \mathrm{Inn}\Gamma) &lt;
+\infty\)</span>
+</div>
+<div class="theorem">
+<p><strong>(Mostow rigidity)</strong>:</p>
+<p>For <span class="math display">\[\begin{equation}
+\Gamma = \pi_{1}( \text{ closed hyperbolic 3-manifold}),
+\end{equation}\]</span> one has <span
+class="math display">\[\begin{equation}
+    \mathrm{Comm}(\Gamma) = \mathrm{Comm}_{\mathrm{PSL}_{2}(\mathbb{C})}
+(\Gamma)
+\end{equation}\]</span></p>
+</div>
+<div class="conjecture">
+<p><strong>(Gromov)</strong></p>
+<p><span class="math inline">\(\Gamma\)</span> rigid hyperbolic then
+<span class="math inline">\(\exists\)</span> locally compact topological
+<span class="math inline">\(G\)</span> s.t. <span
+class="math inline">\(\Gamma \leq G\)</span> is a discrete cocompact and
+<span class="math inline">\(\mathrm{Comm}_{G}(\Gamma) =
+\mathrm{Comm}(\Gamma)\)</span>.</p>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on February 5, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
