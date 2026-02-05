@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-02-04" />
+  <title>Momeny SOS Heirarchy</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Momeny SOS Heirarchy</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#recollection" id="toc-recollection">Recollection</a></li>
+<li><a href="#duality" id="toc-duality">Duality</a></li>
+</ul>
+</nav>
+
+
+
+<p>I am attending a seminar given by Luca from Tromso at IIT Bombay in
+the Ramanujan hall. It seems this is part of some ongoing lecture
+series, so I don’t follow everything.</p>
+<h2 id="recollection">Recollection</h2>
+<p>Let <span class="math inline">\(K = \{ x \in \mathbb{R}^{n} \mid
+g_{1}(x) \geq 0 , \dots, g_{m}(x) \geq 0\}\)</span> be compact for some
+<span class="math inline">\(g_{i} \in \mathbb{R}[x] \in
+\mathbb{R}[x_{1},\dots,x_{n]}\)</span>.</p>
+<p>Want to minimize some polynomial <span
+class="math inline">\(p(x)\)</span>. This is stated as (POP) <span
+class="math inline">\({P}^{\min} = \inf\{ p(x) \mid x \in K\} = \sup \{
+\lambda \in \mathbb{R} \mid p - \lambda \in P(K)\}\)</span>, Here <span
+class="math display">\[\begin{equation}
+    P(K)  = \{p \in \mathbb{R}[X] \mid p \geq 0\},
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+\Sigma = \{ \Sigma q_{i}(x)^{2} \mid q_{i} \in \mathbb{R}[X] \},
+\end{equation}\]</span></p>
+<p>We call relaxation <span class="math inline">\(P_{d}^{\SOS} = \sup \{
+\lambda \in \mathbb{R} \mid p - \lambda \in Q(g_{1}\dots,g_{n})\} \geq
+d\)</span> where <span class="math display">\[\begin{equation}
+Q(g_{1},\dots,g_{n}) = \{ \sigma_{0} + g_{1} \sigma_{1} +\dots + g_{m}
+\sigma_{m} \mid \sigma_{i} \in \Sigma \}  .
+\end{equation}\]</span></p>
+<p>One has <span class="math inline">\(P_{d}^{\SOS}
+\rightarrow  P^{\SOS} = P^{\mind}\)</span></p>
+<h2 id="duality">Duality</h2>
+<p><span class="math display">\[\begin{align}
+P^{\min} &amp; = \inf \{ \int p(x) \diff \mu (x) \mid  \mu \text{
+prob  measure supported on $K$} \}  \\
+&amp; \leq  P^{\min} \leq p(x)
+\end{align}\]</span></p>
+<p><em>I don’t know what happened here</em></p>
+<p><span class="math display">\[\begin{equation}
+P^{\min} = \inf \{ L(p) \mid L \in \mathbb{R}[x]^{*}, \text{ integration
+wrt prob. measure supported on }K\}
+\end{equation}\]</span></p>
+<div class="theorem">
+<p><strong>(Havilland, 1936)</strong></p>
+<p>For <span class="math inline">\(L \in \mathbb{R}[X]^{*}\)</span> and
+<span class="math inline">\(K \subseteq \mathbb{R}^{n}\)</span> closed,
+the following are equivalent</p>
+<ol type="1">
+<li><span class="math inline">\(L\)</span> is an integration with
+respect to a measure supported on <span
+class="math inline">\(K\)</span></li>
+<li><span class="math inline">\(L(p) \geq 0\)</span> <span
+class="math inline">\(\forall p \in {P}(K)\)</span>.
+</div></li>
+</ol>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on February 4, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>

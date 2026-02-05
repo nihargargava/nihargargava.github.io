@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2026-02-01" />
+  <meta name="dcterms.date" content="2026-02-05" />
   <title>Matrix positivity preservers</title>
   <style>
     code{white-space: pre-wrap;}
@@ -111,20 +111,20 @@ class="math inline">\(\mathcal{F}_{\infty}\)</span>.</p>
 class="math inline">\(f(x)=x\)</span> also works. The class of <span
 class="math inline">\(f\)</span> that work is closed under addition,
 scaling by positive reals and pointwise limits. So it is a closed convex
-cone. It is also closed under product because of the <em>Schur product
-theorem (1911)</em>.</p>
+cone. It is also closed under pointwise multiplication because of the
+<em>Schur product theorem (1911)</em>.</p>
 <div class="remark">
 <p>Schur showed that matrices preserve PSD condition under Hadamard
 products (which should be named after Schur actually). So this easily
 implies <span class="math inline">\(\mathcal{F}_{\infty}\)</span> being
 closed under products.</p>
 </div>
-<p>These above remarks can be collected to this theorem.</p>
+<p>These above remarks can be collected into the following theorem.</p>
 <div class="theorem">
-<p><strong>(1925) Polya-Szego’s book exercise</strong></p>
+<p><strong>(1925) Polya,-Szego’s book exercise</strong></p>
 <p>The positivity preservers <span
 class="math inline">\(\mathcal{F}_{\infty}\)</span>(I) contain the
-closure of all polynomials and therefore contains all power series with
+closure of all polynomials, and therefore contains all power series with
 non-negative coefficients that are convergent on <span
 class="math inline">\(I\)</span>.</p>
 </div>
@@ -151,12 +151,12 @@ that these are all.</li>
 </ol>
 <p><strong>(Herz, 1963)</strong></p>
 <ol start="3" type="1">
-<li>No, for <span class="math inline">\(I \subseteq \mathbb{C}\)</span>
-the open unit disc beyond Rudin’s conjecture.</li>
+<li>Not beyond Rudin’s conjecture, for <span class="math inline">\(I
+\subseteq \mathbb{C}\)</span> the open unit.</li>
 </ol>
 </div>
 <p>Now, let’s go back to <span class="math inline">\(I=[-1,1]\)</span>.
-In Rudin’s paper, he also noticed that the end points might introduce
+In Rudin’s paper, he also noticed that the endpoints might introduce
 some new functions. For example <span
 class="math inline">\(x,x^{3},x^{5},\dots\)</span> converge to <span
 class="math inline">\(\mathbf{1}_{1}- \mathbf{1}_{-1}\)</span> where
@@ -178,7 +178,8 @@ class="math inline">\(k \geq 0\)</span>, <span
 class="math inline">\(\varphi_{k}(x) = x^{k}\)</span>.</p>
 </div>
 <p>There is also a related work for the closed disc for which one could
-see Apoorva’s note.</p>
+see Apoorva’s survey <span class="citation" data-cites="Kh25">[<a
+href="#ref-Kh25" role="doc-biblioref">1</a>]</span>.</p>
 <h2 id="for-fixed-dimension">For fixed dimension</h2>
 <p>Define <span class="math display">\[\begin{equation}
     \mathcal{F}_{n}(I) = \{ \text{ positivity preservers for $n \times
@@ -191,13 +192,13 @@ class="math display">\[\begin{equation}
 <ol type="1">
 <li><span class="math inline">\(\mathcal{F}_{1}(I)\)</span> is trivial.
 It is just all the functions taking <span class="math inline">\(I \cap
-\mathbb{R}_{&gt;0}\)</span> to <span
-class="math inline">\(\mathbb{R}_{&gt;0}\)</span>.</li>
+\mathbb{R}_{\geq 0}\)</span> to <span class="math inline">\(\mathbb{R}_{
+\geq 0}\)</span>.</li>
 <li>For <span class="math inline">\(\mathcal{F}_{2}((0,\infty))\)</span>
-was solved by Vasudeva. It is the cone of functions satisfying <span
-class="math inline">\(f \geq 0\)</span>, <span
+the problem was solved by Vasudeva. It is the cone of functions
+satisfying <span class="math inline">\(f \geq 0\)</span>, <span
 class="math inline">\(f\)</span> non-decreasing and <span
-class="math inline">\(f\)</span> satisfying multiplicative midconvexity.
+class="math inline">\(f\)</span> satisfying multiplicative midconvexity:
 <span class="math display">\[\begin{equation}
 f(x)f(y) \geq f(\sqrt{xy})^{2}
 \end{equation}\]</span> It’s the same thing as saying <span
@@ -215,7 +216,7 @@ class="math inline">\(\mathcal{F}_{n}(I)\)</span>? This is partially
 known. <a href="#fn1" class="footnote-ref" id="fnref1"
 role="doc-noteref"><sup>1</sup></a></p>
 <p>Apoorva has a result where they show that <span
-class="math inline">\(\mathcal{P}_{n}(I)\)</span> have polynomials with
+class="math inline">\(\mathcal{F}_{n}(I)\)</span> has polynomials with
 non-negative coefficients. This is about his work with Terry Tao.</p>
 <p>There is also a theorem of Loewner (1967).<a href="#fn2"
 class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
@@ -236,15 +237,15 @@ go into this aspect in more detail.</p>
 <embed src="images/IMG_20260128_153925694.jpg" />
 <figcaption aria-hidden="true">Apoorva explains: weather in an area of
 the planet may correlate very weakly with weather of some other area. We
-want to subtitute these entries in the correlation matrix to zero
+want to substitute these entries in the correlation matrix to zero
 without destroying the positivity of the correlation
 matrix.</figcaption>
 </figure>
 <h2 id="connection-to-sphere-packing">Connection to sphere packing</h2>
 <p>Let <span class="math inline">\((X_{n},d)\)</span> be a finite metric
-space with <span class="math inline">\(n\)</span> elements. All the data
-of <span class="math inline">\((X_{n},d)\)</span> is inside a distance
-matrix: <span class="math display">\[\begin{equation}
+space with <span class="math inline">\(n+1\)</span> elements. All the
+data of <span class="math inline">\((X_{n},d)\)</span> is inside a
+distance matrix: <span class="math display">\[\begin{equation}
 D_{X} = (d_{X_{n}}(x_{i},x_{j}))_{i,j=0}^{n}
 \end{equation}\]</span></p>
 <div class="theorem">
@@ -267,26 +268,26 @@ class="math inline">\(X_{n}\)</span>?</p>
 </div>
 <div class="theorem">
 <p><strong>(Schoenberg, 1935)</strong></p>
-<p>Construct <span class="math inline">\(\mathrm{CM}(X) = (d_{i0}^{2} +
-d_{j0}^{2} - d_{ij}^{2})_{i,j=1}^{n}\)</span>. Then <span
+<p>Construct <span class="math inline">\(\mathrm{CM}(X_{n}) =
+(d_{i0}^{2} + d_{j0}^{2} - d_{ij}^{2})_{i,j=1}^{n}\)</span>. Then <span
 class="math inline">\(X_{n}\)</span> embeds in <span
 class="math inline">\(\mathbb{R}^{n}\)</span> with <span
 class="math inline">\(\|\cdot\|_{2}\)</span>-norm if and only if <span
-class="math inline">\(\mathrm{CM}(X)\)</span> is PSD. Also, minimum
+class="math inline">\(\mathrm{CM}(X_{n})\)</span> is PSD. Also, minimum
 dimension <span class="math inline">\(m =
-\mathrm{rank}(\mathrm{CM}(X))\)</span>.</p>
+\mathrm{rank}(\mathrm{CM}(X_{n}))\)</span>.</p>
 </div>
 <p>Let us prove the <span class="math inline">\(\implies\)</span>
 implication. Observe that <span class="math display">\[\begin{align}
-    d_{10}^{2} + d_{j0}^{2} - d_{ij}^{2} &amp;    = \|x_{i}-x_{0}\|^{2}
+    d_{i0}^{2} + d_{j0}^{2} - d_{ij}^{2} &amp;    = \|x_{i}-x_{0}\|^{2}
 + \|x_{j}-x_{0}\|^{2} - \|(x_{i}-x_{0}) - (x_{j}- x_{0})\|^{2} \\
     &amp; = 2 \langle x_{i} - x_{0}, x_{j} - x_{0}\rangle.
 \end{align}\]</span> This shows that <span
-class="math inline">\(\mathrm{CM}(X)\)</span> is a Gram matrix.</p>
+class="math inline">\(\mathrm{CM}(X_n)\)</span> is a Gram matrix.</p>
 <p>The other direction is to basically find <span
 class="math inline">\(n\)</span> points such that <span
-class="math inline">\(\mathrm{CM}(X)\)</span> is a Gram matrix of those
-<span class="math inline">\(n\)</span>-points and map <span
+class="math inline">\(\mathrm{CM}(X_{n})\)</span> is a Gram matrix of
+those <span class="math inline">\(n\)</span>-points and map <span
 class="math inline">\(X\)</span> to those <span
 class="math inline">\(n\)</span>-points.</p>
 <p>In the same paper, Schoenberg also dealt with embedding <span
@@ -300,7 +301,7 @@ doorstep of positivity preservers.</p>
 \rightarrow  (S^{n}, \angle)\)</span> for the <span
 class="math inline">\(n\)</span>-dimensional sphere if and only if</p>
 <ol type="1">
-<li><span class="math inline">\(\mathrm{diam}(X) \leq \pi\)</span></li>
+<li><span class="math inline">\(\mathrm{diam}(X) \leq \pi\)</span>,</li>
 <li><span class="math inline">\(\cos [D_{X}] \in
 \mathbb{P}_{n+1}\)</span>. That is, cosine is a Schoenberg-positive
 definite function on <span class="math inline">\(X\)</span> <a
@@ -388,7 +389,7 @@ Abelian group. Then <span class="math inline">\(f: G \rightarrow
 \mathbb{C}\)</span> is a continuous positive definite function if and
 only if there exists some <span class="math inline">\(\mu \in
 M(\widehat{G})\)</span>=finite, positive measures on <span
-class="math inline">\(\widehat{G}\)</span> such that <span
+class="math inline">\(\widehat{G}\)</span>, such that <span
 class="math display">\[\begin{equation}
     f = \int_{\widehat{G}}^{} \chi(t) \, \mathrm{d}\mu (\chi)
 \end{equation}\]</span></p>
@@ -435,25 +436,29 @@ role="doc-endnotes">
 <li id="fn1"><p><em>Apoorva had some comments on this, which I have
 reproduced below:</em><br />
 - By Polya-Szego 1925, any polynomial with nonnegative coefficients
-preserves positivity in all dimensions.<br />
-- Now if you want preservers in a fixed dimension, well, they have to
-preserve psd on a far smaller set of text matrices (only of a single
-dimension), so one would expect lots more preservers. Even among
+preserves positivity in all dimensions, when applied entry-wise.<br />
+- Now if you want entry-wise preservers in a fixed dimension, well, they
+have to preserve psd on a far smaller set of test matrices (only of a
+single dimension), so one would expect lots more preservers. Even among
 polynomials!<br />
-- But from 1925 to 2016 there was no example known, of a dimension
-n&gt;2 and a polynomial preserver in dimension n, which has a negative
+- But from 1925 to 2016 there was no example known, of a dimension <span
+class="math inline">\(n&gt;2\)</span> and a polynomial preserver in
+dimension <span class="math inline">\(n\)</span>, which has a negative
 coefficient.<br />
-- We worked out the first such examples with Belton-Guillot-Putinar in a
-restricted setting, and then with Tao in far more generality. (Also for
-sums of real powers, not just for polynomials.)<br />
-- For dimension n, what we have worked out fully is, all polynomials
-with up to n+1 monomials, which preserve positivity on matrices with
-positive entries.<a href="#fnref1" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
+- In 2016, we worked out the first such examples with
+Belton-Guillot-Putinar in a restricted setting, and then with Tao in far
+more generality. (Also for sums of real powers, not just for
+polynomials.)<br />
+- For dimension <span class="math inline">\(n\)</span>, what we have
+worked out fully is, all polynomials with up to <span
+class="math inline">\(n+1\)</span> monomials, which preserve positivity
+on matrices with positive entries.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p><em>Apoorva adds:</em> modulo small tweaks, it remains
-essentially the only necessary condition for a general function f and an
-integer n&gt;2 to date!<a href="#fnref2" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
+essentially the only necessary condition for a general function <span
+class="math inline">\(f\)</span> and an integer <span
+class="math inline">\(n&gt;2\)</span> to date!<a href="#fnref2"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p><em>Apoorva adds:</em> In case you want, it may be worth
 pointing out the distinction between this notion of positive definite
 functions, and the classical, “Bochner” notion, which has domain pairs
@@ -463,7 +468,7 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <hr />
-	<small>	<p class="date">This page was updated on February 1, 2026.<br>
+	<small>	<p class="date">This page was updated on February 5, 2026.<br>
 		<a href="../index.html">Main Page</a> </p>
       </small>
 </body>
