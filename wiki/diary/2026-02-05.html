@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2026-02-05" />
+  <meta name="dcterms.date" content="2026-02-06" />
   <title>As hyperbolic as they Comm</title>
   <style>
     code{white-space: pre-wrap;}
@@ -101,20 +101,26 @@ $3$-manifold })\)</span></li>
 </ul>
 <h2 id="some-results">Some results</h2>
 <div class="theorem">
-<p><strong>(Sela)</strong> 1. (not <span class="math inline">\(A \cdot
-B\)</span> with respect to <span
-class="math inline">\(\mathbb{Z}\)</span>). 1-ended hyperbolic groups
-are co-Hopfian i.e. <span class="math inline">\(\Gamma \simeq H
-\subseteq \Gamma\)</span>.</p>
-<p><strong>(Sela)</strong> 2. If <span class="math inline">\(H \subseteq
-\Gamma\)</span> are hyperbolic then <span
-class="math inline">\(H\)</span> is a free product of surface and free
-groups, <span class="math inline">\(\Gamma = A *_{\mathbb{Z}}
-B\)</span>.</p>
-<strong>(Paulin)</strong> 3. If <span
-class="math inline">\(\Gamma\)</span> does not split over <span
-class="math inline">\(\mathbb{Z}\)</span> then <span
-class="math inline">\(|\mathrm{Out}(F)|&lt; \infty\)</span>.
+<p><strong>(Sela)</strong></p>
+<ol type="1">
+<li>Being torsion-free and 1-ended is equivalent to being freely
+indecomposable, i.e. not being trivial, <span
+class="math inline">\(\mathbb{Z}\)</span> or a non-trivial free product
+<span class="math inline">\(A \ast B\)</span>.</li>
+</ol>
+<p><strong>(Sela)</strong></p>
+<ol start="2" type="1">
+<li>If <span class="math inline">\(\Gamma \subseteq G\)</span> is normal
+then <span class="math inline">\(\Gamma\)</span> is a free product of
+surface and free groups, <span class="math inline">\(\Gamma = A
+*_{\mathbb{Z}} B\)</span>.</li>
+</ol>
+<p><strong>(Paulin)</strong></p>
+<ol start="3" type="1">
+<li>If <span class="math inline">\(\Gamma\)</span> does not split over
+<span class="math inline">\(\mathbb{Z}\)</span> then <span
+class="math inline">\(|\mathrm{Out}(F)|&lt; \infty\)</span>.</li>
+</ol>
 </div>
 <div class="definition">
 <p>A (abstract) commensurator of <span
@@ -122,7 +128,9 @@ class="math inline">\(\Gamma\)</span> is an isomorphism <span
 class="math inline">\(\varphi: H_{1} \xrightarrow[\simeq]{}
 H_{2}\)</span> such that <span class="math inline">\(H_{1} \subseteq
 \Gamma\)</span>, <span class="math inline">\(| \Gamma : H_{i}| &lt;
-\infty\)</span></p>
+\infty\)</span>. Here both <span class="math inline">\(H_{1},
+H_{2}\)</span> are some subgroups of <span
+class="math inline">\(\Gamma\)</span>.</p>
 </div>
 <div class="question">
 <p><strong>(Whyte)</strong></p>
@@ -167,36 +175,40 @@ f.i.r.</p>
 class="math inline">\(\mathrm{Comm}_{G}(\Gamma)\)</span> is defined as
 <span class="math display">\[\begin{equation}
 \mathrm{Comm}_{G}(\Gamma) = \{ g\in G \mid [\Gamma : \Gamma \cap g
-\Gamma g^{-1}] &lt; \infty, [g \Gamma g^{-1},  \dots ] &lt; \infty\}.
+\Gamma g^{-1}] &lt; \infty, [g \Gamma g^{-1},  \Gamma \cap g \Gamma
+g^{-1} ] &lt; \infty\}.
 \end{equation}\]</span> We also define <span
 class="math display">\[\begin{equation}
 \mathrm{N}_{G}(\Gamma) = \{ g\in G \mid  g \Gamma g^{-1} = \Gamma \}
 \end{equation}\]</span></p>
 </div>
 <p><span class="math display">\[\begin{equation}
-\Gamma \simeq G \Leftrightarrow N_{G}(\Gamma) = G
+\Gamma \text{ is normal in } G \Leftrightarrow N_{G}(\Gamma) = G
 \end{equation}\]</span></p>
 <div class="definition">
-<p><span class="math inline">\(\Gamma\)</span> be a normal subgroup
-<span class="math inline">\(G\)</span> if <span
-class="math inline">\(\mathrm{Comm}_{G}(\Gamma) = G\)</span>: almost
-normal commensurated subgroups.</p>
+<p><span class="math inline">\(\Gamma\)</span> be almost normal subgroup
+in <span class="math inline">\(G\)</span> if <span
+class="math inline">\(\mathrm{Comm}_{G}(\Gamma) = G\)</span>: aka
+commensurated subgroups.</p>
 </div>
 <p>There is an example of this given by <span
 class="math display">\[\begin{equation}
-G = \langle a, t \mid t a^{p} t^{-1} = a^{q}\rangle
-\end{equation}\]</span></p>
+G = \langle a, t \mid t a^{p} t^{-1} = a^{q}\rangle.
+\end{equation}\]</span> Here the subgroup <span
+class="math inline">\(\Gamma = \langle a\rangle\)</span> is almost
+normal.</p>
 <p>If <span class="math inline">\(G\)</span> is finitely generated, one
 has <span class="math display">\[\begin{equation}
-\Gamma \triangleleft G \Leftrightarrow \Gamma - \mathrm{Stab}_{G}(v)
-\text{ for an action } G \curvearrowright\underbrace{Y}_{\text{ hc.
-finite graph}.}
+\Gamma \text{ almost normal in } G \Leftrightarrow \Gamma -
+\mathrm{Stab}_{G}(v) \text{ for an action } G
+\curvearrowright\underbrace{Y}_{\text{ hc. finite graph}.}
 \end{equation}\]</span></p>
 <div class="theorem">
 <p><strong>(L-Margolis-Mj)</strong></p>
-<p>If <span class="math inline">\(\Gamma \triangleleft G\)</span> is
-hyperbolic then <span class="math inline">\(\Gamma\)</span> is a free
-product of surface and free groups.</p>
+<p>If <span class="math inline">\(\Gamma\)</span> is almost normal in
+<span class="math inline">\(G\)</span> is hyperbolic then <span
+class="math inline">\(\Gamma\)</span> is a free product of surface and
+free groups.</p>
 </div>
 <p><em>(Then there was a sketch of the proof which was a bit too
 technical for me)</em></p>
@@ -233,9 +245,12 @@ x\)</span>.
 <div class="question">
 <span class="math inline">\(\Gamma\)</span> is rigid <span
 class="math inline">\(\implies\)</span> <span
-class="math inline">\((\mathrm{Comm}(\Gamma) : \mathrm{Inn}\Gamma) &lt;
-\infty\)</span>
+class="math inline">\((\mathrm{Comm}(\Gamma) : \mathrm{Inn}(\Gamma))
+&lt; \infty\)</span>
 </div>
+<p>The answer is negative. The example of <span
+class="math inline">\(\mathrm{PSL}_{2}(\mathbb{Z})\)</span> is supposed
+to illustrate this.</p>
 <div class="theorem">
 <p><strong>(Mostow rigidity)</strong>:</p>
 <p>For <span class="math display">\[\begin{equation}
@@ -256,7 +271,7 @@ class="math inline">\(\Gamma \leq G\)</span> is a discrete cocompact and
 \mathrm{Comm}(\Gamma)\)</span>.</p>
 </div>
 <hr />
-	<small>	<p class="date">This page was updated on February 5, 2026.<br>
+	<small>	<p class="date">This page was updated on February 6, 2026.<br>
 		<a href="../index.html">Main Page</a> </p>
       </small>
 </body>
