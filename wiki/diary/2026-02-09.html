@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2026-02-09" />
+  <meta name="dcterms.date" content="2026-02-10" />
   <title>On the values of a binary quadratic form that can be written as a norm in some Abelian extensions</title>
   <style>
     code{white-space: pre-wrap;}
@@ -77,11 +77,12 @@ class="math display">\[\begin{equation}
 \text{ such that }(*) \text{ holds for }s,t\}.
 \end{equation}\]</span> We will let <span class="math inline">\(B
 \rightarrow  \infty\)</span></p>
-<p>The conjecture of Longhram-Smeet is the following. Let <span
+<p>The conjecture of Loughram-Smeets is the following. Let <span
 class="math display">\[\begin{equation}
 \pi: X \rightarrow  \mathbb{P}^{m}
 \end{equation}\]</span> be a morphism that is dominant on generic fibres
-and geom. irreducible <em>(what is that?)</em> and let <span
+and geom. irreducible <a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> and let <span
 class="math inline">\(X\)</span> be projective and smooth. Then <span
 class="math display">\[\begin{equation}
 N_{\mathrm{glob}}(\pi,B) = \#\{ x \in \mathbb{P}^{n}(\mathbb{Q}) \mid
@@ -91,13 +92,18 @@ class="math display">\[\begin{equation}
 N_{\mathrm{loc}}(\pi,B) = \#\{ x \in \mathbb{P}^{n}(\mathbb{Q}) \mid
 H(x) \leq B, \pi^{-1}(x) \text{ is ELS}\}
 \end{equation}\]</span></p>
+<p><em>Matthieu adds later:</em> it is under some technical assumptions
+on <span class="math inline">\(\pi\)</span> that we expect the
+asymptotic formula</p>
 <p>ELS stands for everywhere locally solvable.</p>
 <div class="theorem">
 <p><strong>(2016)</strong></p>
 <p><span class="math display">\[\begin{equation}
 N_{\mathrm{loc}}(\pi,B) \ll \frac{B^{n+1}}{(\log B)^{\Delta(\pi)}}
 \text{  \ \  } \Delta(\pi) \geq 0
-\end{equation}\]</span></p>
+\end{equation}\]</span> Here <span
+class="math inline">\(\Delta(\pi)\)</span> is some invariant associated
+to <span class="math inline">\(\pi\)</span>.</p>
 </div>
 <div class="conjecture">
 <p><span class="math display">\[\begin{equation}
@@ -137,6 +143,8 @@ class="math display">\[\begin{equation}
 \mathrm{N}_{F,L}(B) \asymp\frac{B^{2}}{ (\log B)^{\alpha_{L,F}}}.
 \end{equation}\]</span></p>
 </div>
+<p>The upper bound is a consequence of a theorem of Nair and
+Tenenbaum.</p>
 <p><span class="math display">\[\begin{align}
 N_{L,F}(B)  &amp; = \sum_{|s| , |t| \leq B}  \mathbb{1}_{\exists x \in
 L: N_{L/\mathbb{Q}}(x) = F(s,t)}  \\
@@ -164,10 +172,10 @@ then <span class="math display">\[\begin{equation}
 \frac{1}{D^{\omega(k)}} = \sum_{d \mid k} \mu(d) \left( 1-
 \frac{1}{D}\right)^{\omega(k)} \mu(d)
 \end{equation}\]</span> We take <span
-class="math inline">\(\overline{\lambda_{D}}\)</span> supported in <span
+class="math inline">\({\lambda_{D}}^{-}\)</span> supported in <span
 class="math inline">\([1,B^{\varepsilon}]\)</span> and estimate this by
 <span class="math display">\[\begin{equation}
-N_{L,F}(B) \geq \sum_{d}^{} \overline{\lambda_{d}} \left( 1-
+N_{L,F}(B) \geq \sum_{d}^{} {\lambda_{d}}^{-} \left( 1-
 \tfrac{1}{D}\right)^{w(d)}
 \underbrace{\sum_{\substack{|s|,|t| \leq B \\ d \mid F(s,t)}}^{}
 \mu^{2}(F(s,t) ) \Omega_{L}(F(s,t))}_{M_{d}(B)},
@@ -185,7 +193,7 @@ class="math display">\[\begin{equation}
 \chi_{D-1}(k_{D-1})
 \end{equation}\]</span> and <span
 class="math display">\[\begin{equation}
-\Omega_{L}(n) = (1 * \psi_L)(n)
+r_{L}(n) = (1 * \psi_L)(n)
 \end{equation}\]</span></p>
 <p>Fix <span class="math inline">\(Z = B^{\frac{2}{D}}\)</span>.
 Contribution of <span class="math inline">\((k_{1},\dots,k_{D-1}) \in
@@ -198,6 +206,15 @@ and then <span class="math display">\[\begin{equation}
 \chi_{1}^{-1}(k_{1}&#39; k_{2} \dots k_{D-1})
 \chi_{2}(k_{2})  \chi_{D-1}(k_{D-1}),
 \end{equation}\]</span></p>
+<p><em>Matthieu adds later:</em> The reason why you can impose <span
+class="math inline">\(\chi(F(s,t)) = 1\)</span> is by imposing
+congruence conditions on <span class="math inline">\((s,t)\)</span>
+earlier (since we give a lower bound). Such condition exists because of
+the assumption that there exists a solution <span
+class="math inline">\((x,s,t)\)</span> to our problem. This is a
+consequence of the class field theory : <span
+class="math inline">\(F(s,t)\)</span> is a norm so it is in the kernel
+of the Artin reciprocity map.</p>
 <p>Denote <span class="math display">\[\begin{equation}
     \Lambda_{k,d}(B) =
 \#\{ (s,t) \in [- B,B]^{2} : [k,d] \mid F(s,t) \},
@@ -224,8 +241,22 @@ conclude that <span class="math display">\[\begin{equation}
 M_{d}(B) = g(d) B^{2} + O(B^{2- \varepsilon}), \text{ where  }g(d)
 \simeq \frac{1}{d}
 \end{equation}\]</span></p>
+<p><em>Matthieu adds later:</em> we conclude with the Rosser Iwaniec
+sieve</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
 <hr />
-	<small>	<p class="date">This page was updated on February 9, 2026.<br>
+<ol>
+<li id="fn1"><p><em>Mathieu explained later:</em> Geometrically integral
+means geometrically integral + geometrically irreducible, it essentially
+means that the polynomial defining your variety irreducible when you
+consider it as a polynomial in <span
+class="math inline">\(\overline{\mathbb{Q}}[x_0, \dots, x_n]\)</span>.<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<hr />
+	<small>	<p class="date">This page was updated on February 10, 2026.<br>
 		<a href="../index.html">Main Page</a> </p>
       </small>
 </body>
