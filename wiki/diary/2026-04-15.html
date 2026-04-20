@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-04-20" />
+  <title>Two seminars at SCMS</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Two seminars at SCMS</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#survivor-set-of-gauss-map-with-a-hole-at-1"
+id="toc-survivor-set-of-gauss-map-with-a-hole-at-1">Survivor set of
+Gauss map with a hole at 1</a>
+<ul>
+<li><a href="#first-motivation-main-results"
+id="toc-first-motivation-main-results">First motivation &amp; main
+results</a></li>
+<li><a href="#relation-with-the-survivor-sets-of-open-dynamical-system"
+id="toc-relation-with-the-survivor-sets-of-open-dynamical-system">Relation
+with the survivor sets of open dynamical system</a></li>
+<li><a href="#main-argument" id="toc-main-argument">Main
+argument</a></li>
+<li><a href="#intermediate-step" id="toc-intermediate-step">Intermediate
+step</a></li>
+<li><a href="#final-remarks" id="toc-final-remarks">Final
+remarks</a></li>
+</ul></li>
+<li><a href="#density-of-shapes-of-periodic-tori-part-i-the-cubic-case"
+id="toc-density-of-shapes-of-periodic-tori-part-i-the-cubic-case">Density
+of shapes of periodic tori: Part I (the cubic case)</a>
+<ul>
+<li><a href="#a-dynamical-problem" id="toc-a-dynamical-problem">A
+dynamical problem</a></li>
+<li><a href="#a-construction" id="toc-a-construction">A
+construction</a></li>
+<li><a href="#ordered-embeddings" id="toc-ordered-embeddings">Ordered
+embeddings</a></li>
+<li><a href="#dirichlets-unit-theorem"
+id="toc-dirichlets-unit-theorem">Dirichlet’s unit theorem</a>
+<ul>
+<li><a href="#congruence-conditions"
+id="toc-congruence-conditions">Congruence conditions</a></li>
+<li><a href="#parameters" id="toc-parameters">Parameters</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+<p>I am at the Shanghai Center of Mathematical Sciences at the Jiangwan
+campus of Fudan University in Shanghai. There are two seminars here
+today.</p>
+<h1 id="survivor-set-of-gauss-map-with-a-hole-at-1">Survivor set of
+Gauss map with a hole at 1</h1>
+<p>This was a talk by Lingmin Liau from the University of Wuhan. This is
+joint work with Cheng Liu.</p>
+<h2 id="first-motivation-main-results">First motivation &amp; main
+results</h2>
+<p>In 2003, there was a paper by Jun Wu asking “How many points have the
+same Engel and Sylvester expansions?” Let us explain what these
+expansions are.</p>
+<p><strong>Engel</strong>’s expansion is <span
+class="math display">\[\begin{equation}
+    x= \frac{1}{d_{1}} + \frac{1}{d_{1} d_{2}} + \frac{1}{d_{1} d_{2}
+d_{3}} + \dots, \text{ for } 2 \leq d_{1} \leq d_{2} \leq \dots
+\end{equation}\]</span></p>
+<p><strong>Sylvester</strong>’s expansion is <span
+class="math display">\[\begin{equation}
+    x = \frac{1}{s_{1}} + \frac{1}{s_{2}} + \frac{1}{s_{3}} + \dots
+\text{ where } s_{k+1} \geq s_{j}(s_{j} - 1)+ 1
+\end{equation}\]</span></p>
+<p>This is related to dynamics via the following map. <span
+class="math display">\[\begin{align}
+    T(x)  &amp; = x - \tfrac{1}{ \lfloor \frac{1}{x}\rfloor + 1}
+\implies  x \\
+     &amp; = \frac{1}{ \lfloor \frac{1}{x}\rfloor + 1 } + Tx  =
+\frac{1}{s_{1}} + \frac{1}{ \lfloor  \frac{1}{ Tx} \rfloor + 1} + T^{2}
+x \dots \\
+     &amp; = \frac{1}{s_{1}} + \frac{1}{ s_{2} }  + \dots
+\end{align}\]</span> There is a similar dynamics map for the first
+expansion which I did not understand.</p>
+<p>Now we define the set <span class="math display">\[\begin{equation}
+    E = \{x : d_{1} = s_{1} , d_{2} = s_{2} , \dots\}.
+\end{equation}\]</span> Then what is <span
+class="math inline">\(\dim_{H} E\)</span>? The main result of Jun Wu is
+that this dimension is <span class="math inline">\(1/2\)</span>.</p>
+<p>Before this Galombus showed in 1981, 1996 that the Lebesgue measure
+is 0.</p>
+<div class="question">
+<p><span class="math display">\[\begin{equation}
+E(\alpha) := \{ x \in [0,1] \mid x \text{ has the same regular continued
+fractions and $\alpha$-CF}\}.
+\end{equation}\]</span> Then, what is the <span
+class="math inline">\(\dim E(\alpha)\)</span>?</p>
+</div>
+<p>We assume <span class="math inline">\(\alpha \in [0,1]\)</span>. For
+this, we must study the map <span
+class="math inline">\(T_{\alpha}\)</span> which acts on <span
+class="math inline">\([\alpha - 1, \alpha)\)</span> via <span
+class="math display">\[\begin{equation}
+    T_{\alpha}(x) =
+    \begin{cases}
+      |\tfrac{1}{x}| - \lfloor |\tfrac{1}{x}| + 1 - \alpha\rfloor &amp;
+\text{ if }x \neq 0 \\
+      0 &amp;  \text{ otherwise}
+    \end{cases}.
+\end{equation}\]</span></p>
+<p>For <span class="math inline">\(x \in \mathbb{R}\)</span>, let <span
+class="math inline">\(b_{0} \in \mathbb{Z}\)</span> be such that <span
+class="math inline">\(x-b_{0} \in [\alpha-1,\alpha)\)</span>. For
+this</p>
+<ul>
+<li><span class="math inline">\(T_{\alpha}^{n-1}( x - b_{0}) \neq
+0\)</span>, define $<em>{n}(x) = ( T</em>{}^{n-1}(x - b_{0})) $, where
+<span class="math inline">\(b_{n}(x) = \lfloor
+|\frac{1}{T_{\alpha}^{n-1}(x-b_{0})}|  + 1 - \alpha
+\rfloor\)</span>.</li>
+<li>We have <span class="math inline">\(T_{\alpha}^{n-1}(x-b_{0}) = 0,
+\varepsilon_{n}(x)=0, b_{n}(x)=0\)</span>, <span
+class="math inline">\(\forall n \geq n_{0} + 1\)</span> $$ <span
+class="math display">\[\begin{align}
+x  &amp; = b_{0}(x) + \frac{\varepsilon_{1}(x)}{b_{1}(x) +
+\frac{\varepsilon_{2}(x)}{ b_{2}(x) + \frac{\varepsilon_{3}(x)}{b_{3}(x)
++ \dots}}} \\
+&amp; =:  [ b_{0}, \varepsilon_{1},b_{1},\varepsilon_{2},b_{2},\dots]_{
+\alpha}
+\end{align}\]</span> The same continued fraction and <span
+class="math inline">\(\alpha\)</span>-CF means <span
+class="math display">\[\begin{equation}
+a_{0} = b_{0}, \varepsilon_{n}=1 \forall n \geq 1, a_{n} = b_{n} \forall
+n \geq 1.
+\end{equation}\]</span></li>
+</ul>
+Here is the first theorem.
+<div class="theorem">
+<ul>
+<li><span class="math inline">\(\alpha \mapsto  \dim_{H}
+s(\alpha)\)</span> is a.e. locally constant</li>
+<li>Not continuous at <span class="math inline">\(0\)</span></li>
+<li>Gauss: continous on <span class="math inline">\((0,1)\)</span></li>
+</ul>
+</div>
+<p>This is something similar to a phonemenon called Devil’s stairs (I
+don’t understand). The constant intervals of <span
+class="math inline">\(\alpha \mapsto  S(\alpha)\)</span> are</p>
+<ul>
+<li><span class="math inline">\(a_{1} \geq 2, n \geq 1\)</span> : <span
+class="math inline">\(([a_{1},a_{2},\dots, a_{2n},a_{1}],
+[a_{1},\dots,a_{2n},1])\)</span></li>
+<li><span class="math inline">\(a_{1} \geq 2\)</span> : <span
+class="math inline">\(([a_{1}\dots a_{2n+1},1), [a_{1} a_{2} \dots
+a_{2n+1} a_{1}]\)</span></li>
+<li><span class="math inline">\(a_{2n+1} \geq 2\)</span> <span
+class="math inline">\(( [1, a_2,\dots,a_{2n+1}], [1,\dots,a_{2n+1}-1,
+\overline{1 a_{2}}])\)</span></li>
+</ul>
+Here is the second theorem.
+<div class="theorem">
+<p>We have the bifurcation set (complement of the union of the above
+intervals) defined as: <span class="math display">\[\begin{equation}
+\varepsilon = \{ x \in [0,1] \mid T^{k} x \leq x , \forall k \geq 0\}.
+\end{equation}\]</span> Here <span class="math inline">\(T\)</span> is
+the Gauss map <span class="math inline">\(x
+\mapsto  \{\tfrac{1}{x}\}\)</span>. Then the Hausdorf dimension <span
+class="math inline">\(\dim_{H} \varepsilon = 1\)</span>.</p>
+</div>
+<h2
+id="relation-with-the-survivor-sets-of-open-dynamical-system">Relation
+with the survivor sets of open dynamical system</h2>
+<p>Define <span class="math display">\[\begin{equation}
+E(\alpha) : = \{x \in [0,1) : T^{n} x \leq \alpha, \forall n \geq 0\}.
+\end{equation}\]</span> This is called a “survivor set”.</p>
+<p>We will prove that the <span class="math inline">\(S(\alpha)\)</span>
+in our question satisfies <span class="math display">\[\begin{equation}
+S(\alpha) = \{x \in [0,1] : T^{n} x &lt; \alpha \forall n \geq 0\}.
+\end{equation}\]</span> This is the same thing as <span
+class="math inline">\(E(\alpha)\)</span> but with inequality turned into
+a strict inequality. We get <span
+class="math display">\[\begin{equation}
+S(\alpha) \subseteq E(\alpha) \subseteq S(\alpha) \cup \mathbb{Q} \cup
+\bigsqcup_{n=0}^{ \infty } \{  x \in [0,1), T^{n} x = \alpha\}.
+\end{equation}\]</span></p>
+<ul>
+<li>Ruith in 1994 studied <span class="math inline">\(f: [0,1]
+\rightarrow  [0,1]\)</span> in expanding monotone interval map with
+finitely many branches. We define <span
+class="math display">\[\begin{equation}
+\mathrm{Hole} = \bigcup_{i=1}^{k} (a_{i} , b_{i}).
+\end{equation}\]</span> Then we get that <span
+class="math inline">\(\dim_{H} E_{f}( \mathrm{Hole})\)</span> is
+continuous with respect to the <span
+class="math inline">\(\mathrm{Hole}\)</span>.</li>
+<li>Carminati-Tiozzo studied in 2022 the Gauss map with a hole at <span
+class="math inline">\(0\)</span>.</li>
+</ul>
+<h2 id="main-argument">Main argument</h2>
+<p>For our interest, we study <span class="math display">\[\begin{align}
+S(\tfrac{1}{n}) &amp; = \{x \mid T^{k} x &lt; \tfrac{1}{n} \forall k
+\geq 0\} \\
+&amp; = \{x \mid a_{k}  &gt; n \forall k \geq 0\}.
+\end{align}\]</span> We have <span
+class="math display">\[\begin{equation}
+\lim_{n \rightarrow  \infty}  \dim_{H} S(\tfrac{1}{n}) =  \frac{1}{2}.
+\end{equation}\]</span> This is due to Good from 1941. Then <span
+class="math inline">\(S(0) = ?\)</span>. This is the set <span
+class="math inline">\(\{T^{n} x &lt; 0\} = \{\}\)</span></p>
+<h2 id="intermediate-step">Intermediate step</h2>
+To prove the intermediate step <span class="math inline">\(\dim_{H}
+\varepsilon = 1\)</span>, there is <span
+class="math display">\[\begin{equation}
+\bigcup_{m=2} \{x = [1,m,x_{3} x_{4} \dots  ] \mid x_{i} \leq m - 1,
+\forall i \geq 3\} \subseteq \varepsilon.
+\end{equation}\]</span>
+<div class="proof">
+<p><span class="math display">\[\begin{equation}
+\forall x = [1,m,x_{3},x_{4},\dots] , m \geq 2 , x_{i} \leq m-1, \forall
+i \geq 3.
+\end{equation}\]</span> We then have <span
+class="math display">\[\begin{equation}
+T x = [m ,x_{3} x_{4} \dots ] &lt; x = [1 \dots ] \geq 2
+\end{equation}\]</span> and for <span class="math inline">\(k \geq
+2\)</span> <span class="math display">\[\begin{equation}
+T^{k} x = [x_{k+1}, x_{k+2} , \dots ] &lt; x= [1,m,x_{3}, \dots ]
+\end{equation}\]</span></p>
+<ul>
+<li><span class="math inline">\(x_{k+1} = 1\)</span> by <span
+class="math inline">\(x_{k+2} \leq m-1\)</span>, <span
+class="math inline">\(x_{k+1} \geq 2\)</span></li>
+<li><span class="math inline">\(x_{k+1} \geq 2\)</span> <span
+class="math inline">\(T^{k} x &lt; x\)</span>.</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+\dim_{H} \bigcup_{m=2}^{\infty} \{ x = [1,m_{1},x_{3},\dots] : x_{i}
+\leq m - 1\}.
+\end{equation}\]</span> Then we have <span
+class="math display">\[\begin{equation}
+    = \sup_{m \geq 2} \dim_{H}\{ x = [1,m,x_{3},x_{4},\dots  ] : x_{i}
+\leq m-1, \forall i \geq 3 \}
+\end{equation}\]</span> Then with this, for some reason we get our
+result.</p>
+</div>
+<h2 id="final-remarks">Final remarks</h2>
+<p>We have <span class="math inline">\(F(\alpha):= S(\alpha) \cap
+(\text{Bounded})\)</span>. We can prove <span
+class="math inline">\(\alpha \mapsto  \dim_{H} F(\alpha)\)</span> is
+continuous on <span class="math inline">\((0,1)\)</span>. This is
+related to some IFS (I don’t understand).</p>
+<h1
+id="density-of-shapes-of-periodic-tori-part-i-the-cubic-case">Density of
+shapes of periodic tori: Part I (the cubic case)</h1>
+<p>The speaker is Nguyen-Thi Dang. She is from Université
+Paris-Saclay.</p>
+<p>This is joint work with myself and J. Li. See also my notes <a
+href="2026-01-17.html">here</a>.</p>
+<h2 id="a-dynamical-problem">A dynamical problem</h2>
+<p>Consider <span class="math inline">\(G =
+\mathrm{SL}(3,\mathbb{R})\)</span> and <span
+class="math inline">\(\Gamma =  \mathrm{SL}(3,\mathbb{Z})\)</span>. We
+have <span class="math display">\[\begin{equation}
+    A = \{
+    \begin{bmatrix}
+      a_{1} &amp; &amp;  \\
+       &amp; a_{2}  &amp;  \\
+       &amp; &amp; a_{3}
+    \end{bmatrix}
+    \mid a_{i} &gt; 0, a_{1}a_{2}a_{3} = 1
+    \}.
+\end{equation}\]</span> We also have <span
+class="math display">\[\begin{equation}
+    M = \{
+    \begin{bmatrix}
+      \pm 1 &amp; &amp;  \\
+       &amp; \pm 1  &amp;  \\
+       &amp; &amp; \pm 1
+    \end{bmatrix}, \det( \cdot ) = 1
+    \}
+\end{equation}\]</span> We have <span class="math inline">\(\mathfrak{a}
+= \log A = \{ (t_{1},t_{2},t_{3}) \mid \sum_{{i}}^{} t_{i}=
+0\}.\)</span></p>
+<div class="definition">
+<p>A periodic torus is <span class="math display">\[\begin{equation}
+C(A) = \{ \text{compact } A-\text{orbit}\}.
+\end{equation}\]</span></p>
+</div>
+<div class="definition">
+<p>For <span class="math inline">\(F \in C(A)\)</span>, the set of
+periods <span class="math display">\[\begin{equation}
+P(F) = \{ Y \in \mathfrak{a} \mid e^{Y} z = z, \forall z \in F\}.
+\end{equation}\]</span></p>
+</div>
+<p>Then <span class="math inline">\(P(F) \subseteq \mathfrak{a}\)</span>
+is a <span class="math inline">\(2\)</span>-lattice in <span
+class="math inline">\(\mathfrak{a} \simeq \mathbb{R}^{2}\)</span>. Fix
+an isomorphism <span class="math inline">\(\mathfrak{a} \simeq
+\mathbb{R}^{2}\)</span>. We then have <span class="math inline">\({P}(F)
+= \sqrt{\mathrm{covol}( P(F))} g_{F} \mathbb{Z}^{2}\)</span> for some
+<span class="math inline">\(g_{F} \in
+\mathrm{SL}(2,\mathbb{R})\)</span></p>
+<div class="definition">
+<p>We define a shape <span class="math inline">\([P(F)] = g_{F}
+\mathrm{SL}({2},\mathbb{Z}) \in
+\mathrm{SL}(2,\mathbb{R})/\mathrm{SL}(2,\mathbb{Z})\)</span>.</p>
+</div>
+<div class="theorem">
+<p><strong>(D,G,L)</strong></p>
+<p>The set of shapes of periodic periodic tori in <span
+class="math inline">\(M \backslash \mathrm{SL}(3,\mathbb{R})/
+\mathrm{SL}(3,\mathbb{Z})\)</span> is dense in <span
+class="math inline">\(\mathrm{SL}(2,\mathbb{R})/\mathrm{SL}(2,\mathbb{Z})\)</span>.</p>
+</div>
+<h2 id="a-construction">A construction</h2>
+<p>We will look at <span class="math inline">\(0 &lt; a_{1} &lt;
+a_{2}\)</span> in <span class="math inline">\(\mathbb{N}\)</span> such
+that <span class="math inline">\(a_{1} \gg 1\)</span> and <span
+class="math inline">\(a_{2} - a_{1} \gg 1\)</span>. Then <span
+class="math inline">\(f(X) = X(X-a_{1})(X-a_{2}) - 1\)</span> is
+irreducible over <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<p>We consider the field <span class="math inline">\(K = \mathbb{Q}[X]/
+\langle f(X)\rangle\)</span> This is isomorphic to <span
+class="math inline">\(\mathbb{Q}^{3}\)</span> additively.</p>
+<h2 id="ordered-embeddings">Ordered embeddings</h2>
+<p>For <span class="math inline">\(\sigma =
+(\sigma_{1},\sigma_{2},\sigma_{3}) : K \rightarrow  \mathbb{R}\)</span>
+are given by <span class="math inline">\(X \mapsto \alpha_{i}\)</span>
+where <span
+class="math inline">\(\alpha_{1},\alpha_{2},\alpha_{3}\)</span> are the
+roots of the polynomial.</p>
+<h2 id="dirichlets-unit-theorem">Dirichlet’s unit theorem</h2>
+<div class="theorem">
+<p><strong>(DUT)</strong></p>
+<p>For all <span class="math inline">\([\mathcal{O}: \mathcal{O}_{K}]
+&lt; \infty\)</span> and <span
+class="math inline">\(\mathcal{O}\)</span> is a subring <span
+class="math display">\[\begin{equation}
+\mathcal{O}^{\times} \simeq \langle \pm 1 , \beta_{1}, \beta_{2} \rangle
+\simeq \mathbb{Z}^{2}.
+\end{equation}\]</span> That is, multiplicatively <span
+class="math inline">\(\mathcal{O}^{\times} \simeq
+\mathbb{Z}^{2}\)</span>.</p>
+</div>
+<p>Using this, one can construct a periodic torus. We consider the
+action of <span class="math inline">\(K^{\times}\)</span> on <span
+class="math inline">\(K\)</span> and get <span
+class="math display">\[\begin{align}
+    K &amp; \xrightarrow[]{} \mathbb{R}^{3}  \\
+    x &amp; \mapsto  \mathrm{diag}( \sigma_{1}(x),\sigma_{2}(x),
+\sigma_{3}(x) ).
+\end{align}\]</span> Then we look at <span
+class="math inline">\(\mathcal{O}^{\times}\)</span> acting on <span
+class="math inline">\(\mathcal{O}\)</span> and write <span
+class="math inline">\(\mathcal{O} = h_{\mathcal{O}} \mathbb{Z}^{3}
+\subseteq \mathbb{R}^{3}\)</span>.</p>
+<div class="lemma">
+<p>For <span class="math inline">\(\mathcal{O} = \mathbb{Z}[X]/ \langle
+f(X)\rangle = \mathbb{Z}[\alpha]\)</span>, then <span
+class="math inline">\(\mathcal{O}^{\times} = \langle  \pm 1, \alpha,
+\alpha- a_{1}\rangle\)</span>.</p>
+</div>
+<p>Indeed, observe that <span class="math inline">\(\alpha,
+\alpha-a_{1},\alpha - a_{2} \in \mathcal{O}^{\times}\)</span>. This
+lemma is due to an optimal inequality for cubic fields by Cusick.</p>
+<p>But we want density of shapes!</p>
+<h3 id="congruence-conditions">Congruence conditions</h3>
+<p>What we will try is <span class="math display">\[\begin{align}
+    (a_{1},a_{2}) &amp; \simeq (0,1)\pmod{2^{c}}, \text{ for }c \in
+\mathbb{Z}_{\geq 0} \\
+    (a_{1},a_{2}) &amp; \simeq (1,0)\pmod{3^{d}}, \text{ for }d \in
+\mathbb{Z}_{\geq 0} \\
+    (a_{1},a_{2}) &amp; \simeq (1,1)\pmod{5^{r}}, \text{ for }r \in
+\mathbb{Z}_{\geq 0} \\
+\end{align}\]</span> Then we have that <span
+class="math inline">\(\mathcal{O}_{(c,d,r)} = \mathbb{Z} + 2^{c} 3^{d}
+5^{r} \mathcal{O}\)</span> satisfies <span
+class="math display">\[\begin{equation}
+    \mathcal{O}_{(c,d,r)}^{\times} =  
+    \{  \pm \alpha^{m} (\alpha - a_{1})^{n} \mid
+    \underbrace{    \begin{cases}
+         \varphi_{(0,1)}(m,n) \simeq 0 \pmod{ 7\cdot 2^{c-1}} \\
+         \varphi_{(1,0)}(m,n) \simeq 0 \pmod{ 8\cdot 3^{d-1}} \\
+         \varphi_{(1,1)}(m,n) \simeq 0 \pmod{ 24\cdot 5^{r-1}} \\
+        \end{cases}}_{\text{ defines a lattice }\Lambda_{(c,d,r)}
+\subseteq \mathbb{Z}^{2}}
+    \}
+\end{equation}\]</span> where <span
+class="math inline">\(\varphi_{(0,1)}, \varphi_{(1,0)}, \varphi_{(1,1)}
+\in (\mathbb{Z}^{2})^{*}\)</span>.</p>
+<h3 id="parameters">Parameters</h3>
+<figure>
+<embed src="images/thi.jpeg.html" />
+<figcaption aria-hidden="true">Thi explains the blueprint of the
+proof</figcaption>
+</figure>
+<div class="theorem">
+<p><strong>(D,G,L)</strong></p>
+<p><span class="math display">\[\overline{\{ [\Lambda_{(c,d,r)}]\} }=
+\mathrm{SL}(2,\mathbb{R})/\mathrm{SL}(2,\mathbb{Z})\]</span></p>
+</div>
+<hr />
+	<small>	<p class="date">This page was updated on April 20, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
