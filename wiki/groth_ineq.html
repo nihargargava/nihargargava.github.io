@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2026-05-18" />
+  <meta name="dcterms.date" content="2026-05-21" />
   <title>Grothendieck’s inequality</title>
   <style>
     code{white-space: pre-wrap;}
@@ -53,30 +53,30 @@ MathJax.Hub.Config({
 
 <p>Let <span class="math inline">\(\{x_{i}\}_{i=1}^{m},
 \{y_{j}\}_{j=1}^{n} \subseteq S^{d-1}\)</span> be two sets of points on
-the sphere on the <span class="math inline">\((d-1)\)</span>-sphere.
-Take <span class="math inline">\(A = [a_{ij}] \in \mathbb{R}^{n\times
-m}\)</span> fixed real matrix.</p>
+the <span class="math inline">\((d-1)\)</span>-sphere. Take <span
+class="math inline">\(A = [a_{ij}] \in \mathbb{R}^{n\times m}\)</span> a
+fixed real matrix.</p>
 <p>We want a constant <span class="math inline">\(K\)</span> such that
 <span class="math display">\[\begin{equation}
-\max\left\{    \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} \langle x_{i},
+\max\left\{    \sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij} \langle x_{i},
 y_{j}\rangle
   \mid \{x_{i}\}_{i=1}^{m}, \{y_{j}\}_{j=1}^{n} \subseteq S^{d-1}
 \right\}
 \leq  K \cdot
-\max\left\{    \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} \delta_{i}
+\max\left\{    \sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij} \delta_{i}
 \varepsilon_{j}
   \mid \{\delta_{i}\}_{i=1}^{m}, \{\varepsilon_{j}\}_{j=1}^{n}
 \subseteq  \{-1,1\}
 \right\}
 \end{equation}\]</span> Define <span
 class="math display">\[\begin{equation}
-K_{G} = \text{ largest possible value of }K
+K_{G} = \text{ smallest possible value of }K
 \end{equation}\]</span></p>
 <p>Grothendieck’s inequality says that for every <span
 class="math inline">\(n,m \in \mathbb{N}\)</span> and for any <span
 class="math inline">\(A\)</span>, there exists a universal value of
 <span class="math inline">\(K\)</span> such that the above inequality is
-true. It has even an explicit form. One can has <span
+true. It has even an explicit form. One can have <span
 class="math inline">\(K_{G}\)</span> between <span
 class="math display">\[\begin{equation}
     \tfrac{\pi}{2} \exp(\eta_{0}^{2})\leq  K_{G} \leq \frac{\pi}{2 \log(
@@ -86,19 +86,19 @@ class="math display">\[\begin{equation}
     \eta_{0} = 0.25573 \dots
 \end{equation}\]</span> is the unique solution of <span
 class="math display">\[\begin{equation}
-    1 - 2 \tfrac{2}{\pi} \int_{0}^{\pi}
-\exp(-\frac{z^{2}}{2})  \mathrm{d}z = \tfrac{2}{ \pi }e^{\eta^{2}}
+    1 -  \tfrac{2}{\pi} \int_{0}^{\eta_{0}}
+\exp(-\frac{z^{2}}{2})  \mathrm{d}z = \tfrac{2}{ \pi }e^{\eta_{0}^{2}}
 \end{equation}\]</span></p>
 <div class="question">
 <p>Can you give an exact value of <span
 class="math inline">\(K_{G}(d)\)</span> for a fixed <span
 class="math inline">\(d\)</span>? It is known that <span
-class="math inline">\(K_{G}(2) = \sqrt{2}\)</span> apparently.</p>
+class="math inline">\(K_{G}(2) = \sqrt{2}\)</span>.</p>
 </div>
 <p><a href="https://arxiv.org/pdf/1108.2464">This paper</a> has a nice
 survey.</p>
 <hr />
-	<small>	<p class="date">This page was updated on May 18, 2026.<br>
+	<small>	<p class="date">This page was updated on May 21, 2026.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
