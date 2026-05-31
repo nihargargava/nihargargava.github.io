@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-05-25" />
+  <title>Oberwolfach’s first day</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Oberwolfach’s first day</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a
+href="#effective-equidistribution-unipotent-flows-of-representations-of-integral-quadratic-forms"
+id="toc-effective-equidistribution-unipotent-flows-of-representations-of-integral-quadratic-forms">Effective
+equidistribution &amp; unipotent flows of representations of integral
+quadratic forms</a>
+<ul>
+<li><a href="#theorem-of-shah" id="toc-theorem-of-shah">Theorem of
+Shah</a></li>
+<li><a href="#ratner-type-measures" id="toc-ratner-type-measures">Ratner
+type measures</a></li>
+<li><a href="#arithmetic-group" id="toc-arithmetic-group">Arithmetic
+group</a></li>
+<li><a href="#classification-of-measures-on-adelic-quotients"
+id="toc-classification-of-measures-on-adelic-quotients">Classification
+of measures on Adelic quotients</a></li>
+<li><a href="#motivation" id="toc-motivation">Motivation</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+<h2
+id="effective-equidistribution-unipotent-flows-of-representations-of-integral-quadratic-forms">Effective
+equidistribution &amp; unipotent flows of representations of integral
+quadratic forms</h2>
+<p>The speaker is Elon Lindenstrauss. This is joint work with
+Einsiedler, Mohammadi, Wieser (in the audience)</p>
+<p>Starting point is the following theorem.</p>
+<div class="theorem">
+<p><span class="math inline">\(\text{\bf Ratner}\)</span></p>
+<p>Let <span class="math inline">\(G\)</span> be a real group, <span
+class="math inline">\(\Gamma \subseteq G\)</span> be a latice. Let <span
+class="math inline">\(u_{t}\)</span> be a <span
+class="math inline">\(1\)</span>-parameter <span
+class="math inline">\(\mathrm{Ad}\)</span>-unipotent group. Then for any
+<span class="math inline">\(f \in \mathcal{C}_{b}(G/\Gamma)\)</span>,
+<span class="math inline">\(\forall x \in G/\Gamma\)</span>, <span
+class="math display">\[\begin{equation}
+    \frac{1}{T} \int_{0}^{T} f(u_{t},x)  \mathrm{d}t \xrightarrow[]{}
+\int_{L \cdot x}^{} f .
+\end{equation}\]</span> Here <span class="math inline">\(L \cdot
+x\)</span> is a preiodic orbit for some <span
+class="math inline">\(\{u_{t}\} \subseteq L \subseteq G\)</span>.</p>
+</div>
+<div class="remark">
+<p>One has that <span class="math inline">\(L \cdot x\)</span> is
+periodic if and only if it supports an <span
+class="math inline">\(L\)</span> invariant probbaility measure, which is
+if and only if <span class="math inline">\(\mathrm{stab}_{L}(x)\)</span>
+is a lattice in L.</p>
+</div>
+<p>The proof of Ratner’s theorem is via measure classification.</p>
+<div class="theorem">
+<p><span class="math inline">\(\text{\bf Ratner}\)</span></p>
+<p>Let <span class="math inline">\(G\)</span> be a real group, <span
+class="math inline">\(\Gamma \subseteq G\)</span> be a latice. Let <span
+class="math inline">\(u_{t}\)</span> be a <span
+class="math inline">\(1\)</span>-parameter <span
+class="math inline">\(\mathrm{Ad}\)</span>-unipotent group as before.
+Let <span class="math inline">\(\mu\)</span> be <span
+class="math inline">\(u_{t}\)</span>-invariant and ergodic measure on
+<span class="math inline">\(G/\Gamma\)</span>, then <span
+class="math inline">\(\mu\)</span> is homogeneous. This means that <span
+class="math inline">\(\mathrm{stab}_{G} \mu\)</span> acts transitively
+on <span class="math inline">\(\mathrm{supp}\mu\)</span>, which happens
+if and only if <span class="math inline">\(\mu\)</span> is the natural
+homogeneous measure on a periodic orbit of some <span
+class="math inline">\(\{u_{t}\} \subseteq L \subseteq G\)</span>.</p>
+</div>
+<h3 id="theorem-of-shah">Theorem of Shah</h3>
+Let <span class="math inline">\(G\)</span> be a real algebraic group.
+Let <span class="math inline">\(\varphi: \mathrm{SL}_{2}(\mathbb{R})
+\rightarrow  G\)</span> be homogeneous. Let and <span
+class="math display">\[\begin{equation}
+\mu_{s} : \varphi
+\begin{bmatrix}
+   1 &amp; s \\
+    &amp;  1 \\
+\end{bmatrix},
+a_{t} = \varphi \begin{bmatrix}
+   \exp(\tfrac{t}{2}) &amp;  \\
+    &amp;  \exp(-\tfrac{t}{2}) \\
+\end{bmatrix}.
+\end{equation}\]</span> These are <span
+class="math inline">\(1\)</span>-parameter unipotent and diagonal groups
+such that <span class="math inline">\(a_{t} u_{s} a_{-t} =
+u_{e^{t}s}\)</span>.
+<div class="theorem">
+<p><span class="math inline">\(\text{\bf Shah}\)</span></p>
+<p><span class="math display">\[\begin{equation}
+    \lim_{t \xrightarrow[]{} \infty} \int_{0}^{1}    f(a_{t} u_{s} x)
+\mathrm{d}s
+    \xrightarrow[]{} \int_{L \cdot x}^{}  f ,
+\end{equation}\]</span> where <span
+class="math inline">\(\varphi(\mathrm{SL}_{2}(\mathbb{R})) \subseteq L
+\subseteq G\)</span>.</p>
+</div>
+<p>Here <span class="math display">\[\begin{equation}
+\int_{0}^{1}  f(a_{t} u_{s} x) \mathrm{d}s = \tfrac{1}{T} \int_{0}^{T}
+f(u_{s} a_{t} x) \mathrm{d}s, T = e^{t}.
+\end{equation}\]</span></p>
+<h3 id="ratner-type-measures">Ratner type measures</h3>
+<p>This can be thought of as a random walk. One has <span
+class="math display">\[\begin{equation}
+\mu_{t} = \int_{0}^{1}  \delta_{a_{t} u_{s}} \mathrm{d}s,
+\end{equation}\]</span> One has <span
+class="math display">\[\begin{equation}
+\int_{}^{} f(g x) \mathrm{d}\mu_{t}^{* k}(g) \simeq
+\int_{0}^{1}  f(a_{kt} u_{s} x) \mathrm{d}s + O(e^{-t} ) \|f\|_{\infty}.
+\end{equation}\]</span></p>
+<div class="definition">
+<p>We say that a homogeneous measure on <span
+class="math inline">\(G/\Gamma\)</span> is of Ratner type if there is
+some <span class="math inline">\(1\)</span>-parameter unipotent flow
+under which it is invariant and ergodic.</p>
+</div>
+<div class="example">
+<p>Example of homogeneous measures not of Ratner type is the following.
+There are periodic <span class="math inline">\(L \cdot x\)</span> where
+<span class="math inline">\(L\)</span> is a torus (in the sense of
+algebraic groups).</p>
+</div>
+<div class="theorem">
+<p><span class="math inline">\(\text{ \bf (Mozez-Shah) }\)</span></p>
+<p>If <span class="math inline">\(\mu_{i}\)</span> are homogeneous
+measures of Ratner type, either <span
+class="math inline">\(\mathrm{supp}\mu_{i}\)</span> escapes from every
+compact set or after passing to subsequence, <span
+class="math inline">\(\mu_{i} \rightarrow \mu\)</span> such that <span
+class="math inline">\(\mu\)</span> is homogeneous of Ratner’s type and
+<span class="math display">\[\begin{equation}
+    \exists g_{i} \rightarrow  1 \text{ such that } \mathrm{supp}( g_{i}
+\mu_{i}) \subseteq \mathrm{supp}( \mu)
+\end{equation}\]</span></p>
+</div>
+<h3 id="arithmetic-group">Arithmetic group</h3>
+<p>The arithmetic case is the most interesting. Let <span
+class="math inline">\(\mathbf{G}\)</span> be an algebraic group defined
+over <span class="math inline">\(\mathbb{Q}\)</span> (or some number
+field <span class="math inline">\(F\)</span>), let <span
+class="math inline">\(G = \mathbf{G}(\mathbb{R})/\Gamma\)</span>, Let
+<span class="math inline">\(\Gamma \subseteq
+\mathbf{G}(\mathbb{Q})\)</span> be a congruence lattice (commensurable
+to <span class="math inline">\(\mathbf{G}(\mathbb{Z})\)</span>). Let it
+be such that <span class="math inline">\(\mathbf{G}\)</span> has no
+<span class="math inline">\(\mathbb{Q}\)</span>-characters.</p>
+<p>One can view it all together as an Adelic quotient if we consider
+<span
+class="math inline">\(\mathbf{G}(\mathbb{A})/\mathbf{G}(\mathbb{Q})\)</span>.
+Here <span class="math inline">\(\mathbb{A}\)</span> is the restricted
+product <span class="math display">\[\begin{equation}
+    \mathbb{A} = \mathbb{R} \times \prod_{}^{}&#39; \mathbb{Q}_{p}
+\end{equation}\]</span></p>
+<p>One has <span
+class="math inline">\(\mathrm{SL}_{n}(\mathbb{A})/\mathrm{SL}_{n}(\mathbb{Q})
+\rightarrow  \mathrm{SL}_{n}(\mathbb{R}) /
+\mathrm{SL}_{n}(\mathbb{Z})\mathbb{Z}\)</span> as a surjective map.
+Similar construction also works for number fields.</p>
+<h3 id="classification-of-measures-on-adelic-quotients">Classification
+of measures on Adelic quotients</h3>
+<p>Let <span
+class="math inline">\(\mathbf{G}(\mathbb{A}_{F})/\mathbf{G}(F)\)</span>
+be an Adelic quotient for a number field <span
+class="math inline">\(F\)</span>. Two assumptions are needed.</p>
+<ol type="1">
+<li><span class="math inline">\(\mathbf{G}\)</span> is semisimple</li>
+<li><span class="math inline">\(\mathbf{G}\)</span> is anisotropic $ $
+<span
+class="math inline">\(\mathbf{G}(\mathbb{A}_{F})/\mathbf{G}(F)\)</span>
+compact.</li>
+</ol>
+<p>Under these assumptions, we give a concise description of all
+homogenous measures of Ratner’s type in <span
+class="math inline">\(\mathbf{G}(\mathbb{A}_{F})/\mathbf{G}(F)\)</span>.
+Let <span class="math inline">\(\mathbf{H}\)</span> be a simply
+connected semisimple group over <span class="math inline">\(F\)</span>.
+Let <span class="math inline">\(\rho: \mathbf{H}
+\rightarrow  \mathbf{G}\)</span> be an <span
+class="math inline">\(F\)</span>-homomorphism. Let <span
+class="math inline">\(g \in \mathbf{G}(\mathbb{A})\)</span>. Let <span
+class="math display">\[\begin{equation}
+g[\rho(\mathbf{H}(\mathbb{A}))] \subseteq \mathbf{G}(\mathbb{A})/
+\mathbf{G}(F),
+\end{equation}\]</span> these are precisely all the homogeneous measures
+of Ratner’s type in <span
+class="math inline">\(\mathbf{G}(\mathbb{A}_{F})/\mathbf{G}(F)\)</span>
+(parameterized by <span
+class="math inline">\((\mathbf{H},\rho,g)\)</span>). These are called
+“Adelic periods”.</p>
+<p>It is useful to think <span
+class="math inline">\(\mathbf{G}(\mathbb{A}_{F})/\mathbf{G}(F)\)</span>
+as another Adelic period in <span
+class="math inline">\(\mathrm{SL}_{n}(\mathbb{A}_{F})/\mathrm{SL}_{n}(F)\)</span>.
+To an Adelic period can attach some notion of height/complexities. <span
+class="math display">\[\begin{equation}
+\prod_{v}^{} \| \text{ something }\|_{v} = \tilde{H} ( \text{ adelic
+periods })
+\end{equation}\]</span></p>
+<div class="theorem">
+<p><span class="math inline">\((\text{ \bf Elon et al})\)</span></p>
+<p>Assuming adelic period correponds to <span
+class="math inline">\((\mathbf{H}, \rho, g)\)</span> is contained in
+<span class="math inline">\((\mathbf{G},\tau,g_{0})\)</span>, one has
+the difference of the Adelic periods is <span
+class="math display">\[\begin{equation}
+| \int_{}^{} f - \int_{}^{} f | \ll _{n,d} \frac{\tilde(H)(
+\mathbf{G},\tau,g)^{A}}{\min \tilde{H}(\mathbb{H}^{1},
+\rho^{1},g^{1})^{\frac{1}{A}} } \disc(F)^{A}.
+\end{equation}\]</span></p>
+</div>
+<div class="remark">
+<p>This is minimum over all Adelic periods strictly containing <span
+class="math inline">\((\mathbf{H},\rho,g)\)</span> and strictly
+contained in <span
+class="math inline">\((\mathbf{G},\tau,g_{0})\)</span>. This generalizes
+E-M-M-V or E-M-V in case <span class="math inline">\(\mathbf{H}
+\subseteq \mathbf{G}\)</span> is maximal.</p>
+</div>
+<h3 id="motivation">Motivation</h3>
+<p>There is some following the work of Ellenberg-Venkatesh. It is about
+representing quadratic forms restricted to rational subspaces.</p>
+<hr />
+	<small>	<p class="date">This page was updated on May 25, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
