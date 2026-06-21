@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2023-11-13" />
+  <meta name="dcterms.date" content="2026-06-19" />
   <title>Discriminant of a number field</title>
   <style>
     code{white-space: pre-wrap;}
@@ -32,11 +32,17 @@
         div.csl-indent {
           margin-left: 2em;
         }  </style>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
 </head>
 <body>
 <header id="title-block-header">
@@ -45,24 +51,42 @@
 <nav id="TOC" role="doc-toc">
 <h3 id="toc-title">Contents</h3>
 <ul>
-<li><a href="#cyclotomic-field">Cyclotomic field</a></li>
+<li><a href="#cyclotomic-field" id="toc-cyclotomic-field">Cyclotomic
+field</a></li>
 </ul>
 </nav>
-<p>Discriminant of a number field <span class="math inline">\(K\)</span> is defined as <span class="math display">\[\begin{align}
+
+
+
+<p>Discriminant of a number field <span class="math inline">\(K\)</span>
+is defined as <span class="math display">\[\begin{align}
   \Delta_K=\det\left(\begin{array}{cccc}
 \sigma_1(b_1) &amp; \sigma_1(b_2) &amp;\cdots &amp; \sigma_1(b_n) \\
 \sigma_2(b_1) &amp; \ddots &amp; &amp; \vdots \\
 \vdots &amp; &amp; \ddots &amp; \vdots \\
 \sigma_n(b_1) &amp; \cdots &amp; \cdots &amp; \sigma_n(b_n)
 \end{array}\right)^2,
-\end{align}\]</span> where <span class="math inline">\(\{ \sigma_1, \cdots, \sigma_n\}\)</span> are the set of embeddings <span class="math inline">\(K \rightarrow \mathbb{C}\)</span> and <span class="math inline">\(\{ b_1,\cdots,n_n\}\)</span> is a <span class="math inline">\(\mathbb{Z}\)</span>-module basis of <span class="math inline">\(\mathcal{O}_{K} \subseteq K\)</span> (the ring of integers).</p>
-<p>This is also related to the covolume of the lattice of integers inside the respective <a href="minkowski_embedding.html">Minkowski embedding</a>. See the page for the details.</p>
+\end{align}\]</span> where <span class="math inline">\(\{ \sigma_1,
+\cdots, \sigma_n\}\)</span> are the set of embeddings <span
+class="math inline">\(K \rightarrow \mathbb{C}\)</span> and <span
+class="math inline">\(\{ b_1,\cdots,b_n\}\)</span> is a <span
+class="math inline">\(\mathbb{Z}\)</span>-module basis of <span
+class="math inline">\(\mathcal{O}_{K} \subseteq K\)</span> (the ring of
+integers).</p>
+<p>This is also related to the covolume of the lattice of integers
+inside the respective <a href="minkowski_embedding.html">Minkowski
+embedding</a>. See the page for the details.</p>
 <h1 id="cyclotomic-field">Cyclotomic field</h1>
-<p>If <span class="math inline">\(K=\mathbb{Q}(\xi_{n})\)</span>, the <span class="math inline">\(n\)</span>th cyclotomic field, then we have that for <span class="math inline">\(n &gt;2\)</span> <span class="math display">\[\begin{align}
-  \Delta_{K} = \left( -1 \right)^{\frac{1}{2}\varphi(n)}\frac{n^{\varphi(n)}}{ \prod_{p \mid n} n^{\frac{\varphi(n)}{p-1}}}
+<p>If <span class="math inline">\(K=\mathbb{Q}(\xi_{n})\)</span>, the
+<span class="math inline">\(n\)</span>th cyclotomic field, then we have
+that for <span class="math inline">\(n &gt;2\)</span> <span
+class="math display">\[\begin{align}
+  \Delta_{K} = \left( -1
+\right)^{\frac{1}{2}\varphi(n)}\frac{n^{\varphi(n)}}{ \prod_{p \mid n}
+n^{\frac{\varphi(n)}{p-1}}}
 \end{align}\]</span></p>
 <hr />
-	<small>	<p class="date">This page was updated on November 13, 2023.<br>
+	<small>	<p class="date">This page was updated on June 19, 2026.<br>
 		<a href="index.html">Main Page</a> </p>
       </small>
 </body>
