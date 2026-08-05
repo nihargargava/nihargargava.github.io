@@ -270,7 +270,23 @@ figure {
   text-align: center;        /* lets inline-block figcaption be centered */
 }
 
-figure img,
+img {
+  display: block;
+  max-width: 600px;
+  margin: 1em auto;
+  padding: 0;
+  text-align: center;        /* lets inline-block figcaption be centered */
+}
+
+figure img {
+  display: block;
+  max-width: 600px;
+  margin: 1em auto;
+  padding: 0;
+  text-align: center;        /* lets inline-block figcaption be centered */
+}
+
+
 figure embed,
 figure object,
 figure iframe {
