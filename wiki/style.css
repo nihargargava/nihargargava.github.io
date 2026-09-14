@@ -314,3 +314,40 @@ table, th, td {
   border-collapse: collapse;
  padding: 8px;
 }
+
+/* Collapsible SHA-256 values on the homepage. */
+details.checksum {
+  display: inline;
+  margin: 0;
+  max-width: 100%;
+  text-align: left;
+  vertical-align: middle;
+}
+
+details.checksum summary {
+  display: inline;
+  color: #a00;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+}
+
+details.checksum summary::marker {
+  content: "";
+}
+
+details.checksum summary::-webkit-details-marker {
+  display: none;
+}
+
+details.checksum summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+details.checksum > code {
+  display: inline;
+  margin-left: 0.35em;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
