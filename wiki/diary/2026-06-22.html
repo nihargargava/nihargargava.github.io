@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-10-19" />
+  <title>Kristian Holm’s minicourse on Rogers’ integration formula, lectures 1 and 2</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Kristian Holm’s minicourse on Rogers’ integration
+formula, lectures 1 and 2</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#lecture-1" id="toc-lecture-1">Lecture 1</a>
+<ul>
+<li><a href="#sphere-packings" id="toc-sphere-packings">Sphere
+packings</a></li>
+</ul></li>
+<li><a href="#lecture-2" id="toc-lecture-2">Lecture 2</a>
+<ul>
+<li><a href="#counting-sublattices"
+id="toc-counting-sublattices">Counting sublattices</a></li>
+<li><a href="#hecke-operators" id="toc-hecke-operators">Hecke
+operators</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+<p>Notes from Kristian Holm’s minicourse at <a href="../rgnt.html">RGNT
+in Lausanne</a>, June 22, 2026. See the <a
+href="../rgnt_firstweek.html">programme</a> and <a
+href="2026-06-23.html">lectures 3 and 4</a>. Throughout, <span
+class="math inline">\(n \geq 2\)</span>.</p>
+<h1 id="lecture-1">Lecture 1</h1>
+<div class="definition">
+<p><strong>Definition.</strong> A full-rank lattice in <span
+class="math inline">\(\mathbb{R}^{n}\)</span> is a discrete subgroup of
+the form <span class="math inline">\(\Lambda = g\mathbb{Z}^{n}\)</span>
+for some <span class="math inline">\(g \in
+\mathrm{GL}_{n}(\mathbb{R})\)</span>. Its covolume is <span
+class="math display">\[
+d(\Lambda) = \operatorname{vol}(\mathbb{R}^{n}/\Lambda) = |\det g|.
+\]</span></p>
+</div>
+<p>We say that <span class="math inline">\(\Lambda\)</span> is
+unimodular if <span class="math inline">\(d(\Lambda)=1\)</span>. Let
+<span class="math display">\[
+X_n = \{\Lambda \subseteq \mathbb{R}^{n} : \Lambda \text{ is a lattice
+and } d(\Lambda)=1\}.
+\]</span> We identify this space with the homogeneous space <span
+class="math display">\[
+X_n \simeq \mathrm{SL}_{n}(\mathbb{R})/\mathrm{SL}_{n}(\mathbb{Z}).
+\]</span></p>
+<p>There are many interesting questions:</p>
+<ol type="1">
+<li>How many sublattices <span class="math inline">\(\Pi \subseteq
+\mathbb{Z}^{n}\)</span> have index <span
+class="math inline">\([\mathbb{Z}^{n}:\Pi]=N\)</span>?</li>
+<li>How short can non-zero lattice vectors be? This is related to short
+closed geodesics on <span
+class="math inline">\(\mathbb{R}^{n}/\Lambda\)</span> and to
+lattice-based cryptography.</li>
+<li>Given a set <span class="math inline">\(S \subseteq
+\mathbb{R}^{n}\)</span>, estimate <span class="math inline">\(\#(\Lambda
+\cap S)\)</span>.</li>
+</ol>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Lattice or integral representation</th>
+<th>Region</th>
+<th>Related problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\mathbb{Z}^{2}\)</span></td>
+<td><span class="math inline">\(B_0(R)\)</span></td>
+<td>Gauss circle problem</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mathbb{Z}^{2}\)</span></td>
+<td><span class="math inline">\(\{(x,y) \in
+\mathbb{R}_{&gt;0}^{2}:xy\leq T\}\)</span></td>
+<td>Dirichlet divisor problem</td>
+</tr>
+<tr>
+<td>Integral binary cubic forms</td>
+<td>Regions of bounded absolute discriminant</td>
+<td>Davenport–Heilbronn theorem, after taking orbits and imposing the
+appropriate arithmetic conditions</td>
+</tr>
+</tbody>
+</table>
+<p>The Davenport–Heilbronn theorem counts cubic fields up to
+isomorphism. With both discriminant signs included, the normalization is
+<span class="math display">\[
+\#\{K/\mathbb{Q} : [K:\mathbb{Q}]=3,\ |\operatorname{disc}(K)|\leq T\}
+\sim \frac{T}{3\zeta(3)}.
+\]</span> See <a
+href="https://arxiv.org/html/1005.0672">Bhargava–Shankar–Tsimerman,
+Theorem 1</a> for the separate constants for positive and negative
+discriminants.</p>
+<h2 id="sphere-packings">Sphere packings</h2>
+<p>If <span class="math inline">\(\Lambda \cap B_0(1)=\{0\}\)</span>,
+with <span class="math inline">\(B_0(1)\)</span> the open unit ball,
+then the unit balls centred at <span
+class="math inline">\(2\Lambda\)</span> form a lattice packing. Its
+density is <span class="math display">\[
+\frac{\operatorname{vol}(B_0(1))}{2^{n}d(\Lambda)}.
+\]</span></p>
+<div class="theorem">
+<p><strong>Minkowski–Hlawka theorem (1943).</strong> Let <span
+class="math inline">\(S \subseteq \mathbb{R}^{n}\)</span> be a
+measurable, centrally symmetric set that is star-shaped about <span
+class="math inline">\(0\)</span>. If <span class="math display">\[
+\operatorname{vol}(S)&lt;2\zeta(n),
+\]</span> then there exists <span class="math inline">\(\Lambda \in
+X_n\)</span> such that <span class="math inline">\(\Lambda \cap S
+\subseteq \{0\}\)</span>.</p>
+</div>
+<p>For <span class="math inline">\(f \in
+C_c^{\infty}(\mathbb{R}^{n})\)</span>, its Siegel transform is the
+function <span
+class="math inline">\(\widehat{f}:X_n\to\mathbb{C}\)</span> defined by
+<span class="math display">\[
+\widehat{f}(\Lambda)=\sum_{v\in\Lambda\setminus\{0\}}f(v).
+\]</span></p>
+<div class="theorem">
+<p><strong>Siegel’s mean value theorem (1945).</strong> Let <span
+class="math inline">\(\mu\)</span> be the invariant probability measure
+on <span class="math inline">\(X_n\)</span>. Then <span
+class="math inline">\(\widehat{f}\in L^1(X_n,\mu)\)</span> and <span
+class="math display">\[
+\int_{X_n}\widehat{f}(\Lambda)\,\mathrm{d}\mu(\Lambda)
+=\int_{\mathbb{R}^{n}}f(x)\,\mathrm{d}x.
+\]</span></p>
+</div>
+<p>The formula also applies to <span
+class="math inline">\(f=\mathbf{1}_S\)</span> for a measurable set <span
+class="math inline">\(S\)</span> of finite volume, giving <span
+class="math display">\[
+\int_{X_n}\#\bigl((\Lambda\setminus\{0\})\cap
+S\bigr)\,\mathrm{d}\mu(\Lambda)
+=\operatorname{vol}(S).
+\]</span> To obtain the extra factor of <span
+class="math inline">\(\zeta(n)\)</span>, one sieves for primitive
+points.</p>
+<div class="definition">
+<p><strong>Definition.</strong> A non-zero vector <span
+class="math inline">\(v\in\Lambda\)</span> is primitive if <span
+class="math display">\[
+\Lambda\cap\{tv:0\leq t\leq1\}=\{0,v\}.
+\]</span></p>
+</div>
+<p>Primitive lattice points have asymptotic density <span
+class="math inline">\(\zeta(n)^{-1}\)</span> among all lattice
+points.</p>
+<h1 id="lecture-2">Lecture 2</h1>
+<p>There is a natural measure on <span
+class="math inline">\(X_n\)</span> with total mass <span
+class="math display">\[
+\widetilde{\mu}(X_n)=\frac{1}{n}\zeta(2)\zeta(3)\cdots\zeta(n).
+\]</span> Thus <span
+class="math inline">\(\mu=\widetilde{\mu}(X_n)^{-1}\widetilde{\mu}\)</span>
+is a probability measure.</p>
+<p>Write <span
+class="math inline">\(G=\mathrm{SL}_{n}(\mathbb{R})\subseteq\operatorname{Mat}_{n}(\mathbb{R})\simeq\mathbb{R}^{n^2}\)</span>.
+For a measurable set <span class="math inline">\(A\subseteq G\)</span>,
+define <span class="math display">\[
+C_A(R)=\{tg:g\in A,\ 0&lt;t\leq R\}.
+\]</span> The cone normalization of Haar measure is <span
+class="math display">\[
+\widetilde{\mu}(A)=\operatorname{Leb}_{n^2}(C_A(1)).
+\]</span> Let <span class="math inline">\(\mathcal{F}\subseteq
+G\)</span> be a fundamental domain for the right action of <span
+class="math inline">\(\mathrm{SL}_{n}(\mathbb{Z})\)</span>. Scaling the
+cone gives <span class="math display">\[
+\widetilde{\mu}(X_n)
+=R^{-n^2}\operatorname{Leb}_{n^2}(C_{\mathcal{F}}(R)).
+\]</span></p>
+<p>Define <span class="math inline">\(L_n(m)\)</span> to be the number
+of sublattices <span
+class="math inline">\(\Pi\subseteq\mathbb{Z}^{n}\)</span> with <span
+class="math inline">\([\mathbb{Z}^{n}:\Pi]=m\)</span>. Every full-rank
+integer matrix with positive determinant spans a sublattice, and
+choosing its normalized representative in <span
+class="math inline">\(\mathcal{F}\)</span> selects one positively
+oriented basis for that sublattice. Consequently, <span
+class="math display">\[
+\#\bigl(\operatorname{Mat}_{n}(\mathbb{Z})\cap C_{\mathcal{F}}(R)\bigr)
+=\sum_{m\leq R^n}L_n(m).
+\]</span> This suggests computing the cone volume through <span
+class="math display">\[
+R^{-n^2}\sum_{m\leq R^n}L_n(m).
+\]</span> The passage from lattice-point counts to volume requires
+justification because the fundamental domain is unbounded; that step is
+not recorded in these notes.</p>
+<h2 id="counting-sublattices">Counting sublattices</h2>
+<p>Every sublattice <span
+class="math inline">\(\Pi\subseteq\mathbb{Z}^{n}\)</span> has a basis in
+Hermite normal form: <span class="math display">\[
+\Pi=
+\begin{pmatrix}
+d_1 &amp; 0 &amp; \cdots &amp; 0\\
+* &amp; d_2 &amp; \cdots &amp; 0\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+* &amp; * &amp; \cdots &amp; d_n
+\end{pmatrix}\mathbb{Z}^{n}.
+\]</span> Here <span class="math inline">\(d_i&gt;0\)</span>, the
+entries below the diagonal in row <span class="math inline">\(i\)</span>
+lie in <span class="math inline">\(\{0,\ldots,d_i-1\}\)</span>, and
+<span class="math inline">\(d_1\cdots d_n=m\)</span> for an index-<span
+class="math inline">\(m\)</span> sublattice. The number of choices for
+the stars is <span class="math display">\[
+d_1^0d_2^1d_3^2\cdots d_n^{n-1}.
+\]</span> Therefore <span class="math display">\[
+L_n(m)=\sum_{d_1\cdots d_n=m}d_1^0d_2^1\cdots d_n^{n-1}.
+\]</span></p>
+<p>This is related to Dirichlet convolution: <span
+class="math display">\[
+\left(\sum_{r\geq1}\frac{a_r}{r^s}\right)
+\left(\sum_{t\geq1}\frac{b_t}{t^s}\right)
+=\sum_{m\geq1}\frac{\sum_{rt=m}a_rb_t}{m^s},
+\]</span> in a region of absolute convergence. In particular, <span
+class="math display">\[
+\sum_{m\geq1}\frac{L_n(m)}{m^s}
+=\zeta(s)\zeta(s-1)\cdots\zeta(s-n+1),\qquad \operatorname{Re}(s)&gt;n.
+\]</span> The rightmost pole is at <span
+class="math inline">\(s=n\)</span>. The Wiener–Ikehara Tauberian theorem
+gives <span class="math display">\[
+\sum_{m\leq X}L_n(m)
+\sim\frac{X^n}{n}\operatorname*{Res}_{s=n}
+\bigl(\zeta(s)\zeta(s-1)\cdots\zeta(s-n+1)\bigr)
+=\frac{X^n}{n}\prod_{j=2}^{n}\zeta(j).
+\]</span></p>
+<h2 id="hecke-operators">Hecke operators</h2>
+<div class="definition">
+<p><strong>Definition.</strong> For <span class="math inline">\(F\in
+L^2(X_n)\)</span> and a prime <span class="math inline">\(p\)</span>,
+the Hecke operator <span class="math inline">\(T_p\)</span> is <span
+class="math display">\[
+(T_pF)(g\mathbb{Z}^{n})
+=\frac{1}{L_n(p)}\sum_{c=1}^{n}\sum_{x\in\mathbb{F}_p^{c-1}}
+F\bigl(p^{-1/n}gM_c(x)\mathbb{Z}^{n}\bigr),
+\]</span> where, using integer representatives of the row vector <span
+class="math inline">\(x\)</span>, <span class="math display">\[
+M_c(x)=
+\begin{pmatrix}
+I_{c-1} &amp; 0 &amp; 0\\
+x &amp; p &amp; 0\\
+0 &amp; 0 &amp; I_{n-c}
+\end{pmatrix}.
+\]</span> Empty blocks are omitted when <span
+class="math inline">\(c=1\)</span> or <span
+class="math inline">\(c=n\)</span>.</p>
+</div>
+<p>The matrices <span class="math inline">\(M_c(x)\)</span> are exactly
+the Hermite normal forms of determinant <span
+class="math inline">\(p\)</span>. In particular, <span
+class="math display">\[
+L_n(p)=1+p+\cdots+p^{n-1}.
+\]</span></p>
+<p>Two useful facts are:</p>
+<ol type="1">
+<li>The probability measure <span class="math inline">\(\mu\)</span> is
+invariant under <span class="math inline">\(T_p\)</span>: <span
+class="math display">\[
+\int_{X_n}T_pF\,\mathrm{d}\mu=\int_{X_n}F\,\mathrm{d}\mu.
+\]</span></li>
+<li>If <span class="math inline">\(F\in L^2(X_n)\)</span> and <span
+class="math inline">\(T_pF\)</span> converges almost everywhere to a
+constant as <span class="math inline">\(p\to\infty\)</span> through the
+primes, then that constant is <span
+class="math inline">\(\int_{X_n}F\,\mathrm{d}\mu\)</span>. The <span
+class="math inline">\(L^2\)</span> contraction property gives the
+uniform integrability needed to pass to the limit.</li>
+</ol>
+<p>Conceptually, <span class="math inline">\(T_p\)</span> averages over
+the unimodular rescalings of the index-<span
+class="math inline">\(p\)</span> sublattices of a fixed lattice <span
+class="math inline">\(\Lambda\)</span>: <span class="math display">\[
+(T_pF)(\Lambda)
+=\frac{1}{L_n(p)}
+\sum_{\substack{\Pi\subseteq\Lambda\\{}[\Lambda:\Pi]=p}}F(p^{-1/n}\Pi).
+\]</span></p>
+<p>Continue with <a href="2026-06-23.html">lectures 3 and 4</a>.</p>
+<hr />
+	<small>	<p class="date">This page was updated on October 19, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
