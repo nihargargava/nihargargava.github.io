@@ -75,6 +75,30 @@ h1:first-of-type  {
 
 
 
+/* LaTeX-style title blocks for every page, using Pandoc metadata. */
+#title-block-header {
+  margin: 2.5em 0;
+  text-align: center;
+}
+
+#title-block-header .title {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: normal;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+#title-block-header .subtitle {
+  margin: 0.8em 0 0;
+  font-size: 1.2em;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: center;
+  text-wrap: balance;
+}
+
 /* Article Body */
 
 body {
