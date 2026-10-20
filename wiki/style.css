@@ -414,18 +414,6 @@ details.checksum > code {
   opacity: 0.65;
 }
 
-.diary-index a,
-.diary-index a:visited {
-  color: inherit;
-  text-decoration: none;
-}
-
-.diary-index a:hover,
-.diary-index a:focus-visible {
-  color: #a00;
-  text-decoration: underline;
-}
-
 @media (max-width: 30em) {
   .diary-index li {
     grid-template-columns: minmax(0, 1fr);
