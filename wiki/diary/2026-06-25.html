@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-19" />
+  <title>Automorphic forms — II</title>
+  <style>
+    code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        ul.task-list{list-style: none;}
+        div.csl-bib-body { }
+        div.csl-entry {
+          clear: both;
+        }
+        .hanging div.csl-entry {
+          margin-left:2em;
+          text-indent:-2em;
+        }
+        div.csl-left-margin {
+          min-width:2em;
+          float:left;
+        }
+        div.csl-right-inline {
+          margin-left:2em;
+          padding-left:1em;
+        }
+        div.csl-indent {
+          margin-left: 2em;
+        }  </style>
+  <link rel="stylesheet" href="https://nihargargava.com/wiki/style.css" />
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"
+  type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+});
+</script>
+
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Automorphic forms — II</h1>
+<p class="subtitle">Radu Toma · Lectures 3–4</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<h3 id="toc-title">Contents</h3>
+<ul>
+<li><a href="#lecture-3" id="toc-lecture-3">Lecture 3</a></li>
+<li><a href="#lecture-4" id="toc-lecture-4">Lecture 4</a>
+<ul>
+<li><a href="#whittaker-expansion-u-is-cuspidal"
+id="toc-whittaker-expansion-u-is-cuspidal">Whittaker expansion (<span
+class="math inline">\(u\)</span> is cuspidal)</a></li>
+<li><a href="#rankin-selberg-l-functions"
+id="toc-rankin-selberg-l-functions">Rankin-Selberg L-functions</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+<p>Notes from Radu Toma’s minicourse at <a href="../rgnt.html">RGNT in
+Lausanne</a>, <strong>25 June 2026</strong>. See the <a
+href="../rgnt_firstweek.html">programme</a> and <a
+href="2026-06-24.html">lectures 1 and 2 on 24 June 2026</a>.</p>
+<h1 id="lecture-3">Lecture 3</h1>
+<p>We recall from the picture</p>
+<figure>
+<img src="images/IMG_20260625_134158961.jpg"
+alt="Blackboard summary from Radu Toma’s third lecture" />
+<figcaption aria-hidden="true">Blackboard summary from Radu Toma’s third
+lecture</figcaption>
+</figure>
+<div class="definition">
+<p><strong>(Eisenstein series)</strong></p>
+<p><span class="math display">\[\begin{equation}
+    E_{s}(z) = \sum_{\gamma \in \Gamma_{\infty} \backslash \Gamma}
+\Im(\gamma z)^{s}
+\end{equation}\]</span></p>
+</div>
+<div class="lemma">
+<p><span class="math inline">\(E_{s}\)</span> converges when <span
+class="math inline">\(\Re(s) &gt; 1\)</span>. Here <span
+class="math inline">\(\Delta E_{s} = s(1-s) E_{s}\)</span>.</p>
+</div>
+<div class="remark">
+<p><span class="math inline">\(E_{s} \notin L^{2}\)</span>. Not so bad
+to recall on <span class="math inline">\(L^{2}(\mathbb{R})\)</span>.</p>
+</div>
+<div class="theorem">
+<p><strong>(Hard theorem of Selberg)</strong></p>
+<p><span class="math inline">\(E_{s}\)</span> extends meromorphically to
+<span class="math inline">\(s \in  \mathbb{C}\)</span> except at <span
+class="math inline">\(s=1\)</span> (the only pole).</p>
+<p>We have - <span class="math display">\[\begin{equation}
+\Delta E_{s} = s(1-s) E_{s}
+\end{equation}\]</span> - The constant term <span
+class="math display">\[\begin{equation}
+(E_{s})_{N} (y) = y^{s} + c(s) y^{1-s},
+\end{equation}\]</span> where <span class="math inline">\(c(s) =
+\frac{\xi(2(1-s))}{\xi(2s)}\)</span> for <span
+class="math inline">\(\xi(s) = \pi^{-s/2} \Gamma(s/2) \zeta(s)\)</span>.
+- <span class="math inline">\(E_{s} = c(s) E_{1-s}\)</span> - <span
+class="math inline">\(E_{s}\)</span> is holomorphic for <span
+class="math inline">\(\Re(s)=1/2\)</span>.</p>
+</div>
+<p>For the probability measure on <span
+class="math inline">\(Y\)</span>, one has <span
+class="math display">\[\begin{equation}
+E_{\psi} = \langle \psi ,1 \rangle + \frac{1}{4\pi}
+\int_{-\infty}^{\infty} \langle E_{\psi}, E_{\frac{1}{2}+it}\rangle
+E_{\frac{1}{2}+it} \,\mathrm{d}t
+\end{equation}\]</span></p>
+<div class="theorem">
+<p><span class="math inline">\(\Delta\)</span> on <span
+class="math inline">\(L^{2}_{\mathrm{cusp}}\)</span> has a pure point
+spectrum. <span class="math inline">\(\exists (u_{j}) \in
+L^{2}_{\mathrm{cusp}}\)</span> such that <span
+class="math inline">\(\forall f \in L^{2}_{\mathrm{cusp}}(Y)\)</span>.
+Additionally, eigenvalues of <span class="math inline">\(u_{j}
+\xrightarrow[]{} \infty\)</span> (non-trivial).</p>
+</div>
+<div class="theorem">
+<p>For all <span class="math inline">\(f \in L^{2}(Y)\)</span>, <span
+class="math inline">\(f = \sum \langle f, u_{j}\rangle u_{j} +
+\frac{1}{4 \pi} \int_{\Re(s) = 1/2}^{} \langle f , E_{s}\rangle E_{s}
+\,\mathrm{d}s\)</span> , where <span class="math inline">\(u_{0} \equiv
+1\)</span>, <span class="math inline">\(u_{1},u_{2}, \cdots\)</span> are
+cuspidal.</p>
+</div>
+<p>## Recollections on Hecke operators</p>
+<p>Denote <span class="math display">\[T_{n}f(\underbrace{L}_{\text{
+lattice } \in Y}) = \frac{1}{d(n)} \sum_{[L:M]=n}^{}
+f(\tfrac{1}{\sqrt{n} M }),\]</span> where <span
+class="math display">\[\begin{equation}
+d(n) = \sum_{d \mid n} d
+\end{equation}\]</span></p>
+<p>Some properties: - <span class="math inline">\(T_{n} \curvearrowright
+L^{2}(Y) : T_{n}^{*} = T_{n}\)</span> if <span
+class="math inline">\(\langle T_{n} f , g \rangle = \langle f , T_{n}
+g\rangle\)</span>. (This is only a special property in <span
+class="math inline">\(\mathrm{SL}_{2}(\mathbb{R})/\mathrm{SL}_{2}(\mathbb{Z})\)</span>.)
+- <span class="math inline">\(T_{n} T_{m} = T_{m} T_{n}\)</span> for all
+<span class="math inline">\(m,n\)</span>. - <span
+class="math inline">\(T_{n}\)</span> commutes with <span
+class="math inline">\(\Delta\)</span> and preserves <span
+class="math inline">\(L^{2}_{\mathrm{cusp}}\)</span>. - On <span
+class="math inline">\(L^{2}(Y)\)</span>, we can simultaneously
+diagonalize in the following sense. There is a basis <span
+class="math inline">\((u_{j})\)</span> among which <span
+class="math inline">\(u_{0} \equiv 1\)</span>, of eigenfunctions of
+<span class="math inline">\(\Delta\)</span> and <span
+class="math inline">\(T_{n}\)</span> for all n. These are called
+Hecke–Maass forms. Ideally, we would like to show that all these
+eigenfunctions are with multiplicity one (so all eigenforms are
+Hecke–Maass forms), but this is not known.</p>
+<p><em>Fact</em>: <span class="math display">\[\begin{equation}
+T_{n} E_{\tfrac{1}{2} + it} = \left( \tfrac{1}{\sqrt{n}} \sum_{ad =
+n}^{} (\frac{a}{d})^{it}\right) E_{\tfrac{1}{2} + it}
+\end{equation}\]</span></p>
+<ul>
+<li>Let’s go back to the equidistribution of sublattices. To show <span
+class="math inline">\(T_{n} f \xrightarrow{n \rightarrow  \infty}
+\int_{Y}^{} f \,\mathrm{d}\mu\)</span>.</li>
+</ul>
+<p>Weyl’s criterion: It suffices to prove this for <span
+class="math inline">\(f\)</span> in a basis. That is, for <span
+class="math inline">\(f\)</span> a Hecke–Maass cusp form and for
+Eisenstein series</p>
+<h1 id="lecture-4">Lecture 4</h1>
+<p>We recall <span class="math display">\[\begin{equation}
+T_{n} E_{s} = \tfrac{1}{\sqrt{n}}
+\sum_{ad=n}(\tfrac{a}{d})^{it}E_{s},\text{ for } s = 1/2 + it.
+\end{equation}\]</span></p>
+<div class="lemma">
+<p><span class="math display">\[\begin{equation}
+|\tfrac{1}{\sqrt{n}} \sum_{ad =n}^{} (\frac{a}{d})^{it}|  \leq
+\tfrac{1}{\sqrt{n}} \#\{\text{ divisors }\} \leq c_{\varepsilon}
+n^{-\frac{1}{2} + \varepsilon} \rightarrow  0
+\end{equation}\]</span></p>
+</div>
+<h2 id="whittaker-expansion-u-is-cuspidal">Whittaker expansion (<span
+class="math inline">\(u\)</span> is cuspidal)</h2>
+<p>Recall <span class="math inline">\(u ( z+1) = u(z)\)</span>. Hence
+Fourier expansion <span class="math inline">\(u(x+iy) = \sum_{n \in
+\mathbb{Z}}^{} a(n,y) e(nx)\)</span>. One can write <span
+class="math display">\[\begin{equation}
+\Delta u = \lambda u = s(1-s) u
+\end{equation}\]</span> Cuspidal implies that <span
+class="math inline">\(a(0,y)=0\)</span>. This implies that <span
+class="math inline">\(u(x+iy) = \sum_{n \in \mathbb{Z} \setminus
+\{0\}}^{} a(n) \sqrt{y} K_{s-\tfrac{1}{2}}(2 \pi |n| y) e(nx)\)</span>.
+Here <span class="math inline">\(K_{s-\tfrac{1}{2}}\)</span> is the
+Bessel function (of some kind).</p>
+<p>After some renormalizing the Hecke operators, we get <span
+class="math display">\[\begin{equation}
+T_{n}^{\sharp} f(L) = \tfrac{1}{\sqrt{n}} \sum_{\text{ sublattices }}^{}
+f(M).
+\end{equation}\]</span> Using this <span
+class="math display">\[\begin{equation}
+T_{n}^{\sharp} u = \lambda_{n}^{\sharp} u \implies  a(n) =
+\lambda(n)^{\sharp} a(1).
+\end{equation}\]</span> Unfortunately, this step is non-trivial but you
+really need to write it down (???). Using this, we get the “trivial”
+bound: <span class="math inline">\(a(n) \ll \sqrt{n} \leftrightarrow
+\lambda(n) \ll 1\)</span>. (Radu doesn’t have time!)</p>
+<p>Automorphic forms are good at forming L-functions</p>
+<ul>
+<li>Forming L-functions</li>
+<li>Being averaged and giving trace functions</li>
+</ul>
+<p>We will take the L-function route.</p>
+<p>Normalize <span class="math inline">\(u\)</span> such that <span
+class="math inline">\(a(1) = 1 \implies a(n)\)</span> is multiplicative
+and <span class="math inline">\(a(nm) = a(n)a(m)\)</span> for all <span
+class="math inline">\(\gcd(n,m)=1\)</span>. Define <span
+class="math display">\[\begin{equation}
+L(s,u) =  \sum_{n=1}^{\infty} \frac{a(n)}{n^{s}}.
+\end{equation}\]</span> This has</p>
+<ul>
+<li>Euler product</li>
+<li>Analytic continuation and functional equation</li>
+</ul>
+<p>Euler product from Hecke operators <span
+class="math display">\[\begin{align}
+L(s,u) &amp; = \prod_{p}^{} \sum_{}^{} a(p^{r}) (p^{r})^{-s} \\
+&amp; = \prod_{p}^{} (1- a(p)p^{-s} + p^{-2s})^{-1}
+\end{align}\]</span> Recall <span
+class="math display">\[\begin{equation}
+\zeta(s) = \prod_{p}^{} (1-p^{-s})^{-1}
+\end{equation}\]</span></p>
+<p><em>Fact:</em></p>
+<p><span class="math display">\[\begin{equation}
+\int_{0}^{\infty} u(iy) y^{s \pm \tfrac{1}{2}} y^{-1}\,\mathrm{d}y =
+\pi^{-s} \Gamma(\frac{s+ \varepsilon + \nu}{2})
+\Gamma(\frac{s+\varepsilon - \nu}{2}),
+\end{equation}\]</span> where <span class="math inline">\(\varepsilon=
+0\)</span> or <span class="math inline">\(1\)</span> depending on <span
+class="math inline">\(u\)</span> is even or odd. More precisely <span
+class="math inline">\(u(-x+iy) = (-1)^{\varepsilon} u(x+iy)\)</span>.
+The variable <span class="math inline">\(\nu\)</span> is <span
+class="math inline">\(\Delta u = (\tfrac{1}{4} - \nu^{2})u\)</span>.</p>
+<p>Riemann’s trick and the transform <span class="math inline">\(z
+\mapsto  -1/z\)</span> show that <span
+class="math inline">\(\Lambda(s,u)\)</span> is holomorphic on <span
+class="math inline">\(s \in \mathbb{C}\)</span> and <span
+class="math inline">\(\Delta(u,s) = (-1)^{\varepsilon}
+\Lambda(1-s,u)\)</span>.</p>
+<h2 id="rankin-selberg-l-functions">Rankin-Selberg L-functions</h2>
+<p>Let <span class="math display">\[\begin{align}
+\varphi = &amp; \sum_{}^{} a(n) \sqrt{y} K_{\nu} ( 2 \pi |n| y)  e(n
+x)  \\
+\psi = &amp; \sum b(n) (\cdots)
+\end{align}\]</span></p>
+<p>Hecke–Maass cusp forms ::: {.definition} <span
+class="math display">\[\begin{equation}
+L(s, \phi \times \psi ) = \zeta(2s) \sum_{}^{} \frac{a(n) b(n)}{n^{s}}.
+\end{equation}\]</span> :::</p>
+<p>The method of Rankin-Selberg is <span class="math inline">\(\Re(s)
+&gt; 1\)</span>: <span class="math display">\[\begin{equation}
+\int_{Y}^{} E(z,s) \varphi(z) \psi(z) \,\mathrm{d}z
+= (\text{ some local factors }) \sum_{}^{} \frac{a(n) b(n)}{n^{s}}
+\end{equation}\]</span></p>
+<p>Recall if <span class="math display">\[\begin{equation}
+c(s) E_{s} = E_{1-s}
+\end{equation}\]</span> and analytic continuation of <span
+class="math inline">\(E_{s}\)</span> implies <span
+class="math display">\[\begin{equation}
+\Lambda(s, \varphi \times \psi) = (\cdots ) L(s,\varphi \times \psi)
+\end{equation}\]</span> has a meromorphic continuation to <span
+class="math inline">\(\mathbb{C}\)</span> with poles at most at <span
+class="math inline">\(s=0\)</span> and <span
+class="math inline">\(s=1\)</span> and <span
+class="math inline">\(\Lambda(s) = \Lambda(1-s)\)</span>.</p>
+<p>Langlands’ philosophy tells us that this Rankin-Selberg should be the
+<span class="math inline">\(L\)</span>-function from some automorphic
+form. This is indeed true for some <span
+class="math inline">\(\mathrm{GL}(4)\)</span> automorphic form!</p>
+<div class="lemma">
+<p><em>(Landau’s theorem)</em></p>
+<p>Let - <span class="math inline">\(L(s) = \sum_{}^{} b_{n} n
+^{-s}\)</span>, <span class="math inline">\(b_{n} \geq 0\)</span>,
+convergent in <span class="math inline">\(\Re(s) &gt; 1\)</span>, -
+<span class="math inline">\(L(s)\)</span> meromorphically continues with
+a pole at <span class="math inline">\(s=1\)</span> on <span
+class="math inline">\(\Re(s) \geq \tfrac{1}{2}\)</span> - Size bounds on
+<span class="math inline">\(L\)</span> - Functional equation with <span
+class="math inline">\(\Gamma\)</span> factors</p>
+<p>Then <span class="math inline">\(\sum_{n \leq x}^{} b_{n} = C \cdot x
++ O_{\varepsilon, L} (x^{\frac{2 \eta - 1}{ 2 \eta + 1} +
+\varepsilon})\)</span> where <span class="math inline">\(\eta = \sum
+\alpha_{i}\)</span>.</p>
+</div>
+<p>We’ll apply to <span class="math inline">\(L(s,\varphi \times
+\overline{\varphi})\)</span>. This gets <span
+class="math inline">\(\Gamma\)</span> factors <span
+class="math display">\[\begin{equation}
+\Gamma(\frac{s}{2})^{2} \Gamma( \frac{s+ 2 \nu}{2}) \Gamma( \frac{s-2
+\nu}{2}) \implies  \eta = 2
+\end{equation}\]</span> Write <span
+class="math display">\[\begin{equation}
+L(s, \varphi \times\overline{\varphi}) = \sum_{}^{} \frac{b_{n}}{n^{s}}
+\end{equation}\]</span> where <span
+class="math display">\[\begin{equation}
+b_{n} = \sum_{\substack{u v = n \\ u = \text{ square }}}^{} a(v)^{2}
+\geq 0
+\end{equation}\]</span> Landau implies that <span
+class="math display">\[\begin{equation}
+\sum_{n \leq x}^{} b_{n} = C x + O(x^{\frac{3}{5} + \varepsilon})
+\end{equation}\]</span> Möbius inversion gives <span
+class="math display">\[\begin{equation}
+\sum_{n \leq x}^{} |a(n)|^{2} = \sum_{n \leq x} \sum_{u v = n}^{}
+u_{\mathrm{sq}}(u) b_{v},
+\end{equation}\]</span> where <span
+class="math display">\[\begin{equation}
+u_{\mathrm{sq}}(n) = \begin{cases} \mu(d) &amp; \text{if } n=d^{2}, \\ 0
+&amp; \text{otherwise}. \end{cases}
+\end{equation}\]</span> We can write this as <span
+class="math display">\[\begin{align}
+&amp;  
+= \sum_{u \leq x} u_{\mathrm{sq}}(u) \sum_{v \leq x u^{-1}}^{} b_{v} \\
+&amp; = C \sum_{}^{} u_{\mathrm{sq}} \frac{x}{u} + O(x^{\frac{3}{5}}
+\sum_{u \leq x}^{} u u^{\frac{-\frac{3}{5} + \varepsilon}{}})
+\end{align}\]</span></p>
+<p>We will use the simple fact <span
+class="math display">\[\begin{equation}
+\frac{1}{\zeta(2s)} = \sum_{n \geq 1}^{\infty}
+\frac{u_{\mathrm{sq}}(n)}{n^{s}}
+\end{equation}\]</span> This implies <span
+class="math display">\[\begin{equation}
+\sum_{n \leq x}^{} |a(n)|^{2}= \frac{C}{\zeta(2)} x + O(x^{3/5} +
+\varepsilon)
+\end{equation}\]</span> Use this with <span
+class="math inline">\(x=N\)</span> and <span class="math inline">\(x=N-1
+\implies |a(N)|^{2} = \sum_{n \leq N} |a(n)|^{2} - \sum_{n \leq N-1}
+|a(n)|^{2} \ll N^{3/5+\varepsilon}\)</span> . This implies <span
+class="math display">\[\begin{equation}
+a(N) \ll N^{3/10 + \varepsilon} \text{ and } \frac{3}{10} &lt;
+\frac{1}{2}
+\end{equation}\]</span></p>
+<p>Best reference for this is <em>Bergeron</em>. The book is called
+<em>The spectrum of hyperbolic surfaces</em>.</p>
+<hr />
+	<small>	<p class="date">This page was updated on November 19, 2026.<br>
+		<a href="../index.html">Main Page</a> </p>
+      </small>
+</body>
+</html>
